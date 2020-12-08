@@ -26,7 +26,7 @@ I am using xboxdrv for my wireless xbox 360 controller. Everything is detected a
 
 Noticed if the controller turns off from inactivity, the game exits (or crashes?) silently without warning AND WITHOUT SAVING. In theory, this should only impact wireless controllers and even then only if you are leaving it inactive for a long time.
 
-After I realized what was happening, I tested to verify. Setting screensaver to 1 minute had no effect (just moved the mouse to dismiss but game stayed open). Then I set screensaver for 30 min and used a timer app and just left the game and controller sit. At ~15 min, the controller led turned off and the game promptly exited.
+After I realized what was happening, I tested to verify. Setting screensaver to 1 minute had no effect (just moved the mouse to dismiss but game stayed open). Then I set screensaver for 30 min and used a timer app and just left the game and controller sit. At \~15 min, the controller led turned off and the game promptly exited.
 
 Since this has the potential to lose in-game progress and protondb still does not allow editing of submitted reports, I felt an addendum to previous report was warranted.
 
