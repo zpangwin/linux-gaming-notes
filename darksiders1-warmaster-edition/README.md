@@ -55,13 +55,13 @@ Figure out you locations and create the variables in the terminal window before 
 
 tested on both Linux Mint 19.3 and LMDE 4. Nov 2020
 
-**\0.** If you have any launch options set, clear them out for now. Exit game AND steam.
+**0.** If you have any launch options set, clear them out for now. Exit game AND steam.
 
 
-**\1.** In terminal, first create variables for locations above (with YOUR paths). Then we're going to install Media Foundation libraries and a custom version of Proton from developer Glorious Eggroll (called Proton-GE). In some old instructions, I had said the version did not matter but in fact version does matter. Unless you see a newer version of Proton-GE that specifically mentions Darksiders: Warmastered Edition being fixed, then it is recommended to stick with the Proton-5.11-GE-3-MF version I reference in my notes.
+**1.** In terminal, first create variables for locations above (with YOUR paths). Then we're going to install Media Foundation libraries and a custom version of Proton from developer Glorious Eggroll (called Proton-GE). In some old instructions, I had said the version did not matter but in fact version does matter. Unless you see a newer version of Proton-GE that specifically mentions Darksiders: Warmastered Edition being fixed, then it is recommended to stick with the Proton-5.11-GE-3-MF version I reference in my notes.
 
 
-**\2.** In the same terminal, run:
+**2.** In the same terminal, run:
 
     # Set variables
     PROTONDIR=$HOME/.steam/root/compatibilitytools.d
@@ -83,13 +83,14 @@ tested on both Linux Mint 19.3 and LMDE 4. Nov 2020
     mv "$PFXDIR" "$PFXDIR.old"
 
 
-**\3.** Keep terminal open but relaunch Steam and we'll configure it to use Proton-GE. Go to Libary > right-click on Darksiders WME > Properties > General tab > check box for "Force the use of a specific Steam Play compatibility tool". Select Proton-5.11-GE-3-MF from dropdown. Click Close button to save.
+**3.** Keep terminal open but relaunch Steam and we'll configure it to use Proton-GE. Go to Libary > right-click on Darksiders WME > Properties > General tab > check box for "Force the use of a specific Steam Play compatibility tool". Select Proton-5.11-GE-3-MF from dropdown. Click Close button to save.
 
 
 
-**\4.** Launch game then exit from the main menu as soon as your are able to (it's not completely fixed yet). Then go back to the terminal and confirm the PFXDIR dir was regenerated **and has the correct owner/group/perms**, especially if you have any custom umask settings / etc.
+**4.** Launch game then exit from the main menu as soon as your are able to (it's not completely fixed yet). Then go back to the terminal and confirm the PFXDIR dir was regenerated **and has the correct owner/group/perms**, especially if you have any custom umask settings / etc.
 
-**\5.** Go back to the terminal and run the following:
+
+**5.** Go back to the terminal and run the following:
 
     
     # install media foundation libs for proton's wine binaries to use
@@ -101,7 +102,8 @@ tested on both Linux Mint 19.3 and LMDE 4. Nov 2020
     export PATH="$PROTONDIR/dist/bin:$PATH"
     WINEARCH=win64 WINEPREFIX="$PFXDIR/pfx" ./install-mf-64.sh
 
-**\6.** At this point, cinema and intro scenes should be fixed.
+
+**6.** At this point, cinema and intro scenes should be fixed.
 
 *Note 1: The commands in step \#5 are based on some earlier suggestions on protondb but my version uses Proton's bundled wine binaries for better compatibility (originally I had tried it as suggested by other users but got errors and it didn't work correctly; using proton's wine binaries did the trick for me). If you used the mf-installcab scripts before, see if you can find the file `windows6.1-KB976932-X64.exe` and copy it to `cp -a -t "$PFXDIR/pfx/drive_c" windows6.1-KB976932-X64.exe` first to save downloading the file again (as it was over 900mb).*
 
