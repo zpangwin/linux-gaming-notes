@@ -46,7 +46,7 @@ tested on both Linux Mint 19.3 and LMDE 4. Nov 2020
 
 2. In the same terminal, run:
 
-
+    
     # download media foundation dll file into game dir
     cd "$GAMEDIR"
     wget https://lutris.net/files/tools/dll/mfplat/x32/mfplat.dll
@@ -68,6 +68,7 @@ tested on both Linux Mint 19.3 and LMDE 4. Nov 2020
 
 5. Go back to the terminal and run the following:
 
+    
     # install media foundation libs for proton's wine binaries to use
     cd "$PFXDIR/pfx/drive_c"
     wget https://github.com/z0z0z/mf-installcab/archive/master.zip
