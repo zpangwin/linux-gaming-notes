@@ -63,7 +63,7 @@ tested on both Linux Mint 19.3 and LMDE 4. Nov 2020
 
 **2.** In the same terminal, run:
 
-    # Set variables
+    # Set variables with YOUR paths (next 3 lines are technically from first step)
     PROTONDIR=$HOME/.steam/root/compatibilitytools.d
     GAMEDIR="<SteamDir>/steamapps/common/Darksiders Warmastered Edition"
     PFXDIR="<SteamDir>/steamapps/compatdata/462780" 
