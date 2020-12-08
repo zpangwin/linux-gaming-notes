@@ -46,19 +46,21 @@ tested on both Linux Mint 19.3 and LMDE 4. Nov 2020
 
 2. In the same terminal, run:
 
+
     # download media foundation dll file into game dir
     cd "$GAMEDIR"
     wget https://lutris.net/files/tools/dll/mfplat/x32/mfplat.dll
-
+    
     # follow Proton-GE instructions to download and install under ~/.steam/root/compatibilitytools.d
     mkdir -m=755 -p $PROTONDIR && chgrp $USER $_ && chmod g+s $_ && cd $_
     wget https://github.com/GloriousEggroll/proton-ge-custom/releases/download/5.11-GE-3-MF/Proton-5.11-GE-3-MF.tar.gz
     tar -xvf Proton-5.11-GE-3-MF.tar.gz
     find . -type f -iname '*.py' -exec chmod a+x "{}" \;;
-
+    
     # if there is an existing profile created under vanilla proton, then rename it
     # this will cause profile to be regenerated with Proton-GE next time game is launched
     mv "$PFXDIR" "$PFXDIR.old"
+
 
 3. Keep terminal open but relaunch Steam and we'll configure it to use Proton-GE. Go to Libary > right-click on Darksiders WME > Properties > General tab > check box for "Force the use of a specific Steam Play compatibility tool". Select Proton-5.11-GE-3-MF from dropdown. Click Close button to save.
 
