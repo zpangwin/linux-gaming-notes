@@ -22,28 +22,81 @@ alias gss='git status --short'
 alias gst='git status'
 alias gstat='git status'
 
-# ==============================================================
-# functions and aliases for darksiders 2
-# ==============================================================
+# ========================================================================
+# Darksiders 2 managed game save aliases
+# ========================================================================
+if [[ -f ~/.gamevars/darksiders2-aliases.sh ]]; then
+    alias vids2='vi ~/.gamevars/darksiders2-aliases.sh'
+
+    alias refreshds2vars='source ~/.gamevars/darksiders2-aliases.sh';
+    alias reloadds2vars='source ~/.gamevars/darksiders2-aliases.sh';
+    alias resetds2vars='source ~/.gamevars/darksiders2-aliases.sh';
+
+    alias ds2refreshvars='source ~/.gamevars/darksiders2-aliases.sh';
+    alias ds2reloadvars='source ~/.gamevars/darksiders2-aliases.sh';
+    alias ds2resetvars='source ~/.gamevars/darksiders2-aliases.sh';
+
+elif [[ -f ~/.games/darksiders2-aliases.sh ]]; then
+    alias vids2='vi ~/.games/darksiders2-aliases.sh'
+
+    alias refreshds2vars='source ~/.games/darksiders2-aliases.sh';
+    alias reloadds2vars='source ~/.games/darksiders2-aliases.sh';
+    alias resetds2vars='source ~/.games/darksiders2-aliases.sh';
+
+    alias ds2refreshvars='source ~/.games/darksiders2-aliases.sh';
+    alias ds2reloadvars='source ~/.games/darksiders2-aliases.sh';
+    alias ds2resetvars='source ~/.games/darksiders2-aliases.sh';
+
+elif [[ -f ~/darksiders2-aliases.sh ]]; then
+    alias vids2='vi ~/darksiders2-aliases.sh'
+
+    alias refreshds2vars='source ~/darksiders2-aliases.sh';
+    alias reloadds2vars='source ~/darksiders2-aliases.sh';
+    alias resetds2vars='source ~/darksiders2-aliases.sh';
+
+    alias ds2refreshvars='source ~/darksiders2-aliases.sh';
+    alias ds2reloadvars='source ~/darksiders2-aliases.sh';
+    alias ds2resetvars='source ~/darksiders2-aliases.sh';
+fi
 
 export ds2sep='----------------------------------------------';
-export darksiders2SaveDir="<YOUR_STEAM_DIR>/steamapps/compatdata/388410/pfx/drive_c/users/steamuser/My Documents/My Games/Darksiders2/143062021";
 
-if [[ '<YOUR_STEAM_DIR>/' == "${darksiders2SaveDir:0:17}" ]]; then
-	echo "ERROR: You need to update the 'darksiders2SaveDir' variable.";
-	echo "Please replace '<YOUR_STEAM_DIR>' with your actual steam path... :-)";
-	echo "Current darksiders2SaveDir: '${darksiders2SaveDir}'";
+export ds2_gl_sep='-----------------------------------------------------------------------'
+
+# ========================================================================
+# NEEDS PATH TO DARKSIDERS SAVE FOLDER TO WORK
+# ========================================================================
+# OPTION #1: hardcode the variable to your exact path
+# e.g.
+#export darksiders2SaveDir="$HOME/.steam/steam/steamapps/compatdata/388410/pfx/drive_c/users/steamuser/My Documents/My Games/Darksiders2";
+
+# OPTION #2: Export variables from .bashrc and it will automatically figure it out
+#   export DARKSIDERS2_COMPAT_DIR="$HOME/.steam/steam/steamapps/compatdata/388410";
+# ========================================================================
+if [[ -z "$darksiders2SaveDir" ]]; then
+    if [[ -z "$DARKSIDERS2_COMPAT_DIR" ]]; then
+        echo 'E: DARKSIDERS2_COMPAT_DIR variable not set. Please export from ~/.bashrc or similar.'
+        echo 'This should be something like <steamdir>/steamapps/compatdata/388410';
+    else
+        export darksiders2SaveDir="${DARKSIDERS2_COMPAT_DIR}/pfx/drive_c/users/steamuser/My Documents/My Games/Darksiders2";
+    fi
 fi
 
 #
 # this message template lets you set some variables in your terminal session and just
 # repeat a consistent format while changing a value here and there before saving
 #
-# message template - fullname version
-#ds2msgTemplate='L$lvl @$loc - $notes ($bmc/100 boatman coins, $botdp/40 book of the dead pages, $ms/34 mystic stones, $ps/25 power stones, $rs/10 resist stones, $egr/15 etugoth relics, $rgr/10 renagoth relics, $kgr/5 khagoth relics, $deaths deaths, $hp hp)'
+# message template - fullname (no guide placeholders)
+#ds2msgTemplate='L$lvl @$loc - $notes ($bmc/100 boatman coins, $botdp/40 book of the dead pages, $ms/34 mystic stones, $ps/25 power stones, $rs/10 resist stones, $egr/15 etugoth relics, $kgr/5 khagoth relics, $rgr/10 renagoth relics, $sas/10 soul arbiter scrolls, $sass/10 soul arbiter sacred scrolls, $ssp/12 secret skill points, $gmg/4 gnomads gnomes, $lotf/10 light of the fallen, $ws/4 wandering stones, $bl/6 bloodless, $dt/4 death tombs)'
 
-# message template - abbrev'd version
-ds2msgTemplate='L$lvl @$loc - $notes ($bmc/100 bmc, $botdp/40 botdp, $ms/34 ms, $ps/25 ps, $rs/10 rs, $egr/15 egr, $rgr/10 rgr, $kgr/5 kgr, $deaths deaths, $hp hp)'
+# message template - fullname (with guide placeholders)
+#ds2msgTemplate='L$lvl @$loc - $notes ($bmc/$g_bmc/100 boatman coins, $botdp/$g_botdp/40 book of the dead pages, $ms/$g_ms/34 mystic stones, $ps/$g_ps/25 power stones, $rs/$g_rs/10 resist stones, $egr/$g_egr/15 etugoth relics, $kgr/$g_kgr/5 khagoth relics, $rgr/$g_rgr/10 renagoth relics, $sas/$g_sas/10 soul arbiter scrolls, $sass/$g_sass/10 soul arbiter sacred scrolls, $ssp/$g_ssp/12 secret skill points, $gmg/$g_gmg/4 gnomads gnomes, $lotf/$g_lotf/10 light of the fallen, $ws/$g_ws/4 wandering stones, $bl/$g_bl/6 bloodless, $dt/$g_dt/4 death tombs)'
+
+# message template - abbrev'd version (no guide placeholders)
+#ds2msgTemplate='L$lvl @$loc - $notes ($bmc/100 bmc, $botdp/40 botdp, $ms/34 ms, $ps/25 ps, $rs/10 rs, $egr/15 egr, $kgr/5 kgr, $rgr/10 rgr, $sas/10 sas, $sass/10 sass, $ssp/12 ssp, $gmg/4 gmg, $lotf/10 lotf, $ws/4 ws, $bl/6 bl, $dt/4 dt)'
+
+# message template - abbrev'd version (with guide placeholders)
+ds2msgTemplate='L$lvl @$loc - $notes ($bmc/$g_bmc/100 bmc, $botdp/$g_botdp/40 botdp, $ms/$g_ms/34 ms, $ps/$g_ps/25 ps, $rs/$g_rs/10 rs, $egr/$g_egr/15 egr, $kgr/$g_kgr/5 kgr, $rgr/$g_rgr/10 rgr, $sas/$g_sas/10 sas, $sass/$g_sass/10 sass, $ssp/$g_ssp/12 ssp, $gmg/$g_gmg/4 gmg, $lotf/$g_lotf/10 lotf, $ws/$g_ws/4 ws, $bl/$g_bl/6 bl, $dt/$g_dt/4 dt)'
 
 function ds2LoadGame() {
     local commitId="$1"
@@ -81,26 +134,18 @@ function ds2LoadGame() {
     # if the game doesn't crap out, then I can remove the following code block
     #
     # update: game launchs and makes it to menu screen fine with this set as above...
-    #
-
-    #
-    #if [[ ! -z "${STEAM_PRIMARY_USER_DATA_DIR[@]}" && -d "${STEAM_PRIMARY_USER_DATA_DIR}" ]]; then
-    #    if [[ -d "${STEAM_PRIMARY_USER_DATA_DIR}/388410" ]]; then
-    #        rm -rf "${STEAM_PRIMARY_USER_DATA_DIR}/388410" 2>/dev/null;
-    #    fi
-    #fi
 
     # git and sha256 are both easier to use from working dir
     cd "${darksiders2SaveDir}"
 
     # print checksum of old file:
-    printf '\nChecksum before loading: %s\n\n' "$(md5sum *)";
+    printf '\n%s\nChecksum before loading: %s\n\n' "$ds2sep" "$(md5sum *)";
 
     # now reset the saves
     git reset --hard ${commitId};
 
     # print checksum of new file:
-    printf '\nChecksum after loading: %s\n\n' "$(md5sum *)";
+    printf '\nChecksum after loading: %s\n%s\n\n' "$(md5sum *)" "$ds2sep";
 
     # restore starting dir
     if [[ "$PWD" != "$startingDir" ]]; then
@@ -109,8 +154,21 @@ function ds2LoadGame() {
 }
 
 function ds2AutoSetVarsFromLastCommitMessage() {
-    notes=TODO;
-    deaths=0;
+    # normally we only want to auto-set empty vars unless
+    # the -f flag was passed to force all vars to be set
+    if [[ '-f' == "$1" ]]; then
+        # reset counter vars
+        notes='' loc='' lvl='';
+
+        bcm='' botdp='' ms='' ps='' rs='' egr='' kgr='' rgr='' sas='' sass='';
+        gmg='' lotf=''  ws='' bl='' dt='' ssp='';
+
+        # reset guide counter vars (if used)
+        g_bcm='' g_botdp='' g_ms='' g_ps='' g_rs='' g_egr='' g_kgr='' g_rgr='' g_sas='' g_sass='';
+        g_gmg='' g_lotf='' g_ws='' g_bl='' g_dt='' g_ssp='';
+    fi
+
+    test -z "$notes" && notes=TODO;
 
     if [[ -z "${darksiders2SaveDir}" ]]; then
         echo "E: Variable 'darksiders2SaveDir' is not set/exported.";
@@ -122,57 +180,206 @@ function ds2AutoSetVarsFromLastCommitMessage() {
 
     local lastCommitMessage=$(GIT_PAGER=cat git log --format='%s' -1);
 
-    lvl=$(echo "${lastCommitMessage}"|grep -P '^L[1-9]\d*'|sed -E 's/^L([1-9][0-9]*) .*/\1/g');
-    loc=$(echo "${lastCommitMessage}"|grep -P '^L[1-9]\d* @'|sed -E 's/^L[1-9][0-9]* @([-A-Za-z0-9_ ]+) \- .*/\1/g');
+    test -z "$lvl" && lvl=$(echo "${lastCommitMessage}"|grep -P '^L[1-9]\d*'|sed -E 's/^L([1-9][0-9]*) .*/\1/g');
 
-    bmc=$(echo "${lastCommitMessage}"|grep -P '(bmc|boatman coin)'|sed -E 's|^.*[^0-9/]([0-9][0-9]*)(/[1-9][0-9]*)? (bmc|boatman coin).*$|\1|g');
+    test -z "$loc" && loc=$(echo "${lastCommitMessage}"|grep -P '^L[1-9]\d* @'|sed -E 's/^L[1-9][0-9]* @([-A-Za-z0-9_ ]+) \- .*/\1/g');
 
-    botdp=$(echo "${lastCommitMessage}"|grep -P '(botdp|book of the dead page)'|sed -E 's|^.*[^0-9/]([0-9][0-9]*)(/[1-9][0-9]*)? (botdp|book of the dead page).*$|\1|g');
+    test -z "$bmc" && bmc=$(echo "${lastCommitMessage}"|grep -P '(bmc|boatman coins?)'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[1-9][0-9\/]*)? (bmc|boatman coins?).*$/\1/g');
 
-    ms=$(echo "${lastCommitMessage}"|grep -P ' (ms|mystic stone)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[1-9][0-9]*)? (ms|mystic stone).*$/\1/g');
+    test -z "$g_bmc" && g_bmc=$(echo "${lastCommitMessage}"|grep -P '\d+/\d+/\d+ (bmc|boatman coins?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)\/([0-9][0-9]*)\/([x1-9][0-9]*)? (bmc|boatman coins?).*$/\2/g');
 
-    ps=$(echo "${lastCommitMessage}"|grep -P ' (ps|power sto[nr]e)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[1-9][0-9]*)? (ps|power sto[nr]e).*$/\1/g');
+    test -z "$botdp" && botdp=$(echo "${lastCommitMessage}"|grep -P '(botdp|book of the dead pages?)'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[1-9][0-9\/]*)? (botdp|book of the dead pages?).*$/\1/g');
 
-    rs=$(echo "${lastCommitMessage}"|grep -P ' (rs|resist stone)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[1-9][0-9]*)? (rs|resist stone).*$/\1/g');
+    test -z "$g_botdp" && g_botdp=$(echo "${lastCommitMessage}"|grep -P '\d+/\d+/\d+ (botdp|book of the dead pages?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)\/([0-9][0-9]*)\/([x1-9][0-9]*)? (botdp|book of the dead pages?).*$/\2/g');
 
-    egr=$(echo "${lastCommitMessage}"|grep -P ' (egr|etu[-]goth relics?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9]*)? (egr|etu[-]?goth relics?).*$/\1/g');
+    test -z "$ms" && ms=$(echo "${lastCommitMessage}"|grep -P ' (ms|mystic stones?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[1-9][0-9\/]*)? (ms|mystic stones?).*$/\1/g');
 
-    kgr=$(echo "${lastCommitMessage}"|grep -P ' (kgr|khagoth relics?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9]*)? (kgr|khagoth relics?).*$/\1/g');
+    test -z "$g_ms" && g_ms=$(echo "${lastCommitMessage}"|grep -P '\d+/\d+/\d+ (ms|mystic stones?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)\/([0-9][0-9]*)\/([x1-9][0-9]*)? (ms|mystic stones?).*$/\2/g');
 
-    rgr=$(echo "${lastCommitMessage}"|grep -P ' (rgr|renagoth relics?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9]*)? (rgr|renagoth relics?).*$/\1/g');
+    test -z "$ps" && ps=$(echo "${lastCommitMessage}"|grep -P ' (ps|power stones?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[1-9][0-9\/]*)? (ps|power stones?).*$/\1/g');
 
-    hp=$(echo "${lastCommitMessage}"|grep -P ' hp\b'|sed -E 's/^.*[^\w](low|half|mostlyfull|full) hp.*$/\1/g');
+    test -z "$g_ps" && g_ps=$(echo "${lastCommitMessage}"|grep -P '\d+/\d+/\d+ (ps|power stones?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)\/([0-9][0-9]*)\/([x1-9][0-9]*)? (ps|power stones?).*$/\2/g');
 
+    test -z "$rs" && rs=$(echo "${lastCommitMessage}"|grep -P ' (rs|resist stones?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[1-9][0-9\/]*)? (rs|resist stones?).*$/\1/g');
+
+    test -z "$g_rs" && g_rs=$(echo "${lastCommitMessage}"|grep -P '\d+/\d+/\d+ (rs|resist stones?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)\/([0-9][0-9]*)\/([x1-9][0-9]*)? (rs|resist stones?).*$/\2/g');
+
+    test -z "$egr" && egr=$(echo "${lastCommitMessage}"|grep -P ' (egr|etu[-]?goth relics?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9\/]*)? (egr|etu[-]?goth relics?).*$/\1/g');
+
+    test -z "$g_egr" && g_egr=$(echo "${lastCommitMessage}"|grep -P '\d+/\d+/\d+ (egr|etu[-]?goth relics?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)\/([0-9][0-9]*)\/([x1-9][0-9]*)? (egr|etu[-]?goth relics?).*$/\2/g');
+
+    test -z "$kgr" && kgr=$(echo "${lastCommitMessage}"|grep -P ' (kgr|khagoth relics?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9\/]*)? (kgr|khagoth relics?).*$/\1/g');
+
+    test -z "$g_kgr" && g_kgr=$(echo "${lastCommitMessage}"|grep -P '\d+/\d+/\d+ (kgr|khagoth relics?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)\/([0-9][0-9]*)\/([x1-9][0-9]*)? (kgr|khagoth relics?).*$/\2/g');
+
+    test -z "$rgr" && rgr=$(echo "${lastCommitMessage}"|grep -P ' (rgr|renagoth relics?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9\/]*)? (rgr|renagoth relics?).*$/\1/g');
+
+    test -z "$g_rgr" && g_rgr=$(echo "${lastCommitMessage}"|grep -P '\d+/\d+/\d+ (rgr|renagoth relics?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)\/([0-9][0-9]*)\/([x1-9][0-9]*)? (rgr|renagoth relics?).*$/\2/g');
+
+    test -z "$sas" && sas=$(echo "${lastCommitMessage}"|grep -P ' (sas|soul arbiter scrolls?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9\/]*)? (sas[^s]|soul arbiter scrolls?).*$/\1/g');
+
+    test -z "$g_sas" && g_sas=$(echo "${lastCommitMessage}"|grep -P '\d+/\d+/\d+ (sas|soul arbiter scrolls?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)\/([0-9][0-9]*)\/([x1-9][0-9]*)? (sas[^s]|soul arbiter scrolls?).*$/\2/g');
+
+    test -z "$sass" && sass=$(echo "${lastCommitMessage}"|grep -P ' (sass|soul arbiter sacred scrolls?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9\/]*)? (sass|soul arbiter sacred scrolls?).*$/\1/g');
+
+    test -z "$g_sass" && g_sass=$(echo "${lastCommitMessage}"|grep -P '\d+/\d+/\d+ (sass|soul arbiter sacred scrolls?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)\/([0-9][0-9]*)\/([x1-9][0-9]*)? (sass|soul arbiter sacred scrolls?).*$/\2/g');
+
+    test -z "$gmg" && gmg=$(echo "${lastCommitMessage}"|grep -P ' (gmg|gnomads gnomes?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9\/]*)? (gmg|gnomads gnomes?).*$/\1/g');
+
+    test -z "$g_gmg" && g_gmg=$(echo "${lastCommitMessage}"|grep -P '\d+/\d+/\d+ (gmg|gnomads gnomes?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)\/([0-9][0-9]*)\/([x1-9][0-9]*)? (gmg|gnomads gnomes?).*$/\2/g');
+
+    test -z "$lotf" && lotf=$(echo "${lastCommitMessage}"|grep -P ' (lotf|light of the fallen)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9\/]*)? (lotf|light of the fallen).*$/\1/g');
+
+    test -z "$g_lotf" && g_lotf=$(echo "${lastCommitMessage}"|grep -P '\d+/\d+/\d+ (lotf|light of the fallen)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)\/([0-9][0-9]*)\/([x1-9][0-9]*)? (lotf|light of the fallen).*$/\2/g');
+
+    test -z "$ws" && ws=$(echo "${lastCommitMessage}"|grep -P ' (ws|wandering stones?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9\/]*)? (ws|wandering stones?).*$/\1/g');
+
+    test -z "$g_ws" && g_ws=$(echo "${lastCommitMessage}"|grep -P '\d+/\d+/\d+ (ws|wandering stones?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)\/([0-9][0-9]*)\/([x1-9][0-9]*)? (ws|wandering stones?).*$/\2/g');
+
+    test -z "$bl" && bl=$(echo "${lastCommitMessage}"|grep -P ' (bl|bloodless)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9\/]*)? (bl|bloodless).*$/\1/g');
+
+    test -z "$g_bl" && g_bl=$(echo "${lastCommitMessage}"|grep -P '\d+/\d+/\d+ (bl|bloodless)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)\/([0-9][0-9]*)\/([x1-9][0-9]*)? (bl|bloodless).*$/\2/g');
+
+    test -z "$ssp" && ssp=$(echo "${lastCommitMessage}"|grep -P ' (ssp|secret skill points?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9\/]*)? (ssp|secret skill points?).*$/\1/g');
+
+    test -z "$g_ssp" && g_ssp=$(echo "${lastCommitMessage}"|grep -P '\d+/\d+/\d+ (ssp|secret skill points?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)\/([0-9][0-9]*)\/([x1-9][0-9]*)? (ssp|secret skill points?).*$/\2/g');
+
+    test -z "$dt" && dt=$(echo "${lastCommitMessage}"|grep -P ' (dt|death tombs?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9\/]*)? (dt|death tombs?).*$/\1/g');
+
+    test -z "$g_dt" && g_dt=$(echo "${lastCommitMessage}"|grep -P '\d+/\d+/\d+ (dt|death tombs?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)\/([0-9][0-9]*)\/([x1-9][0-9]*)? (dt|death tombs?).*$/\2/g');
+
+    test -z "$lvl" && lvl=1;
     export lvl="$lvl";
+
+    test -z "$loc" && loc=unknown;
     export loc="$loc";
-    export bmc="$bmc";
-    export botdp="$botdp";
 
-    export ms="$ms";
-    export ps="$ps";
-    export rs="$rs";
+    #local defaultToZeroVarList='bmc botdp ms ps rs egr kgr rgr sas sass ssp gmg lotf ws bl dt';
+    local defaultToZeroVarList='bmc botdp ms ps rs egr kgr rgr sas sass ssp gmg lotf ws bl dt g_bmc g_botdp g_ms g_ps g_rs g_egr g_kgr g_rgr g_sas g_sass g_ssp g_gmg g_lotf g_ws g_bl g_dt';
+    local value='';
 
-    test -z "$egr" && egr=0;
-    export egr="$egr";
+    # if an existing value for the variable was not found, then
+    for varName in $(echo "$defaultToZeroVarList"); do
+        if [[ '' == "$varName" ]]; then
+            continue;
+        fi
+        #printf 'varName: %s\n' "$varName";
 
-    test -z "$kgr" && kgr=0;
-    export kgr="$kgr";
+        value="$(eval "echo \$${varName}")";
+        #printf 'varName: %s, initialValue: %s\n' "$varName" "$value";
 
-    test -z "$rgr" && rgr=0;
-    export rgr="$rgr";
-
-    export hp="$hp";
+        if [[ $value =~ ^[0-9][0-9]*$ ]]; then
+            continue;
+        fi
+        eval "export ${varName}=0";
+    done;
 }
+function ds2IncrementSingleVariable() {
+    local varName="$1";
+    if [[ -z "${varName}" ]]; then
+        echo "E: Var name required";
+        return -1;
+    fi
+    if [[ ! $varName =~ ^[a-z][a-z]*$ ]]; then
+        echo "E: Invalid var name '$1'";
+        return -2;
+    fi
+    # increment value
+    eval "${varName}=\$(( \$${varName} + 1 ))";
+
+    # print new value
+    echo '';
+    eval "printf '${varName}: %s\\n' \"\$${varName}\"";
+    echo '';
+}
+function ds2IncrementPairedVariables() {
+    local varName="$1";
+    if [[ -z "${varName}" ]]; then
+        echo "E: Var name required";
+        return -1;
+    fi
+    if [[ 'g_' == "${var:0:2}" ]]; then
+        varName="${varName:2}";
+    fi
+    if [[ -z "${varName}" || ! $varName =~ ^[a-z][a-z]*$ ]]; then
+        echo "E: Invalid var name '$1'";
+        return -2;
+    fi
+    # increment values
+    eval "${varName}=\$(( \$${varName} + 1 ))";
+    eval "g_${varName}=\$(( \$g_${varName} + 1 ))";
+
+    # print new values
+    echo '';
+    eval "printf '${varName}: %s\\n' \"\$${varName}\"";
+    eval "printf 'g_${varName}: %s\\n' \"\$g_${varName}\"";
+    echo '';
+}
+function ds2PrintMazeDirections() {
+    local floor="$1";
+    if [[ ! $floor =~ [1-9][0-9]*$ ]]; then
+        floor='*';
+    elif [[ $floor =~ [1-9]$ ]]; then
+        floor="0${floor}";
+    fi
+
+    local __sep__="-------------------------";
+    echo "${__sep__}";
+
+    declare -A ds2MazeMap;
+
+    # define mappings
+    ds2MazeMap["01"]="N, W";
+    ds2MazeMap["01 Secret"]="S, E";
+
+    ds2MazeMap["02"]="E, S, N";
+    ds2MazeMap["02 Secret"]="N, N";
+
+    ds2MazeMap["03"]="W, E, N, N";
+    ds2MazeMap["03 Secret"]="N, S, E";
+
+    ds2MazeMap["04"]="E, W, N, S";
+    ds2MazeMap["04 Secret"]="W, E, N";
+
+    ds2MazeMap["05"]="W, W, N, E";
+    ds2MazeMap["05 Secret"]="W, N, S";
+
+    ds2MazeMap["06"]="S, E, E, N, N";
+    ds2MazeMap["06 Secret"]="E, E, E, S";
+
+    ds2MazeMap["07"]="S, W, E, E, E";
+    ds2MazeMap["07 Secret"]="S, S, W, N, N";
+
+    ds2MazeMap["08"]="N, W, N, W, E";
+    ds2MazeMap["08 Secret"]="N, S, S, E, N";
+
+    ds2MazeMap["09"]="E, N, E, N, S";
+    ds2MazeMap["09 Secret"]="S, W, E, E, N";
+
+    ds2MazeMap["10"]="W, E, N, S, W";
+    ds2MazeMap["10 Secret"]="N, S, E, W";
+
+    for key in "${!ds2MazeMap[@]}"; do
+        if [[ '*' == "$floor" || "${floor}" == "${key:0:2}" ]]; then
+            value="${ds2MazeMap[$key]}";
+            echo "Level ${key}: ${value}";
+            echo "${__sep__}";
+        fi
+    done
+}
+alias ds2maze='ds2PrintMazeDirections';
+
+alias ds2+="ds2IncrementSingleVariable";
+alias ds2++="ds2IncrementPairedVariables";
 
 alias ds2dir="cd '$darksiders2SaveDir'";
 
-alias ds2ls="cd '$darksiders2SaveDir'; GIT_PAGER=cat git log --format='%h %cd  %s' --date=format:'%Y-%m-%d %H:%M:%S'";
-
-alias ds2list="cd '$darksiders2SaveDir'; GIT_PAGER=cat git log --format='%h %cd  %s' --date=format:'%Y-%m-%d %H:%M:%S'";
+alias ds2ls="cd '$darksiders2SaveDir'; GIT_PAGER=cat git log --reflog --format='%C(cyan)%D%Creset  %Cred%h%Creset  %C(#ff8c00)%cd%Creset  %s%n${ds2_gl_sep}' --date=format:'%Y-%m-%d %H:%M:%S'";
+alias ds2list="cd '$darksiders2SaveDir'; GIT_PAGER=cat git log --reflog --format='%C(cyan)%D%Creset  %Cred%h%Creset  %C(#ff8c00)%cd%Creset  %s%n${ds2_gl_sep}' --date=format:'%Y-%m-%d %H:%M:%S'";
 
 alias ds2sav="cd '$darksiders2SaveDir'; git add *;git commit -m"
 
-# ---------------------------------------------------------------------------------------------------
+# ========================================================================
 # loads the specified commit (requires argument). passed argument can be any of:
 #
 # HEAD:    will load the most recent save
@@ -183,32 +390,38 @@ alias ds2sav="cd '$darksiders2SaveDir'; git add *;git commit -m"
 #
 # commit hash: either the full or abbreviated commit hash will load the save indicated by that hash
 # branch or tag name: will load the commit pointed to by the indicated tag or branch
-# ---------------------------------------------------------------------------------------------------
+# ========================================================================
 alias ds2load="cd '$darksiders2SaveDir'; ds2LoadGame";
 
 # change the comment/message for the last commit using configured git editor (nano by default)
-alias ds2amend="cd '$darksiders2SaveDir'; git commit --amend"
+alias ds2amend="cd '$darksiders2SaveDir'; echo '$ds2sep'; git commit --amend"
 
 # change the comment/message for the last commit using new passed comment/message
-alias ds2rename="cd '$darksiders2SaveDir'; git commit --amend -m"
+alias ds2rename="cd '$darksiders2SaveDir'; echo '$ds2sep'; git commit --amend -m"
 
 # overwrite the last commit using the same comment/message
-alias ds2update="cd '$darksiders2SaveDir'; add *; omsg=\"\$(GIT_PAGER=cat git log --format='%s' -1)\";git commit --amend -m \"\$omsg\";"
+alias ds2update="cd '$darksiders2SaveDir'; echo '$ds2sep'; git add *; omsg=\"\$(GIT_PAGER=cat git log --format='%s' -1)\";git commit --amend -m \"\$omsg\"; echo '$ds2sep';"
 
-# use this to create a "quick save" using the message template and associated variables
-alias ds2qsav="cd '$darksiders2SaveDir'; msg=\"${ds2msgTemplate}\"; git add *; git commit -m \"\$msg\";";
+# overwrite the last commit using the same comment/message
+alias ds2replace="cd '$darksiders2SaveDir'; msg=\"${ds2msgTemplate}\"; echo '$ds2sep'; git add *; git commit --amend -m \"\$msg\"; echo '$ds2sep';"
+
+# use this to create a "quick"/"templated" using the message template and associated variables
+alias ds2qsav="cd '$darksiders2SaveDir'; msg=\"${ds2msgTemplate}\"; echo '$ds2sep'; git add *; git commit -m \"\$msg\"; echo '$ds2sep'; ";
+alias ds2tsav="cd '$darksiders2SaveDir'; msg=\"${ds2msgTemplate}\"; echo '$ds2sep'; git add *; git commit -m \"\$msg\"; echo '$ds2sep'; ";
 
 # change the comment/message for the last commit using the message template and associated variables
-alias ds2qren="cd '$darksiders2SaveDir'; msg=\"${ds2msgTemplate}\"; git commit --amend -m \"\$msg\";"
+alias ds2qren="cd '$darksiders2SaveDir'; msg=\"${ds2msgTemplate}\"; echo '$ds2sep'; git commit --amend -m \"\$msg\"; echo '$ds2sep';"
+alias ds2tren="cd '$darksiders2SaveDir'; msg=\"${ds2msgTemplate}\"; echo '$ds2sep'; git commit --amend -m \"\$msg\"; echo '$ds2sep';"
 
 # run either of these to print out / test the variables used in the message template
 alias ds2msg="cd '$darksiders2SaveDir'; msg=\"${ds2msgTemplate}\"; printf '\\n%s\\n%s\\n%s\\n' '$ds2sep' \"msg: \$msg\" '$ds2sep';";
 alias ds2test="cd '$darksiders2SaveDir'; msg=\"${ds2msgTemplate}\"; printf '\\n%s\\n%s\\n%s\\n' '$ds2sep' \"msg: \$msg\" '$ds2sep';";
 
-# run this to initialize variables off hard-coded values (requires some maintenance)
-alias ds2iset="cd '$darksiders2SaveDir'; lvl=13; loc=TODO; notes=TODO; bmc=39; botdp=10; ms=14; ps=2; rs=1; egr=1; deaths=0; hp=nearfull; msg=\"${ds2msgTemplate}\"; printf '\\n%s\\n%s\\n%s\\n' '$ds2sep' \"msg: \$msg\" '$ds2sep';";
-
 # run this to set variables automatically from last commit
 alias ds2aset="cd '$darksiders2SaveDir'; ds2AutoSetVarsFromLastCommitMessage; msg=\"${ds2msgTemplate}\"; printf '\\n%s\\n%s\\n%s\\n' '$ds2sep' \"msg: \$msg\" '$ds2sep';";
 
+alias ds2asetf="cd '$darksiders2SaveDir'; ds2AutoSetVarsFromLastCommitMessage -f; msg=\"${ds2msgTemplate}\"; printf '\\n%s\\n%s\\n%s\\n' '$ds2sep' \"msg: \$msg\" '$ds2sep';";
 
+# ========================================================================
+# END: Darksiders 2 managed game save aliases
+# ========================================================================
