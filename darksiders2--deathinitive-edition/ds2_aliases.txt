@@ -1,0 +1,214 @@
+# ==============================================================
+# general aliases for git
+# ==============================================================
+
+#git CLI commands without 'git' prefix
+alias add='git add'
+alias amend='git commit --amend -m'
+alias branch='git branch'
+alias checkout='git checkout';
+alias commit='git commit -m'
+
+alias ga='git add'
+alias gb='git branch'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gl='GIT_PAGER=cat git log --format="%h  %cn  %cd  %s" --date=format:"%Y-%m-%d %H:%M:%S"';
+alias glg='GIT_PAGER=cat git log --graph --oneline --decorate --all'
+alias gld='GIT_PAGER=cat git log --pretty=format:"%h %ad %s" --date=short --all'
+alias glog='GIT_PAGER=cat git log --format="%H  %cn  %cd  %s" --date=format:"%Y-%m-%d %H:%M:%S"';
+alias greset='git reset --hard'
+alias gss='git status --short'
+alias gst='git status'
+alias gstat='git status'
+
+# ==============================================================
+# functions and aliases for darksiders 2
+# ==============================================================
+
+export ds2sep='----------------------------------------------';
+export darksiders2SaveDir="<YOUR_STEAM_DIR>/steamapps/compatdata/388410/pfx/drive_c/users/steamuser/My Documents/My Games/Darksiders2/143062021";
+
+if [[ '<YOUR_STEAM_DIR>/' == "${darksiders2SaveDir:0:17}" ]]; then
+	echo "ERROR: You need to update the 'darksiders2SaveDir' variable.";
+	echo "Please replace '<YOUR_STEAM_DIR>' with your actual steam path... :-)";
+	echo "Current darksiders2SaveDir: '${darksiders2SaveDir}'";
+fi
+
+#
+# this message template lets you set some variables in your terminal session and just
+# repeat a consistent format while changing a value here and there before saving
+#
+# message template - fullname version
+#ds2msgTemplate='L$lvl @$loc - $notes ($bmc/100 boatman coins, $botdp/40 book of the dead pages, $ms/34 mystic stones, $ps/25 power stones, $rs/10 resist stones, $egr/15 etugoth relics, $rgr/10 renagoth relics, $kgr/5 khagoth relics, $deaths deaths, $hp hp)'
+
+# message template - abbrev'd version
+ds2msgTemplate='L$lvl @$loc - $notes ($bmc/100 bmc, $botdp/40 botdp, $ms/34 ms, $ps/25 ps, $rs/10 rs, $egr/15 egr, $rgr/10 rgr, $kgr/5 kgr, $deaths deaths, $hp hp)'
+
+function ds2LoadGame() {
+    local commitId="$1"
+    local startingDir="$(pwd)";
+
+    if [[ 'last' == "$commitId" || '0' == "$commitId" ]]; then
+        commitId="HEAD";
+
+    elif [[ $commitId =~ ^[1-9][0-9]*$ ]]; then
+        commitId="HEAD~${commitId}";
+
+    elif [[ $commitId =~ ^\-[1-9][0-9]*$ ]]; then
+        commitId="HEAD~${commitId:1}";
+
+    elif [[ $commitId =~ ^[0-9a-f][0-9a-f]*$ && ( "${#commitId}" == '7' ||  "${#commitId}" == '40' ) ]]; then
+        commitId="$commitId";
+
+    elif [[ 'HEAD' == "$commitId" || $commitId =~ ^HEAD~[1-9][0-9]*$ ]]; then
+        commitId="$commitId";
+
+    else
+        matchingTag='';
+        matchingBranch=$(git branch --list "$commitId" 2>/dev/null|head -1|sed -E 's/[ \t*]//g');
+        if [[ -z "$matchingBranch" ]]; then
+            matchingTag=$(git tag --list "$commitId" 2>/dev/null|head -1|sed -E 's/[ \t*]//g');
+        fi
+        if [[ -z "$matchingBranch" && -z "${matchingTag}" ]]; then
+            echo "E: invalid save name; name must be a commit hash, index, branch-name, or tag-name.";
+            return -1
+        fi
+    fi
+
+    # testing: going to see if I can prevent access to the folder by creating it with root
+    # and restricted access perms: sudo mkdir -m 0500 388410
+    # if the game doesn't crap out, then I can remove the following code block
+    #
+    # update: game launchs and makes it to menu screen fine with this set as above...
+    #
+
+    #
+    #if [[ ! -z "${STEAM_PRIMARY_USER_DATA_DIR[@]}" && -d "${STEAM_PRIMARY_USER_DATA_DIR}" ]]; then
+    #    if [[ -d "${STEAM_PRIMARY_USER_DATA_DIR}/388410" ]]; then
+    #        rm -rf "${STEAM_PRIMARY_USER_DATA_DIR}/388410" 2>/dev/null;
+    #    fi
+    #fi
+
+    # git and sha256 are both easier to use from working dir
+    cd "${darksiders2SaveDir}"
+
+    # print checksum of old file:
+    printf '\nChecksum before loading: %s\n\n' "$(md5sum *)";
+
+    # now reset the saves
+    git reset --hard ${commitId};
+
+    # print checksum of new file:
+    printf '\nChecksum after loading: %s\n\n' "$(md5sum *)";
+
+    # restore starting dir
+    if [[ "$PWD" != "$startingDir" ]]; then
+        cd "$startingDir";
+    fi
+}
+
+function ds2AutoSetVarsFromLastCommitMessage() {
+    notes=TODO;
+    deaths=0;
+
+    if [[ -z "${darksiders2SaveDir}" ]]; then
+        echo "E: Variable 'darksiders2SaveDir' is not set/exported.";
+        return -1;
+    fi
+
+    # change to game save dir so git will work
+    cd "${darksiders2SaveDir}";
+
+    local lastCommitMessage=$(GIT_PAGER=cat git log --format='%s' -1);
+
+    lvl=$(echo "${lastCommitMessage}"|grep -P '^L[1-9]\d*'|sed -E 's/^L([1-9][0-9]*) .*/\1/g');
+    loc=$(echo "${lastCommitMessage}"|grep -P '^L[1-9]\d* @'|sed -E 's/^L[1-9][0-9]* @([-A-Za-z0-9_ ]+) \- .*/\1/g');
+
+    bmc=$(echo "${lastCommitMessage}"|grep -P '(bmc|boatman coin)'|sed -E 's|^.*[^0-9/]([0-9][0-9]*)(/[1-9][0-9]*)? (bmc|boatman coin).*$|\1|g');
+
+    botdp=$(echo "${lastCommitMessage}"|grep -P '(botdp|book of the dead page)'|sed -E 's|^.*[^0-9/]([0-9][0-9]*)(/[1-9][0-9]*)? (botdp|book of the dead page).*$|\1|g');
+
+    ms=$(echo "${lastCommitMessage}"|grep -P ' (ms|mystic stone)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[1-9][0-9]*)? (ms|mystic stone).*$/\1/g');
+
+    ps=$(echo "${lastCommitMessage}"|grep -P ' (ps|power sto[nr]e)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[1-9][0-9]*)? (ps|power sto[nr]e).*$/\1/g');
+
+    rs=$(echo "${lastCommitMessage}"|grep -P ' (rs|resist stone)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[1-9][0-9]*)? (rs|resist stone).*$/\1/g');
+
+    egr=$(echo "${lastCommitMessage}"|grep -P ' (egr|etu[-]goth relics?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9]*)? (egr|etu[-]?goth relics?).*$/\1/g');
+
+    kgr=$(echo "${lastCommitMessage}"|grep -P ' (kgr|khagoth relics?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9]*)? (kgr|khagoth relics?).*$/\1/g');
+
+    rgr=$(echo "${lastCommitMessage}"|grep -P ' (rgr|renagoth relics?)\b'|sed -E 's/^.*[^0-9\/]([0-9][0-9]*)(\/[x1-9][0-9]*)? (rgr|renagoth relics?).*$/\1/g');
+
+    hp=$(echo "${lastCommitMessage}"|grep -P ' hp\b'|sed -E 's/^.*[^\w](low|half|mostlyfull|full) hp.*$/\1/g');
+
+    export lvl="$lvl";
+    export loc="$loc";
+    export bmc="$bmc";
+    export botdp="$botdp";
+
+    export ms="$ms";
+    export ps="$ps";
+    export rs="$rs";
+
+    test -z "$egr" && egr=0;
+    export egr="$egr";
+
+    test -z "$kgr" && kgr=0;
+    export kgr="$kgr";
+
+    test -z "$rgr" && rgr=0;
+    export rgr="$rgr";
+
+    export hp="$hp";
+}
+
+alias ds2dir="cd '$darksiders2SaveDir'";
+
+alias ds2ls="cd '$darksiders2SaveDir'; GIT_PAGER=cat git log --format='%h %cd  %s' --date=format:'%Y-%m-%d %H:%M:%S'";
+
+alias ds2list="cd '$darksiders2SaveDir'; GIT_PAGER=cat git log --format='%h %cd  %s' --date=format:'%Y-%m-%d %H:%M:%S'";
+
+alias ds2sav="cd '$darksiders2SaveDir'; git add *;git commit -m"
+
+# ---------------------------------------------------------------------------------------------------
+# loads the specified commit (requires argument). passed argument can be any of:
+#
+# HEAD:    will load the most recent save
+# HEAD~n:  will load the n^th most recent save, where n is a positive integer.
+#
+# <int>: 0 will load HEAD (the last save). 1 will load HEAD~1, 2 will load HEAD~2 etc. negative numbers
+#        will be treated the same as their positive counterparts.
+#
+# commit hash: either the full or abbreviated commit hash will load the save indicated by that hash
+# branch or tag name: will load the commit pointed to by the indicated tag or branch
+# ---------------------------------------------------------------------------------------------------
+alias ds2load="cd '$darksiders2SaveDir'; ds2LoadGame";
+
+# change the comment/message for the last commit using configured git editor (nano by default)
+alias ds2amend="cd '$darksiders2SaveDir'; git commit --amend"
+
+# change the comment/message for the last commit using new passed comment/message
+alias ds2rename="cd '$darksiders2SaveDir'; git commit --amend -m"
+
+# overwrite the last commit using the same comment/message
+alias ds2update="cd '$darksiders2SaveDir'; add *; omsg=\"\$(GIT_PAGER=cat git log --format='%s' -1)\";git commit --amend -m \"\$omsg\";"
+
+# use this to create a "quick save" using the message template and associated variables
+alias ds2qsav="cd '$darksiders2SaveDir'; msg=\"${ds2msgTemplate}\"; git add *; git commit -m \"\$msg\";";
+
+# change the comment/message for the last commit using the message template and associated variables
+alias ds2qren="cd '$darksiders2SaveDir'; msg=\"${ds2msgTemplate}\"; git commit --amend -m \"\$msg\";"
+
+# run either of these to print out / test the variables used in the message template
+alias ds2msg="cd '$darksiders2SaveDir'; msg=\"${ds2msgTemplate}\"; printf '\\n%s\\n%s\\n%s\\n' '$ds2sep' \"msg: \$msg\" '$ds2sep';";
+alias ds2test="cd '$darksiders2SaveDir'; msg=\"${ds2msgTemplate}\"; printf '\\n%s\\n%s\\n%s\\n' '$ds2sep' \"msg: \$msg\" '$ds2sep';";
+
+# run this to initialize variables off hard-coded values (requires some maintenance)
+alias ds2iset="cd '$darksiders2SaveDir'; lvl=13; loc=TODO; notes=TODO; bmc=39; botdp=10; ms=14; ps=2; rs=1; egr=1; deaths=0; hp=nearfull; msg=\"${ds2msgTemplate}\"; printf '\\n%s\\n%s\\n%s\\n' '$ds2sep' \"msg: \$msg\" '$ds2sep';";
+
+# run this to set variables automatically from last commit
+alias ds2aset="cd '$darksiders2SaveDir'; ds2AutoSetVarsFromLastCommitMessage; msg=\"${ds2msgTemplate}\"; printf '\\n%s\\n%s\\n%s\\n' '$ds2sep' \"msg: \$msg\" '$ds2sep';";
+
+

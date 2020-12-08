@@ -1,0 +1,22 @@
+### General status
+
+This game worked fairly well out of the box (no tweaks needed to get it to run). I did have a few fairly minor issues though.
+
+1. This game doesn't Alt+Tab correctly (in fullscreen at least; didnt try windowed mode). If you Alt+Tab, you can shift kb/m focus to another window but the game will remain on top visually. Also if you insert a device (such as charging your phone) and you normally get a pop-up window, that can steal kb/m focus and you will need to Alt+Tab back to game before you can move.
+
+2. Game can behave oddly after being left paused for a time. There were a few times when I got a short call (5-10 minutes) and while it responded fine on the pause menu, after unpausing it took 10-30 seconds before I could move in game.
+
+3. This game ignored me when trying to disable steam cloud saves (both per-game and later turning off cloud for all games). I hate this game's single save per game system and much prefer the DS1 approach so I was using git + some aliases to create and manage my own save slots. To stop it from downloading the cloud saves, it was necessary for me to delete the remote folder and then recreate it with root ownership and restricted permissions: `cd ~/.steam/steam/userdata/<steamid>; rm -r 388410; sudo mkdir -m 0500 388410;`
+
+After doing so, one can use git to create and manage saves over ssh. For reloading, simply `git reset --hard HASH`. Reloading while game isn't running works as expected. But if reloading while in-game, this needs to be done while in the game world before choosinv 'Quit Game' as choosing 'Quit Game' from the pause menu actually pre-loads your last save so that it is ready when you choose 'Continue' from the menus. I used JuiceSSH on Android to ssh in from my phone and create/manage/reload saves while in-game. Very handy if you are picky about item spawns etc. For the aliases I used, see my github repo:
+
+---
+
+### Variations:
+
+#### no options/no tweaks:
+seemed to work fine on LMDE-4 and Fedora 33 aside from things noted above (Proton 5.13.2). Using Cinnamon DE on both.
+
+#### Using D9VK
+Setting launch option `PROTON_USE_D9VK=1 %command%`.
+Only tested on Fedora 33. Didn't notice any difference with or without this launch option.
