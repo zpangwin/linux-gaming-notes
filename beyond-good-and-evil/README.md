@@ -49,8 +49,17 @@ BGE steam fixes:
 
 4\. Regedit seemed to ignore terminal args for me so had to manually import from the gui. Run `WINEPREFIX="$HOME/.steam/steam/steamapps/compatdata/15130/pfx" wine regedit` then from the top-left of regedit, choose Registry > Import Registry File > and select `bge.reg`.
 
-There were a few points at which I gave up on the steam version and played the GOG on instead, as I was able to resolve all of my issues there. I did eventually come back and use some of the GOG version settings etc and applied it to the steam version to get the notes above.
+There were multiple points at which I gave up on the steam version and played the GOG on instead, as I was able to resolve all of my issues there. I did eventually come back and use some of the GOG version settings etc and applied it to the steam version to get the notes above. Another consideration is that if you want to use remapping software such as antimicro, the steam version appears to have some default controller mapping which will conflict with your antimicro mappings (e.g. If you have controller's "A" button mapped to space, game will map it to "left mouse button" so when you press "A" on controller BOTH keys are triggered). In the GOG version, there is no controller support so antimicro profiles should just work.
 
+
+Preventing the game from detecting the controller:
+
+| Status                 | Steps |
+| :--------------------- | :------------------------------------------------------- |
+| Not Working | Steam Libray > Right-click Game > Properties > Controller tab > Disable Steam Input |
+| Not Working | From pfx dir, run `WINEPREFIX="$(pwd)" wine64 control` > Game Controllers > choose Connected Controller > Disable button > OK button |
+| Not Working | Disconnect/turn off controller > start game > wait until menu before turning on/reconnecting |
+| Working     | From pfx dir, run `WINEPREFIX="$(pwd)" wine64 regedit` > then download and import [my reg file](https://raw.githubusercontent.com/zpangwin/antimicro-profiles/master/beyond-good-and-evil/disable-controller-in-current-wineprefix.reg) **OR** go to `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\WineBus` > create DWORD called `Enable SDL` with value "0" |
 
 ---
 
