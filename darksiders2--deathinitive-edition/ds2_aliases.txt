@@ -1,6 +1,7 @@
 # ==============================================================
 # general aliases for git
 # ==============================================================
+export gl_sep='-----------------------------------------------------------------------'
 
 #git CLI commands without 'git' prefix
 alias add='git add'
@@ -13,10 +14,16 @@ alias ga='git add'
 alias gb='git branch'
 alias gco='git checkout'
 alias gcob='git checkout -b'
-alias gl='GIT_PAGER=cat git log --format="%h  %cn  %cd  %s" --date=format:"%Y-%m-%d %H:%M:%S"';
+
+# H = full hash, h = abbreviated hash, cn = committer name, cd = commit date, s = string (commit message)
+alias gl="echo '${gl_sep}';GIT_PAGER=cat git log --format='%C(cyan)%D%Creset  %Cred%h%Creset  %Cgreen%cn%Creset  %C(#ff8c00)%cd%Creset  %s%n${gl_sep}' --date=format:'%Y-%m-%d %H:%M:%S'";
+
 alias glg='GIT_PAGER=cat git log --graph --oneline --decorate --all'
 alias gld='GIT_PAGER=cat git log --pretty=format:"%h %ad %s" --date=short --all'
-alias glog='GIT_PAGER=cat git log --format="%H  %cn  %cd  %s" --date=format:"%Y-%m-%d %H:%M:%S"';
+
+# --reflog will also print commits on other branches/tags
+alias glog="echo '${gl_sep}';GIT_PAGER=cat git log --reflog --format='%C(cyan)%D%Creset  %Cred%h%Creset  %Cgreen%cn%Creset  %C(#ff8c00)%cd%Creset  %s%n${gl_sep}' --date=format:'%Y-%m-%d %H:%M:%S'";
+
 alias greset='git reset --hard'
 alias gss='git status --short'
 alias gst='git status'
