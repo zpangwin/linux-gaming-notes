@@ -72,9 +72,11 @@ Out of the box, this version of the game had fewer issues than the steam version
 
 I was using Lutris as a launcher but since I prefer to install the game using the offline GOG installer, I setup the wineprefixes manually. Here are the steps I used:
 
-1. Obviously, have wine, winetricks, and lutris installed.
-2. Decide where you want the wine container (WINEPREFIX) to live. For me, this was: `/media/f/lutris/games/beyond-good-and-evil` - *note: do **not** actually create this folder, wine is picky and will want to do that when we set it up. You just want to pick the parent folder and decide on a name.*
-3. Run the following command to create the WINEPREFIX (replacing my folder/name if you want):
+1\. Obviously, have wine, winetricks, and lutris installed.
+
+2\. Decide where you want the wine container (WINEPREFIX) to live. For me, this was: `/media/f/lutris/games/beyond-good-and-evil` - *note: do NOT actually create this folder, wine is picky and will want to do that when we set it up. You just want to pick the parent folder and decide on a name.*
+
+3\. Run the following command to create the WINEPREFIX (replacing my folder/name if you want):
 
     # setup 64-bit wine prefix. could probably use 32-bit but it shouldn't matter
     env WINEPREFIX="/media/f/lutris/games/beyond-good-and-evil" WINEARCH=win64 wine wineboot;
