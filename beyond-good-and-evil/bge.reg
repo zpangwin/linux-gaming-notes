@@ -1,0 +1,33 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers]
+"Z:\\gaming\\steam\\steamapps\\common\\Beyond Good and Evil\\CheckApplication.exe"="HIGHDPIAWARE
+ 
+[HKEY_CURRENT_USER\Software\Ubisoft\Beyond Good & Evil\SettingsApplication.INI\Basic video]
+"Activate compatibility settings"=dword:00000001
+"AfterFx"=dword:00000001
+"Autogen mipmap"=dword:00000000
+"Blurryness"=dword:00000000
+"Depth buffer"=dword:00000001
+"Flare"=dword:00000000
+"Flipmode"=dword:00000003
+"Format"=dword:00000016
+"Frame buffers"=dword:00000002
+"HardwareVertexProcessing"=dword:00000000
+"Mipmapping"=dword:00000001
+"Mode"=dword:0000000b
+"NoBands"=dword:00000001
+"Shadows Quality"=dword:00000080
+"SSE Enabled"=dword:00000001
+"Vertex Streams"=dword:00000000
+"Video Adapter"=dword:00000000
+"VSynch"=dword:00000001
+"Water quality"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Ubisoft\Beyond Good & Evil\SettingsApplication.INI\Sound]
+"Audio board FX Capable"=dword:00000001
+"Audio board GUID"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+"Sound FX"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Wine\DllOverrides]
+"atl100"="native,builtin"
