@@ -32,9 +32,9 @@ BGE steam fixes:
 
 #### Steps:
 
-\1. Delete `~/.steam/steam/steamapps/compatdata/15130/pfx` then rerun game to recreate it and exit game.
+1\. Delete `~/.steam/steam/steamapps/compatdata/15130/pfx` then rerun game to recreate it and exit game.
 
-\2. From terminal run the following to create backups of registry, fix bad registry paths, use protontricks to setup reg entries for dsound, then use a more reliable version of dsound.dll. Should resolve forced french audio, looping audio, & audio out-of-sync.
+2\. From terminal run the following to create backups of registry, fix bad registry paths, use protontricks to setup reg entries for dsound, then use a more reliable version of dsound.dll. Should resolve forced french audio, looping audio, & audio out-of-sync.
 
 
     cd $HOME/.steam/steam/steamapps/compatdata/15130/pfx;
@@ -45,9 +45,9 @@ BGE steam fixes:
     protontricks 15130 dsound d3dx9 arial d3dcompiler_47;
     wget --output-document= ./drive_c/windows/syswow64/dsound.dll https://github.com/legluondunet/MyLittleLutrisScripts/raw/master/Beyond%20Good%20and%20Evil/dsound.dll;
 
-\3. Download [bge.reg file](https://raw.githubusercontent.com/zpangwin/linux-gaming-notes/master/beyond-good-and-evil/bge.reg) or create yourself but **use windows-style line endings**.  Contains reg settings I reverse-engineered from the settings app to fix flicking artifacts + the NoBands fix. Save to `~/.steam/steam/steamapps/compatdata/15130/pfx/drive_c/bge.reg`
+3\. Download [bge.reg file](https://raw.githubusercontent.com/zpangwin/linux-gaming-notes/master/beyond-good-and-evil/bge.reg) or create yourself but **use windows-style line endings**.  Contains reg settings I reverse-engineered from the settings app to fix flicking artifacts + the NoBands fix. Save to `~/.steam/steam/steamapps/compatdata/15130/pfx/drive_c/bge.reg`
 
-\4. Regedit seemed to ignore terminal args for me so had to manually import from the gui. Run `WINEPREFIX="$HOME/.steam/steam/steamapps/compatdata/15130/pfx" wine regedit` then from the top-left of regedit, choose Registry > Import Registry File > and select `bge.reg`.
+4\. Regedit seemed to ignore terminal args for me so had to manually import from the gui. Run `WINEPREFIX="$HOME/.steam/steam/steamapps/compatdata/15130/pfx" wine regedit` then from the top-left of regedit, choose Registry > Import Registry File > and select `bge.reg`.
 
 There were a few points at which I gave up on the steam version and played the GOG on instead, as I was able to resolve all of my issues there. I did eventually come back and use some of the GOG version settings etc and applied it to the steam version to get the notes above.
 
