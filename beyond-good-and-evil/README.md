@@ -29,6 +29,7 @@ BGE steam fixes:
 
 1. You're using default paths. If not, change in both the commands AND the reg file. For reg file, use your absolute linux path prefixed with "Z:" e.g. "Z:/home/myuser/etc".
 2. You have recent versions of wine, winetricks, and protontricks installed.
+3. Note: I try to use the default compatdata location (`$HOME/.steamg/steam/steamapps/compatdata/15130/pfx`) where possible but you may also see `"/gaming/steam/steamapps/compatdata/15130/pfx"` which is where I actually have mine. For instance, the REG file has this because I can't use `$HOME` or `~` expansion in the REG file and I obviously can't make it match everybody's username. I am assuming that you will edit any occurrances of my paths to be yours instead.
 
 #### Steps:
 
@@ -243,4 +244,270 @@ create a text file named `Beyond Good and Evil.desktop` and add the following:
     Categories=Game;
 
 Make sure the file is executable (`chmod a+rx "Beyond Good and Evil.desktop"`) then copy it to your desktop. Or if you want it in your app menu, put it in `~/.local/share/applications`. You may need to log out / reboot / restart your Desktop Environment before it appears in the app menu / icons are detected correctly.
+
+---
+
+## Cheats
+
+### Minigames
+
+First, these aren't so much cheats as they are countering the game cheating against you. Since this is a single-player game that only impacts *you*, I especially don't care. But I am listing them as cheats as some folks have very narrow ideas about deviating from the expected play as developers intended and this *does* make it easier to win some specific minigames.
+
+Which mini-games, you ask? Only ones where slowing down game speed might help your reactions counter the AI.
+
+It will probably take awhile to read through my wall of text but it is mostly copy/paste. Still it will probably take at least 10-15 minutes to setup and test so might not be worth if unless you're aggrevated with the cheating the game does or are academically interested (it was both for me, plus I figured this technique is bound to be useful if I come across an older game that I need to fix a bad framerate for).
+
+<details>
+  <summary>Spoiler warning</summary>
+  
+  Yeah, I'm talking about countering that cheating bastard Franci's second air hockey game. The first pearl from this game isn't so bad. But by the time he gets a second pearl, his tactics are downright bullshit and it is not even a remotely fair game. I know I don't *need* all the pearls. But I paid for this game and I want them. So fuck that cheating asshole.
+  
+  That said, this might also help with Peeper's coconut shell game but I didn't test it for that.
+  
+</details>
+
+
+WARNING: **BEFORE** you attempt this,  I strongly recommend that  you should create a backup of your current `${WINEPREFIX}/*.reg` files that wine uses to simulate the registry, so that you can easily restore them to normal afterwards. This is included in my instructions below so don't complain to me if you skip them and fuck shit up.
+
+Note: I will be messing with the SettingsApplication.exe for this too. You can probaby skip that part to be honest but if you get an error about EAX and really want to follow those steps, see my notes above about getting a copy of eax.dll (sorry, I would share it directly but I am not allowed to legally). The eax.dll will go in your install folder with BGE.exe and SettingsApplication.exe.
+
+1\. Backups working registry settings and muck with game settings to make it run slower. Note: this unlikely to slow the game down much so skipping this step is fine.
+
+
+    # change to use whatever path is valid for you
+    # default for proton is under ~/.steam/steam/steamapps/compatdata
+    cd "/gaming/steam/steamapps/compatdata/15130/pfx";
+     
+    # make sure game is not running
+    pkill --signal 9 --full --ignore-case BGE.exe
+     
+    # create backups
+    mkdir registry-backups-normal-framerate && cp -a -t "$_" ./*.reg;
+     
+    # after addressing the eax issue, run the settings app
+    # NOTE: adjust both paths in this command to match YOUR paths
+    # Also, "Z:/" is just the wine equivalant of the linux path "/"
+    /usr/bin/env WINEPREFIX="/gaming/steam/steamapps/compatdata/15130/pfx" /usr/bin/wine start /d"Z:/gaming/steam/steamapps/common/Beyond Good and Evil" SettingsApplication.exe
+
+2\. Note: If you are skipping step 1, you can skip this step too since they go hand-in-hand. Basically, once the settings app is up, you want to do everything you can to reduce FPS. On the Graphics tab, if you can lower refresh rate, then do so. I had the options of "24 Hz", "30 Hz", and "60 Hz"; normally, I have this at 60, but I chose 24 for this. On the Advanced tab, enable/max out everything: water, shadows, antialiasing, flare, HW Vertex Processing, etc. When finished, launch the game and confirm that you can still get to the main menu without issue (shouldn't have any problems at this stage but best to verify so we can isolate any problems that might appear later).
+
+3\. As stated above, the settings app won't impact things much; mostly because this is an old game running on modern PCs and even maxing things out, modern PCs are unlikely to be challenged enough to lower the FPS much if at all. So we need some FPS limiter or Framerate limiter tools that will work under Wine / Proton.
+
+[This steam guide](https://steamcommunity.com/sharedfiles/filedetails/?id=1787799592) covers some basic linux tools and has decent descriptions on our two main options: [libstrangle](https://gitlab.com/torkel104/libstrangle) (fps limiter) and [mangohud](https://github.com/flightlessmango/MangoHud) (fps viewer gui that can also be [configured to limit fps](https://github.com/flightlessmango/MangoHud/blob/master/bin/MangoHud.conf#L8)). Both of these seem to have issues with Proton 5.13+ and require workarounds. Follow my [setup notes](https://www.github.com/zpangwin/linux-gaming-notes/workarounds-for-mango-hud-and-libstrangle) to get them installed, configured, and working with 5.13+.
+
+4\.Now try running the game and see if you get any errors. If you are able to get things running ok, then you can play around with tweaking the actual FPS value but first you want to confirm it still launches before messing with things more. You might have to play with it to find the right match of settings that will work for you PC. For me, the lucky combo was using the above workarounds applied against `Proton-5.21-GE-1` and the launch option `ENABLE_VK_LAYER_TORKEL104_libstrangle=1 STRANGLE_FPS=6 %command%`. With FPS @ 6, it was laggy as fuck and I had to spam click a lot. It was still a very challenging match that took a few tries but it did slow things down enough that I actually had a chance against his cheating ass.
+
+5\. When/if you wish to return to your original game settings, remove the launch options and/or restore back to your old settings
+
+    # change to use whatever path is valid for you
+    # default for proton is under ~/.steam/steam/steamapps/compatdata
+    cd "/gaming/steam/steamapps/compatdata/15130/pfx";
+     
+    # make sure game is not running
+    pkill --signal 9 --full --ignore-case BGE.exe
+     
+    # create backups
+    mkdir registry-backups-low-framerate && cp -a -t "$_" ./*.reg;
+     
+    # restore registry from normal framerate setup
+    cp -a -t ./ ./registry-backups-normal-framerate/*.reg;
+
+---
+
+### Door codes
+
+Do you just want to open the locked doors and don't give a shit about story/timeline/spoilers? Well, here ya go.
+
+1\. Lighthouse:
+
+<details>
+  <summary>Timeline</summary>
+  
+  After you complete the factory
+  
+</details>
+
+<details>
+  <summary>Hint 1</summary>
+  
+  Go to the lighthouse and talk to the long-haired girl in a dress.
+  
+</details>
+
+<details>
+  <summary>Hint 2</summary>
+  
+  Go in your inventory and look at the bottom of the shoes.
+  
+</details>
+
+<details>
+  <summary>Upstairs bedroom code</summary>
+  
+  T4P9
+  
+</details>
+
+<details>
+  <summary>Dock code</summary>
+  
+  H5D9
+  
+</details>
+
+2\. Akuda Bar (in Pedestrian District) - Room 2
+
+Timeline - any time
+
+<details>
+  <summary>Hint 1</summary>
+  
+  At the base of the stairs, there's a shark named Rufus. If you look at the table, there's a slip of paper with the code but he'll cover it up if you get too close...
+  
+</details>
+
+<details>
+  <summary>Hint 2</summary>
+  
+  Use the camera, dumbass!
+  
+</details>
+
+<details>
+  <summary>Code</summary>
+  
+  V8H9
+  
+</details>
+
+3\. Akuda Bar (in Pedestrian District) - Room 3
+
+<details>
+  <summary>Timeline</summary>
+  
+  After you complete the Mister De Castlean mission on Black Isle.
+  
+</details>
+
+<details>
+  <summary>Hint 1</summary>
+  
+  Talk to Mister De Castlean
+  
+</details>
+
+<details>
+  <summary>Hint 2</summary>
+  
+  Talk to Peepers on second floor, adjacent to the room.
+  
+</details>
+
+<details>
+  <summary>Code</summary>
+  
+  Q6D7
+  
+</details>
+
+4\. Akuda Bar (in Pedestrian District) - first floor, near air hockey table
+
+<details>
+  <summary>Timeline</summary>
+  
+  Late game after completing many, many side missions.
+  
+</details>
+
+<details>
+  <summary>Hint</summary>
+  
+  Collect all 88 pearls
+  
+</details>
+
+<details>
+  <summary>Code</summary>
+  
+  TODO
+  
+</details>
+
+5\. Entrance in Pedestrian District
+
+6\. Entrance to Factory
+
+<details>
+  <summary>Timeline</summary>
+  
+  After you complete the Mister De Castlean mission on Black Isle.
+  
+</details>
+
+
+<details>
+  <summary>Code</summary>
+  
+  R9J7
+  
+</details>
+
+7\. Factory Locker
+
+<details>
+  <summary>Code</summary>
+  
+  W8D5
+  
+</details>
+
+8\. Factory Loading Dock / Exit
+
+<details>
+  <summary>Timeline</summary>
+  
+  After you complete the mission at the Factory.
+  
+</details>
+
+
+<details>
+  <summary>Code</summary>
+  
+  N6L5
+  
+</details>
+
+9\. Exit from Slaugherhouse
+
+<details>
+  <summary>Timeline</summary>
+  
+  After you complete the Slaughterhouse objectives.
+  
+</details>
+
+
+<details>
+  <summary>Code</summary>
+  
+  L7D6
+  
+</details>
+
+10\. Alpha Sections - Town Square
+
+<details>
+  <summary>Timeline</summary>
+  
+  After you complete the Slaughterhouse mission.
+  
+</details>
+
+<details>
+  <summary>Code</summary>
+  
+  S6V9
+  
+</details>
 
