@@ -16,6 +16,8 @@ This is for the **GOG** version only. No matter what I tried, the steam verion w
 
 Game launches. You will get a black screen with audio during the Piranha-Bytes splash video but the New Game/Intro Story video works fine (e.g. video is displayed with audio). Xbox 360 controller worked fine -- actually it worked better for me in wine than it did under the steam version on windows.
 
+If you don't want this, you can shorten the launch sequence to a brief (\~ 5 sec?) black screen with the menu appearing right after that by deleting or renaming the logo\*.vid files under the data/extern/videos folder (more below).
+
 ----
 
 
@@ -87,6 +89,22 @@ To enable controller:
 
 If you get weird vertical sensitivity issues, take a look [here](https://steamcommunity.com/sharedfiles/filedetails/?id=734013029) or just look in your ConfigDefault.xml for 'SensitivityX' and 'SensitivityY' values and adjust accordingly. The higher the value, the faster your mouse movement; the guide author used set X to 0.4 and Y to 2.0, but it will depend on your system.
 
+
+## Removing buggy logo videos
+
+
+If you don't want to listen to the logo/splash screen videos (Deep Silver logo, Ubi logo, and PB logo) - which in my setup only play audio anyway, you can go into the videos folder and rename or delete them.
+
+    # from game install dir
+    cd /media/f/lutris/games/gog-risen-2/drive_c/GOG/Risen2
+     
+    # go to videos subfolder
+    cd data/extern/videos
+     
+    # rename the logo files
+    for f in logo_*.vid; do mv "$f" "${f}.bak"; done
+    # OR
+    prename 's/(.vid)$/$1.bak/g' logo_*.vid
 
 
 ## Desktop shortcut
