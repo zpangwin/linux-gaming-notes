@@ -99,15 +99,7 @@ See included file in this folder. For best portability and to avoid copyright is
 You can get it here:
 https://www.moddb.com/games/risen-ii-dark-waters/downloads/risen-2-unofficial-patch-v05
 
-Unfortunately, you will NOT be able to extract it on the Linux side and will need to have access to a Windows machine or VM to be able to extract the files.
-
-Even if I could repackage the files, I would not be allowed to repackage them without the mod authors' permission (or I am not willing to risk it, take your pick).
-
-If someone *else* wanted to repackage it and say link to it on reddit or a forum page somewhere, I would have no qualms about linking to reddit/forums.
-
-For everybody else, I will show a list of the extracted files and their checksums for reference.
-
-Also to allow myself to be able to turn the patch on/off at will, I have set up my game install folder as a git repo. If you are interested in doing so (such as for being able to use the parrot exploit which the patch blocks), then you could set it up like this:
+To allow myself to be able to turn the patch on/off at will, I have set up my game install folder as a git repo. If you are interested in doing so (such as for being able to use the parrot exploit which the patch blocks), then you could set it up like this:
 
 
     # if you want the unofficial risen 2 patch, you can get it here:
@@ -160,7 +152,23 @@ The patch does not overwrite any files. It adds the following files (sha256 sums
 
 To remove the patch, you can either move/delete the files manually or run the uninstaller with wine.
 
+UPDATE:
 
+As far as I can tell, the mod itself does not contain any games assets (ignoring the 'uninstaller', I am showing the files themselves coming in at \~ 876 kB). I'm not entirely sure who the mod author is and "Mein Deutsche ist nicht gut".
 
+I *think* the primary (only?) author was someone who goes by Baltram on the [worldofplayers.de forums](https://forum.worldofplayers.de/forum/threads/1154440-release-Risen-2-Unofficial-Patch) but my German is not very good at all so I'm not sure if this is all his/her work or if it was a collaborative effort.
 
+While the [Risen 1 unofficial patch](https://forum.worldofplayers.de/forum/threads/978203-RELEASE-Risen-unofficial-patch) appears to provide both the source code and a ZIP-based archive, I could not find any such oepn-formats for Risen 2.
+
+According to a post [here](https://forum.worldofplayers.de/forum/threads/1154440-release-Risen-2-Unofficial-Patch/page3), Baltram replied in 2015 Mar - in response to someone asking if there will be any additional updates to the mod:
+
+> I am sorry but no, I don't plan to release a new version. I made this patch about 3 years ago. Now I am totally out of touch with Risen 2 modding and it would take me a lot of time to get into it again. (Besides, most of the bugs that still exist can't be fixed by editing the resource files.) 
+
+That being the case and considering that this is a mod which does not contain any copyrighted game assets and that if one can't get the installer to run, it becomes practically impossible to extract on non-windows systems... I decided to provide extracted copies of the \*.p00 files I listed above in my repo and put them in an archive named `manual-patch-install.tar.xz` which should be easy enough for most linux users to extract.
+
+For those that get [a feeling of impending doom whenever they need to use the "tar" command](https://xkcd.com/1168/), you can just run this to extract:
+
+    tar --extract --file="manual-patch-install.tar.xz"
+
+To Baltram (and other mod authors, if applicable): should you prefer that I do not include copies of the mod files here, please let me know and I will be happy to remove these files ASAP even if it means losing the git history for this repo. Likewise, if you were fine with it and wanted to grant me explicit permission or have me update credits, I would be happy to proudly update with that info as well. For either case, I can be reached at \<my github/gitlab username\> \<at\> \<that one email service owned by google\>. For anyone else, while I am not opposed to general questions / corrections / addendums related to my setup, I am not likely to run through and debug everything for you either.
 

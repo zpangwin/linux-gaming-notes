@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Type=Application
+Name=Risen2
+Icon=/media/f/lutris/games/gog-risen-2/drive_c/GOG/Risen2/system/splash_.bmp
+Exec=/usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/media/f/lutris/games/gog-risen-2" "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe"
+Categories=Game
