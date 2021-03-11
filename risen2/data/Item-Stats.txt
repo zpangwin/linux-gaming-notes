@@ -1,0 +1,219 @@
+
+
+
+Note: The Purchase Price is always 5x Selling Price
+(or Selling Price=Purchase Price/5)
+
+
+| Consumable Name      | Type/BuyPrice | Effect                                            |
+|:--------------------:|:-------------:|:-------------------------------------------------:|
+| Fool's Juice         | PPotion/????  | Silver Tongue, Dirty Tricks, Thievery +2          |
+| Graveroot Extract    | PPotion/????  | Black Magic, Death Cult, Ritual +2                |
+| Leather Oil          | PPotion/????  | Bladeproof, Bulletproof, Intimidate +2            |
+| Sharpeye Paste       | PPotion/????  | Muskets, Pistols, & Shotguns +2                   |
+| Swordthorn Essence   | PPotion/????  | Piercing, Slashing, & Throwing +2                 |
+| -------------------- | ------------- | ------------------------------------------------- |
+| Marksman's Potion    | TPotion/????  |  |
+| Potion of Awe        | TPotion/????  |  |
+| Potion of Blades     | TPotion/????  | Throwing +7/Piercing +7/Slashing +7 for 30s       |
+| Potion of Persuasion | TPotion/????  | Silvertongue +7 for 30s                           |
+| Ritual Potion        | TPotion/????  | Ritual +7 for 30s                                 |
+| Spirit Essence       | TPotion/????  |  |
+| Thief's Potion       | TPotion/????  |  |
+| -------------------- | ------------- | ------------------------------------------------- |
+| Grog                 | Alcohol/60    | 50 Blood (Instant Regeneration)                   |
+| Bloody Mary          | Alcohol/75    | 100 Regeneration over time                        |
+| Rum                  | Alcohol/100   | 100 Blood (Instant Regeneration)                  |
+| Painkiller           | Alcohol/150   | Bladeproof 50, Bulletproof 50                     |
+| -------------------- | ------------- | ------------------------------------------------- |
+| Black Bandana        | Head          | 2 Blade, 2 Bullet, 2 Intimidate                   |
+| Striped Bandana      | Head/100      | 2 Blade, 2 Bullet                                 |
+| Old Bandana          | Head/100      | 2 Blade, 2 Bullet                                 |
+| Old Bicorne Hat      | Head/100      | 2 Blade, 2 Bullet                                 |
+| Pirate Bandana Largo | Head/100      | 5 Blade, 0 Bullet, 5 Intimidate                   |
+| Old Tricorne Hat     | Head/200      | 3 Blade, 3 Bullet                                 |
+| Pirate Hat           | Head/250      | 5 Blade, 5 Bullet, 5 Silver Tongue                |
+| -------------------- | ------------- | ------------------------------------------------- |
+| Dirty Shirt          | Body/75       | 3 Blade, 3 Bullet                                 |
+| Old Shirt            | Body/75       | 3 Blade, 3 Bullet                                 |
+| Plain Shirt          | Body/100      | 5 Blade, 5 Bullet                                 |
+| Striped Shirt        | Body/100      | 5 Blade, 5 Bullet                                 |
+| Old Waistcoat        | Body/150      | 8 Blade, 8 Bullet                                 |
+| Largos Leather Shirt | Body/150      | 6 Blade, 5 Bullet                                 |
+| Leather Shirt        | Body/200      | 6 Blade, 6 Bullet                                 |
+| Elegant Waistcoast   | Body/300      | 10 Blade, 10 Bullet, Silv Tongue +5               |
+| Old Coat             | Body/350      | 12 Blade, 12 Bullet                               |
+| Pirate Clothes       | Body/500      | 10 Blade, 5 Bullet                                |
+| Silk Shirt           | Body/500      | 1 Blade, 1 Bullet, 10 Silv Tongue, 10 Pierc       |
+| -------------------- | ------------- | ------------------------------------------------- |
+| Colourful Trousers   | Legs/150      | 2 Blade, 2 Bullet                                 |
+| Leather Trousers     | Legs/150      | 2 Blade, 2 Bullet                                 |
+| Black Trousers       | Legs/200      | 3 Blade, 3 Bullet, 3 Intimidate                   |
+| White Trousers       | Legs/200      | 3 Blade, 3 Bullet, 3 SilvTongue                   |
+| -------------------- | ------------- | ------------------------------------------------- |
+| Old Shoes            | Feet/75       | 2 Blade, 0 Bullet, 2 Silv Tongue                  |
+| Old Short Boots      | Feet/125      | 5 Blade, 0 Bullet                                 |
+| Wornout Boots: Largo | Feet/125      | 5 Blade, 0 Bullet                                 |
+| Old Leather Boots    | Feet/200      | 5 Blade, 5 Bullet                                 |
+| Good Shoes           | Feet/200      | 3 Blade, 0 Bullet, 3 Silv Tongue                  |
+| Pirate Boots         | Feet/250      | 5 Blade, 5 Bullet                                 |
+| Good Short Boots     | Feet/300      | 5 Blade, 5 Bullet, 2 Silv Tongue                  |
+| Elegant Shoes        | Feet/400      | 5 Blade, 0 Bullet, 5 Silv Tongue                  |
+| -------------------- | ------------- | ------------------------------------------------- |
+| Pearl Earring        | Earring/200   | Silv Tongue +5                                    |
+| Skulls Earring       | Earring/200   | Intimidate +5                                     |
+| Duelist's Earring    | Earring/250   | Piercing +5                                       |
+| Sailor's Earring     | Earring/600   | Bladeproof +5                                     |
+| Bloodthorn Earring   | Earring       |  |
+| Feather Earring      | Earring       |  |
+| Jade Earring         | Earring       | Black Magic +5                                    |
+| Blackpearl           | Earring/2000  | Cunning +1                                        |
+| -------------------- | ------------- | ------------------------------------------------- |
+| Tribal Symbol        | Amulet/150    | Ritual +5
+| Lucky Charm          | Amulet/400    | Bulletproof +5
+| Curse Stone          | Amulet/800    | Death Cult +5, Black Magic +10
+| Ancestral Stone      | Amulet        |  |
+| Bone Necklace        | Amulet        |  |
+| Hunter's Necklace    | Amulet        |  |
+| Jade Pendant         | Amulet        |  |
+| Skull Amulet         | Amulet        |  |
+| Soul Necklace        | Amulet        |  |
+| Ti' Ha Ko            | Amulet        |  |
+| Warrior's Jewelery   | Amulet        |  |
+| -------------------- | ------------- | ------------------------------------------------- |
+| MasterScholar's Ring | Ring/NA       | Glory Bonus +5%                                   |
+| Sparkling Gold Ring  | Ring/150      | Silver Tongue +5                                  |
+| Officer's Ring       | Ring/250      | Piercing +5, Pistols +5                           |
+| Ruby Ring            | Ring/250      | Dirty Tricks +5, Silver Tongue +5                 |
+| Iron Ring            | Ring/500      | Throwing Weapons +5, Bladeproof +5                |
+| Thief's Ring         | Ring/600      | 5 Dirty Tricks, 10 Thievery                       |
+| Ring of Deception    | Ring/600      | Dirty Tricks +15, Silver Tongue +5                |
+| Inquisitor's Ring    | Ring          | 5 Muskets, 5 Bulletproof                          |
+| Bone Ring            | Ring          |  |
+| Hunter's Ring        | Ring          |  |
+| Jade Ring            | Ring          |  |
+| Soul Ring            | Ring          |  |
+| -------------------- | ------------- | ------------------------------------------------- |
+| Curse Doll           | Misc          |  |
+| Sceptre of Fear      | Sceptre       |  |
+| Sceptre of Power     | Sceptre       |  |
+| Skull Sceptre        | Sceptre       |  |
+| -------------------- | ------------- | ------------------------------------------------- |
+| Old Sword            | Piercing/150  | Dam 15-30, Talent +5                              |
+| Crab Stabber         | Piercing/250  | Dam 15-30, Talent +10                             |
+| Stormthorn           | Piercing/250  | Dam 20-30, Talent +15                             |
+| Corsair's Sword      | Piercing/250  | Dam 25-30, Talent +5                              |
+| Officer's Sword      | Piercing/450  | Dam 20-40, Talent +10                             |
+| Fencing Foil         | Piercing/600  | Dam 20-50, Talent +10                             |
+| Epee                 | Piercing/800  | Dam 20-60, Talent +15                             |
+| Sword                | Piercing/1100 | Dam 30-65, Talent +10                             |
+| Duelling Epee        | Piercing/1500 | Dam 30-70, Talent +15                             |
+| Buchaneers Sword     | Piercing/1600 | Dam 35-80, Talent +5                              |
+| Magnificient Sword   | Piercing/1900 | Dam 35-80, Talent +20                             |
+| Rapier               | Piercing/1750 | Dam 40-90, Talent +10                             |
+| Elegant Scimitar     | Piercing/2250 | Dam 45-70, Talent +20                             |
+| Death Knell          | Piercing/2250 | Dam 45-95, Talent +10                             |
+| Admiral's Blade      | Piercing/2500 | Dam 45-100, Talent +15                            |
+| King's Sword         | Piercing/2500 | Dam 45-100, Talent +15                            |
+| Soul Caller          | Piercing/2500 | Dam 45-100, Talent +15                            |
+| -------------------- | ------------- | ------------------------------------------------- |
+| Sunken One's Axe     | Slashing/50   | Dam 15-25, Talent +10                             |
+| Cutlass              | Slashing/250  | Dam 25-30, Talent +5                              |
+| Buccaneer's Knife    | Slashing/250  | Dam 25-30, Talent +5                              |
+| Machete              | Slashing/450  | Dam 25-30, Talent +10                             |
+| Sabre                | Slashing/550  | Dam 30-40, Talent +10                             |
+| Scimitar             | Slashing/750  | Dam 30-40, Talent +15                             |
+| Pirate's Sabre       | Slashing/1000 | Dam 35-50, Talent +10                             |
+| Prizetaker           | Slashing/1500 | Dam 35-50, Talent +15                             |
+| Captain's Sabre      | Slashing/1500 | Dam 40-60, Talent +10                             |
+| Reaper               | Slashing/1750 | Dam 40-60, Talent +10                             |
+| Exotic Sabre         | Slashing/1875 | Dam 50-80, Talent +15                             |
+| Stormwind            | Slashing/2000 | Dam 45-60, Talent +15                             |
+| Plank Breaker        | Slashing/2100 | Dam 45-70, Talent +5                              |
+| General (DLC)        | Slashing/2100 | Dam 50-80, Talent +20                             |
+| Wave Dancer          | Slashing/3000 | Dam 60-100, Talent +20                            |
+| -------------------- | ------------- | ------------------------------------------------- |
+| Boarding Pistol      | Pistols/400   | Dam 50, Range 8 Steps, Reload 20s, Talent +10     |
+| Scatter Pistol       | Pistols/500   | Dam 60, Range 8 Steps, Reload 30s, Talent +5      |
+| Pistol               | Pistols/750   | Dam 60, Range 8 Steps, Reload 20s, Talent +20     |
+| The Twins            | Pistols/950   | Dam 70, Range 8 Steps, Reload 15s, Talent +10     |
+| The Grinder          | Pistols/1000  | Dam 70, Range 8 Steps, Reload 30s, Talent +5      |
+| Officer's Pistol     | Pistols/1350  | Dam 65, Range 8 Steps, Reload 20s, Talent +15     |
+| Sawn-Off Shotgun     | Pistols       |  |
+| Silver Iron          | Pistols+      | Dam 80, Range 8 Steps, Reload 20s, Talent +15     |
+| -------------------- | ------------- | ------------------------------------------------- |
+| D-barrelled Shotgun  | Shotguns      |  |
+| Fire Cudgel          | Shotguns      |  |
+| -------------------- | ------------- | ------------------------------------------------- |
+| Shotgun              | Muskets/750   | Dam 50, Range 26, Reload 2s, Talent +5
+| Storm Rifle          | Muskets       |  |
+| Seaman's Shotgun     | Muskets       |  |
+| -------------------- | ------------- | ------------------------------------------------- |
+
+
+
+| Consumable Name      | Type        | Recipe                                              |
+|:--------------------:|:-----------:|:---------------------------------------------------:|
+| Fool's Juice         | Perm Potion | 1x Jester's Cap, 1x Black Oleander, 1x Monkey Skull |
+| Graveroot Extract    | Perm Potion | 1x Graveroot, 1x Spirit Lily, 1x Bone               |
+| Leather Oil          | Perm Potion | ???                                                 |
+| Sharpeye Paste       | Perm Potion | 1x Sharpeye, 1x Powdered Poppy Seed, 1x Acid Gland  |
+| Swordthorn Essence   | Perm Potion | 1x Swordthorn, 1x Choking Vine, 1x Panther Paw      |
+| -------------------- | ----------- | --------------------------------------------------- |
+| Marksman's Potion    | Temp Potion | 1x Powdered Poppy Seed, 1x Acid Gland               |
+| Potion of Awe        | Temp Potion | 1x Bloodroot, 1x Tusk                               |
+| Potion of Blades     | Temp Potion | 1x Choking Vine, 1x Panther Paw                     |
+| Potion of Persuasion | Temp Potion | 1x Golden Clover, 1x Sand Devil Sensor              |
+| Ritual Potion        | Temp Potion | 1x Spirit Lily, 1x Ear                              |
+| Spirit Essence       | Temp Potion | 1x Skullflower, 1x Bone                             |
+| Thief's Potion       | Temp Potion | 1x Black Oleander, 1x Monkey Skull                  |
+| -------------------- | ----------- | --------------------------------------------------- |
+| Bloody Mary          | Alcohol     | 2x Bloodroot, 1x Sugar                              |
+| Grog                 | Alcohol     | 1x Sugar                                            |
+| Painkiller           | Alcohol     | 1x Bloodroot, 1x Sugar                              |
+| Rum                  | Alcohol     | 2x Sugar                                            |
+| -------------------- | ----------- | --------------------------------------------------- |
+| Ancestral Stone      | Amulet      | 2x Jade, 1x Gold Nugget, 1x Jaguar Heart            |
+| Bone Necklace        | Amulet      | 3x Bone, 1x Jade                                    |
+| Curse Stone          | Amulet      | 1x Jade, 2x Eye, 1x Acid Gland                      |
+| Hunter's Necklace    | Amulet      | 1x Jade, 1x Claw, 2x Tusk                           |
+| Jade Pendant         | Amulet      | 2x Jade, 1x Gold Nugget, 1x Feather                 |
+| Skull Amulet         | Amulet      | 1x Monkey Skull, 1x Jade, 1x Bone                   |
+| Soul Necklace        | Amulet      | 1x Jade, 1x Gold Nugget, 1x Jaguar Heart            |
+| Ti' Ha Ko            | Amulet      | 2x Jade, 1x Bone, 1x Jaguar Heart                   |
+| Tribal Symbol        | Amulet      | 1x Bone, 1x Teeth, 1x Feather                       |
+| Warrior's Jewelery   | Amulet      | 1x Gold Nugget, 1x Panther Paw, 1x Tusk             |
+| -------------------- | ----------- | --------------------------------------------------- |
+| Bone Ring            | Ring        | 2x Bone                                             |
+| Hunter's Ring        | Ring        | 1x Gold Nugget,1x Tusk                              |
+| Jade Ring            | Ring        | 1x Jade, 1x Acid Gland                              |
+| Soul Ring            | Ring        | 1x Bone, 1x Jade                                    |
+| -------------------- | ----------- | --------------------------------------------------- |
+| Bloodthorn Earring   | Earring     | 1x Bone, 1x Teeth                                   |
+| Feather Earring      | Earring     | 1x Tusk, 1x Feather                                 |
+| Jade Earring         | Earring     | 1x Jade, 1x Bone                                    |
+| -------------------- | ----------- | --------------------------------------------------- |
+| Curse Doll           | Misc        | 1x Claw, 1x VodoDoll, 1x MonkeySkull, 1x SpiritLily |
+| Sceptre of Fear      | Sceptre     | 1x Skull, 1x Eye, 1x Jade, 1x Emerald               |
+| Sceptre of Power     | Sceptre     | 1x Jade, 1x GoldNug, 1x SandevilSensor, 1x Sapphire |
+| Skull Sceptre        | Sceptre     | Quest Item (no ingredients lsted)                   |
+| -------------------- | ----------- | --------------------------------------------------- |
+| Duelling Epee        | Piercing    | 2x Sword Blank                                      |
+| Epee                 | Piercing    | 1x Sword Blank, 1x Gold Nugget                      |
+| Rapier               | Piercing    | 1x Sword Blank, 1x Gold Nugget, 1x Ruby             |
+| -------------------- | ----------- | --------------------------------------------------- |
+| Captain's Sabre      | Slashing    | 2x Sword Blank                                      |
+| Scimitar             | Slashing    | 2x Sword Blank, 1x Gold Nugget                      |
+| Plank Breaker        | Slashing    | 1x Sword Blank, 1x Gold Nugget                      |
+| -------------------- | ----------- | --------------------------------------------------- |
+| Sawn-Off Shotgun     | Pistols     | 1x Funnel-shaped Gun Barrel, 1x Wheel Lock          |
+| Twins                | Pistols     | 2x Wheel Lock, 2x Pistol Barrel                     |
+| -------------------- | ----------- | --------------------------------------------------- |
+| D-barrelled Shotgun  | Shotguns    | 2x Shotgun Barrel, 2x Matchlock                     |
+| Fire Cudgel          | Shotguns    | 1x Shotgun Barrel, 1x Matchlock                     |
+| -------------------- | ----------- | --------------------------------------------------- |
+| Storm Rifle          | Rifle       | 2x Shotgun Barrel, 2x Matchlock, 1x Curved Dagger   |
+| Seaman's Shotgun     | Rifle       | 1x Shotgun Barrel, 1x Matchlock, 1x Curved Dagger   |
+| -------------------- | ----------- | --------------------------------------------------- |
+
+
