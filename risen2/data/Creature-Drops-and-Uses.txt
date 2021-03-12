@@ -27,31 +27,29 @@ I may be missing some later game locations for these and I don't really care as 
 -----------------------------------------------------
 
 
-| Creature Name    | Normal | B-saw  | S-knife | J-chisel | R-Knife   |
-|:----------------:|:------:|:------:|:-------:|:--------:|:---------:|
-| Cave Bats        | ---    | Claw   | ---     | ---      | ???       | -> Ear
-| Blueclaw Monkeys | ---    | Claw   | ---     | Teeth    | ???       |
-| Claw Monkeys     | ---    | Claw   | ---     | Teeth    | ???       |
-| Firebirds        | C-Meat | ---    | ---     | ???      | ???       | -> Feather
-| Gators           | ---    | ---    | ---     | ???      | ???       |
-| Ghouls           | ---    | Claw   | ---     | ???      | ???       |
-| Giant Crabs      | Oyster | ---    | ---     | ???      | ???       | -> Eye
-| Gorilla          | ???    | ---    | Skin    | ???      | ???       | -> Teeth
-| Grave Spiders    | ???    | ???    | ???     | ???      | ???       | -> Eye
-| Guardians        | Club   | ---    | ???     | ???      | ???       |
-| Jaguar           | ---    | ---    | Skin    | ???      | ???       | -> Jaguar Heart
-| Monkeys (Normal) | ---    | ---    | ---     | ???      | ???       | -> Monkey Skull
-| Panther          | ---    | ???    | ???     | ???      | ???       | -> Panther Paw
-| Rats             | ---    | ---    | ---     | ???      | ???       |
-| Sand Devil       | Sensor | ---    | ???     | ???      | ???       |
-| Silverback       | ???    | ???    | ???     | ???      | ???       |
-| Skeleton         | ???    | ???    | ???     | ???      | ???       |
-| Spider           | ???    | ???    | ???     | ???      | ???       | -> Eye
-| Sunken One       | ???    | ???    | ???     | ???      | ???       |
-| Termite Warrior  | ---    | Sickle | ---     | ???      | ???       | -> Acid Gland
-| Termite Worker   | ---    | Sickle | ---     | ???      | ???       |
-| Turkeys          | C-Meat | ---    | ---     | ---      | ???       |
-| Warthogs         | Meat   | ---    | Skin    | ???      | ???       | -> Tusk
+| Creature Name    | Normal Drop  | B-saw  | S-knife | J-chisel | R-Knife   |
+|:----------------:|:------------:|:------:|:-------:|:--------:|:---------:|
+| Cave Bats        | ---          | Claw   | ---     | ---      | ???       | -> Ear
+| Blueclaw Monkeys | ---          | Claw   | ---     | Teeth    | ???       |
+| Claw Monkeys     | ---          | Claw   | ---     | Teeth    | ???       |
+| Firebirds        | Chicken Meat | ---    | ---     | ---      | ???       | -> Feather
+| Gators           | ---          | ---    | ---     | ???      | ???       |
+| Ghouls           | ---          | Claw   | ---     | ???      | ???       |
+| Giant Crabs      | Oyster       | ---    | ---     | ---      | ???       | -> Eye
+| Gorilla          | ???          | ---    | Skin    | Teeth    | ???       |
+| Grave Spiders    | ---          | ???    | ---     | ???      | ???       | -> Eye
+| Jaguar           | ---          | ---    | Skin    | ???      | ???       | -> Jaguar Heart
+| Monkeys (Normal) | ---          | ---    | ---     | ---      | ???       | -> Monkey Skull
+| Panther          | ---          | ---    | ???     | ???      | ???       | -> Panther Paw
+| Rats             | ---          | ---    | ---     | ---      | ---       |
+| Sand Devil       | SD Sensor    | ---    | ---     | ---      | ---       |
+| Silverback       | ???          | ???    | ???     | ???      | ???       |
+| Skeleton         | ???          | ???    | ???     | ???      | ???       |
+| Spider           | ???          | ???    | ???     | ???      | ???       | -> Eye
+| Termite Warrior  | ---          | Sickle | ---     | ???      | ???       | -> Acid Gland
+| Termite Worker   | ---          | Sickle | ---     | ???      | ???       |
+| Turkeys          | Chicken Meat | ---    | ---     | ---      | ???       |
+| Warthogs         | Meat         | ---    | Skin    | Tusk     | ???       |
 
 
 -----------------------------------------------------
