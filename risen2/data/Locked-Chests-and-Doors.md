@@ -6,42 +6,48 @@
 
 I won't mention gold, provisions, goblets, and such but if there is a quest-item, unique item, potion, rare item, or equipment I will mention it.
 
-| Level | Island                | Area                 | Notes                                                  | Notable Items             |
-|:-----:|:---------------------:|:--------------------:|:------------------------------------------------------:|:-------------------------:|
-| ??    | Caldera               | Barracks building    | Second floor, by Angus in first chapter                | ???                       |
-| ??    | Caldera               | Barracks building    | First floor, by guards' beds - inner room              | ???                       |
-| ??    | Caldera               | Barracks building    | First floor, by guards' beds - outer room              | ???                       |
-| 20    | Tacarigua             | Plantation           | In the storehouse shed                                 | Potion of Awe             |
-| 30    | Tacarigua             | Puerto Sacarico      | In the guard barracks                                  | Ritual Potion             |
-| 60    | Tacarigua             | Puerto Sacarico      | In De Fuego's house, second floor                      | ???                       |
-| 25    | Tacarigua             | Puerto Sacarico      | In De Fuego's house, first floor, left side            | ---                       |
-| 20    | Tacarigua             | Puerto Sacarico      | In De Fuego's house, first floor, right side           | Ring of Deception         |
-| 30    | Tacarigua             | Vasco's Tower        | Near the bed                                           | ---                       |
-| 35    | Tacarigua             | Lighthouse           | First floor                                            | Scimitar, Thief's Ring    |
-| 20    | Tacarigua             | Pirates Den          | Stone's House (the blacksmith)                         | Hammer ?                  |
-| 30    | Tacarigua             | Pirates Den          | Top floor of bar (booze's room) - by bed               | Iron Ring                 |
-| 90    | Tacarigua             | Pirates Den          | Top floor of bar (booze's room) - by shelf             | ???                       |
-| 90    | Tacarigua             | S of "Large Gate"    | In wilderness S/SW of Pirates Den entrance             | ???                       |
-| 30    | Tacarigua             | N of "Large Gate"    | Head N but follow cliff left and into cave             | Fencing Foil, Jade Earing |
-| 20    | Tacarigua             | SE corner of swamps  | Farthest SE of island/swamps on a sandbar              | ---                       |
-| 90    | Tacarigua             | NE corner of swamps  | Farthest NE of swamps by 4 ghouls, 2 crabs             | ???                       |
-| 25    | Tacarigua             | Steelbeard's Ship    | Talk to guy above decks then go below decks            | ---                       |
-| 20    | Sword Coast           | Lookout Tower        | Up the stairs on the "ramparts"                        | ---                       |
-| 25    | Sword Coast           | Outside the Batcave  | Head to town via cave. on right as you exit            | ---                       |
-| 20    | Sword Coast           | Near Puerto Isabella | Follow path NW of town, by fork in the road            | ---                       |
-| 25    | Sword Coast           | Puerto Isabella      | As you come in the N gate, room off to the side        | ---                       |
-| 20    | Sword Coast           | Puerto Isabella      | Outside between N gate and Sophia (bartender)          | ---                       |
-| 20    | Sword Coast           | Puerto Isabella      | In Webster's house (the gunsmith)                      | Sophia's Wine             |
-| 30    | Sword Coast           | Puerto Isabella      | In Cooper's house (the blacksmith)                     | Hammer, Sword Blank       |
-| 40    | Sword Coast           | Puerto Isabella      | In Tito's house (the butcher)                          | ---                       |
-| 20    | Sword Coast           | Puerto Isabella      | In the pigpen behind Tito's house (the butcher)        | ---                       |
-| 25    | Sword Coast           | Puerto Isabella      | Sebastiano's Manor 2F, in the room before Isabella's   | ---                       |
-| 75    | Sword Coast           | Puerto Isabella      | Sebastiano's Manor 2F, in Isabella's room              | ???                       |
-| 25    | Sword Coast           | Puerto Isabella      | Sebastiano's Manor 1F, in guard barracks room          | ---                       |
-| 65    | Sword Coast           | Puerto Isabella      | Sebastiano's Manor 1F, in Sebastiano's room            | ???                       |
-| 90    | Sword Coast           | Puerto Isabella      | Sebastiano's Manor 1F, in closet in Sebastiano's room  | ???                       |
-| 85    | Sword Coast           | N of Native Village  | Near where you kill the gator                          | ???                       |
-| 60    | Sword Coast           | Native Village       | In Kupua's hut                                         | ???                       |
+| Level | Island                | Area                 | Notes                                                  | Notable Items                     |
+|:-----:|:---------------------:|:--------------------:|:------------------------------------------------------:|:---------------------------------:|
+| ??    | Caldera               | Barracks building    | Second floor, by Angus in first chapter                | ???                               |
+| ??    | Caldera               | Barracks building    | First floor, by guards' beds - inner room              | ???                               |
+| ??    | Caldera               | Barracks building    | First floor, by guards' beds - outer room              | ???                               |
+| 20    | Tacarigua             | Plantation           | In the storehouse shed                                 | Potion of Awe                     |
+| 30    | Tacarigua             | Puerto Sacarico      | In the guard barracks                                  | Ritual Potion                     |
+| 60    | Tacarigua             | Puerto Sacarico      | In De Fuego's house, second floor                      | ???                               |
+| 25    | Tacarigua             | Puerto Sacarico      | In De Fuego's house, first floor, left side            | ---                               |
+| 20    | Tacarigua             | Puerto Sacarico      | In De Fuego's house, first floor, right side           | Ring of Deception                 |
+| 30    | Tacarigua             | Vasco's Tower        | Near the bed                                           | ---                               |
+| 35    | Tacarigua             | Lighthouse           | First floor                                            | Scimitar, Thief's Ring            |
+| 20    | Tacarigua             | Pirates Den          | Stone's House (the blacksmith)                         | Hammer ?                          |
+| 30    | Tacarigua             | Pirates Den          | Top floor of bar (booze's room) - by bed               | Iron Ring                         |
+| 90    | Tacarigua             | Pirates Den          | Top floor of bar (booze's room) - by shelf             | ???                               |
+| 90    | Tacarigua             | S of "Large Gate"    | In wilderness S/SW of Pirates Den entrance             | ???                               |
+| 30    | Tacarigua             | N of "Large Gate"    | Head N but follow cliff left and into cave             | Fencing Foil, Jade Earing         |
+| 20    | Tacarigua             | SE corner of swamps  | Farthest SE of island/swamps on a sandbar              | ---                               |
+| 90    | Tacarigua             | NE corner of swamps  | Farthest NE of swamps by 4 ghouls, 2 crabs             | ???                               |
+| 25    | Tacarigua             | Steelbeard's Ship    | Talk to guy above decks then go below decks            | ---                               |
+| 20    | Sword Coast           | Lookout Tower        | Up the stairs on the "ramparts"                        | ---                               |
+| 25    | Sword Coast           | Outside the Batcave  | Head to town via cave. on right as you exit            | ---                               |
+| 20    | Sword Coast           | Near Puerto Isabella | Follow path NW of town, by fork in the road            | ---                               |
+| 25    | Sword Coast           | Puerto Isabella      | As you come in the N gate, room off to the side        | ---                               |
+| 20    | Sword Coast           | Puerto Isabella      | Outside between N gate and Sophia (bartender)          | ---                               |
+| 20    | Sword Coast           | Puerto Isabella      | In Webster's house (the gunsmith)                      | Sophia's Wine                     |
+| 30    | Sword Coast           | Puerto Isabella      | In Cooper's house (the blacksmith)                     | Hammer, Sword Blank               |
+| 40    | Sword Coast           | Puerto Isabella      | In Tito's house (the butcher)                          | ---                               |
+| 20    | Sword Coast           | Puerto Isabella      | In the pigpen behind Tito's house (the butcher)        | ---                               |
+| 25    | Sword Coast           | Puerto Isabella      | Sebastiano's Manor 2F, in the room before Isabella's   | ---                               |
+| 75    | Sword Coast           | Puerto Isabella      | Sebastiano's Manor 2F, in Isabella's room              | ???                               |
+| 25    | Sword Coast           | Puerto Isabella      | Sebastiano's Manor 1F, in guard barracks room          | ---                               |
+| 65    | Sword Coast           | Puerto Isabella      | Sebastiano's Manor 1F, in Sebastiano's room            | ???                               |
+| 90    | Sword Coast           | Puerto Isabella      | Sebastiano's Manor 1F, in closet in Sebastiano's room  | ???                               |
+| 45    | Sword Coast           | Puerto Isabella      | In Gun Powder Shed (near cannonier, Benito)            | Dueling Epee, Powder Keg          |
+| 40    | Sword Coast           | Near Puerto Isabella | On the beach SE of town, at the bottom of the slope    | Duelist Earring, Soul Caller Hilt |
+| 30    | Sword Coast           | NW of Pirate Tower   | In the cave where you fight a pirate and 2 natives     | Map of the Sword Coast            | 
+| 85    | Sword Coast           | N of Native Village  | Near where you kill the gator                          | ???                               |
+| 20    | Sword Coast           | Native Village       | Next to Pirate Jim                                     | Jim's Treasure Map                |
+| 30    | Sword Coast           | Native Village       | Hut next to Ranapiri                                   | Warthog Skin, Spear               |
+| 60    | Sword Coast           | Native Village       | In Kupua's hut                                         | Pearl Earring, Rattle, Schematic for Hunter Necklace |
+| 30    | Sword Coast           | SW of Native Village | Turn right out of village and chest is by the river    | ---                               |
 | --    | Isle of Thieves       | Placeholder |  |  |
 | --    | Treasure island (DLC) | Placeholder |  |  |
 
@@ -71,11 +77,12 @@ https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62699114
 
 ## Locked Doors:
 
-| Level | Island                | Area                 | Notes                                                  | Notable Items             |
-|:-----:|:---------------------:|:--------------------:|:------------------------------------------------------:|:-------------------------:|
-| ??    | Caldera               | Beach/Docks Area     | Room on Storehouse 2nd Floor                           | ???                       |
-| ??    | SwordCoast            | Puerto Isabella      | Room on Storehouse 2nd Floor                           | ???, L?? Chest            |
-| 50    | Sword Coast           | Puerto Isabella      | Sebastiano's Manor 1F, closet in Sebastiano's room     | Sophia's Wine, L90 Chest  |
+| Level | Island                | Area                 | Notes                                                  | Notable Items               |
+|:-----:|:---------------------:|:--------------------:|:------------------------------------------------------:|:---------------------------:|
+| ??    | Caldera               | Beach/Docks Area     | Room on Storehouse 2nd Floor                           | ???                         |
+| ??    | SwordCoast            | Puerto Isabella      | Room on Storehouse 2nd Floor                           | ???, L?? Chest              |
+| 50    | Sword Coast           | Puerto Isabella      | Sebastiano's Manor 1F, closet in Sebastiano's room     | Sophia's Wine, L90 Chest    |
+| 50    | Sword Coast           | Puerto Isabella      | Gun Powder Shed (near cannonier, Benito)               | Powder Keg, L45 Chest, Bomb |
 
 
 ----
@@ -91,6 +98,8 @@ These charts will start at the minimum cunning level needed for each scenario an
 ### Lockpicking Only:
 
 Lockpicking: Minimum Cunning 4
+
+Reminder: The table columns are using *base* Cunning Level (e.g. without bonuses)
 
 | Item(s)                   | C-4 | C-5 | C-6 | C-7 | C-8 | C-9 | C-10 |
 |:-------------------------:|:---:|:---:|:---:|:---:|:---:|:---:|:----:|
@@ -125,9 +134,14 @@ Lockpicking: Minimum Cunning 4
 Thievery 1:  Minimum Cunning 2
 Lockpicking: Minimum Cunning 4
 
+Reminder: The table columns are using *base* Cunning Level (e.g. without bonuses)
+
 | Item(s)                   | C-4 | C-5 | C-6 | C-7 | C-8 | C-9 | C-10 |
 |:-------------------------:|:---:|:---:|:---:|:---:|:---:|:---:|:----:|
-| No Items                  | 25  | 30  | 35  | 40  | 45  | 50  | 55   |
+| No Items - Before Skills  | 20  | 25  | 30  | 35  | 40  | 45  | 50   |
+| ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
+| No Items - After Skills   | 25  | 30  | 35  | 40  | 45  | 50  | 55   |
+| ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 | BP: (Blackpearl Earring)  | 30  | 35  | 40  | 45  | 50  | 55  | 60   |
 | TR: (Thief's Ring)        | 35  | 40  | 45  | 50  | 55  | 60  | 65   |
 | SB: (Snuffbox)            | 35  | 40  | 45  | 50  | 55  | 60  | 65   |
@@ -154,66 +168,76 @@ Lockpicking: Minimum Cunning 4
 
 ### Lockpicking + Thievery 2 (+15):
 
-Thievery 2:  Minimum Cunning 5
+Thievery 2:  Minimum Cunning 5 (4 if using Blackpearl)
 Lockpicking: Minimum Cunning 4
 
-| Item(s)                   | C-5 | C-6 | C-7 | C-8 | C-9 | C-10 |
-|:-------------------------:|:---:|:---:|:---:|:---:|:---:|:----:|
-| No Items                  | 40  | 45  | 50  | 55  | 60  | 65   |
-| BP: (Blackpearl Earring)  | 45  | 50  | 55  | 60  | 65  | 70   |
-| TR: (Thief's Ring)        | 50  | 55  | 60  | 65  | 70  | 75   |
-| SB: (Snuffbox)            | 50  | 55  | 60  | 65  | 70  | 75   |
-| TP: (Thief Potion - temp) | 47  | 52  | 57  | 62  | 67  | 72   |
-| ------------------------- | --- | --- | --- | --- | --- | ---- |
-| BP + TR (+15)             | 55  | 60  | 65  | 70  | 75  | 80   |
-| BP + SB (+15)             | 55  | 60  | 65  | 70  | 75  | 80   |
-| TR + SB (+20)             | 60  | 65  | 70  | 75  | 80  | 85   |
-| ------------------------- | --- | --- | --- | --- | --- | ---- |
-| BP + TP (+12)             | 52  | 57  | 62  | 67  | 72  | 77   |
-| TR + TP (+17)             | 57  | 62  | 67  | 72  | 77  | 82   |
-| SB + TP (+17)             | 57  | 62  | 67  | 72  | 77  | 82   |
-| ------------------------- | --- | --- | --- | --- | --- | ---- |
-| BP + TR + SB (+25)        | 65  | 70  | 75  | 80  | 85  | 90   |
-| ------------------------- | --- | --- | --- | --- | --- | ---- |
-| BP + TR + TP (+22)        | 62  | 67  | 72  | 77  | 82  | 87   |
-| BP + SB + TP (+22)        | 62  | 67  | 72  | 77  | 82  | 87   |
-| TR + SB + TP (+27)        | 67  | 72  | 77  | 82  | 87  | 92   |
-| ------------------------- | --- | --- | --- | --- | --- | ---- |
-| BP + TR + SB + TP (+32)   | 72  | 77  | 82  | 87  | 92  | 97   |
-| ------------------------- | --- | --- | --- | --- | --- | ---- |
+Reminder: The table columns are using *base* Cunning Level (e.g. without bonuses)
+
+| Item(s)                   | C-4 | C-5 | C-6 | C-7 | C-8 | C-9 | C-10 |
+|:-------------------------:|:---:|:---:|:---:|:---:|:---:|:---:|:----:|
+| No Items - Before Skills  | 20  | 25  | 30  | 35  | 40  | 45  | 50   |
+| ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
+| No Items - After Skills   | 35  | 40  | 45  | 50  | 55  | 60  | 65   |
+| ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
+| BP: (Blackpearl Earring)  | 40  | 45  | 50  | 55  | 60  | 65  | 70   |
+| TR: (Thief's Ring)        | 45  | 50  | 55  | 60  | 65  | 70  | 75   |
+| SB: (Snuffbox)            | 45  | 50  | 55  | 60  | 65  | 70  | 75   |
+| TP: (Thief Potion - temp) | 42  | 47  | 52  | 57  | 62  | 67  | 72   |
+| ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
+| BP + TR (+15)             | 50  | 55  | 60  | 65  | 70  | 75  | 80   |
+| BP + SB (+15)             | 50  | 55  | 60  | 65  | 70  | 75  | 80   |
+| TR + SB (+20)             | 55  | 60  | 65  | 70  | 75  | 80  | 85   |
+| ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
+| BP + TP (+12)             | 47  | 52  | 57  | 62  | 67  | 72  | 77   |
+| TR + TP (+17)             | 47  | 57  | 62  | 67  | 72  | 77  | 82   |
+| SB + TP (+17)             | 52  | 57  | 62  | 67  | 72  | 77  | 82   |
+| ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
+| BP + TR + SB (+25)        | 55  | 65  | 70  | 75  | 80  | 85  | 90   |
+| ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
+| BP + TR + TP (+22)        | 57  | 62  | 67  | 72  | 77  | 82  | 87   |
+| BP + SB + TP (+22)        | 57  | 62  | 67  | 72  | 77  | 82  | 87   |
+| TR + SB + TP (+27)        | 62  | 67  | 72  | 77  | 82  | 87  | 92   |
+| ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
+| BP + TR + SB + TP (+32)   | 67  | 72  | 77  | 82  | 87  | 92  | 97   |
+| ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 
 
 
 
 ### Lockpicking + Thievery 3 (+30):
 
-Thievery 3:  Minimum Cunning 8
+Thievery 3:  Minimum Cunning 8 (7 if using Blackpearl)
 Lockpicking: Minimum Cunning 4
 
-| Item(s)                   | C-8 | C-9 | C-10 |
-|:-------------------------:|:---:|:---:|:----:|
-| No Items                  | 70  | 75  | 80   |
-| BP: (Blackpearl Earring)  | 75  | 80  | 85   |
-| TR: (Thief's Ring)        | 80  | 85  | 90   |
-| SB: (Snuffbox)            | 80  | 85  | 90   |
-| TP: (Thief Potion - temp) | 77  | 82  | 87   |
-| ------------------------- | --- | --- | ---- |
-| BP + TR (+15)             | 85  | 90  | 95   |
-| BP + SB (+15)             | 85  | 90  | 95   |
-| TR + SB (+20)             | 90  | 95  | 100  |
-| ------------------------- | --- | --- | ---- |
-| BP + TP (+12)             | 82  | 87  | 92   |
-| TR + TP (+17)             | 87  | 92  | 97   |
-| SB + TP (+17)             | 87  | 92  | 97   |
-| ------------------------- | --- | --- | ---- |
-| BP + TR + SB (+25)        | 95  | 100 | 105  |
-| ------------------------- | --- | --- | ---- |
-| BP + TR + TP (+22)        | 92  | 97  | 102  |
-| BP + SB + TP (+22)        | 92  | 97  | 102  |
-| TR + SB + TP (+27)        | 97  | 102 | 107  |
-| ------------------------- | --- | --- | ---- |
-| BP + TR + SB + TP (+32)   | 102 | 107 | 112  |
-| ------------------------- | --- | --- | ---- |
+Reminder: The table columns are using *base* Cunning Level (e.g. without bonuses)
+
+| Item(s)                   | C-7 | C-8 | C-9 | C-10 |
+|:-------------------------:|:---:|:---:|:---:|:----:|
+| No Items - Before Skills  | 35  | 40  | 45  | 50   |
+| ------------------------- | --- | --- | --- | ---- |
+| No Items - After Skills   | 65  | 70  | 75  | 80   |
+| ------------------------- | --- | --- | --- | ---- |
+| BP: (Blackpearl Earring)  | 70  | 75  | 80  | 85   |
+| TR: (Thief's Ring)        | 75  | 80  | 85  | 90   |
+| SB: (Snuffbox)            | 75  | 80  | 85  | 90   |
+| TP: (Thief Potion - temp) | 72  | 77  | 82  | 87   |
+| ------------------------- | --- | --- | --- | ---- |
+| BP + TR (+15)             | 80  | 85  | 90  | 95   |
+| BP + SB (+15)             | 80  | 85  | 90  | 95   |
+| TR + SB (+20)             | 85  | 90  | 95  | 100  |
+| ------------------------- | --- | --- | --- | ---- |
+| BP + TP (+12)             | 77  | 82  | 87  | 92   |
+| TR + TP (+17)             | 82  | 87  | 92  | 97   |
+| SB + TP (+17)             | 82  | 87  | 92  | 97   |
+| ------------------------- | --- | --- | --- | ---- |
+| BP + TR + SB (+25)        | 90  | 95  | 100 | 105  |
+| ------------------------- | --- | --- | --- | ---- |
+| BP + TR + TP (+22)        | 87  | 92  | 97  | 102  |
+| BP + SB + TP (+22)        | 87  | 92  | 97  | 102  |
+| TR + SB + TP (+27)        | 92  | 97  | 102 | 107  |
+| ------------------------- | --- | --- | --- | ---- |
+| BP + TR + SB + TP (+32)   | 97  | 102 | 107 | 112  |
+| ------------------------- | --- | --- | --- | ---- |
 
 
 
