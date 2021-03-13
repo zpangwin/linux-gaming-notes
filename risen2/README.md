@@ -107,9 +107,20 @@ If you don't want to listen to the logo/splash screen videos (Deep Silver logo, 
     prename 's/(.vid)$/$1.bak/g' logo_*.vid
 
 
+## Disable screensaver while playing
+
+The easiest way I've found to do this on a Linux system is to install Gamemoderun and use that. If on fedora, it's available in the central repos and you can use `sudo dnf install -y gamemode`
+
+Ubuntu/Mint/etc users probably need to find a PPA or else just install manually from their [github repo](https://github.com/FeralInteractive/gamemode)
+
+
 ## Desktop shortcut
 
 See included file in this folder. For best portability and to avoid copyright issues, it references the bmp file included with the gog install but you can probably find or make a better icon.
+
+The 'risen2.desktop' is for a regular wine launch (you'll need to manually disable your screensaver)
+
+The 'gamemode.risen2.desktop' is for running with gamemoderun (which you'll need to install yourself but will automatically handle screensaver)
 
 
 ## Unofficial Patch
