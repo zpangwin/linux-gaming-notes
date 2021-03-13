@@ -9,15 +9,17 @@ As such, most of the item codes I have matched up based purely on the name. Give
 
 If you decide you try them out anyway, the instructions are:
 
-1. Anywhere in game type in `pommes` quickly and it enables test mode, access console by pressing `\``
+1. Anywhere in game type in `pommes` quickly and it enables test mode, access console by pressing The tilde key \`
 2. type `list` to show all commands
 3. type `give Item_Code` to give 1 copy of the item or `give Item_Code n` to give n copies of the item. Note that all item codes are **case-sensitive**
 4. If you want to remove an item (such as a quest item that didn't get removed) then you can type `take Item_Code` or `take Item_Code n` to remove the appropriate number of that item. This also works like gold (for example if you want to "buy" something out of thin air so you can RP getting it from a different merchant, you could do something like `take It_Gold 150` then `give It_SkinningKnife 1`)
 
 
+
 ## Items
 
 Note: The Purchase Price is always 5x Selling Price (or Selling Price=Purchase Price/5). I will always be using the Purphase Price for the "Cost" column and elsewhere unless otherwise mentioned.
+
 
 ### Permanent Potions
 
