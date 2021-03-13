@@ -33,7 +33,7 @@ I may be missing some later game locations for these and I don't really care as 
 | Blueclaw Monkeys | ---          | Claw   | ---     | Teeth    | ???       |
 | Claw Monkeys     | ---          | Claw   | ---     | Teeth    | ???       |
 | Firebirds        | Chicken Meat | ---    | ---     | ---      | ???       | -> Feather
-| Gators           | ---          | ---    | ---     | ???      | ???       |
+| Gators           | ---          | ---    | ---     | Teeth    | ???       |
 | Ghouls           | ---          | Claw   | ---     | ???      | ???       |
 | Giant Crabs      | Oyster       | ---    | ---     | ---      | ???       | -> Eye
 | Gorilla          | ???          | ---    | Skin    | Teeth    | ???       |

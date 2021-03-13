@@ -30,6 +30,8 @@ I won't mention gold, provisions, goblets, and such but if there is a quest-item
 | 25    | Sword Coast           | Outside the Batcave  | Head to town via cave. on right as you exit            | ---                               |
 | 20    | Sword Coast           | Near Puerto Isabella | Follow path NW of town, by fork in the road            | ---                               |
 | 25    | Sword Coast           | Puerto Isabella      | As you come in the N gate, room off to the side        | ---                               |
+| 25    | Sword Coast           | Puerto Isabella      | Storehouse first floor                                 | ---                               |
+| 35    | Sword Coast           | Puerto Isabella      | Storehouse first floor                                 | ---                               |
 | 20    | Sword Coast           | Puerto Isabella      | Outside between N gate and Sophia (bartender)          | ---                               |
 | 20    | Sword Coast           | Puerto Isabella      | In Webster's house (the gunsmith)                      | Sophia's Wine                     |
 | 30    | Sword Coast           | Puerto Isabella      | In Cooper's house (the blacksmith)                     | Hammer, Sword Blank               |
@@ -42,7 +44,10 @@ I won't mention gold, provisions, goblets, and such but if there is a quest-item
 | 90    | Sword Coast           | Puerto Isabella      | Sebastiano's Manor 1F, in closet in Sebastiano's room  | ???                               |
 | 45    | Sword Coast           | Puerto Isabella      | In Gun Powder Shed (near cannonier, Benito)            | Dueling Epee, Powder Keg          |
 | 40    | Sword Coast           | Near Puerto Isabella | On the beach SE of town, at the bottom of the slope    | Duelist Earring, Soul Caller Hilt |
-| 30    | Sword Coast           | NW of Pirate Tower   | In the cave where you fight a pirate and 2 natives     | Map of the Sword Coast            | 
+| 35    | Sword Coast           | Near Puerto Isabella | On the beach NE of town, on sandbar jutting out to sea | ---                               |
+| 20    | Sword Coast           | Near Inquisition's Tower | Cave under the tower on the E side                 | Iron Ring                         |
+| 45    | Sword Coast           | Near Inquisition's Tower | In a field N of the tower on a slight rise         | ---                               |
+| 30    | Sword Coast           | NW of Pirate Tower   | In the cave where you fight a pirate and 2 natives     | Map of the Sword Coast            |
 | 85    | Sword Coast           | N of Native Village  | Near where you kill the gator                          | ???                               |
 | 20    | Sword Coast           | Native Village       | Next to Pirate Jim                                     | Jim's Treasure Map                |
 | 30    | Sword Coast           | Native Village       | Hut next to Ranapiri                                   | Warthog Skin, Spear               |
@@ -80,7 +85,7 @@ https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62699114
 | Level | Island                | Area                 | Notes                                                  | Notable Items               |
 |:-----:|:---------------------:|:--------------------:|:------------------------------------------------------:|:---------------------------:|
 | ??    | Caldera               | Beach/Docks Area     | Room on Storehouse 2nd Floor                           | ???                         |
-| ??    | SwordCoast            | Puerto Isabella      | Room on Storehouse 2nd Floor                           | ???, L?? Chest              |
+| 75    | SwordCoast            | Puerto Isabella      | Room on Storehouse 2nd Floor                           | ???, L?? Chest              |
 | 50    | Sword Coast           | Puerto Isabella      | Sebastiano's Manor 1F, closet in Sebastiano's room     | Sophia's Wine, L90 Chest    |
 | 50    | Sword Coast           | Puerto Isabella      | Gun Powder Shed (near cannonier, Benito)               | Powder Keg, L45 Chest, Bomb |
 

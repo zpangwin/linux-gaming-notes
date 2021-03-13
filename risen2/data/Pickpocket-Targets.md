@@ -30,6 +30,7 @@
 | Maracai Bay     | 80    | ???                  | Cordobar    | 300 Gold         |
 | Sword Coast     | 20    | ???                  | Eusebio     | 35 Gold          |
 | Sword Coast     | 20    | Native Village       | Badriya     | 50 Gold          |
+| Sword Coast     | 20    | Near Native Village  | Lin         | Gold Nugget  r   |
 | Sword Coast     | 20    | Near Native Village  | Natsumi     | Black Oleander   |
 | Sword Coast     | 20    | Near Native Village  | Yuzuki      | Choking Vine     |
 | Sword Coast     | 25    | Native Village       | Slick       | 75 Gold          |
@@ -58,4 +59,4 @@
 5. [Gamepressure: Caldera II Pickpocketing](https://guides.gamepressure.com/risen2/guide.asp?ID=15134)
 6. [Gamepressure: Maracai Bay Pickpocketing](https://guides.gamepressure.com/risen2/guide.asp?ID=15135)
 
-Note: The Gamepressure ones don't seem to be complete. For instance, they are missing Chavez (a solider wandering around just outside of Puerto Isabella). Possibly others as well. I think it might also be missing the Lighthouse keeper (Jack) on Tacarigua (needs to be confirmed)
+Note: The Gamepressure ones don't seem to be complete. For instance, they are missing Chavez (a solider wandering around just outside of Puerto Isabella) and Lin (outside Native village). Possibly others as well. I think it might also be missing the Lighthouse keeper (Jack) on Tacarigua (needs to be confirmed)
