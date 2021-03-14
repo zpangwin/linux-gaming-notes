@@ -179,16 +179,17 @@ It_LowBoot_NPC_Largo
 | Item Name          | Cost | Item Code      | Stats and Effects              |
 |:------------------:|:----:|:--------------:|:------------------------------:|
 | Ancestral Stone    | ???? |  |  |
-| Bone Necklace      | ???? | It_Am_Bone    |  |
+| Bone Necklace      | ???? | It_Am_Bone     |  |
 | Curse Stone        | 800  | It_Am_Curse    | Death Cult +5, Black Magic +10 |
-| Hunter's Necklace  | ???? |  |  |
-| Jade Pendant       | ???? | It_Am_Jade    |  |
+| Hunter's Necklace  | ???? | ???            |     |
+| Jade Pendant       | ???? | It_Am_Jade     |     |
 | Lucky Charm        | 400  | It_Am_Luck     | Bulletproof +5                 |
-| Skull Amulet       | ???? | It_Am_Skull   |  |
-| Soul Necklace      | ???? | It_Am_Soul    |  |
-| Ti' Ha Ko          | ???? |  |  |
+| Skull Amulet       | ???? | It_Am_Skull    |  |
+| Soul Necklace      | ???? | It_Am_Soul     |  |
+| Ti' Ha Ko          | 1000 | ???            | Death Cult +5, Black Magic +15 |
 | Tribal Symbol      | 150  | It_Am_Tribe    | Ritual +5                      |
-| Warrior's Jewelery | ???? | It_Am_Warrior |  |
+| Warrior's Jewelery | 750  | It_Am_Warrior  | Ritual +15                     |
+| Witche's Amulet    | 500  | ???            | Black Magic +5, Ritual +5 |
 
 
 Item Codes:
@@ -207,7 +208,7 @@ Note: The DLC item "Master Scholar's Ring" cannot be sold and thus does not have
 | Item Name                   | Cost | Item Code        | Stats and Effects                  |
 |:---------------------------:|:----:|:----------------:|:----------------------------------:|
 | Bone Ring                   | ???? | It_Ri_Bone       |  |
-| Hunter's Ring               | ???? | It_Ri_Hunter     |  |
+| Hunter's Ring               | 500  | It_Ri_Hunter     | Muskets +5, Shotguns +5            |
 | Inquisitor's Ring           | 600  | It_Ri_Inquisitor | Muskets +5, Bulletproof +5         |
 | Iron Ring                   | 500  | It_Ri_Iron       | Throwing Weapons +5, Bladeproof +5 |
 | Jade Ring                   | ???? | It_Ri_Jade       |  |
@@ -237,11 +238,12 @@ It_Ri_Skull
 | Bloodthorn Earring | ???? | It_Ear_Bloodthorn |  |
 | Duelist's Earring  | 250  | It_Ear_Duel       | Piercing +5       |
 | Feather Earring    | ???? | It_Ear_Warrior    |  |
-| Jade Earring       | ???? | It_Ear_Jade       | Black Magic +5    |
+| Jade Earring       | 250  | It_Ear_Jade       | Black Magic +5    |
 | Pearl Earring      | 200  | It_Ear_Pearl      | Silver Tongue +5  |
 | Rogues Earring     | 200  | It_Ear_Rogue      | Dirty Tricks +5   |
 | Sailor's Earring   | 600  | It_Ear_Sailor     | Bladeproof +5     |
-| Skulls Earring     | 200  | It_Ear_Skull      | Intimidate +5     |
+| Skull Earring      | 200  | It_Ear_Skull      | Intimidate +5     |
+| Warrior's Earring  | 1000 | It_Ear_Skull      | Bulletproof +5, Ritual +5 |
 
 
 
@@ -389,13 +391,13 @@ It_ShG_Pirate
 It_ShG_Ship
 It_ShG_Thunder
 
-### Rifles
+### Muskets
 
 Note: Since this game has a lot of translation errors with the gun item names, this section
-will be counting anything that uses the Rifle skill as a Rifle
+will be counting anything that uses the Muskets skill as a Muskets
 
 | Item Name        | Cost | Item Code                  | Stats and Effects |
-|:----------------:|:-------------:|:---------:|:----------------------------------------:|
+|:----------------:|:----:|:---------:|:----------------------------------------:|
 | Shotgun          | 750  |  | Dam 50, Range 26, Rel 2s, Talent +5
 | Storm Rifle      | ???? |  |  |
 | Seaman's Shotgun | ???? |  |  |

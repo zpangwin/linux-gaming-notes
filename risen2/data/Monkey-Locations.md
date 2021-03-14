@@ -2,18 +2,24 @@
 
 ## Confirmed
 
-| Island            | Area                 | Notes                                                                       |
-|:-----------------:|:--------------------:|:---------------------------------------------------------------------------:|
-| Tacarigua         | Spider Cave Temple   | Near on of the idols, there is a broken door with a lever on the other side |
-| Sword Coast       | Puerto Isabella      | Storehouse 2nd floor (alternate for lockpick)                               |
-| ---               | ---                  | --- |
-| Storm Island      | placeholder          | --- |
-| Tacarigua         | placeholder          | --- |
-| Sword Coast       | placeholder          | --- |
-| Angitua           | placeholder          | --- |
-| Maracai           | placeholder          | --- |
-| Trease Island     | placeholder          | --- |
-| Island of Theives | placeholder          | --- |
+| Island            | Area                     | Notes                                                                       |
+|:-----------------:|:-------------------------:|:---------------------------------------------------------------------------:|
+| Tacarigua         | Spider Cave Temple       | Near on of the idols, there is a broken door with a lever on the other side |
+| Sword Coast       | Puerto Isabella          | Storehouse 2nd floor (alternate for lockpick)                               |
+| Sword Coast       | Natives Village          | Temple of Ancestors, right path. hole & lever. No guardians                 |
+| Sword Coast       | Ruins Near Pirate Tower  | Climb up and there are monkey holes on either side. hole & lever. No guardians                 |
+| ---               | ---                      | --- |
+| Storm Island      | placeholder              | --- |
+| Tacarigua         | placeholder              | --- |
+| Sword Coast       | placeholder              | --- |
+| Angitua           | placeholder              | --- |
+| Maracai           | placeholder              | --- |
+| Trease Island     | placeholder              | --- |
+| Island of Theives | placeholder              | --- |
+
+| Sword Coast       | 2 | 'Beach Temple', N of Pirates Tower | on central path, branches to L & R both have cracks in walls. |
+| Sword Coast       | 4 | Temple N of start loc    | "in the ruin there's two"                                               |
+
 
 ## Unconfirmed
 
@@ -37,17 +43,13 @@ This probably contains some duplicates but I've leave it for now until I can con
 | Maracai           | 1 | couple of the ancestor temples that you can use the monkey in, but I don't recall which |          |
 | Storm Island      | 1 | Storm Temple (?)         | REQ: Hand from Garcia. Through a door on the right to pull a lever.     |
 | Storm Island      | 2 | Air Temple (?)           | Through a hole on the right wall                                        |
-| Sword Coast       | 1 | first temple             |  just beside where you first come ashore.                               |
-| Sword Coast       | 1 | natives ancestor temple  | behind their village.                                                   |
-| Sword Coast       | 1 | Temple behind native village | (no other details)                                                  |
-| Sword Coast       | 1 | temple North of the guard tower where you start | there's some in there                            |
-| Sword Coast       | 2 | 'Beach Temple', N of Pirates Tower | on central path, branches to L & R both have cracks in walls. |
-| Sword Coast       | 2 | Temple just NW of Native Village | take the right path, a wall will show a crack                   |
-| Sword Coast       | 3 | northernmost entrance to the temple | Use the monkey to fit through a hole and pull the lever      |
-| Sword Coast       | 4 | Natives Ancestor Temple  | (doesnt give any more detailed info)                                    |
-| Sword Coast       | 4 | Temple N of start loc    | "in the ruin there's two"                                               |
+
 | Tacarigua         | 1 | "ones I'm less sure of": big tomb @ bottom of canyon (via jungle where the 3 "slaves" are)   |     |
 
+
+I think these mean the "Temple of the Ancestors" in the village. But review first before deletion:
+| Sword Coast       | 2 | Temple just NW of Native Village | take the right path, a wall will show a crack                   |
+| Sword Coast       | 3 | northernmost entrance to the temple | Use the monkey to fit through a hole and pull the lever      |
 
 ## Sources
 
