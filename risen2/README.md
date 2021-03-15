@@ -220,12 +220,50 @@ More info from [here](https://forum.worldofplayers.de/forum/threads/1147645-RELE
 TBD - currently untested
 
 
-any other winetricks dependencies needed to run this?: no clue
+* Any other winetricks dependencies needed to run this?: didn't seem to be any
+
+* Issues: Some of the controls are a little wonky under wine. Possibly installing mfc or similar could help? but i'd rather not risk it. For the exe selection, I could only pick lnk file and couldn't edit path to exe (you can later edit via ini file to fix this). For the mods page, the scrollbar didn't work for me but you could click in the text and use keyboard up/down/left/right arrows ok. Also on Mods page, I could not click to check the boxes but i could click on the mod name and then press spacebar to check/uncheck; it was also sometimes picky where i clicked on the mod name and i had to click more left/right.
 
 
-guessing it would run with something like: 
+    # install the mod manager
+    cp -t "/media/f/lutris/games/gog-risen-2/drive_c/temp" "$HOME/Downloads/R2MDS_OnlineDB_2_0_0_0.exe"
+    env WINEDEBUG="fixme-all" WINEPREFIX="/media/f/lutris/games/gog-risen-2" wine start /D"C:/temp" "R2MDS_OnlineDB_2_0_0_0.exe"
+     
+    # run the mod manager for first time - then see notes below
+    env WINEDEBUG="fixme-all" WINEPREFIX="/media/f/lutris/games/gog-risen-2" wine start /D"C:/Program Files/Risen2MDS" "r2mds.exe"
+     
+    # when it came up it complained that it couldn't find the risen exe and wanted me to type the path
+    # when i tried typing nothing appeared in the text box and i wasn't able to type/paste there but
+    # clicking the Browse button worked and I was able to navigate.
+    # oddly it wouldn't let me select:
+    #   C:\GOG\Risen2\system\Risen.exe
+    # but I was able to select:
+    #   C:\GOG\Risen2\Launch Risen 2 - Dark Waters.lnk
+    # then relaunch and close the program.
+    # finally I edited /media/f/lutris/games/gog-risen-2/drive_c/Program Files/Risen2MDS/mds.ini
+    # and manually changed the path to the exe and relaunched.
+     
+    # re-run the mod manager with correct path in ini file
+    env WINEDEBUG="fixme-all" WINEPREFIX="/media/f/lutris/games/gog-risen-2" wine start /D"C:/Program Files/Risen2MDS" "r2mds.exe"
+     
+    # when it comes up, choose "Internet Mods DB" from the menu at top and check the ones you want then click Download.
+    # it will take a bit to download then prompt you to add them to your modlist and restart (pick yes)
+    # click the 'Check all' button then 'Integrate mods' button to copy them to your risen 2 install folder
+    # then 'Close' and launch your game via wine as you normally do
 
-        /usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/media/f/lutris/games/gog-risen-2" "/usr/bin/gamemoderun" "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe"
+
+For my testing, I selected the following mods:
+
+* R2.E.T_Pack_V1.0
+* Unofficial Patch v0.5
+* LoD Distance Mod Final
+* AntiWarp Ultra
+* Crosshair Mod v1.1
+* No Parallax Occlusion Mapping Mod
+* Lookup Specular
+
+Seemed to wokr fine for me
+
 
 ## Sources
 
