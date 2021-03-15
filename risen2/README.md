@@ -78,6 +78,9 @@ I retested these steps after cleaning them up and they still worked for me
     
     # run game and confirm everything works
     env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="$PFXD" wine start /D"C:/GOG/Risen2/system" "Risen.exe"
+     
+    # if you have feral interactive's gamemoderun installed, then use this to avoid screensaver:
+    env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="$PFXD" "/usr/bin/gamemoderun" wine start /D"C:/GOG/Risen2/system" "Risen.exe"
 
 -> worked fine
 
@@ -112,6 +115,10 @@ If you don't want to listen to the logo/splash screen videos (Deep Silver logo, 
 The easiest way I've found to do this on a Linux system is to install Gamemoderun and use that. If on fedora, it's available in the central repos and you can use `sudo dnf install -y gamemode`
 
 Ubuntu/Mint/etc users probably need to find a PPA or else just install manually from their [github repo](https://github.com/FeralInteractive/gamemode)
+
+once you have it installed you can launch with something like:
+
+    /usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/media/f/lutris/games/gog-risen-2" "/usr/bin/gamemoderun" "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe"
 
 
 ## Desktop shortcut
@@ -201,3 +208,33 @@ For those that get [a feeling of impending doom whenever they need to use the "t
 
 To Baltram (and other mod authors, if applicable): should you prefer that I do not include copies of the mod files here, please let me know and I will be happy to remove these files ASAP even if it means losing the git history for this repo. Likewise, if you were fine with it and wanted to grant me explicit permission or have me update credits, I would be happy to proudly update with that info as well. For either case, I can be reached at \<my github/gitlab username\> \<at\> \<that one email service owned by google\>. For anyone else, while I am not opposed to general questions / corrections / addendums related to my setup, I am not likely to run through and debug everything for you either.
 
+Update 2: After reading more and trying to learn a little about the modding process, I found there is also an app called [Risen 2 - Mod Starter v2.0](https://forum.worldofplayers.de/forum/threads/1147645-RELEASE-Risen-2-ModStarter-v-2-0-%28Online-DB-version%29) which seems to be a mod manager for some risen 2 mods. I have not tested this myself but I noticed that the unofficial patch mod appears to be available as a zip file under this thread and that the zip file appears to contain the same files that get extracted from the regular mod exe. In the event that I have to take down the tar.xz and rebuild my repo without that in the history, then this might be a good alternate location that is extractable on Linux. Wish I had seen this before I messaged the mod author / made my own repack... probably would have been simpler to just use that from the start, had i known about it. I didn't test anything with this so this is all guess relevant guesswork.
+
+## Risen 2 - Mod Starter v2.0
+
+Download / info from [here](https://www.worldofrisen.de/english/download_85.htm) - download might require registration/login
+Download mirror [here](https://www.moddb.com/games/risen-ii-dark-waters/downloads/risen-2-modstarter-v20-online-db-version) - no login required
+More info from [here](https://forum.worldofplayers.de/forum/threads/1147645-RELEASE-Risen-2-ModStarter-v-2-0-%28Online-DB-version%29)
+
+
+TBD - currently untested
+
+
+any other winetricks dependencies needed to run this?: no clue
+
+
+guessing it would run with something like: 
+
+        /usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/media/f/lutris/games/gog-risen-2" "/usr/bin/gamemoderun" "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe"
+
+## Sources
+
+My approach above is based on aggregated data from multiple sources and tested until I got it working. Here are some of the sources I used if you are interested in looking them over in more detail. If you contributed to any of these then Thank You!  - this guide probably wouldn't have been possible without your contributions.
+
+1. [Gamersonlinux: Risen 2 Dark Waters Guide by booman](https://www.gamersonlinux.com/forum/threads/risen-2-dark-waters-guide.1717/)
+2. [Winehq DB - Test Results section](https://appdb.winehq.org/objectManager.php?sClass=version&iId=35292#testdata)
+3. [GOG Foums: Risen series for Linux by adamhm](https://www.gog.com/forum/risen_series/risen_series_for_linux) - especially looking at the source of the script in his [risen2_wine.tar.xz](https://www.dropbox.com/s/yf7fijcrm26ld2k/risen2_wine.tar.xz?dl=0). *(note: you may need to be logged into gog forums to see all the posts; i know i had that issue at least once)*
+4. [Protondb: Risen 2](https://www.protondb.com/app/40390) - ultimately this did not work for me but i might have grabbed some winetricks dependencies from here
+5. [Lutris: Risen 2 (view script)](https://lutris.net/games/risen-2-dark-waters/) - ultimately this did not work for me but i might have grabbed some winetricks dependencies from here
+6. Risen 2 Unofficial patch ([on moddb](https://www.moddb.com/games/risen-ii-dark-waters/downloads/risen-2-unofficial-patch-v05) | [on orum.worldofplayers.de](https://forum.worldofplayers.de/forum/threads/1154440-release-Risen-2-Unofficial-Patch)) - didn't really help with install but i still prefer to have less bugs
+7. Risen 2 - Mod Starter v2.0 ([1](https://www.worldofrisen.de/english/download_85.htm), [2](https://forum.worldofplayers.de/forum/threads/1147645-RELEASE-Risen-2-ModStarter-v-2-0-%28Online-DB-version%29)) - wish i had noticed this sooner. i didn't come across it until my guide was finished and i was a good chunk of the way through the game
