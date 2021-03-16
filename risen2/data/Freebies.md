@@ -90,14 +90,14 @@ That is stuff that you can get without spending any coins. I have also listed so
 | Map of the Island | R: Lockpick 30      | NW of Pirate Tower. Have Steelbeard lead you to Natives. There is a cave en route. Kill and loot chest  |
 | Monkey Statue     | ---                 | Ancestors Temple in Native Village. In Sarcophagus on left side                                         |
 | Officer's Ring    | ---                 | In graveyard temple, inside of unlocked chest                                                           |
-| Pearl Earring     | R: Lockpick 60      | Native Village: chest next in hut next to Kupua                                                         |
+| Pearl Earring     | R: Lockpick 60      | Native Village: chest next in hut next to Kapua                                                         |
 | Pirate's Saber    | ---                 | Cave to the NW of the Pirate Watch Tower. Kill the Pirate aand pick up the weapon                       |
 | Pistol            | ---                 | After the opening fight when take over the Pirate Watch Tower. Kill the Pirates and loot their bodies   |
 | Potion of Awe     | ---                 | Ancestors Temple in Native Village. In Sarcophagus on left side                                         |
 | Powder Bag        | B: Pistols +10      | Collecct all the Cargo crates on various beaches of the island and turn them into the storehouse keeper |
 | Powder Keg        | R: Lockpick 50      | Puerto Isabella: In Gun Powder Shed (near cannonier, Benito), L50 Door, L45 Chest                       |
 | Prizetaker        | ---                 | Boss Fight                                                                                              |
-| Rattle            | R: Lockpick 60      | Native Village: chest next in hut next to Kupua                                                         |
+| Rattle            | R: Lockpick 60      | Native Village: chest next in hut next to Kapua                                                         |
 | Ritual Potion     | ---                 | Ancestors Temple in Native Village. In Sarcophagus at back                                              |
 | Ritual Potion     | R: Lockpick 35      | North of Inquisition Tower: On the shore near the top of the waterfalls                                 |
 | Rogue's Ring      | ---                 | Talk to Venturo before choosing sides. kill 3 pirates and loot Basil's body                             |
@@ -108,7 +108,7 @@ That is stuff that you can get without spending any coins. I have also listed so
 | Sailor's Earring  | ---                 | Unlocked chest on the beach SE of the Pirate Watch Tower                                                |
 | Sand              | ---                 | After the opening fight when take over the Pirate Watch Tower. Kill the Pirates and loot their bodies   |
 | Sapphire          | ---                 | Ancestors Temple in Native Village. In Sarcophagus on left side                                         |
-| Schematic: Hunter Necklace | R: Lockpick 60  | Native Village: chest next in hut next to Kupua                                                    |
+| Schematic: Hunter Necklace | R: Lockpick 60  | Native Village: chest next in hut next to Kapua                                                    |
 | Sharpeye          | B: Firearms +1 \*   | S from Inquisition Tower go uphill. after termites continue until you reach graveyard                   |
 | Shrunken Head     | B: Intimidate +10   | S from Inquisition Tower go uphill. after termites continue until you reach graveyard                   |
 | Shrunken Head     | B: Intimidate +10   | S from Inquisition Tower go uphill. after termites continue until you reach graveyard                   |
@@ -145,7 +145,24 @@ That is stuff that you can get without spending any coins. I have also listed so
 ---
 
 
+## Angitua
+
+| Item              | Special Reqs/Bonus  | Notes                                                                                                     |
+|:-----------------:|:-------------------:|:---------------------------------------------------------------------------------------------------------:|
+| Ring of Greed     | ---                 | Harbour Town: in unlocked chest on the very farthest end of the beach                                     |
+| Potion of Awe     | ---                 | Harbour Town: in unlocked chest on the very farthest end of the beach                                     |
+| Potion of Blades  | ---                 | Harbour Town: in unlocked chest on 1F of the warehouse near Slayne's ship                                 |
+| Spirit Essence    | ---                 | Harbour Town: on a shelf near front door of Emma's voodoo store (turn right from your ship)               |
+| Curse Doll        | ---                 | Harbour Town: upstairs on a shelf in Emma's voodoo store (turn right from your ship)                      |
+
+
+---
+
+
+
 ## Placeholder
 
 
-
+| Item              | Special Reqs/Bonus  | Notes                                                                                                   |
+|:-----------------:|:-------------------:|:--------------------------------------------------------------------------------------------------------:|
+| | | |

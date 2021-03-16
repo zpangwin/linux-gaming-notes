@@ -84,7 +84,7 @@ You might still notice these chests for later (or not, as I'll mention them agai
 | 50    | Chest | Puerto Isabella        | Storehouse 2nd Floor behind locked door                | Hunter's Ring                                        |
 | 50    | Door  | Puerto Isabella        | Gun Powder Shed (near cannonier, Benito)               | Powder Keg, L45 Chest, Bomb                          |
 | 50    | Door  | Puerto Isabella        | Sebastiano's Manor 1F, closet in Sebastiano's room     | Sophia's Wine, L90 Chest                             |
-| 60    | Chest | Native Village         | In Kupua's hut                                         | Pearl Earring, Rattle, Schematic for Hunter Necklace |
+| 60    | Chest | Native Village         | In Kapua's hut                                         | Pearl Earring, Rattle, Schematic for Hunter Necklace |
 | 65    | Chest | Puerto Isabella        | Sebastiano's Manor 1F, in Sebastiano's room            | ---                                                  |
 | 65    | Chest | SE of Native Village   | SW of the waterfall chest by 2 jaguars                 | ---                                                  |
 | 70    | Chest | N of Native Village    | N/NE of Village, upriver+uphill. cave w bats & ghouls  | Rogue's Earring                                      |
@@ -92,6 +92,19 @@ You might still notice these chests for later (or not, as I'll mention them agai
 | 75    | Door  | Puerto Isabella        | Room on Storehouse 2nd Floor                           | Book Hint: Powder Bag, L50 Chest                     |
 | 85    | Chest | N of Native Village    | Near where you kill the gator                          | ???                                                  |
 | 90    | Chest | Puerto Isabella        | Sebastiano's Manor 1F, in closet in Sebastiano's room  | ???                                                  |
+
+
+---
+
+
+## Angitua
+
+
+| Level | Type  | Area                   | Notes                                                           | Notable Items                     |
+|:-----:|:-----:|:----------------------:|:---------------------------------------------------------------:|:---------------------------------:|
+| 20    | Chest | Harbour Town           | The Cauldron (bar near your ship) in Scarlett's room (upstairs) | Old Sword, Jade                   |
+| 20    | Chest | Harbour Town           | Along the side of Emma's Voodoo shop                            | ---                               |
+
 
 
 
@@ -160,23 +173,30 @@ Reminder: The table columns are using *base* Cunning Level (e.g. without bonuses
 | BP: (Blackpearl Earring)  | 25  | 30  | 35  | 40  | 45  | 50  | 55   |
 | TR: (Thief's Ring)        | 30  | 35  | 40  | 45  | 50  | 55  | 60   |
 | SB: (Snuffbox)            | 30  | 35  | 40  | 45  | 50  | 55  | 60   |
+| RG: (Ring of Greed)       | 35  | 40  | 45  | 50  | 55  | 60  | 65   |
 | TP: (Thief Potion - temp) | 27  | 32  | 37  | 42  | 47  | 52  | 57   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 | BP + TR (+15)             | 35  | 40  | 45  | 50  | 55  | 60  | 65   |
 | BP + SB (+15)             | 35  | 40  | 45  | 50  | 55  | 60  | 65   |
+| BP + RG (+20)             | 40  | 45  | 50  | 55  | 60  | 65  | 70   |
 | TR + SB (+20)             | 40  | 45  | 50  | 55  | 60  | 65  | 70   |
+| SB + RG (+25)             | 45  | 50  | 55  | 60  | 65  | 70  | 75   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 | BP + TP (+12)             | 32  | 37  | 42  | 47  | 52  | 57  | 62   |
 | TR + TP (+17)             | 37  | 42  | 47  | 52  | 57  | 62  | 67   |
 | SB + TP (+17)             | 37  | 42  | 47  | 52  | 57  | 62  | 67   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 | BP + TR + SB (+25)        | 45  | 50  | 55  | 60  | 65  | 70  | 75   |
+| BP + RG + SB (+30)        | 50  | 55  | 60  | 65  | 70  | 75  | 80   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 | BP + TR + TP (+22)        | 42  | 47  | 52  | 57  | 62  | 67  | 72   |
 | BP + SB + TP (+22)        | 42  | 47  | 52  | 57  | 62  | 67  | 72   |
+| BP + RG + TP (+27)        | 47  | 52  | 57  | 62  | 67  | 72  | 77   |
 | TR + SB + TP (+27)        | 47  | 52  | 57  | 62  | 67  | 72  | 77   |
+| RG + SB + TP (+32)        | 52  | 57  | 62  | 67  | 72  | 77  | 82   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 | BP + TR + SB + TP (+32)   | 52  | 57  | 62  | 67  | 72  | 77  | 82   |
+| BP + RG + SB + TP (+37)   | 57  | 62  | 67  | 72  | 77  | 82  | 85   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 
 
@@ -197,23 +217,30 @@ Reminder: The table columns are using *base* Cunning Level (e.g. without bonuses
 | BP: (Blackpearl Earring)  | 30  | 35  | 40  | 45  | 50  | 55  | 60   |
 | TR: (Thief's Ring)        | 35  | 40  | 45  | 50  | 55  | 60  | 65   |
 | SB: (Snuffbox)            | 35  | 40  | 45  | 50  | 55  | 60  | 65   |
+| RG: (Ring of Greed)       | 40  | 45  | 50  | 55  | 60  | 65  | 70   |
 | TP: (Thief Potion - temp) | 32  | 37  | 42  | 47  | 52  | 57  | 62   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 | BP + TR (+15)             | 40  | 45  | 50  | 55  | 60  | 65  | 70   |
 | BP + SB (+15)             | 40  | 45  | 50  | 55  | 60  | 65  | 70   |
+| BP + RG (+20)             | 45  | 50  | 55  | 60  | 65  | 70  | 75   |
 | TR + SB (+20)             | 45  | 50  | 55  | 60  | 65  | 70  | 75   |
+| SB + RG (+25)             | 50  | 55  | 60  | 65  | 70  | 75  | 80   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 | BP + TP (+12)             | 37  | 42  | 47  | 52  | 57  | 62  | 67   |
 | TR + TP (+17)             | 42  | 47  | 52  | 57  | 62  | 67  | 72   |
 | SB + TP (+17)             | 42  | 47  | 52  | 57  | 62  | 67  | 72   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 | BP + TR + SB (+25)        | 50  | 55  | 60  | 65  | 70  | 75  | 80   |
+| BP + RG + SB (+30)        | 55  | 60  | 65  | 70  | 75  | 80  | 85   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 | BP + TR + TP (+22)        | 47  | 52  | 57  | 62  | 67  | 72  | 77   |
 | BP + SB + TP (+22)        | 47  | 52  | 57  | 62  | 67  | 72  | 77   |
+| BP + RG + TP (+27)        | 52  | 57  | 62  | 67  | 72  | 77  | 79   | 
 | TR + SB + TP (+27)        | 52  | 57  | 62  | 67  | 72  | 77  | 79   |
+| RG + SB + TP (+32)        | 57  | 62  | 67  | 72  | 77  | 79  | 82   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 | BP + TR + SB + TP (+32)   | 57  | 62  | 67  | 72  | 77  | 79  | 82   |
+| BP + RG + SB + TP (+37)   | 62  | 67  | 72  | 77  | 79  | 82  | 87   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 
 
@@ -234,23 +261,30 @@ Reminder: The table columns are using *base* Cunning Level (e.g. without bonuses
 | BP: (Blackpearl Earring)  | 40  | 45  | 50  | 55  | 60  | 65  | 70   |
 | TR: (Thief's Ring)        | 45  | 50  | 55  | 60  | 65  | 70  | 75   |
 | SB: (Snuffbox)            | 45  | 50  | 55  | 60  | 65  | 70  | 75   |
+| RG: (Ring of Greed)       | 50  | 55  | 60  | 65  | 70  | 75  | 80   |
 | TP: (Thief Potion - temp) | 42  | 47  | 52  | 57  | 62  | 67  | 72   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 | BP + TR (+15)             | 50  | 55  | 60  | 65  | 70  | 75  | 80   |
 | BP + SB (+15)             | 50  | 55  | 60  | 65  | 70  | 75  | 80   |
+| BP + RG (+20)             | 55  | 60  | 65  | 70  | 75  | 80  | 85   |
 | TR + SB (+20)             | 55  | 60  | 65  | 70  | 75  | 80  | 85   |
+| SB + RG (+25)             | 60  | 65  | 70  | 75  | 80  | 85  | 90   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 | BP + TP (+12)             | 47  | 52  | 57  | 62  | 67  | 72  | 77   |
 | TR + TP (+17)             | 47  | 57  | 62  | 67  | 72  | 77  | 82   |
 | SB + TP (+17)             | 52  | 57  | 62  | 67  | 72  | 77  | 82   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 | BP + TR + SB (+25)        | 55  | 65  | 70  | 75  | 80  | 85  | 90   |
+| BP + RG + SB (+30)        | 65  | 70  | 75  | 80  | 85  | 90  | 95   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 | BP + TR + TP (+22)        | 57  | 62  | 67  | 72  | 77  | 82  | 87   |
 | BP + SB + TP (+22)        | 57  | 62  | 67  | 72  | 77  | 82  | 87   |
+| BP + RG + TP (+27)        | 62  | 67  | 72  | 77  | 82  | 87  | 92   |
 | TR + SB + TP (+27)        | 62  | 67  | 72  | 77  | 82  | 87  | 92   |
+| RG + SB + TP (+32)        | 67  | 72  | 77  | 82  | 87  | 92  | 97   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 | BP + TR + SB + TP (+32)   | 67  | 72  | 77  | 82  | 87  | 92  | 97   |
+| BP + RG + SB + TP (+37)   | 72  | 77  | 82  | 87  | 92  | 97  | 102  |
 | ------------------------- | --- | --- | --- | --- | --- | --- | ---- |
 
 
@@ -272,23 +306,30 @@ Reminder: The table columns are using *base* Cunning Level (e.g. without bonuses
 | BP: (Blackpearl Earring)  | 70  | 75  | 80  | 85   |
 | TR: (Thief's Ring)        | 75  | 80  | 85  | 90   |
 | SB: (Snuffbox)            | 75  | 80  | 85  | 90   |
+| RG: (Ring of Greed)       | 80  | 85  | 90  | 95   |
 | TP: (Thief Potion - temp) | 72  | 77  | 82  | 87   |
 | ------------------------- | --- | --- | --- | ---- |
 | BP + TR (+15)             | 80  | 85  | 90  | 95   |
 | BP + SB (+15)             | 80  | 85  | 90  | 95   |
+| BP + RG (+20)             | 85  | 90  | 95  | 100  |
 | TR + SB (+20)             | 85  | 90  | 95  | 100  |
+| SB + RG (+25)             | 90  | 95  | 100 | 105  |
 | ------------------------- | --- | --- | --- | ---- |
 | BP + TP (+12)             | 77  | 82  | 87  | 92   |
 | TR + TP (+17)             | 82  | 87  | 92  | 97   |
 | SB + TP (+17)             | 82  | 87  | 92  | 97   |
 | ------------------------- | --- | --- | --- | ---- |
 | BP + TR + SB (+25)        | 90  | 95  | 100 | 105  |
+| BP + RG + SB (+30)        | 95  | 100 | 105 | 110  |
 | ------------------------- | --- | --- | --- | ---- |
 | BP + TR + TP (+22)        | 87  | 92  | 97  | 102  |
 | BP + SB + TP (+22)        | 87  | 92  | 97  | 102  |
+| BP + RG + TP (+27)        | 92  | 97  | 102 | 107  |
 | TR + SB + TP (+27)        | 92  | 97  | 102 | 107  |
+| RG + SB + TP (+32)        | 97  | 102 | 107 | 112  |
 | ------------------------- | --- | --- | --- | ---- |
 | BP + TR + SB + TP (+32)   | 97  | 102 | 107 | 112  |
+| BP + RG + SB + TP (+37)   | 102 | 107 | 112 | 117  |
 | ------------------------- | --- | --- | --- | ---- |
 
 
