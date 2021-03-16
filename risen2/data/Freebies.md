@@ -5,11 +5,16 @@ That is stuff that you can get without spending any coins. I have also listed so
 
 ## Caldera I
 
-| Item             | Special Requirements / Permanent Bonuses | Notes                                                                            |
-|:----------------:|:----------------------------------------:|:--------------------------------------------------------------------------------:|
-| The Twins        | R: Sneak skill, do BEFORE rescuing Patty | Go to ship. When asked, respond w Ship/Captain/Commandant/Carlos to get onboard. |
-| Heros Crown      | B: Toughness +1 \*                       | Along the wall in the Crystal Cave (enter from the beach).                       |
-| Potion Blades    | ---                                      | On the back side of some crates at the end of the docks                          |
+| Item                 | Special Requirements / Permanent Bonuses | Notes                                                                            |
+|:--------------------:|:----------------------------------------:|:--------------------------------------------------------------------------------:|
+| Officer's Sword      | ---                                      | Starting gear; required to progress story                                        |
+| Officer's Pistol     | R: DLC Purchase (or item code cheat)     | DLC Starting gear                                                                |
+| Pirate Hat (DLC)     | R: DLC Purchase (or item code cheat)     | DLC Starting gear                                                                |
+| Pirate Clothes (DLC) | R: DLC Purchase (or item code cheat)     | DLC Starting gear                                                                |
+| Pirate Boots (DLC)   | R: DLC Purchase (or item code cheat)     | DLC Starting gear                                                                |
+| The Twins          | R: Sneak skill, do BEFORE rescuing Patty | Go to ship. When asked, respond w Ship/Captain/Commandant/Carlos to get onboard. |
+| Heros Crown        | B: Toughness +1 \*                       | Along the wall in the Crystal Cave (enter from the beach).                       |
+| Potion Blades      | ---                                      | On the back side of some crates at the end of the docks                          |
 
 \* This plant gives an immediate and permanent +1 bonus to the TALENTS for that Attribute if consumed now OR it can be used to make a potion later that gives a permanent +2 bonus to the same talents. Note that this is differenet than a +1/+2 to the Attribute itself (which would give +5/+10 to those talents, respectively).
 
