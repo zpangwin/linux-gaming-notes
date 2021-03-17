@@ -170,6 +170,7 @@ Pretty much all of these potions can be found for free around the world.
 
 ### Amulets
 
+
 | Item Name          | Buy  | Sell | Item Code      | Stats and Effects                                        | Free? | Merchants                        |
 |:------------------:|:----:|:----:|:--------------:|:--------------------------------------------------------:|:-----:|:--------------------------------:|
 | Ancestral Stone    | ???? | 500  | It_Am_Ancestor | Death Cult +10, Black Magic +10, Ritual +10              | No    |                                  |
@@ -190,9 +191,12 @@ Pretty much all of these potions can be found for free around the world.
 
 \* Requires Pickpocket, Lockpick, and/or Monkey Trainer Skills be unlocked and of a certain level. If there are multiple copies freely available this only applies when *all* of the freely available copies of that item require thieving skills.
 
+
 ### Rings
 
+
 Note: The DLC item "Master Scholar's Ring" cannot be sold and thus does not have a price.
+
 
 | Item Name                   | Buy  | Sell | Item Code         | Stats and Effects                           | Free? | Merchants                           |
 |:---------------------------:|:----:|:----:|:-----------------:|:-------------------------------------------:|:-----:|:-----------------------------------:|
@@ -278,6 +282,7 @@ Note: The DLC item "Master Scholar's Ring" cannot be sold and thus does not have
 
 ### Pistols
 
+
 Note: This game has a *lot* of translation errors with the gun item names and categorization. Be carful to go by the weapon's *stats* rather than its name (e.g. there is a gun named "Shotgun" which is actually a musket using the "Musket" skill and fires Bullets rather than Lead Shot; likewise "Seaman's Shotgun" is a musket; but "Double-barrelled Shotgun" really is a shotgun ... ). At least I hope it was translation errors because otherwise someone was so clueless about firearms that they must never have played an FPS before... and they probably shouldn't have been involved with naming them.
 
 I am separating them based on which Skill they use (or what sounds logical in the case of Big Olga since its description says it's a pistol).
@@ -308,6 +313,7 @@ I am separating them based on which Skill they use (or what sounds logical in th
 
 ### Shotguns
 
+
 Note: This game has a *lot* of translation errors with the gun item names and categorization. Be carful to go by the weapon's *stats* rather than its name (e.g. there is a gun named "Shotgun" which is actually a musket using the "Musket" skill and fires Bullets rather than Lead Shot; likewise "Seaman's Shotgun" is a musket; but "Double-barrelled Shotgun" really is a shotgun ... ). At least I hope it was translation errors because otherwise someone was so clueless about firearms that they must never have played an FPS before... and they probably shouldn't have been involved with naming them.
 
 There are multiple guns with "Rifle" in the name under the "Shotgun" category as well as a gun with "Shotgun" as the name in the "Muskets" category. I know I'm American but I think they should have at least had some of these guys play FPS games for a couple days before they game up with guns lol... Is a bit like trying to label a greatsword as a finesse weapon; I mean, they're both pointy and you swing them, right? ;-P
@@ -327,6 +333,7 @@ There are multiple guns with "Rifle" in the name under the "Shotgun" category as
 
 
 ### Muskets
+
 
 Note: This game has a *lot* of translation errors with the gun item names and categorization. Be carful to go by the weapon's *stats* rather than its name (e.g. there is a gun named "Shotgun" which is actually a musket using the "Musket" skill and fires Bullets rather than Lead Shot; likewise "Seaman's Shotgun" is a musket; but "Double-barrelled Shotgun" really is a shotgun ... ). At least I hope it was translation errors because otherwise someone was so clueless about firearms that they must never have played an FPS before... and they probably shouldn't have been involved with naming them.
 
@@ -353,7 +360,7 @@ There are multiple guns with "Rifle" in the name under the "Shotgun" category as
 
 
 | Item Name             | Buy  | Sell | Item Code             | Damage | Effects                                    | Free? | Merchants          |
-|:---------------------:|:----:|:----:|:---------------------:|:---------------------------------------------------:|:-----:|:------------------:|
+|:---------------------:|:----:|:----:|:---------------------:|:------:|:------------------------------------------:|:-----:|:------------------:|
 | Curse Doll            | ???  | 20   | It_VoodooDoll_Curse   | ---    | Curse and weaken enemies                   | Yes   |                    |
 | Voodoo Doll           | 50   | 10   | It_VoodooDoll         | ---    | ---                                        | No    | Kapua, Emma, Quinn |
 | Sceptre of Fear       | ???? | 200  | It_Scepter_Fear       | 10-20  | Cause Fera and Terror in Enemies           | No    |                    |
