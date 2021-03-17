@@ -108,7 +108,16 @@ Reminder: The table columns are using *base* Cunning Level (e.g. without bonuses
 | BP + RG + SB + TP (+37)   | 47  | 52  | 57  | 62  | 67  | 72  | 77  | 82  | 85   |
 | ------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | ---- |
 
+note: need to redo tables with full set of items
 
+Black Pearl (Cunning +1 => Thievery +5)
+Blade Ring (Thievery +20)
+Thief's Amulet (Thievery +10)
+Ring of Greed (Thievery +15)
+Thief's Ring (Thievery +10)
+Snuffbox (Thievery +10)
+Thief's Potion (Thievery +7 for 30s w/o Ritual skills)
+One Left Boot (Cunning +1 => Thievery +5)
 
 ### Pickpocket + Thievery 1 (+5):
 

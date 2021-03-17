@@ -26,13 +26,14 @@ That is stuff that you can get without spending any coins. I have also listed so
 
 | Item             | Special Reqs/Bon | Notes                                                                                                           |
 |:----------------:|:----------------:|:---------------------------------------------------------------------------------------------------------------:|
-| Cutlass          | ---              | Talk to Meeks (dont give rum) then Booze. Do quest  + loot                                                      |
+| Black Pearl      | R: Pickpocket 10 | Buy Pickpocket skill then talk to Largo and ask how to get the Blackpearl. You will also need 1 Grog.           |
+| Cutlass          | ---              | Talk to Meeks (dont give rum) then Booze. Do quest + loot                                                       |
 | Fencing Foil     | R: Lockpick 30   | On the "Pass" turn right after bridge. Or from "Large Gate", head N then keep L. In cave beat ghoul then chest  |
 | Graveroot        | B: Voodoo +1 \*  | NE corner of the swamps (across the river from the ghouls)                                                      |
 | Hammer (maybe?)  | R: Lockpick 20   | chest in Stone (the blacksmith's) house in the Pirate Den                                                       |
 | Inquistor Ring   | ---              | Talk to Meeks (dont give rum) then Booze. Complete quest                                                        |
 | Iron Ring        | R: Lockpick 30   | chest in Booze's Bedroom at Pirates Den                                                                         |
-| Jade Earing      | R: Lockpick 30   | On the "Pass" turn right after bridge. Or from "Large Gate", head N then keep L. In cave beat ghoul then chest  |
+| Jade Earring     | R: Lockpick 30   | On the "Pass" turn right after bridge. Or from "Large Gate", head N then keep L. In cave beat ghoul then chest  |
 | Jesters Cap      | B: Cunning +1 \* | Use cannons @ "Large Gate" to blow open door on tomb across the pass. Clear area & look on floor by sarcophagus |
 | Lucky Charm      | ---              | Get Lighthouse Quest. In Termite Cave, @ top of spiral path                                                     |
 | Machete          | ---              | Talk to De Fuego. Talk headhunter quest for 600. Find loot from the bodies                                      |
