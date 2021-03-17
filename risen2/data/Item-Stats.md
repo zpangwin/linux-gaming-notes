@@ -146,8 +146,9 @@ Pretty much all of these potions can be found for free around the world.
 
 ### Earrings
 
+
 | Item Name          | Buy  | Sell | Item Code         | Stats and Effects         | Free? | Merchants                           |
-|:------------------:|:----:|:----:|:-----------------:|:----------------------- -:|:-----:|:-----------------------------------:|
+|:------------------:|:----:|:----:|:-----------------:|:-------------------------:|:-----:|:-----------------------------------:|
 | Black Pearl        | 2000 | 400  | It_Ear_Largo      | Cunning +1                | Yes\* |                                     |
 | Bloodthorn Earring | 200  | 40   | It_Ear_Bloodthorn | Ritual +5                 | No    | Kapua                               |
 | Creole Earring     | ???? | 400  | It_Ear_Creole     | Blades +1                 | No    |                                     |
@@ -162,6 +163,7 @@ Pretty much all of these potions can be found for free around the world.
 | Shark Tooth        | ???? | 400  | It_Ear_Shark      | Toughness +1              | No    |                                     |
 | Skull Earring      | 200  | 40   | It_Ear_Skull      | Intimidate +5             | Yes\* | Flannigan, Quinn                    |
 | Warrior's Earring  | 1000 | 200  | It_Ear_Warrior    | Bulletproof +5, Ritual +5 | Yes   |                                     |
+
 
 \* Requires Pickpocket, Lockpick, and/or Monkey Trainer Skills be unlocked and of a certain level. If there are multiple copies freely available this only applies when *all* of the freely available copies of that item require thieving skills.
 
@@ -413,12 +415,13 @@ There are multiple guns with "Rifle" in the name under the "Shotgun" category as
 | Raw Chicken Meat           | ???  | 5    | It_Chicken_Raw   | Fry for Provisions                       | Yes   |                                            |
 | Raw Fish                   | ???  | 5    | It_Fish_Raw      | Fry for Provisions                       | Yes   |                                            |
 | Raw Meat                   | ???  | 5    | It_Meat_Raw      | Fry for Provisions                       | Yes   |                                            |
-| Wheel Lock                 | ???  | 15   | ???              | Gun Part                                 | Yes   |                                            |
+| Wheel Lock                 | ???  | 15   | It_WheelLock     | Gun Part                                 | Yes   |                                            |
 | Pistol Barrel              | ???  | 15   | It_Pis_Barrel    | Gun Part                                 | No    |                                            |
 | Funnel-Shaped Gun Barrel   | ???  | 15   | It_ShP_Barrel    | Gun Part                                 | No    |                                            |
 | Shotgun Barrel             | ???  | 15   | It_ShG_Barrel    | Gun Part                                 | No    |                                            |
 | Shotgun Barrel             | ???  | 15   | It_Rif_Barrel    | Gun Part                                 | No    |                                            |
 | Sugar                      | ???  | 10   | It_Sugar         | Brewing Component                        | No    |                                            |
+| Sword Blank                | ???  | 15   | It_SwordRaw      | Sword Part                               | Yes   |                                            |
 
 
 \* Requires Pickpocket, Lockpick, and/or Monkey Trainer Skills be unlocked and of a certain level. If there are multiple copies freely available this only applies when *all* of the freely available copies of that item require thieving skills.
