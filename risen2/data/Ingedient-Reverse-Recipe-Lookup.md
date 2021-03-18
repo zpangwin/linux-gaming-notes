@@ -3,179 +3,49 @@
 
 For easy lookup to see if an ingredient can be used for anything you might be interested in later.
 
-| Ingredient Name     | Used in Recipe(s) for                                                |
-|:-------------------:|:--------------------------------------------------------------------:|
-| Acid Gland          | Sharpeye Paste (Perm +2 Firearms), 3 others (below)                  |
-| Black Oleander      | Fool's Juice (Perm +2 Cunning), Thief's Potion                       |
-| Bloodroot           | Bloody Mary, Painkiller, Potion of Awe                               |
-| Bone                | Graveroot Extract (Perm +2 Voodoo), Spirit Essence, 6 others (below) |
-| Choking Vine        | Potion of Blades, Swordthorn Essence (Perm +2 Blades)                |
-| Claw                | Curse Doll, Hunter's Necklace                                        |
-| Curved Dagger       | Seaman's Shotgun, Storm Rifle                                        |
-| Ear                 | Ritual Potion                                                        |
-| Emerald             | Sceptre of Fear                                                      |
-| Eye                 | Curse Stone, Sceptre of Fear                                         |
-| Feather             | Feather Earring, Jade Pendant, Tribal Symbol                         |
-| Funnel Gun Barrel   | Sawn-Off Shotgun                                                     |
-| Gold Nugget         | Hunter's Ring, 4 Amulets, 4 Swords (below)                           |
-| Golden Clover       | Potion of Persuasion                                                 |
-| Gold Nugget         | Sceptre of Power                                                     |
-| Graveroot           | Graveroot Extract (Perm +2 Voodoo)                                   |
-| Jade                | Sceptre of Fear, Sceptre of Power, 11 Jeweltry pieces (below)        |
-| Jaguar Heart        | Ancestral Stone , Soul Necklace, Ti' Ha Ko                           |
-| Jesters Cap         | Fool's Juice (Perm +2 Cunning)                                       |
-| Matchlock           | D-barrelled Shotgun, Fire Cudgel, Seaman's Shotgun, Storm Rifle      |
-| Monkey Skull        | Curse Doll, Fool's Juice (Perm +2 Cunning), 2 others (below)         |
-| Panther Paw         | Swordthorn Essence (Perm +2 Blades), 2 others (below)                |
-| Pistol Barrel       | Twins                                                                |
-| Powdered Poppy Seed | Marksman's Potion, Sharpeye Paste (Perm +2 Firearms)                 |
-| Ruby                | Rapier                                                               |
-| Sand Devil Sensor   | Potion of Persuasion, Sceptre of Power                               |
-| Sapphire            | Sceptre of Power                                                     |
-| Sharpeye            | Sharpeye Paste (Perm +2 Firearms)                                    |
-| Shotgun Barrel      | D-barrelled Shotgun, Fire Cudgel, Seaman's Shotgun, Storm Rifle      |
-| Skull               | Sceptre of Fear                                                      |
-| Skullflower         | Spirit Essence                                                       |
-| Spirit Lily         | Curse Doll, Graveroot Extract (Perm +2 Voodoo), Ritual Potion        |
-| Sugar               | Bloody Mary, Grog, Painkiller, Rum                                   |
-| Sword Blank         | Duelling Epee, Epee, Plank Breaker, Rapier, Scimitar. 1 more (below) |
-| Swordthorn          | Swordthorn Essence (Perm +2 Blades)                                  |
-| Teeth               | Bloodthorn Earring, Tribal Symbol                                    |
-| Tusk                | Potion of Awe, Hunter's Ring, Warrior's Jewelery, 2 others (below)   |
-| Voodoo Doll         | Curse Doll                                                           |
-| Wheel Lock          | Sawn-Off Shotgun, Twins                                              |
+As a reminder, the gun names in this game make no sense whatsoever: it has guns with "Shotgun" in their name that use either the Pistols, Shotguns, or Muskets skill. It also has guns with "Rifle" in their name that use either Muskets or Shotguns skills. Either the guys doing the gun names have never played a FPS before or they were blazed off his ass when setup the names... 
 
 
+| Ingredient Name     | Categories          | Used in Recipe(s) for                                                                                               |
+|:-------------------:|:-------------------:|:-------------------------------------------------------------------------------------------------------------------:|
+| Acid Gland          | Firearms, Voodoo    | Sharpeye Paste\* (Firearms), Marksman's Potion, Curse Stone (Death Cult +5/Black Magic +10), Jade Ring (Ritual +10) |
+| Black Oleander      | Cunning             | Fool's Juice\* (Cunning), Thief's Potion (Thievery)                                                                 |
+| Bloodroot           | Alcohol, Toughness  | Bloody Mary (Regeneration), Painkiller (Bladeproof/Bulletproof), Potion of Awe (Intimidate)                         |
+| Bone                | Voodoo              | Graveroot Extract\*, Spirit Essence, Bloodthorn Earring (Ritual +5), Bone Necklace (Death Cult +10/Black Magic +5), Bone Ring (Black Magic +5/Ritual +5), Jade Earring (Black Magic +5), Skull Amulet (Death Cult +15/Black Magic +5), Soul Ring (Death Cult +5/Ritual +5), Ti' Ha Ko (Death Cult +5/Black Magic +15), Tribal Symbol (Ritual) |
+| Choking Vine        | Blades              | Swordthorn Essence\* (Blades), Potion of Blades (Blades)                                                            |
+| Claw                | Voodoo              | Curse Doll, Hunter's Necklace (Ritual +10)                                                                          |
+| Curved Dagger       | Muskets             | Seaman's Shotgun (Musket), Storm Rifle (Musket)                                                                     |
+| Ear                 | Voodoo              | Ritual Potion (Ritual)                                                                                              |
+| Emerald             | Voodoo              | Sceptre of Fear                                                                                                     |
+| Eye                 | Voodoo              | Curse Stone (Death Cult +5/Black Magic +10), Sceptre of Fear                                                        |
+| Feather             | Voodoo              | Feather Earring (Voodoo +1), Jade Pendant (Voodoo +1), Tribal Symbol (Ritual +5)                                    |
+| Funnel Gun Barrel   | Pistols             | Sawn-Off Shotgun (Pistol)                                                                                           |
+| Gold Nugget         | Firearms, Blades, Voodoo | Hunter's Ring (Muskets +5/Shotguns +5), Epee (Piercing), Plank Breaker (Slashing), Rapier (Piercing), Scimitar (Slashing), Sceptre of Power, Ancestral Stone (Voodoo +2), Jade Pendant (Voodoo +1), Soul Necklace (Voodoo +1/Ritual +5), Warrior's Jewelery (Ritual +15) |
+| Golden Clover       | Silver Tongue       | Potion of Persuasion (Silver Tongue)                                                                                |
+| Graveroot           | Voodoo              | Graveroot Extract\* (Voodoo)                                                                                        |
+| Jade                | Voodoo              | Sceptre of Fear, Sceptre of Power, Ancestral Stone (Voodoo +2), Bone Necklace (Death Cult +10/Black Magic +5), Curse Stone (Death Cult +5/Black Magic +10), Hunter's Necklace (Ritual +10), Jade Earring (Black Magic +5), Jade Pendant (Voodoo +1), Jade Ring (Ritual +10), Skull Amulet (Death Cult +15/Black Magic +5), Soul Necklace (Voodoo +1/Ritual +5), Soul Ring (Death Cult +5/Ritual +5), Ti' Ha Ko (Death Cult +5/Black Magic +15) |
+| Jaguar Heart        | Voodoo              | Ancestral Stone (Voodoo +2) , Soul Necklace (Voodoo +1/Ritual +5), Ti' Ha Ko (Death Cult +5/Black Magic +15)        |
+| Jesters Cap         | Cunning             | Fool's Juice\* (Cunning)                                                                                            |
+| Matchlock           | Shotguns, Muskets   | D-barrelled Shotgun (Shotgun), Fire Cudgel (Shotgun), Seaman's Shotgun (Musket), Storm Rifle (Musket)               |
+| Monkey Skull        | Cunning, Voodoo     | Fool's Juice\* (Cunning), Thief's Potion (Thievery), Curse Doll, Skull Amulet (Death Cult +15/Black Magic +5)       |
+| Panther Paw         | Blades, Voodoo      | Swordthorn Essence\* (Blades), Potion of Blades, Warrior's Jewelery (Ritual +15)                                    |
+| Pistol Barrel       | Pistols             | The Twins (Pistol)                                                                                                  |
+| Powdered Poppy Seed | Firearms            | Sharpeye Paste\* (Firearms), Marksman's Potion (Firearms)                                                           |
+| Ruby                | Piercing            | Rapier (Piercing)                                                                                                   |
+| Sand Devil Sensor   | Cunning, Voodoo     | Potion of Persuasion (Silver Tongue), Sceptre of Power                                                              |
+| Sapphire            | Voodoo              | Sceptre of Power                                                                                                    |
+| Sharpeye            | Firearms            | Sharpeye Paste\* (Firearms)                                                                                         |
+| Shotgun Barrel      | Shotguns, Muskets   | D-barrelled Shotgun (Shotgun), Fire Cudgel(Shotgun), Seaman's Shotgun (Musket), Storm Rifle (Musket)                |
+| Skull               | Voodoo              | Sceptre of Fear                                                                                                     |
+| Skullflower         | Voodoo              | Spirit Essence (Black Magic)                                                                                        |
+| Spirit Lily         | Voodoo              | Curse Doll, Graveroot Extract\* (Voodoo), Ritual Potion (Ritual)                                                    |
+| Sugar               | Alcohol, Toughness  | BBloody Mary (Regeneration), Grog (Blood +50), Painkiller (Bladeproof/Bulletproof), Rum (Blood +100)                |
+| Sword Blank         | Piercing, Slashing  | Duelling Epee (Piercing), Epee (Piercing), Plank Breaker (Slashing), Rapier (Piercing), Scimitar (Slashing), Captain's Sabre (Slashing) |
+| Swordthorn          | Blades              | Swordthorn Essence\* (Blades)                                                                                       |
+| Teeth               | Ritual              | Bloodthorn Earring (Ritual +5), Tribal Symbol (Ritual +5)                                                           |
+| Tusk                | Firearms, Voodoo, Intimidate | Potion of Awe (Intimidate), Hunter's Ring (Muskets +5/Shotguns +5), Feather Earring (Voodoo +1), Hunter's Necklace (Ritual +10), Warrior's Jewelery (Ritual +15) |
+| Voodoo Doll         | Voodoo              | Curse Doll                                                                                                          |
+| Wheel Lock          | Pistols             | Sawn-Off Shotgun (Pistol), The Twins (Pistol)                                                                       |
 
 
-## Acid Glands Recipes
-
-Potion Recipes using Acid Gland:
-
-* Marksman's Potion
-* Sharpeye Paste (Perm +2 Firearms)
-
-Item Recipes using Acid Gland:
-
-* Curse Stone
-* Jade Ring
-
-
-
-## Bone Recipes
-
-Potion Recipes using Bone:
-
-* Graveroot Extract (Perm +2 Voodoo)
-* Spirit Essence
-
-Item Recipes using Bone:
-
-* Bloodthorn Earring
-* Bone Necklace
-* Bone Ring
-* Jade Earring
-* Skull Amulet
-* Soul Ring
-* Ti' Ha Ko
-* Tribal Symbol
-
-
-
-## Gold Nugget Recipes
-
-Potion Recipes using Gold: None
-
-Weapon Recipes using Gold:
-
-* Epee
-* Plank Breaker
-* Rapier
-* Scimitar
-
-Item Recipes using Gold:
-
-* Ancestral Stone
-* Hunter's Ring
-* Jade Pendant
-* Soul Necklace
-* Warrior's Jewelery
-
-
-
-## Jade Recipes
-
-Sceptre Recipes using Jade:
-
-* Sceptre of Fear
-* Sceptre of Power
-
-Item Recipes using Jade:
-
-* Ancestral Stone
-* Bone Necklace
-* Curse Stone
-* Hunter's Necklace
-* Jade Earring
-* Jade Pendant
-* Jade Ring
-* Skull Amulet
-* Soul Necklace
-* Soul Ring
-* Ti' Ha Ko
-
-
-
-## Monkey Skull Recipes
-
-Potion Recipes using Monkey Skull:
-
-* Fool's Juice (Perm +2 Cunning)
-* Thief's Potion
-
-Item Recipes using Monkey Skull:
-
-* Curse Doll
-* Skull Amulet
-
-
-
-# Panther Paw Recipes
-
-Potion Recipes using Panther Paw:
-
-* Potion of Blades
-* Swordthorn Essence (Perm +2 Blades)
-
-Item Recipes using Panther Paw:
-
-* Warrior's Jewelery
-
-
-
-
-## Sword Blank Recipes
-
-Weapon Recipes using Sword Blank:
-
-* Captain's Sabre
-* Duelling Epee
-* Epee
-* Plank Breaker
-* Rapier
-* Scimitar
-
-
-
-## Tusk Recipes
-
-Potion Recipes using Tusk:
-
-* Potion of Awe
-
-Item Recipes using Tusk:
-
-* Feather Earring
-* Hunter's Necklace
-* Hunter's Ring
-* Warrior's Jewelery 
+\* Permanent stat-boosting potions

@@ -2,9 +2,12 @@
 ## Recipes
 
 
+
 ### Permanent Potions
 
+
 Note: While there is a potion for permanently increasing Toughness ('Leather Oil'), it does not appear to have a recipe in-game (or it is undocumented / named strangely)
+
 
 | Recipe Name        | Buy  | Sell |  Item Code                  | Recipe                                            | Merchant                        |
 |:------------------:|:----:|:----:|:--------------------------:|:--------------------------------------------------:|:-------------------------------:|
@@ -14,7 +17,9 @@ Note: While there is a potion for permanently increasing Toughness ('Leather Oil
 | Swordthorn Essence | ???? | 100  | It_Recipe_Po_Perm_Blades   | 1x Swordthorn, 1x Choking Vine, 1x Panther Paw     |                                 |
 
 
+
 ### Temporary Potions
+
 
 | Recipe Name          | Buy  | Sell | Item Code                 | Recipe                                 | Merchant                        |
 |:--------------------:|:----:|:----:|:-------------------------:|:--------------------------------------:|:-------------------------------:|
@@ -27,7 +32,9 @@ Note: While there is a potion for permanently increasing Toughness ('Leather Oil
 | Thief's Potion       | 250  | 50   | It_Recipe_Po_Thief        | 1x Black Oleander, 1x Monkey Skull     | Badriya (Faction)               |
 
 
+
 ### Alcohol
+
 
 | Recipe Name | Buy  | Sell | Item Code               | Recipe                 | Merchant                        |
 |:-----------:|:----:|:----:|:-----------------------:|:----------------------:|:-------------------------------:|
@@ -36,10 +43,12 @@ Note: While there is a potion for permanently increasing Toughness ('Leather Oil
 | Painkiller  | 500  | 100  | It_Recipe_Bo_PainKiller | 1x Bloodroot, 1x Sugar | Booze                           |
 | Rum         | 500  | 100  | It_Recipe_Bo_Rum        | 2x Sugar               | Booze                           |
 
+
 \* Might have the name wrong but the brewer who lives upstairs above Booze's bar. He will trade for this so it is not exactly free and he's not exactly a merchant either. Even though you can buy it with ingredients you picked up for free, you still have to "spend" something so I am listing it here.
 
 
 ### Earrings
+
 
 | Recipe Name        | Buy  | Sell | Item Code                  | Recipe                                              | Merchant                        |
 |:------------------:|:----:|:----:|:--------------------------:|:---------------------------------------------------:|:-------------------------------:|
@@ -49,6 +58,7 @@ Note: While there is a potion for permanently increasing Toughness ('Leather Oil
 
 
 ### Amulets
+
 
 | Recipe Name        | Buy  | Sell | Item Code             | Recipe                                   | Free? | Merchant                        |
 |:------------------:|:----:|:----:|:---------------------:|:----------------------------------------:|:-----:|:-------------------------------:|
@@ -63,7 +73,11 @@ Note: While there is a potion for permanently increasing Toughness ('Leather Oil
 | Tribal Symbol      | 100  | 20   | It_Recipe_Am_Tribe    | 1x Bone, 1x Teeth, 1x Feather            | No    | Kapua                           |
 | Warrior's Jewelery | ???? | 100  | It_Recipe_Am_Warrior  | 1x Gold Nugget, 1x Panther Paw, 1x Tusk  | No    |                                 |
 
+
+
 ### Rings
+
+
 
 | Recipe Name   | Buy  | Sell | Item Code           | Recipe                 | Merchant                        |
 |:-------------:|:----:|:----:|:-------------------:|:----------------------:|:-------------------------------:|
@@ -72,21 +86,22 @@ Note: While there is a potion for permanently increasing Toughness ('Leather Oil
 | Jade Ring     | ???? | 120  | It_Recipe_Ri_Jade   | 1x Jade, 1x Acid Gland |                                 |
 | Soul Ring     | ???? | 100  | It_Recipe_Ri_Soul   | 1x Bone, 1x Jade       | Emma                            |
 
-### Voodoo Dolls
 
-| Recipe Name | Buy  | Sell | Item Code                  | Recipe                                                  | Merchant                        |
-|:-----------:|:----:|:----:|:--------------------------:|:-------------------------------------------------------:|:-------------------------------:|
-| Curse Doll  | 250  | 50  | It_Recipe_VoodooDoll_Curse | 1x Claw, 1x Voodoo Doll, 1x Monkey Skull, 1x Spirit Lily | Kapua, Emma                     |
 
-### Voodoo Sceptre
+### Voodoo Recipes
 
-| Recipe Name      | Buy  | Sell | Item Code                  | Recipe                                              | Merchant                        |
-|:----------------:|:----:|:----:|:--------------------------:|:---------------------------------------------------:|:-------------------------------:|
-| Sceptre of Fear  | 500  | 100  | It_Recipe_Sce_Fear         | 1x Skull, 1x Eye, 1x Jade, 1x Emerald               | Kapua (Faction), Emma           |
-| Sceptre of Power | 1000 | 200  | It_Recipe_Sce_Power        | 1x Jade, 1x GoldNug, 1x SandevilSensor, 1x Sapphire | Kapua (Faction), Emma           |
-| Skull Sceptre    | ???? | 300  | It_Recipe_Sce_Skull        | Quest Item (no ingredients listed)                  |                                 |
+
+| Recipe Name      | Buy  | Sell | Item Code                  | Recipe                                                   | Merchant                        |
+|:----------------:|:----:|:----:|:--------------------------:|:--------------------------------------------------------:|:-------------------------------:|
+| Curse Doll       | 250  | 50   | It_Recipe_VoodooDoll_Curse | 1x Claw, 1x Voodoo Doll, 1x Monkey Skull, 1x Spirit Lily | Kapua, Emma                     |
+| Sceptre of Fear  | 500  | 100  | It_Recipe_Sce_Fear         | 1x Skull, 1x Eye, 1x Jade, 1x Emerald                    | Kapua (Faction), Emma           |
+| Sceptre of Power | 1000 | 200  | It_Recipe_Sce_Power        | 1x Jade, 1x GoldNug, 1x SandevilSensor, 1x Sapphire      | Kapua (Faction), Emma           |
+| Skull Sceptre    | ???? | 300  | It_Recipe_Sce_Skull        | Quest Item (no ingredients listed)                       |                                 |
+
+
 
 ### Piercing Weapons
+
 
 | Recipe Name   | Buy  | Sell | Item Code            | Recipe                                  | Merchant                        |
 |:-------------:|:----:|:----:|:--------------------:|:---------------------------------------:|:-------------------------------:|
@@ -94,7 +109,9 @@ Note: While there is a potion for permanently increasing Toughness ('Leather Oil
 | Epee          | 1500 | 350  | It_Recipe_Pie_Epee   | 1x Sword Blank, 1x Gold Nugget          | Cooper |
 | Rapier        | ???? | 450  | It_Recipe_Pie_Rapier | 1x Sword Blank, 1x Gold Nugget, 1x Ruby |                                 |
 
+
 ### Slashing Weapons
+
 
 | Recipe Name     | Buy  | Sell | Item Code                  | Recipe                         | Merchant                        |
 |:---------------:|:----:|:----:|:--------------------------:|:------------------------------:|:-------------------------------:|
@@ -103,10 +120,13 @@ Note: While there is a potion for permanently increasing Toughness ('Leather Oil
 | Plank Breaker   | ???? | 450  | It_Recipe_Sla_Plankbreaker | 1x Sword Blank, 1x Gold Nugget |                                 |
 
 
+
 ### Pistols
+
 
 Note: Since this game has a lot of translation errors with the gun item names, this section
 will be counting anything that uses the Pistol skill as a Pistol
+
 
 | Recipe Name      | Buy  | Sell | Item Code             | Recipe                                     | Merchant                        |
 |:----------------:|:----:|:----:|:---------------------:|:------------------------------------------:|:-------------------------------:|
@@ -116,8 +136,10 @@ will be counting anything that uses the Pistol skill as a Pistol
 
 ### Shotguns
 
+
 Note: Since this game has a lot of translation errors with the gun item names, this section
 will be counting anything that uses the Shotgun skill as a Shotgun
+
 
 | Recipe Name         | Buy  | Sell | Item Code             | Recipe                          | Merchant                        |
 |:-------------------:|:----:|:----:|:---------------------:|:-------------------------------:|:-------------------------------:|
@@ -127,10 +149,16 @@ will be counting anything that uses the Shotgun skill as a Shotgun
 
 ### Rifles
 
+
 Note: Since this game has a lot of translation errors with the gun item names, this section
 will be counting anything that uses the Rifle skill as a Rifle
+
 
 | Recipe Name      | Buy  | Sell | Item Code             | Recipe                                            | Merchant                        |
 |:----------------:|:----:|:----:|:---------------------:|:-------------------------------------------------:|:-------------------------------:|
 | Storm Rifle      | ???? | 450  | It_Recipe_Rif_Assault | 2x Shotgun Barrel, 2x Matchlock, 1x Curved Dagger |                                 |
 | Seaman's Shotgun | ???? | 250  | It_Recipe_Rif_Ship    | 1x Shotgun Barrel, 1x Matchlock, 1x Curved Dagger |                                 |
+
+
+
+

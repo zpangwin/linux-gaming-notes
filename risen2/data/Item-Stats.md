@@ -171,25 +171,27 @@ Pretty much all of these potions can be found for free around the world.
 ### Amulets
 
 
-| Item Name          | Buy  | Sell | Item Code      | Stats and Effects                                        | Free? | Merchants                        |
-|:------------------:|:----:|:----:|:--------------:|:--------------------------------------------------------:|:-----:|:--------------------------------:|
-| Ancestral Stone    | ???? | 500  | It_Am_Ancestor | Death Cult +10, Black Magic +10, Ritual +10              | No    |                                  |
-| Bone Necklace      | ???? | 150  | It_Am_Bone     | Death Cult +10, Black Magic +5                           | No    |                                  |
-| Curse Stone        | 800  | 160  | It_Am_Curse    | Death Cult +5, Black Magic +10                           | No    |                                  |
-| Hunter's Necklace  | ???? | 100  | It_Am_Hunter   | Ritual +10                                               | No    |                                  |
-| Jade Pendant       | 750  | 150  | It_Am_Jade     | Black Magic +5, Death Cult +5, Ritual +5                 | No    | Emma                             |
-| Lucky Charm        | 400  | 80   | It_Am_Luck     | Bulletproof +5                                           | Yes   |                                  |
-| Pirates Pendant    | ???? | 200  | It_Am_Pirate   | Slashing +5, Pistols +5, Bulletproof +5, Dirty Tricks +5 | No    |                                  |
-| Skull Amulet       | ???? | 300  | It_Am_Skull    | Death Cult +15, Black Magic +5                           | No    |                                  |
-| Spirit Amulet      | 500  | 100  | It_Am_Ghost    | Death Cult +5, Ritual +5                                 | No    | Emma                             |
-| Soul Necklace      | ???? | 200  | It_Am_Soul     | Death Cult +5, Black Magic +5, Ritual +10                | No    |                                  |
-| Thief's Amulet     | 750  | 150  | It_Am_Thief    | Thievery +10, Dirty Tricks +5                            | No    | Quinn                            |
-| Ti' Ha Ko          | 1000 | 200  | It_Am_Tiwa     | Death Cult +5, Black Magic +15                           | Yes   |                                  |
-| Tribal Symbol      | 150  | 30   | It_Am_Tribe    | Ritual +5                                                | Yes   | Kapua                            |
-| Warrior's Jewelery | 750  | 150  | It_Am_Warrior  | Ritual +15                                               | Yes   |                                  |
-| Witche's Amulet    | 500  | 100  | It_Am_Kiki     | Black Magic +5, Ritual +5                                | Yes\* | Kapua                            |
+| Item Name          | Buy  | Sell | Item Code        | Stats and Effects                                        | Free? | Merchants                        |
+|:------------------:|:----:|:----:|:----------------:|:--------------------------------------------------------:|:-----:|:--------------------------------:|
+| Ancestral Stone    | ???? | 500  | It_Am_Ancestor   | Death Cult +10, Black Magic +10, Ritual +10              | No    |                                  |
+| Bone Necklace      | ???? | 150  | It_Am_Bone       | Death Cult +10, Black Magic +5                           | No    |                                  |
+| Curse Stone        | 800  | 160  | It_Am_Curse      | Death Cult +5, Black Magic +10                           | No    |                                  |
+| Hunter's Necklace  | ???? | 100  | It_Am_Hunter     | Ritual +10                                               | No    |                                  |
+| Jade Pendant       | 750  | 150  | It_Am_Jade       | Black Magic +5, Death Cult +5, Ritual +5                 | No    | Emma                             |
+| Lucky Charm        | 400  | 80   | It_Am_Luck       | Bulletproof +5                                           | Yes   |                                  |
+| Pirates Pendant    | ???? | 200  | It_Am_Pirate     | Slashing +5, Pistols +5, Bulletproof +5, Dirty Tricks +5 | No    |                                  |
+| Rat Amulet         | 50   | 20   | It_Am_Rat_Hikoko | Bulletproof +2                                           | No    | Hikoko                           |
+| Skull Amulet       | ???? | 300  | It_Am_Skull      | Death Cult +15, Black Magic +5                           | No    |                                  |
+| Spirit Amulet      | 500  | 100  | It_Am_Ghost      | Death Cult +5, Ritual +5                                 | No    | Emma                             |
+| Soul Necklace      | ???? | 200  | It_Am_Soul       | Death Cult +5, Black Magic +5, Ritual +10                | No    |                                  |
+| Thief's Amulet     | 750  | 150  | It_Am_Thief      | Thievery +10, Dirty Tricks +5                            | No    | Quinn                            |
+| Ti' Ha Ko          | 1000 | 200  | It_Am_Tiwa       | Death Cult +5, Black Magic +15                           | Yes   |                                  |
+| Tribal Symbol      | 150  | 30   | It_Am_Tribe      | Ritual +5                                                | Yes   | Kapua                            |
+| Warrior's Jewelery | 750  | 150  | It_Am_Warrior    | Ritual +15                                               | Yes   |                                  |
+| Witche's Amulet    | 500  | 100  | It_Am_Kiki       | Black Magic +5, Ritual +5                                | Yes\* | Kapua                            |
 
 \* Requires Pickpocket, Lockpick, and/or Monkey Trainer Skills be unlocked and of a certain level. If there are multiple copies freely available this only applies when *all* of the freely available copies of that item require thieving skills.
+
 
 
 ### Rings
@@ -201,8 +203,6 @@ Note: The DLC item "Master Scholar's Ring" cannot be sold and thus does not have
 | Item Name                   | Buy  | Sell | Item Code         | Stats and Effects                           | Free? | Merchants                           |
 |:---------------------------:|:----:|:----:|:-----------------:|:-------------------------------------------:|:-----:|:-----------------------------------:|
 | Blade Ring                  | ???? | 200  | It_Ri_Blade       | Thievery +20                                | No    |                                     |
-| Silver Ring                 | ???? | 20   | It_Ri_Silver      | ---                                         | No    |                                     |
-| Tek Shaballa                | ???? | ---  | It_Ri_TekShaballa | Black Magic +10, Death Cult +1-, Ritual +10 | No    |                                     |
 | Bone Ring                   | 500  | 100  | It_Ri_Bone        | Black Magic +5, Ritual +5                   | No    | Kapua                               |
 | Hunter's Ring               | 500  | 100  | It_Ri_Hunter      | Muskets +5, Shotguns +5                     | Yes\* |                                     |
 | Inquisitor's Ring           | 600  | 120  | It_Ri_Inquisitor  | Muskets +5, Bulletproof +5                  | Yes   |                                     |
@@ -215,13 +215,17 @@ Note: The DLC item "Master Scholar's Ring" cannot be sold and thus does not have
 | Ring of Greed               | 1000 | 200  | It_Ri_Greed       | Thievery +15, Silver Tongue +5              | Yes   |                                     |
 | Rogue's Ring                | ???  | 100  | It_Ri_Rogue       | Dirty Tricks +10, Thievery +5               | Yes   | Quinn                               |
 | Ruby Ring                   | 250  | 50   | It_Ri_Ruby        | Dirty Tricks +5, Silver Tongue +5           | Yes   | Sophia                              |
+| Silver Ring                 | ???? | 20   | It_Ri_Silver      | ---                                         | No    |                                     |
 | Skull Ring                  | ???? | 100  | It_Ri_Skull       | Slashing +5 , Intimidate +5                 | Yes\* |                                     |
 | Soul Ring                   | ???? | 100  | It_Ri_Soul        | Death Cult +5, Ritual +5                    | No    |                                     |
 | Sparkling Gold Ring         | 150  | 50   | It_Ri_Gold        | Silver Tongue +5                            | No    | Flannigan, Sophia                   |
+| Tek Shaballa\*\*            | ???? | ---  | It_Ri_TekShaballa | Black Magic +10, Death Cult +1-, Ritual +10 | No    |                                     |
 | Thief's Ring                | 600  | 120  | It_Ri_Thief       | Dirty Tricks +5, Thievery +10               | Yes   | Emma                                |
 
 
 \* Requires Pickpocket, Lockpick, and/or Monkey Trainer Skills be unlocked and of a certain level. If there are multiple copies freely available this only applies when *all* of the freely available copies of that item require thieving skills.
+
+\*\* This is a quest item but the quest isn't triggered by adding it.
 
 
 ### Piercing Weapons
@@ -404,12 +408,12 @@ There are multiple guns with "Rifle" in the name under the "Shotgun" category as
 | Bomb                       | 250  | 50   | It_Exp_Bomb      | Timed Explosive                          | Yes\* | Thompkins                                  |
 | Bone Saw                   | 100  | 20   | It_Bonesaw       | Harvest Claw & Sickle from some animals  | No    | Ghiles, Flannigan, Sophia, Ranapiri, Quinn |
 | Bullet                     | 1    | ---  | It_Ammo_Bullet   | ---                                      | Yes   | Thompkins, Barney, Webster                 |
-| Hammer                     | ???? | ???  | It_Hammer        | Allows smithing                          | Yes   |                                            |
+| Hammer                     | ???? | 10   | It_Hammer        | Allows smithing                          | Yes   |                                            |
 | Jaw Chisel                 | ???? | 20   | It_JawChisel     | Harveset teeth & tusks from some animals | No    | Ranapiri, Quinn                            |
 | Lead Shot                  | 1    | ---  | It_Ammo_Buckshot | ---                                      | Yes   | Thompkins, Barney, Webster                 |
 | Lockpick                   | ???? | 20   | It_Lockpick      | Pick locks (REQ: Lockpick skill to use)  | No    |                                            |
 | Monkey                     | ???? | 200  | It_Monkey        | Used to steal things, pull levers, etc   | No    | Flannigan, Quinn                           |
-| Parrot                     | ???? | ???  | It_Parrot        | Used to distract enemies                 | No    | Flannigan                                  |
+| Parrot                     | ???? | 200  | It_Parrot        | Used to distract enemies                 | No    | Flannigan                                  |
 | Pickaxe                    | 150  | 30   | It_Pickaxe       | Allows mining for ore                    | No    | Flannigan, Sophia, Quinn                   |
 | Powder Keg                 | ???  | 25   | It_Exp_PowderKeg | Shootable Explosive                      | Yes\* | ---                                        |
 | Ritual Knife               | ???? | 50   | It_RitualKnife   | ???                                      | No    | Kapua (Faction)                            |
@@ -467,15 +471,16 @@ I am not sure if Bone and Skull can be harvested. If not, I will move them to a 
 | Ear                  | 25   | 5    | It_At_Ear            | Ritual Knife   | Cave Bats                                         | Badriya, Ranapiri                |
 | Eye                  | 50   | 10   | It_At_Eye            | Ritual Knife   | Giant Crabs, Spiders, Grave Spiders               | Badriya, Ranapiri, Kapua, Emma   |
 | Feather              | 50   | 10   | It_At_Feather        | Ritual Knife   | Firebirds                                         | Badriya, Ranapiri                |
-| Gorilla Skin         | ???? | ???  | It_At_Fur_Gorilla    | Skinning Knife | Gorilla                                           |                                  |
+| Gorilla Skin         | ???? | 50   | It_At_Fur_Gorilla    | Skinning Knife | Gorilla                                           |                                  |
 | Jaguar Heart         | 180  | 45   | It_At_Heart          | Ritual Knife   | Jaguars                                           | Badriya, Ranapiri                |
 | Jaguar Skin          | ???  | 40   | It_At_Fur_Jaguar     | Skinning Knife | Jaguars                                           |                                  |
-| Panther Paw          | ???  | ???  | It_At_Paw            | ???            | Panthers                                          |                                  |
-| Panther Skin         | ???  | ???  | It_At_Fur_Panther    | Skinning Knife | Panthers                                          |                                  |
-| Moneky Skull         | 125  | 25   | It_At_MonkeySkull    | Ritual Knife   | Monkeys (passive ones only) |                     | Badriya, Ranapiri, Emma          |
+| Panther Paw          | ???  | 25   | It_At_Paw            | ???            | Panthers                                          |                                  |
+| Panther Skin         | ???  | 50   | It_At_Fur_Panther    | Skinning Knife | Panthers                                          |                                  |
+| Moneky Skull         | 125  | 25   | It_At_MonkeySkull    | Ritual Knife   | Monkeys (passive ones only)                       | Badriya, Ranapiri, Emma          |
 | Sand Devil Sensor    | 75   | 15   | It_At_Sensor         | ---            | Sand Devils                                       | Ranapiri                         |
+| Skull                | ???  | 12   | It_Skull             | ???            | ???                                               |                                  |
 | Sickle               | ???? | 7    | It_At_AntSickle      | Bonesaw        | Termite Workers, Termite Warriors                 |                                  |
-| Silverback Skin      | ???? | ???  | It_At_Fur_Silverback | Skinning Knife | Silverback                                        |                                  |
+| Silverback Skin      | ???? | 60   | It_At_Fur_Silverback | Skinning Knife | Silverback                                        |                                  |
 | Teeth                | 50   | 10   | It_At_Teeth          | Jaw Chisel     | Blueclaw Monekys, Claw Monkeys, Gators, Gorillas  | Ranapiri, Kapua, Emma            |
 | Tusk                 | 100  | 20   | It_At_Tusk           | Jaw Chisel     | Warthogs                                          | Ranapiri                         |
 | Warthog Skin         | ???  | 30   | It_At_Fur_Warthog    | Skinning Knife | Warthogs                                          |                                  |
@@ -485,66 +490,68 @@ I am not sure if Bone and Skull can be harvested. If not, I will move them to a 
 
 Most of the miscellaneous items can be found for free around the world.
 
-| Item Name              | Buy | Sell | Item Code             | Stats and Effects                       | Merchants                        |
-|:----------------------:|:---:|:----:|:---------------------:|:---------------------------------------:|:----------------------------------------:|
-| Axe                    | --- | 60   | It_Sla_GargoyleSlayer | ---                                     | --- |
-| Black Pearl            | ??? | 120  | It_PearlBlack         | ---                                     | DiFuego |
-| Black Pearl Necklace   | ??? | 500  | It_Ne_PearlBlack      | ---                                     | DiFuego |
-| Bone                   | ??? | ???  | It_Bone               | ---                                     | Any natives |
-| Bowl                   | ??? | 100  | It_Bowl_Gold          | ---                                     | --- |
-| Bowl                   | ??? | 120  | It_Chalice_Gold       | ---                                     | --- |
-| Bowl                   | ??? | 75   | It_Disc_Gold          | ---                                     | --- |
-| Blacksmith's Hammer    | ??? | 40   | It_SledgeHammer       | ---                                     | --- |
-| Spyglass               | ??? | 60   | It_Spyglass           | ---                                     | --- |
-| Candlestick            | ??? | 75   | It_Candleholder       | ---                                     | --- |
-| Chisel                 | ??? | 8    | It_Chisel             | ---                                     | --- |
-| Club                   | ??? | 60   | It_Sla_Undead         | ---                                     | --- |
-| Crown                  | ??? | 200  | It_Crown              | ---                                     | --- |
-| Crown                  | ??? | 600  | It_Crown_Zeki         | ---                                     | --- |
-| Decanter               | ??? | 60   | It_Decanter_Silver    | ---                                     | --- |
-| Diamond                | ??? | 250  | It_Diamond            | ---                                     | --- |
-| Emerald                | ??? | 75   | It_Emerald            | ---                                     | --- |
-| Fat Purse              | ??? | 100  | It_GoldBag_Large      | ---                                     | --- |
-| Flail                  | ??? | 12   | It_Flail              | ---                                     | --- |
-| Fork                   | ??? | 2    | It_Fork               | ---                                     | --- |
-| Pot                    | ??? | 6    | It_Pot                | ---                                     | --- |
-| Pestle                 | ??? | 2    | It_Pestle             | ---                                     | --- |
-| Pipe                   | ??? | 4    | It_Pipe               | ---                                     | --- |
-| Gold                   | --- | ---  | It_Gold               | ---                                     | --- |
-| Gold Nugget            | ??? | 20   | It_GoldOre            | ---                                     | --- |
-| Gold Pan               | ??? | 12   | It_GoldPan            | ---                                     | --- |
-| Gold Sceptre           | ??? | 125  | It_Scepter_Skull      | ---                                     | --- |
-| Golden Goblet          | ??? | 100  | It_Goblet_Gold        | ---                                     | --- |
-| Golden Plate           | ??? | 110  | It_Plate_Gold         | ---                                     | --- |
-| Hand Axe               | ??? | 5    | It_Chisel_Ind         | ---                                     | --- |
-| Hand Mirror            | ??? | 40   | It_HandMirror         | ---                                     | --- |
-| Idol                   | ??? | 250  | It_Idol_Priest_Gold   | ---                                     | --- |
-| Idol                   | ??? | 250  | It_Idol_Titan_Gold    | ---                                     | --- |
-| Idol                   | ??? | 250  | It_Idol_Warrior_Gold  | ---                                     | --- |
-| Idol                   | ??? | 500  | It_Idol_Priest_Jade   | ---                                     | --- |
-| Idol                   | ??? | 500  | It_Idol_Titan_Jade    | ---                                     | --- |
-| Idol                   | ??? | 500  | It_Idol_Warrior_Jade  | ---                                     | --- |
-| Jade                   | 25  | 25   | It_Jade               | ---                                     | Badriya, Emma |
-| Jade Idol              | ??? | ???  | ???                   | ---                                     | --- |
-| King's Mask            | ??? | 150  | It_Mask_King          | ---                                     | --- |
-| Knife                  | ??? | 2    | It_Knife              | ---                                     | --- |
-| Ladle                  | ??? | 10   | It_Scoop              | ---                                     | --- |
-| Monkey Statue          | ??? | 100  | It_Statue_Ape         | ---                                     | --- |
-| Oyster Shell           | ??? | ???  | It_Shell              | ---                                     | --- |
-| Pearl                  | ??? | 50   | It_Pearl              | ---                                     | DiFuego |
-| Pearl Necklace         | ??? | 150  | It_Ne_Pearl           | ---                                     | DiFuego |
-| Priest's Mask          | ??? | 150  | It_Mask_Priest        | ---                                     | --- |
-| Purse                  | ??? | 50   | It_GoldBag_Medium     | ---                                     | --- |
-| Rattle                 | ??? | 12   | It_Rattle             | ---                                     | --- |
-| Ruby                   | ??? | 200  | It_Ruby               | ---                                     | DiFuego |
-| Sapphire               | ??? | 100  | It_Sapphire           | ---                                     | --- |
-| Silver Goblet          | ??? | 50   | It_Goblet_Silver      | ---                                     | --- |
-| Silver Plate           | ??? | 50   | It_Plate_Silver       | ---                                     | --- |
-| Skull                  | ??? | 12   | ???                   | ---                                     | --- |
-| Small Purse            | ??? | 25   | It_GoldBag_Small      | ---                                     | --- |
-| Sword BLank            | ??? | 15   | ???                   | ---                                     | --- |
-| Tankard                | ??? | 2    | It_Mug                | ---                                     | --- |
-| White Diamond (Akando) | ??? | 300  | It_Diamond_Akando     | ---                                     | --- |
+| Item Name              | Buy | Sell | Item Code                       | Stats and Effects                       | Merchants                        |
+|:----------------------:|:---:|:----:|:-------------------------------:|:---------------------------------------:|:--------------------------------:|
+| Axe                    | --- | 60   | It_Sla_GargoyleSlayer           | ---                                     | --- |
+| Black Pearl            | ??? | 120  | It_PearlBlack                   | ---                                     | DiFuego |
+| Black Pearl Necklace   | ??? | 500  | It_Ne_PearlBlack                | ---                                     | DiFuego |
+| Blacksmith's Hammer    | ??? | 40   | It_SledgeHammer                 | ---                                     | --- |
+| Bone                   | ??? | 5    | It_Bone                         | ---                                     | Any natives |
+| Bowl                   | ??? | 100  | It_Bowl_Gold                    | ---                                     | --- |
+| Bowl                   | ??? | 120  | It_Chalice_Gold                 | ---                                     | --- |
+| Bowl                   | ??? | 75   | It_Disc_Gold                    | ---                                     | --- |
+| Candlestick            | ??? | 75   | It_Candleholder                 | ---                                     | --- |
+| Chisel                 | ??? | 8    | It_Chisel                       | ---                                     | --- |
+| Club                   | ??? | 60   | It_Sla_Undead                   | ---                                     | --- |
+| Crown                  | ??? | 200  | It_Crown                        | ---                                     | --- |
+| Crown                  | ??? | 600  | It_Crown_Zeki                   | ---                                     | --- |
+| Decanter               | ??? | 60   | It_Decanter_Silver              | ---                                     | --- |
+| Diamond                | ??? | 250  | It_Diamond                      | ---                                     | --- |
+| Emerald                | ??? | 75   | It_Emerald                      | ---                                     | --- |
+| Fat Purse              | ??? | 100  | It_GoldBag_Large                | ---                                     | --- |
+| Flail                  | ??? | 12   | It_Flail                        | ---                                     | --- |
+| Fork                   | ??? | 2    | It_Fork                         | ---                                     | --- |
+| Gold                   | --- | ---  | It_Gold                         | ---                                     | --- |
+| Gold Nugget            | ??? | 20   | It_GoldOre                      | ---                                     | --- |
+| Gold Pan               | ??? | 12   | It_GoldPan                      | ---                                     | --- |
+| Gold Sceptre           | ??? | 125  | It_Scepter_Skull                | ---                                     | --- |
+| Golden Goblet          | ??? | 100  | It_Goblet_Gold                  | ---                                     | --- |
+| Golden Plate           | ??? | 110  | It_Plate_Gold                   | ---                                     | --- |
+| Hand Axe               | ??? | 5    | It_Chisel_Ind                   | ---                                     | --- |
+| Hand Mirror            | ??? | 40   | It_HandMirror                   | ---                                     | --- |
+| Idol                   | ??? | 250  | It_Idol_Priest_Gold             | ---                                     | --- |
+| Idol                   | ??? | 250  | It_Idol_Titan_Gold              | ---                                     | --- |
+| Idol                   | ??? | 250  | It_Idol_Warrior_Gold            | ---                                     | --- |
+| Golden Figurine        | ??? | 250  | It_Idol_Warrior_Gold_TAK_Grave  | ---                                     | --- |
+| Idol                   | ??? | 500  | It_Idol_Priest_Jade             | ---                                     | --- |
+| Idol                   | ??? | 500  | It_Idol_Titan_Jade              | ---                                     | --- |
+| Idol                   | ??? | 500  | It_Idol_Warrior_Jade            | ---                                     | --- |
+| Jade                   | 25  | 25   | It_Jade                         | ---                                     | Badriya, Emma |
+| King's Mask            | ??? | 150  | It_Mask_King                    | ---                                     | --- |
+| Knife                  | ??? | 2    | It_Knife                        | ---                                     | --- |
+| Ladle                  | ??? | 10   | It_Scoop                        | ---                                     | --- |
+| Monkey Statue          | ??? | 100  | It_Statue_Ape                   | ---                                     | --- |
+| Oyster Shell           | ??? | 3    | It_Shell                        | Open it for a chance to get a Pearl     | --- |
+| Pearl                  | ??? | 50   | It_Pearl                        | ---                                     | DiFuego |
+| Pearl Necklace         | ??? | 150  | It_Ne_Pearl                     | ---                                     | DiFuego |
+| Pestle                 | ??? | 2    | It_Pestle                       | ---                                     | --- |
+| Pipe                   | ??? | 4    | It_Pipe                         | ---                                     | --- |
+| Pot                    | ??? | 6    | It_Pot                          | ---                                     | --- |
+| Priest's Mask          | ??? | 150  | It_Mask_Priest                  | ---                                     | --- |
+| Purse                  | ??? | 50   | It_GoldBag_Medium               | ---                                     | --- |
+| Quill                  | ??? | 3    | It_Quill                        | ---                                     | --- |
+| Rattle                 | ??? | 12   | It_Rattle                       | ---                                     | --- |
+| Ruby                   | ??? | 200  | It_Ruby                         | ---                                     | DiFuego |
+| Sapphire               | ??? | 100  | It_Sapphire                     | ---                                     | --- |
+| Silver Goblet          | ??? | 50   | It_Goblet_Silver                | ---                                     | --- |
+| Silver Plate           | ??? | 50   | It_Plate_Silver                 | ---                                     | --- |
+| Skull                  | ??? | 12   | It_Skull                        | ---                                     | --- |
+| Small Purse            | ??? | 25   | It_GoldBag_Small                | ---                                     | --- |
+| Spoon                  | ??? | 12   | It_Voodoo_Scoop                 | ---                                     | --- |
+| Spoon                  | ??? | 2    | It_Spoon                        | ---                                     | --- |
+| Spyglass               | ??? | 60   | It_Spyglass                     | ---                                     | --- |
+| Tankard                | ??? | 2    | It_Mug                          | ---                                     | --- |
+| White Diamond (Akando) | ??? | 300  | It_Diamond_Akando               | ---                                     | --- |
 
 
 ### Legendary Items
@@ -581,128 +588,215 @@ See Legendary-Items.md and/or Freebies.md for more information on locating the i
 
 
 ### Quest Items
-Be forewarned: Adding/removing these could break quests. But this could be handy if you have become stuck / bugged and unable to complete a quest or if you have completed a quest and don't want the quest items cluttering up your inventory.
+
+**WARNING 1: If you are looking through quest item names, you will likely revearl minor or even major spoilers to yourself!**
+
+**WARNING 2: Even if you don't care about spoilers, adding/removing these could break quests.**
+
+This is intended mostly for removing items that are obviously done with but never removed after completion of a quest (e.g. Tower Key after freeing Tahani, Sebastiano's Key after freeing Hawkins, etc). If you fuck up your game by adding / removing things you shouldn't have, then that's on you.
 
 
-| Item Name                                           | Item Code                                 | Quest Name                 |
-|:---------------------------------------------------:|:-----------------------------------------:|:--------------------------:|
-| Ancestor's Blood                                    | It_Po_AncestorsBlood                      | The Blood of the Ancestors |
-| Bag of Herbs                                        |                                           | |
-| Bakir Voodoo Doll                                   | It_VoodooDoll_Bakir                       | |
-| Barrel: Fat Olga                                    | It_FatOlga_Barrel                         | |
-| Barrel: Silver Iron                                 | It_SilverIron_Barrel                      | |
-| Bartolo's Shotgun                                   | It_Rif_Bartolo                            | |
-| Bartolo's Shotgun (Broken)                          | It_Rif_Broken_Bartolo                     | |
-| Bundle of Plants                                    |                                           | |
-| Butch Voodoo Doll                                   | It_VoodooDoll_Butch                       | |
-| Diary Page 2                                        | It_Wri_Letter_Stahlbart_Patty             | |
-| Diary Page 3                                        | It_Wri_Letter_Stahlbart_SWC               | |
-| Diary Page 4                                        | It_Wri_Letter_Stahlbart_TAK               | |
-| Earth Amulet                                        | It_Am_Earth                               | ??? |
-| Engagement Ring                                     | It_Ri_Gold_Family_Stahlbart               | |
-| Foul-Smelling Letter                                | It_Wri_Letter_Crouse                      | |
-| Golden Mask                                         | It_Mask_Floyd                             | |
-| Golden Plate                                        | It_Plate_Gold_Floyd                       | |
-| Golden Statue                                       | It_Statue_Floyd                           | |
-| Grip: Fat Olga Grip                                 | It_FatOlga_Grip                           | |
-| Grip: Silver Iron                                   | It_SilverIron_Grip                        | |
-| Hat                                                 | It_Hat_Morris                             | |
-| Incriminating Letter                                | It_Wri_Letter_Evidence_Mauregato          | |
-| Island Map: Angitua (no inventory item)             | It_Map_ANT                                | |
-| Island Map: Caldera (no inventory item)             | It_Map_CRY                                | |
-| Island Map: Island of the Dead (no inventory item)  | It_Map_IOD                                | |
-| Island Map: Island of Thieves (no inventory item)   | It_Map_IOT                                | |
-| Island Map: Maracai Bay (no inventory item)         | It_Map_MAB                                | |
-| Island Map: Storm Island (no inventory item)        | It_Map_STI                                | |
-| Island Map: Sword Coast (no inventory item)         | It_Map_SWC                                | |
-| Island Map: Tacarigua (no inventory item)           | It_Map_TAK                                | |
-| Island Map: Treasure Island (no inventory item)     | It_Map_TRI                                | |
-| Jim Voodoo Doll                                     | It_VoodooDoll_Jim                         | |
-| Letter (from Di Fuego)                              | It_Wri_Letter_Di_Fuego                    | |
-| Mara's Sword                                        | It_Pie_Mara                               | |
-| Mauregato Voodoo Doll                               | It_VoodooDoll_Mauregato                   | |
-| Mauregato's Key                                     | It_Key_Mauregato                          | |
-| Mauregato's Signet Ring                             | It_Ri_Signet_Mauregato                    | |
-| Message in a Bottle (Island of Thieves)             | It_MessageInABottle_Cave_IOT              | |
-| Message in a Bottle (Maracai Bay)                   | It_MessageInABottle_Cave_MAB              | |
-| Message in a Bottle (Storm Island Hill)             | It_MessageInABottle_Hill_STI              | |
-| Message in a Bottle (Sword Coast Crouse)            | It_MessageInABottle_Crouse_SWC            | |
-| Message in a Bottle (Sword Coast Graveyard)         | It_MessageInABottle_Graveyard_SWC         | |
-| Messenger's Attire                                  | It_Vest_Servant                           | Messenger's Attire |
-| Morris's Hat                                        | It_Hat_Morris                             | |
-| Office Key                                          | It_Key_Mauregato_Office                   | |
-| Potion of False Death                               | It_Po_FalseDead_Tao                       | ???| 
-| Red Wine                                            | It_Wine_Sophia                            | |
-| Sack of Mushrooms                                   |                                           | |
-| Sebastiano Voodoo Doll                              | It_VoodooDoll_Sebastiano                  | |
-| Sebastino'a Key                                     | It_Key_Hawkins                            | |
-| Shaganumbi Idol                                     |                                           | Help Against Crow / Shaganumbi Idol Found |
-| Steelbards's Hat                                    | It_Idol_Shaganumbi                        | |
-| Steelbeard's Diary                                  | It_Wri_Book_StahlbartsDiary               | Steelbeard's Diary |
-| Steelbeard's Key                                    | It_Key_Stahlbart_TAK                      | |
-| Steelbeard's Sabre                                  | It_Sla_Steelbeard                         | |
-| Sword Blade: King's Sword                           | It_KingSword_Blade                        | |
-| Sword Blade: Soul Caller                            | It_SoulCaller_Blade                       | |
-| Sword Blade: Stormwind                              | It_Tempest_Blade                          | |
-| Sword Blade: Wave Dancer                            | It_Wavedancer_Blade                       | |
-| Sword Hilt: King's Sword                            | It_KingSword_Hilt                         | |
-| Sword Hilt: Soul Caller                             | It_SoulCaller_Hilt                        | |
-| Sword Hilt: Stormwind                               | It_Tempest_Hilt                           | |
-| Sword Hilt: Wave Dancer                             | It_Wavedancer_Hilt                        | |
-| Tavern Key                                          | It_Key_Spencer                            | |
-| Thief's Bone Hand                                   |                                           | |
-| Titan Harpoon                                       | It_Thr_Titan                              | Note: It will NOT let you remove this item once you have it. |
-| Tower Key                                           | It_Key_Torres                             | |
-| Treasure Map: Angitua - Beach                       | It_TreasureMap_ANT_Beach                  | |
-| Treasure Map: Angitua - Carcia                      | It_TreasureMap_ANT_Garcia                 | |
-| Treasure Map: Angitua - Cave                        | It_TreasureMap_ANT_Cave                   | |
-| Treasure Map: Angitua - Gibson                      | It_TreasureMap_ANT_Gibson                 | |
-| Treasure Map: Angitua - Grotto                      | It_TreasureMap_ANT_Grotto                 | |
-| Treasure Map: Angitua - Nesir                       | It_TreasureMap_ANT_Nesir                  | |
-| Treasure Map: Caldera - Beach                       | It_TreasureMap_CRY_Beach                  | |
-| Treasure Map: Isle of the Dead - Grave              | It_TreasureMap_IOD_Grave                  | |
-| Treasure Map: Isle of Thieves - Beach               | It_TreasureMap_IOT_Beach                  | |
-| Treasure Map: Isle of Thieves - Cave                | It_TreasureMap_IOT_Cave                   | |
-| Treasure Map: Isle of Thieves - Valley              | It_TreasureMap_IOT_Valley                 | |
-| Treasure Map: Maracai Bay - Beach                   | It_TreasureMap_MAB_Beach                  | |
-| Treasure Map: Maracai Bay - Cave                    | It_TreasureMap_MAB_Cave                   | |
-| Treasure Map: Maracai Bay - Jungle                  | It_TreasureMap_MAB_Jungle                 | |
-| Treasure Map: Maracai Bay - Valley                  | It_TreasureMap_MAB_Valley                 | |
-| Treasure Map: Storm Island - Hill                   | It_TreasureMap_STI_Hill                   | |
-| Treasure Map: Sword Coast - Beach                   | It_TreasureMap_SWC_Beach                  | |
-| Treasure Map: Sword Coast - Fall                    | It_TreasureMap_SWC_Fall                   | |
-| Treasure Map: Sword Coast - Graveyard               | It_TreasureMap_SWC_Graveyard              | |
-| Treasure Map: Sword Coast - Jaguar                  | It_TreasureMap_SWC_Jaguar                 | |
-| Treasure Map: Sword Coast - Steelbeard              | It_TreasureMap_SWC_Stahlbart              | |
-| Treasure Map: Tacarigua - O'Brian                   | It_TreasureMap_TAK_OBrian                 | |
-| Treasure Map: Tacarigua - Peta                      | It_TreasureMap_TAK_Pete                   | |
-| Treasure Map: Treasure Island (DLC) - Ramsay        | It_TreasureMap_TRI_Ramsay                 | |
-| Treasure Map: Treasure Island (DLC) - Sokbart       | It_TreasureMap_TRI_Sokbart                | |
-| Treasure Map: Treasure Island (DLC) - Stubbings     | It_TreasureMap_TRI_Stubbings              | |
-| Treasure Map: Treasure Island (DLC) - Wallace       | It_TreasureMap_TRI_Wallace                | |
-| Wilson's Pistol                                     | It_Pis_Wilson                             | |
-| World Map (no inventory item)                       | It_Map_World                              | |
-| Zaalu Voodoo Doll                                   | It_VoodooDoll_Zaalu                       | |
-| Thief's Bone Hand                                   | It_ScepterTelekinesis                     | |
-| Black Dog's Dagger                                  | It_Dagger_MAB_BlackDog                    | |
-| Sacrificial Knife                                   | It_Dagger_Sacrifice                       | |
-| Spear of the Warrior                                | It_Spear_Kusko                            | |
-| Rusty Nail                                          | It_Nails_Pattys                           | |
+ This might come in handy for example if you have a bugged quest where you can't get the McGuffin that you need to fetch or if you've completed a quest and left behind some garbage quest items cluttering up your inventory.
+
+Some of these items, once added (via console or sometimes even via normal gameplay) cannot be removed, even with the `take` console command. I have tested these and while it only applied to a handfull of items, I thought it warranted a column indicating whether or not you using a `give` command would leave you with a bugged item that you couldn't even remove with console commands - so that's what the last column is all about.
 
 
-    # gives all keys (17)
-    give It_Key
-     
+| Item Name                                   | Item Code                                 | Quest Name                       | Triggers Quest ? | 'take' removes? |
+|:-------------------------------------------:|:-----------------------------------------:|:--------------------------------:|:----------------:|:---------------:|
+| A Knot of Jim's Hair                        | It_Hair_Jim                               |                                  | ???              | Yes             |
+| Ancestor's Blood                            | It_Po_AncestorsBlood                      | The Blood of the Ancestors       | ???              | Yes             |
+| Bag                                         | It_Bag                                    |                                  | ???              | Yes             |
+| Bag of Herbs                                | It_Pouch_Herbs                            |                                  | ???              | Yes             |
+| Bakir Voodoo Doll                           | It_VoodooDoll_Bakir                       |                                  | ???              | Yes             |
+| Barrel: Fat Olga                            | It_FatOlga_Barrel                         |                                  | ???              | Yes             |
+| Barrel: Silver Iron                         | It_SilverIron_Barrel                      |                                  | ???              | Yes             |
+| Bartolo's Shotgun                           | It_Rif_Bartolo                            |                                  | ???              | Yes             |
+| Bartolo's Shotgun (Broken)                  | It_Rif_Broken_Bartolo                     |                                  | ???              | Yes             |
+| Black Dog's Dagger                          | It_Dagger_MAB_BlackDog                    |                                  | ???              | **NO**          |
+| Black Feather                               | It_Feather_Kenan_Black                    |                                  | ???              | Yes             |
+| Black Lotus                                 | It_BlackLotus_Tao                         |                                  | ???              | Yes             |
+| Blue Feather                                | It_Feather_Kenan_Blue                     |                                  | ???              | Yes             |
+| Book                                        | It_Wri_Book_1                             |                                  | ???              | Yes             |
+| Book                                        | It_Wri_Book_2                             |                                  | ???              | Yes             |
+| Book                                        | It_Wri_Book_3                             |                                  | ???              | Yes             |
+| Book                                        | It_Wri_Book_Open_1                        |                                  | ???              | Yes             |
+| Book                                        | It_Wri_Book_Open_2                        |                                  | ???              | Yes             |
+| Book                                        | It_Wri_Book_Open_3                        |                                  | ???              | Yes             |
+| Bundle of Plants                            | It_Pouch_Plants                           |                                  | ???              | Yes             |
+| Butch Voodoo Doll                           | It_VoodooDoll_Butch                       |                                  | ???              | Yes             |
+| Cargo (Sword Coast)                         | It_Crate_Miguel                           |                                  | ???              | Yes             |
+| Chest Key                                   | It_Key_Akando                             |                                  | ???              | Yes             |
+| Chest Key                                   | It_Key_Basil                              |                                  | ???              | Yes             |
+| Claim Ticket                                | It_Wri_Letter_Bond_Paruke                 |                                  | ???              | Yes             |
+| Crystal Head                                | It_Wll_Crystal                            |                                  | ???              | Yes             |
+| Diary Page 2                                | It_Wri_Letter_Stahlbart_Patty             |                                  | ???              | Yes             |
+| Diary Page 3                                | It_Wri_Letter_Stahlbart_SWC               |                                  | ???              | Yes             |
+| Diary Page 4                                | It_Wri_Letter_Stahlbart_TAK               |                                  | ???              | Yes             |
+| Door Key                                    | It_Key_Donovan                            |                                  | ???              | Yes             |
+| Driftwood                                   | It_Driftwood_Jaffer                       |                                  | ???              | Yes             |
+| Earth Amulet                                | It_Am_Earth                               |                                  | ???              | Yes             |
+| Eldric's Serum                              | It_Secretion_Eldric                       |                                  | ???              | Yes             |
+| Engagement Ring                             | It_Ri_Gold_Family_Stahlbart               |                                  | ???              | Yes             |
+| Family Heirloom                             | It_Am_Family_Stahlbart                    |                                  | ???              | Yes             |
+| Feather                                     | It_Feather_Kalil                          |                                  | ???              | **NO**          |
+| Fire Peppers                                | It_Chili_Jamila                           | Fire Peppers                     | Yes              | Yes             |
+| Firutaopi                                   | It_Firestew_Jamila                        |                                  | ???              | Yes             |
+| Flotsam (Caldera I)                         | It_Crate_Flotsam                          |                                  | ???              | Yes             |
+| Foul-Smelling Letter                        | It_Wri_Letter_Crouse                      |                                  | ???              | Yes             |
+| Fresh Meat                                  | It_Meat_Raw_Thompkins                     |                                  | ???              | Yes             |
+| Freshly Killed Meat                         | It_Meat_Raw_Habib                         |                                  | ???              | Yes             |
+| Fruit Basket                                | It_Pouch_Fruits                           |                                  | ???              | Yes             |
+| Gargoyle Egg                                | It_At_GargoyleEgg_ANT                     |                                  | ???              | Yes             |
+| Gargoyle Egg                                | It_At_GargoyleEgg_IOT                     |                                  | ???              | Yes             |
+| Gargoyle Egg                                | It_At_GargoyleEgg_MAB                     |                                  | ???              | Yes             |
+| Gargoyle Egg                                | It_At_GargoyleEgg_STI                     |                                  | ???              | Yes             |
+| Gargoyle Egg                                | It_At_GargoyleEgg_SWC                     |                                  | ???              | Yes             |
+| Gargoyle Egg                                | It_At_GargoyleEgg_TAK                     |                                  | ???              | Yes             |
+| Gold Head                                   | It_Wll_Gold                               |                                  | ???              | Yes             |
+| Golden Mask                                 | It_Mask_Floyd                             |                                  | ???              | Yes             |
+| Golden Mask                                 | It_Mask_MAB_Ghost_01                      |                                  | ???              | Yes             |
+| Golden Mask                                 | It_Mask_MAB_Ghost_02                      |                                  | ???              | Yes             |
+| Golden Mask                                 | It_Mask_MAB_Ghost_03                      |                                  | ???              | Yes             |
+| Golden Mask                                 | It_Mask_MAB_Ghost_04                      |                                  | ???              | Yes             |
+| Golden Mask                                 | It_Mask_Sophia                            |                                  | ???              | Yes             |
+| Golden Plate                                | It_Plate_Gold_Floyd                       |                                  | ???              | Yes             |
+| Golden Statue                               | It_Statue_Floyd                           |                                  | ???              | Yes             |
+| Grave Dust                                  | It_GraveAsh_Tao                           |                                  | ???              | Yes             |
+| Grave Idol                                  | It_Idol_Malaika_01                        |                                  | ???              | Yes             |
+| Grave Idol                                  | It_Idol_Malaika_02                        |                                  | ???              | Yes             |
+| Grave Idol                                  | It_Idol_Malaika_03                        |                                  | ???              | Yes             |
+| Grip: Fat Olga Grip                         | It_FatOlga_Grip                           |                                  | ???              | Yes             |
+| Grip: Silver Iron                           | It_SilverIron_Grip                        |                                  | ???              | Yes             |
+| Hat                                         | It_Hat_Morris                             |                                  | ???              | Yes             |
+| Head                                        | It_Head_Bounty                            |                                  | ???              | Yes             |
+| Idol of Protection                          | It_Idol_Kapua                             |                                  | ???              | Yes             |
+| Incriminating Letter                        | It_Wri_Letter_Evidence_Mauregato          |                                  | ???              | Yes             |
+| Island Map: Angitua                         | It_Map_ANT                                |                                  | ???              | Yes             |
+| Island Map: Caldera                         | It_Map_CRY                                |                                  | ???              | Yes             |
+| Island Map: Island of the Dead              | It_Map_IOD                                |                                  | ???              | Yes             |
+| Island Map: Island of Thieves               | It_Map_IOT                                |                                  | ???              | Yes             |
+| Island Map: Maracai Bay                     | It_Map_MAB                                |                                  | ???              | Yes             |
+| Island Map: Storm Island                    | It_Map_STI                                |                                  | ???              | Yes             |
+| Island Map: Sword Coast                     | It_Map_SWC                                |                                  | ???              | Yes             |
+| Island Map: Tacarigua                       | It_Map_TAK                                |                                  | ???              | Yes             |
+| Island Map: Treasure Island                 | It_Map_TRI                                |                                  | ???              | Yes             |
+| Jade Head                                   | It_Wll_Jade                               |                                  | ???              | Yes             |
+| Jim Voodoo Doll                             | It_VoodooDoll_Jim                         |                                  | ???              | Yes             |
+| Key                                         | It_Key_1                                  |                                  | ???              | Yes             |
+| Key                                         | It_Key_2                                  |                                  | ???              | Yes             |
+| Key                                         | It_Key_3                                  |                                  | ???              | Yes             |
+| Key                                         | It_Key_4                                  |                                  | ???              | Yes             |
+| Key                                         | It_Key_5                                  |                                  | ???              | Yes             |
+| Letter                                      | It_Wri_Letter                             |                                  | ???              | Yes             |
+| Letter (unsealed Roquefort/Di Fuego letter) | It_Wri_Letter_Di_Fuego                    |                                  | ???              | Yes             |
+| Letter from Booze                           | It_Wri_Letter_Booze                       |                                  | ???              | Yes             |
+| Map                                         | It_Wri_Map                                |                                  | ???              | Yes             |
+| Mara's Sword                                | It_Pie_Mara                               |                                  | ???              | Yes             |
+| Master Scholar's Ring                       | It_Ri_XP                                  | N/A                              | N/A              | If unequipped   |
+| Mauregato Voodoo Doll                       | It_VoodooDoll_Mauregato                   |                                  | ???              | Yes             |
+| Mauregato's Key                             | It_Key_Mauregato                          |                                  | ???              | Yes             |
+| Mauregato's Signet Ring                     | It_Ri_Signet_Mauregato                    |                                  | ???              | Yes             |
+| Message in a Bottle (Island of Thieves)     | It_MessageInABottle_Cave_IOT              |                                  | ???              | Yes             |
+| Message in a Bottle (Maracai Bay)           | It_MessageInABottle_Cave_MAB              |                                  | ???              | Yes             |
+| Message in a Bottle (Storm Island Hill)     | It_MessageInABottle_Hill_STI              |                                  | ???              | Yes             |
+| Message in a Bottle (Sword Coast Crouse)    | It_MessageInABottle_Crouse_SWC            |                                  | ???              | Yes             |
+| Message in a Bottle (Sword Coast Graveyard) | It_MessageInABottle_Graveyard_SWC         |                                  | ???              | Yes             |
+| Message in a Bottle (using does nothing)    | It_MessageInABottle                       |                                  | ???              | Yes             |
+| Messenger's Attire                          | It_Vest_Servant                           | Messenger's Attire               | Yes              | Yes             |
+| Moluccan Idol                               | It_Statue_Torres                          |                                  | ???              | Yes             |
+| Morris's Hat                                | It_Hat_Morris                             |                                  | ???              | Yes             |
+| Offerings                                   | It_Paket_Badriya                          |                                  | ???              | Yes             |
+| Office Key                                  | It_Key_Mauregato_Office                   |                                  | ???              | Yes             |
+| Package                                     | It_Paket                                  |                                  | ???              | Yes             |
+| Package of Meat                             | It_Packet_Meat                            |                                  | ???              | Yes             |
+| Pass                                        | It_Wri_Letter_Pass_Azuro                  |                                  | ???              | Yes             |
+| Pass                                        | It_Wri_Letter_Signet_Azuro                |                                  | ???              | Yes             |
+| Piece of Jade                               | It_Jade_Kapua                             |                                  | ???              | Yes             |
+| Pitch-Black Pearl                           | It_PearlBlack_Nuri                        |                                  | ???              | Yes             |
+| Potion of False Death                       | It_Po_FalseDead_Tao                       |                                  | ???              | Yes             |
+| Pouch                                       | It_Pouch                                  |                                  | ???              | Yes             |
+| Red Wine                                    | It_Wine_Sophia                            |                                  | ???              | Yes             |
+| Room Key                                    | It_Key_Hotel_Garcia                       |                                  | ???              | Yes             |
+| Room Key                                    | It_Key_Hotel_Player                       |                                  | ???              | Yes             |
+| Rusty Nail                                  | It_Nails_Patty                            |                                  | ???              | Yes             |
+| Sack of Mushrooms                           | It_Pouch_Mushrooms                        |                                  | ???              | Yes             |
+| Sack of Sugar                               | It_Pouch_Sugar                            |                                  | ???              | Yes             |
+| Sacrificial Knife                           | It_Dagger_Sacrifice                       |                                  | ???              | **NO**          |
+| Sealed Letter (from Roquefort/Di Fuego)     | It_Sealed_Letter_Di_Fuego                 |                                  | ???              | Yes             |
+| Sebastiano Voodoo Doll                      | It_VoodooDoll_Sebastiano                  |                                  | ???              | Yes             |
+| Sebastiano's Hairbrush                      | It_Hairbrush_Sebastiano                   |                                  | ???              | Yes             |
+| Sebastino'a Key                             | It_Key_Hawkins                            |                                  | ???              | Yes             |
+| Shaganumbi Idol                             | It_Idol_Shaganumbi                        | Shaganumbi Idol Found            | ???              | Yes             |
+| Shirt                                       | It_Shirt_Jaffer                           |                                  | ???              | Yes             |
+| Silky, Shiny Hair                           | It_Hair_Sebastiano                        |                                  | ???              | Yes             |
+| Skull of an Undead Animal                   | It_Skull_Silverback                       |                                  | ???              | Yes             |
+| Small Coffer                                | It_Casket                                 |                                  | ???              | Yes             |
+| Small Package                               | It_Paket_Mac                              |                                  | ???              | Yes             |
+| Spear of the Warrior                        | It_Spear_Kusko                            |                                  | ???              | Yes             |
+| Stand of Bakir's Hair                       | It_Hair_Bakir                             |                                  | ???              | Yes             |
+| Steelbards's Hat                            | It_Hat_Stahlbart                          |                                  | ???              | If unequipped   |
+| Steelbeard's Diary                          | It_Wri_Book_StahlbartsDiary               | Steelbeard's Diary               | Yes              | Yes             |
+| Steelbeard's Key                            | It_Key_Stahlbart_TAK                      |                                  | ???              | Yes             |
+| Steelbeard's Sabre                          | It_Sla_Steelbeard                         |                                  | ???              | Yes             |
+| Storage Barrel                              | It_Barrel_Mercutio                        |                                  | ???              | Yes             |
+| Strand of Butch's Hair                      | It_Hair_Butch                             |                                  | ???              | Yes             |
+| Sword Blade: King's Sword                   | It_KingSword_Blade                        |                                  | ???              | Yes             |
+| Sword Blade: Soul Caller                    | It_SoulCaller_Blade                       |                                  | ???              | Yes             |
+| Sword Blade: Stormwind                      | It_Tempest_Blade                          |                                  | ???              | Yes             |
+| Sword Blade: Wave Dancer                    | It_Wavedancer_Blade                       |                                  | ???              | Yes             |
+| Sword Hilt: King's Sword                    | It_KingSword_Hilt                         |                                  | ???              | Yes             |
+| Sword Hilt: Soul Caller                     | It_SoulCaller_Hilt                        |                                  | ???              | Yes             |
+| Sword Hilt: Stormwind                       | It_Tempest_Hilt                           |                                  | ???              | Yes             |
+| Sword Hilt: Wave Dancer                     | It_Wavedancer_Hilt                        |                                  | ???              | Yes             |
+| Tavern Key                                  | It_Key_Spencer                            |                                  | ???              | Yes             |
+| Tek Shaballa                                | It_Ri_TekShaballa                         |                                  | ???              | Yes             |
+| The Black Hunter's Paws                     | It_Paw_Datu                               |                                  | ???              | Yes             |
+| Thief's Bone Hand                           | It_ScepterTelekinesis                     |                                  | ???              | Yes             |
+| Titan Harpoon                               | It_Thr_Titan                              |                                  | ???              | **NO**          |
+| Tower Key                                   | It_Key_Torres                             |                                  | ???              | Yes             |
+| Treasure Map: Angitua - Beach               | It_TreasureMap_ANT_Beach                  |                                  | ???              | Yes             |
+| Treasure Map: Angitua - Carcia              | It_TreasureMap_ANT_Garcia                 |                                  | ???              | Yes             |
+| Treasure Map: Angitua - Cave                | It_TreasureMap_ANT_Cave                   |                                  | ???              | Yes             |
+| Treasure Map: Angitua - Gibson              | It_TreasureMap_ANT_Gibson                 |                                  | ???              | Yes             |
+| Treasure Map: Angitua - Grotto              | It_TreasureMap_ANT_Grotto                 |                                  | ???              | Yes             |
+| Treasure Map: Angitua - Nesir               | It_TreasureMap_ANT_Nesir                  |                                  | ???              | Yes             |
+| Treasure Map: Caldera - Beach               | It_TreasureMap_CRY_Beach                  |                                  | ???              | Yes             |
+| Treasure Map: Isle of the Dead - Grave      | It_TreasureMap_IOD_Grave                  |                                  | ???              | Yes             |
+| Treasure Map: Isle of Thieves - Beach       | It_TreasureMap_IOT_Beach                  |                                  | ???              | Yes             |
+| Treasure Map: Isle of Thieves - Cave        | It_TreasureMap_IOT_Cave                   |                                  | ???              | Yes             |
+| Treasure Map: Isle of Thieves - Valley      | It_TreasureMap_IOT_Valley                 |                                  | ???              | Yes             |
+| Treasure Map: Maracai Bay - Beach           | It_TreasureMap_MAB_Beach                  |                                  | ???              | Yes             |
+| Treasure Map: Maracai Bay - Cave            | It_TreasureMap_MAB_Cave                   |                                  | ???              | Yes             |
+| Treasure Map: Maracai Bay - Jungle          | It_TreasureMap_MAB_Jungle                 |                                  | ???              | Yes             |
+| Treasure Map: Maracai Bay - Valley          | It_TreasureMap_MAB_Valley                 |                                  | ???              | Yes             |
+| Treasure Map: Storm Island - Hill           | It_TreasureMap_STI_Hill                   |                                  | ???              | Yes             |
+| Treasure Map: Sword Coast - Beach           | It_TreasureMap_SWC_Beach                  |                                  | ???              | Yes             |
+| Treasure Map: Sword Coast - Fall            | It_TreasureMap_SWC_Fall                   |                                  | ???              | Yes             |
+| Treasure Map: Sword Coast - Graveyard       | It_TreasureMap_SWC_Graveyard              |                                  | ???              | Yes             |
+| Treasure Map: Sword Coast - Jaguar          | It_TreasureMap_SWC_Jaguar                 |                                  | ???              | Yes             |
+| Treasure Map: Sword Coast - Steelbeard      | It_TreasureMap_SWC_Stahlbart              |                                  | ???              | Yes             |
+| Treasure Map: Tacarigua - O'Brian           | It_TreasureMap_TAK_OBrian                 |                                  | ???              | Yes             |
+| Treasure Map: Tacarigua - Peta              | It_TreasureMap_TAK_Pete                   |                                  | ???              | Yes             |
+| Treasure Map: Treasure Island - Ramsay      | It_TreasureMap_TRI_Ramsay                 |                                  | ???              | Yes             |
+| Treasure Map: Treasure Island - Sokbart     | It_TreasureMap_TRI_Sokbart                |                                  | ???              | Yes             |
+| Treasure Map: Treasure Island - Stubbings   | It_TreasureMap_TRI_Stubbings              |                                  | ???              | Yes             |
+| Treasure Map: Treasure Island - Wallace     | It_TreasureMap_TRI_Wallace                |                                  | ???              | Yes             |
+| Vine                                        | It_Liana_Jaffer                           |                                  | ???              | Yes             |
+| Weathered Chest Key                         | It_Key_Stahlbart_TRI                      |                                  | ???              | Yes             |
+| White Feather                               | It_Feather_Kenan_White                    |                                  | ???              | Yes             |
+| Wig                                         | It_Peruke_Mauregato                       |                                  | ???              | Yes             |
+| Wilson's Pistol                             | It_Pis_Wilson                             |                                  | ???              | Yes             |
+| World Map (no inventory item)               | It_Map_World                              |                                  | ???              | Yes             |
+| Yellow Feather                              | It_Feather_Kenan_Yellow                   |                                  | ???              | Yes             |
+| Zaalu Voodoo Doll                           | It_VoodooDoll_Zaalu                       |                                  | ???              | Yes             |
+| Zaalu's Hair                                | It_Hair_Zaalu                             |                                  | ???              | Yes             |
 
 
-Item Codes:
 
-It_Po_FalseBlood_Tao
-It_Po_Health_02
-It_Po_Speed
-It_Potion_Health
 
-----
+
+
+
 
 
 ## Merchant Locations
