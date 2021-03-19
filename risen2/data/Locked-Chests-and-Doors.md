@@ -159,6 +159,20 @@ This section is for being able to reference the maximum lock level you can succe
 
 These charts will start at the minimum cunning level needed for each scenario and work their way up. Then it will plot the same thing out against various combinations of items. Rinse and repeat for the next skill level and the one after that. You will **always** need to have purchased the Picklocking talent to open locks which requires Cunning 4 or higher; so these charts will not be showing anything below Cunning 4 since you can't pick locks without that anyway.
 
+This compares Cunning and Thievery levels along with various combinations of the following items:
+
+* Black Pearl (Cunning +1 => Thievery +5)
+* Blade Ring (Thievery +20)
+* Thief's Amulet (Thievery +10)
+* Ring of Greed (Thievery +15)
+* Thief's Ring (Thievery +10)
+* Snuffbox (Thievery +10)
+* Thief's Potion w/o Ritual skills (Thievery +7 for 30s)
+* Thief's Potion with Ritual I (Thievery +13 for 30s)
+* Thief's Potion with Ritual II (Thievery +17 for 30s)
+* Thief's Potion with Ritual III (Thievery +?? for 30s)
+* One Left Boot (Cunning +1 => Thievery +5)
+
 
 ### Lockpicking Only:
 
