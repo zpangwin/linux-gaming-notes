@@ -39,15 +39,15 @@ Note: These potions become more effective with additional ranks of the Ritual sk
 
 Pretty much all of these potions can be found for free around the world.
 
-| Item Name            | Buy  | Sell | Item Code          | Duration | Skill(s) Effected            | Reg | Rit-1 | Rit-2 | Rit-3 | Merchants     |
-|:--------------------:|:----:|:----:|:------------------:|:---------------------------------------:|:---:|:-----:|:-----:|:-----:|:-------------:|
-| Marksman's Potion    | 200  | 30   | It_Po_Firearms     | 30 sec   | Muskets, Pistols, Shotguns   | +7  | +13   | +17   | ??    | Badriya, Emma |
-| Potion of Awe        | 150  | 20   | It_Po_Intimdate    | 30 sec   | Intimidate                   | +7  | +13   | +17   | ??    | Badriya, Emma |
-| Potion of Blades     | 200  | 30   | It_Po_Blade        | 30 sec   | Throwing, Piercing, Slashing | +7  | +13   | +17   | ??    | Badriya, Emma |
-| Potion of Persuasion | 150  | 20   | It_Po_Silvertongue | 30 sec   | Silver Tongue                | +7  | +13   | +17   | ??    | Badriya, Emma |
-| Ritual Potion        | 175  | 25   | It_Po_Ritual       | 30 sec   | Ritual                       | +7  | +13   | +17   | ??    | Badriya, Emma |
-| Spirit Essence       | 175  | 25   | It_Po_BlackMagic   | 30 sec   | Black Magic                  | +7  | +13   | +17   | ??    | Badriya, Emma |
-| Thief's Potion       | 250  | 50   | It_Po_Thief        | 30 sec   | Thievery                     | +7  | +13   | +17   | ??    | Badriya, Emma |
+| Item Name            | Buy  | Sell | Item Code          | Duration | Skill(s) Effected            | Reg | Rit-1 | Rit-2 | Rit-3 | Merchants               |
+|:--------------------:|:----:|:----:|:------------------:|:---------------------------------------:|:---:|:-----:|:-----:|:-----:|:-----------------------:|
+| Marksman's Potion    | 200  | 30   | It_Po_Firearms     | 30 sec   | Muskets, Pistols, Shotguns   | +7  | +13   | +17   | ??    | Badriya, Emma, Di Silva |
+| Potion of Awe        | 150  | 20   | It_Po_Intimdate    | 30 sec   | Intimidate                   | +7  | +13   | +17   | ??    | Badriya, Emma, Di Silva |
+| Potion of Blades     | 200  | 30   | It_Po_Blade        | 30 sec   | Throwing, Piercing, Slashing | +7  | +13   | +17   | ??    | Badriya, Emma, Di Silva |
+| Potion of Persuasion | 150  | 20   | It_Po_Silvertongue | 30 sec   | Silver Tongue                | +7  | +13   | +17   | ??    | Badriya, Emma, Di Silva |
+| Ritual Potion        | 175  | 25   | It_Po_Ritual       | 30 sec   | Ritual                       | +7  | +13   | +17   | ??    | Badriya, Emma, Di Silva |
+| Spirit Essence       | 175  | 25   | It_Po_BlackMagic   | 30 sec   | Black Magic                  | +7  | +13   | +17   | ??    | Badriya, Emma, Di Silva |
+| Thief's Potion       | 250  | 50   | It_Po_Thief        | 30 sec   | Thievery                     | +7  | +13   | +17   | ??    | Badriya, Emma, Di Silva |
 
 
 ### Alcohol
@@ -66,16 +66,16 @@ Pretty much all of these potions can be found for free around the world.
 | Item Name            | Buy  | Sell | Item Code          | Stats and Effects                               | Free? | Merchants           |
 |:--------------------:|:----:|:----:|:------------------:|:-----------------------------------------------:|:-----:|:-------------------:|
 | Black Bandana        | 150  | 30   | It_Bandana_Black   | Bladeproof +2, Bulletproof +2, Intimidate +2    | No    | Sophia, Quinn       |
-| Bicorne Hat          | ???  | 40   | It_Bicorn_Black    | Bladeproof +3, Bulletproof +3, Intimidate +2    | No    | ???                 |
-| Elegant Tricorne Hat | ???? | 50   | It_Tricorn_White   | Bladeproof +3, Bulletproof +3, Silver Tongue +3 | No    | ???                 |
-| Good Tricorne Hat    | ???? | 50   | It_Tricorn_Gold    | Bladeproof +3, Bulletproof +3, Intimidate +3    | No    | ???                 |
+| Bicorne Hat          | ???  | 40   | It_Bicorn_Black    | Bladeproof +3, Bulletproof +3, Intimidate +2    | No    | Pantaleo, Mercutio  |
+| Elegant Tricorne Hat | ???? | 50   | It_Tricorn_White   | Bladeproof +3, Bulletproof +3, Silver Tongue +3 | No    | Pantaleo            |
+| Good Tricorne Hat    | ???? | 50   | It_Tricorn_Gold    | Bladeproof +3, Bulletproof +3, Intimidate +3    | No    | Pantaleo, Mercutio  |
 | Hat\*\*              | ---- | 60   | It_Hat_Morris      | Bladeproof +3, Bulletproof +3, Intimidate +3    | No    | ---                 |
 | Old Bandana          | 100  | 20   | It_Bandana_Torn    | Bladeproof +2, Bulletproof +2                   | No    | Carter, Flannigan   |
 | Old Bicorne Hat      | 100  | 20   | It_Bicorn_Torn     | Bladeproof +2, Bulletproof +2                   | No    | Sophia              |
 | Old Tricorne Hat     | 200  | 40   | It_Tricorn_Torn    | Bladeproof +3, Bulletproof +3                   | No    | Sophia, Quinn       |
 | Pirate Bandana Largo | 100  | 20   | It_Bandana_Largo   | Bladeproof +5, Bulletproof +0, Intimidate +5    | No    | ---                 |
 | Pirate Hat (DLC)     | 250  | 50   | It_Hat_DLC1        | Bladeproof +5, Bulletproof +5, Silver Tongue +5 | Yes\* | ---                 |
-| Quality Bicorne Hat  | ???? | 30   | It_Bicorn_Silver   | Bladeproof +3, Bulletproof +3, Silver Tongue +2 | No    | ???                 |
+| Quality Bicorne Hat  | ???? | 30   | It_Bicorn_Silver   | Bladeproof +3, Bulletproof +3, Silver Tongue +2 | No    | Pantaleo            |
 | Red Bandana          | 150  | 20   | It_Bandana_Red     | Bladeproof +2, Bulletproof +2, Intimidate +2    | No    | Quinn               |
 | Steelbeard's Hat\*\* | ---  | ---  | It_Hat_Stahlbart   | Bladeproof +3, Bulletproof +3, Intimidate +10   | No    | ---                 |
 | Striped Bandana      | 100  | 20   | It_Bandana_Striped | Bladeproof +2, Bulletproof +2                   | No    | Flannigan           |
@@ -90,26 +90,26 @@ Pretty much all of these potions can be found for free around the world.
 
 | Item Name            | Buy  | Sell | Item Code            | Stats and Effects                                               | Free? | Merchants         |
 |:--------------------:|:----:|:----:|:--------------------:|:--------------------------------------------------------------:|:-----:|:------------------:|
-| Black Waistcoat      | ???  | 65   | It_Vest_Black        | Bladeproof +10, Bulletproof +10, Intimidate +3                  | No    |                   |
-| Cloth Coat           | ???? | 100  | It_Coat_Cloth        | Bladeproof +15, Bulletproof +15                                 | No    |                   |
+| Black Coat           | ???? | 200  | It_GreatCoat_Black   | Bladeproof +20, Bulletproof +20, Intimidate +5                  | No    | Pantaleo          |
+| Black Waistcoat      | ???  | 65   | It_Vest_Black        | Bladeproof +10, Bulletproof +10, Intimidate +3                  | No    | Pantaleo          |
+| Cloth Coat           | ???? | 100  | It_Coat_Cloth        | Bladeproof +15, Bulletproof +15                                 | No    | Pantaleo          |
 | Dirty Shirt          | 75   | 15   | It_Shirt_Dirty       | Bladeproof +3, Bulletproof +3                                   | Yes   | ---               |
-| Elegant Waistcoast   | 300  | 60   | It_Vest_Silk         | Bladeproof +10, Bulletproof +10, Silver Tongue +5               | No    | DiFuego           |
-| Heavy Cloth Coat     | ???? | 160  | It_GreatCoat_Striped | Bladeproof +20, Bulletproof +20                                 | No    |                   |
-| Heavy Leather Coat   | ???? | 160  | It_GreatCoat_Leather | Bladeproof +20, Bulletproof +20                                 | No    |                   |
-| Black Coat           | ???? | 200  | It_GreatCoat_Black   | Bladeproof +20, Bulletproof +20, Intimidate +5                  | No    |                   |
+| Elegant Waistcoast   | 300  | 60   | It_Vest_Silk         | Bladeproof +10, Bulletproof +10, Silver Tongue +5               | No    | DiFuego, Pantaleo |
+| Heavy Cloth Coat     | ???? | 160  | It_GreatCoat_Striped | Bladeproof +20, Bulletproof +20                                 | No    | Pantaleo          |
+| Heavy Leather Coat   | ???? | 160  | It_GreatCoat_Leather | Bladeproof +20, Bulletproof +20                                 | No    | Mercutio          |
 | Largos Leather Shirt | 150  | 30   | It_Shirt_Largo       | Bladeproof +6, Bulletproof +5                                   | No    | Carter            |
 | Leather Shirt        | 200  | 40   | It_Shirt_Leather     | Bladeproof +6, Bulletproof +6                                   | No    | Sophia            |
-| Leather Waistcoat    | 250  | 45   | It_Vest_Leather      | Bladeproof +10, Bulletproof +10                                 | No    | Quinn             |
-| Official's Coat      | ???  | 80   | It_Coat_Inq          | Bladeproof +12, Bulletproof +15                                 | No    |                   |
+| Leather Waistcoat    | 250  | 45   | It_Vest_Leather      | Bladeproof +10, Bulletproof +10                                 | No    | Quinn, Mercutio   |
+| Official's Coat      | ???  | 80   | It_Coat_Inq          | Bladeproof +12, Bulletproof +15                                 | No    | Mercutio          |
 | Old Coat             | 350  | 60   | It_Coat_Torn         | Bladeproof +12, Bulletproof +12                                 | No    | Sophia            |
-| Old Shirt            | 75   | 15   | It_Shirt_Torn        | Bladeproof +3, Bulletproof +3                                   | No    | Carter            |
 | Old Raincoat         | 600  | 120  | It_GreatCoat_Torn    | Bladeproof +17, Bulletproof +17                                 | No    | Quinn             |
+| Old Shirt            | 75   | 15   | It_Shirt_Torn        | Bladeproof +3, Bulletproof +3                                   | No    | Carter            |
 | Old Waistcoat        | 150  | 30   | It_Vest_Torn         | Bladeproof +8, Bulletproof +8                                   | No    | Sophia            |
 | Pirate Clothes (DLC) | 500  | 100  | It_Armor_DLC1        | Bladeproof +10, Bulletproof +5                                  | Yes\* |                   |
 | Plain Shirt          | 100  | 20   | It_Shirt_Cloth       | Bladeproof +5, Bulletproof +5                                   | No    | Flannigan         |
 | Red Coat             | 500  | 100  | It_Coat_Leather      | Bladeproof +15, Bulletproof +15                                 | No    | Quinn             |
 | Shirt                | ???  | 20   | It_Shirt_Collar      | Bladeproof +5, Bulletproof +5                                   | No    | ???               |
-| Silk Shirt           | 500  | 100  | It_Shirt_White       | Bladeproof +1, Bulletproof +1, Silver Tongue +10, Piercing +10  | No    | DiFuego           |
+| Silk Shirt           | 500  | 100  | It_Shirt_White       | Bladeproof +1, Bulletproof +1, Silver Tongue +10, Piercing +10  | No    | DiFuego, Pantaleo |
 | Striped Shirt        | 100  | 20   | It_Shirt_Striped     | Bladeproof +5, Bulletproof +5                                   | No    | Flannigan         |
 | Voodoo Garb          | ???  | 200  | IT_Armor_Voodoo      | Bladeproof +10, Bulletproof +5, Black Magic +10, Death Cult +10 | No    |                   |
 
@@ -120,24 +120,24 @@ Pretty much all of these potions can be found for free around the world.
 |:------------------:|:----:|:----:|:---------------:|:-----------------------------------------------:|:-----:|:-----------------------------------:|
 | Colourful Trousers | 150  | 30  | It_Pants_Striped | Bladeproof +2, Bulletproof +2                   | No    | Carter, Flannigan                   |
 | Leather Trousers   | 150  | 30  | It_Pants_Leather | Bladeproof +2, Bulletproof +2                   | No    | Sophia, Quinn                       |
-| Black Trousers     | 200  | 50  | It_Pants_Black   | Bladeproof +3, Bulletproof +3, Intimidate +3    | No    | DiFuego                             |
-| Studded Trousers   | ???  | 50  | It_Pants_Studded | Bladeproof +4, Bulletproof +4                   | No    |                                     |
-| White Trousers     | 200  | 50  | It_Pants_White   | Bladeproof +3, Bulletproof +3, Silver Tongue +3 | No    | DiFuego                             |
+| Black Trousers     | 200  | 50  | It_Pants_Black   | Bladeproof +3, Bulletproof +3, Intimidate +3    | No    | DiFuego, Pantaleo                   |
+| Studded Trousers   | ???  | 50  | It_Pants_Studded | Bladeproof +4, Bulletproof +4                   | No    | Mercutio                            |
+| White Trousers     | 200  | 50  | It_Pants_White   | Bladeproof +3, Bulletproof +3, Silver Tongue +3 | No    | DiFuego, Pantaleo                   |
 
 
 ### Feet
 
 | Item Name            | Buy  | Sell | Item Code            | Stats and Effects                               | Free? | Merchants                        |
 |:--------------------:|:----:|:----:|:--------------------:|:-----------------------------------------------:|:-----:|:--------------------------------:|
-| Elegant Shoes        | 400  | 80   | It_Shoes_Rich        | Bladeproof +5, Silver Tongue +5                 | No    | DiFuego                          |
+| Elegant Shoes        | 400  | 80   | It_Shoes_Rich        | Bladeproof +5, Silver Tongue +5                 | No    | DiFuego, Pantaleo                |
 | Good Shoes           | 200  | 40   | It_Shoes_Polished    | Bladeproof +3, Silver Tongue +3                 | No    | DiFuego, Sophia                  |
 | Good Short Boots     | 300  | 60   | It_LowBoot_Polished  | Bladeproof +5, Bulletproof +5, Silver Tongue +2 | No    | Sophia                           |
-| Good Leather Boots   | ???? | 150  | It_HighBoot_Torn     | Bladeproof +5, Bulletproof +5, Intimidate +5    | No    |                                  |
+| Good Leather Boots   | ???? | 150  | It_HighBoot_Torn     | Bladeproof +5, Bulletproof +5, Intimidate +5    | No    | Pantaleo                         |
 | Old Leather Boots    | 200  | 40   | It_HighBoot_Torn     | Bladeproof +5, Bulletproof +5                   | No    | Sophia                           |
-| Old Shoes            | 75   | 15   | It_Shoes_Torn        | Bladeproof +2, Silver Tongue +2                 | No    | Flannigan, Quinn                 |
-| Old Short Boots      | 125  | 25   | It_LowBoot_Torn      | Bladeproof +5                                   | No    | Flannigan                        |
+| Old Shoes            | 75   | 15   | It_Shoes_Torn        | Bladeproof +2, Silver Tongue +2                 | No    | Flannigan, Quinn, Mercutio       |
+| Old Short Boots      | 125  | 25   | It_LowBoot_Torn      | Bladeproof +5                                   | No    | Flannigan, Mercutio              |
 | Pirate Boots (DLC)   | 250  | 50   | It_Shoes_DLC1        | Bladeproof +5, Bulletproof +5                   | Yes\* |                                  |
-| Tall Leather Boots   | 500  | 100  | It_HighBoot_Normal   | Bladeproof +5, Intimidate +3                    | No    | Quinn                            |
+| Tall Leather Boots   | 500  | 100  | It_HighBoot_Normal   | Bladeproof +5, Intimidate +3                    | No    | Quinn, Mercutio                  |
 | Wornout Boots: Largo | 125  | 25   | It_LowBoot_Largo     | Bladeproof +5                                   | No    |                                  |
 
 
@@ -159,7 +159,7 @@ Pretty much all of these potions can be found for free around the world.
 | Jade Earring       | 250  | 50   | It_Ear_Jade       | Black Magic +5            | Yes\* | Emma                                |
 | Pearl Earring      | 200  | 40   | It_Ear_Pearl      | Silver Tongue +5          | Yes\* | DiFuego                             |
 | Rogues Earring     | 200  | 40   | It_Ear_Rogue      | Dirty Tricks +5           | Yes   | Quinn                               |
-| Sailor's Earring   | 600  | 120  | It_Ear_Sailor     | Bladeproof +5             | Yes   |                                     |
+| Sailor's Earring   | 600  | 120  | It_Ear_Sailor     | Bladeproof +5             | Yes   | Possodino                           |
 | Shark Tooth        | ???? | 400  | It_Ear_Shark      | Toughness +1              | No    |                                     |
 | Skull Earring      | 200  | 40   | It_Ear_Skull      | Intimidate +5             | Yes\* | Flannigan, Quinn                    |
 | Warrior's Earring  | 1000 | 200  | It_Ear_Warrior    | Bulletproof +5, Ritual +5 | Yes   |                                     |
@@ -175,19 +175,19 @@ Pretty much all of these potions can be found for free around the world.
 |:------------------:|:----:|:----:|:----------------:|:--------------------------------------------------------:|:-----:|:--------------------------------:|
 | Ancestral Stone    | ???? | 500  | It_Am_Ancestor   | Death Cult +10, Black Magic +10, Ritual +10              | No    |                                  |
 | Bone Necklace      | ???? | 150  | It_Am_Bone       | Death Cult +10, Black Magic +5                           | No    |                                  |
-| Curse Stone        | 800  | 160  | It_Am_Curse      | Death Cult +5, Black Magic +10                           | No    |                                  |
+| Curse Stone        | 800  | 160  | It_Am_Curse      | Death Cult +5, Black Magic +10                           | No    | Di Silva                         |
 | Hunter's Necklace  | ???? | 100  | It_Am_Hunter     | Ritual +10                                               | No    |                                  |
 | Jade Pendant       | 750  | 150  | It_Am_Jade       | Black Magic +5, Death Cult +5, Ritual +5                 | No    | Emma                             |
 | Lucky Charm        | 400  | 80   | It_Am_Luck       | Bulletproof +5                                           | Yes   |                                  |
 | Pirates Pendant    | ???? | 200  | It_Am_Pirate     | Slashing +5, Pistols +5, Bulletproof +5, Dirty Tricks +5 | No    |                                  |
 | Rat Amulet         | 50   | 20   | It_Am_Rat_Hikoko | Bulletproof +2                                           | No    | Hikoko                           |
-| Skull Amulet       | ???? | 300  | It_Am_Skull      | Death Cult +15, Black Magic +5                           | No    |                                  |
+| Skull Amulet       | ???? | 300  | It_Am_Skull      | Death Cult +15, Black Magic +5                           | No    | Di Silva                         |
 | Spirit Amulet      | 500  | 100  | It_Am_Ghost      | Death Cult +5, Ritual +5                                 | No    | Emma                             |
-| Soul Necklace      | ???? | 200  | It_Am_Soul       | Death Cult +5, Black Magic +5, Ritual +10                | No    |                                  |
+| Soul Necklace      | ???? | 200  | It_Am_Soul       | Death Cult +5, Black Magic +5, Ritual +10                | Yes\* |                                  |
 | Thief's Amulet     | 750  | 150  | It_Am_Thief      | Thievery +10, Dirty Tricks +5                            | No    | Quinn                            |
 | Ti' Ha Ko          | 1000 | 200  | It_Am_Tiwa       | Death Cult +5, Black Magic +15                           | Yes   |                                  |
 | Tribal Symbol      | 150  | 30   | It_Am_Tribe      | Ritual +5                                                | Yes   | Kapua                            |
-| Warrior's Jewelery | 750  | 150  | It_Am_Warrior    | Ritual +15                                               | Yes   |                                  |
+| Warrior's Jewelery | 750  | 150  | It_Am_Warrior    | Ritual +15                                               | Yes   | Di Silva                         |
 | Witche's Amulet    | 500  | 100  | It_Am_Kiki       | Black Magic +5, Ritual +5                                | Yes\* | Kapua                            |
 
 \* Requires Pickpocket, Lockpick, and/or Monkey Trainer Skills be unlocked and of a certain level. If there are multiple copies freely available this only applies when *all* of the freely available copies of that item require thieving skills.
@@ -204,7 +204,7 @@ Note: The DLC item "Master Scholar's Ring" cannot be sold and thus does not have
 |:---------------------------:|:----:|:----:|:-----------------:|:-------------------------------------------:|:-----:|:-----------------------------------:|
 | Blade Ring                  | ???? | 200  | It_Ri_Blade       | Thievery +20                                | No    |                                     |
 | Bone Ring                   | 500  | 100  | It_Ri_Bone        | Black Magic +5, Ritual +5                   | No    | Kapua                               |
-| Hunter's Ring               | 500  | 100  | It_Ri_Hunter      | Muskets +5, Shotguns +5                     | Yes\* |                                     |
+| Hunter's Ring               | 500  | 100  | It_Ri_Hunter      | Muskets +5, Shotguns +5                     | Yes\* | Possodino                           |
 | Inquisitor's Ring           | 600  | 120  | It_Ri_Inquisitor  | Muskets +5, Bulletproof +5                  | Yes   |                                     |
 | Iron Ring                   | 500  | 100  | It_Ri_Iron        | Throwing Weapons +5, Bladeproof +5          | Yes\* | Kapua                               |
 | Jade Ring                   | 600  | 120  | It_Ri_Jade        | Ritual +10                                  | No    | Kapua                               |
@@ -216,7 +216,7 @@ Note: The DLC item "Master Scholar's Ring" cannot be sold and thus does not have
 | Rogue's Ring                | ???  | 100  | It_Ri_Rogue       | Dirty Tricks +10, Thievery +5               | Yes   | Quinn                               |
 | Ruby Ring                   | 250  | 50   | It_Ri_Ruby        | Dirty Tricks +5, Silver Tongue +5           | Yes   | Sophia                              |
 | Silver Ring                 | ???? | 20   | It_Ri_Silver      | ---                                         | No    |                                     |
-| Skull Ring                  | ???? | 100  | It_Ri_Skull       | Slashing +5 , Intimidate +5                 | Yes\* |                                     |
+| Skull Ring                  | ???? | 100  | It_Ri_Skull       | Slashing +5 , Intimidate +5                 | Yes\* | Di Silva                            |
 | Soul Ring                   | ???? | 100  | It_Ri_Soul        | Death Cult +5, Ritual +5                    | No    |                                     |
 | Sparkling Gold Ring         | 150  | 50   | It_Ri_Gold        | Silver Tongue +5                            | No    | Flannigan, Sophia                   |
 | Tek Shaballa\*\*            | ???? | ---  | It_Ri_TekShaballa | Black Magic +10, Death Cult +1-, Ritual +10 | No    |                                     |
@@ -234,20 +234,20 @@ Note: The DLC item "Master Scholar's Ring" cannot be sold and thus does not have
 | Item Name          | Buy  | Sell | Item Code               | Damage | Bonus        | Free? | Merchants                        |
 |:------------------:|:----:|:----:|:-----------------------:|:------:|:------------:|:-----:|:--------------------------------:|
 | Admiral's Blade    | 2500 | 500  | It_Pie_Admiral          | 45-100 | Piercing +15 | No    |                                  |
-| Buchaneers Sword   | 1600 | 320  | It_Pie_Pirate           | 35-80  | Piercing +5  | No    |                                  |
+| Buchaneers Sword   | 1600 | 320  | It_Pie_Pirate           | 35-80  | Piercing +5  | No    | Possodino, Mercutio              |
 | Captain's Sword    | ???? | 400  | It_Pie_Captain          | 40-90  | Piercing +15 | No    |                                  |
 | Corsair's Sword    | 250  | 240  | It_Pie_Corsair          | 25-60  | Piercing +10 | Yes   |                                  |
 | Crab Stabber       | 250  | 50   | It_Pie_Crab             | 15-30  | Piercing +10 | No    |                                  |
 | Death Knell        | 2250 | 450  | It_Pie_Deathblow        | 45-95  | Piercing +10 | No    |                                  |
-| Duelling Epee      | 1500 | 300  | It_Pie_Duel             | 30-70  | Piercing +15 | Yes\* |                                  |
-| Elegant Scimitar   | 2250 | 450  | It_Sla_LordlyScimitar   | 45-70  | Piercing +20 | No    |                                  |
+| Duelling Epee      | 1500 | 300  | It_Pie_Duel             | 30-70  | Piercing +15 | Yes\* | Possodino, Mercutio              |
+| Elegant Scimitar   | 2250 | 450  | It_Sla_LordlyScimitar   | 45-70  | Piercing +20 | No    | Mercutio                         |
 | Epee               | 800  | 200  | It_Pie_Epee             | 20-60  | Piercing +15 | No    | Cooper                           |
 | Fencing Foil       | 600  | 120  | It_Pie_Fencing          | 20-50  | Piercing +10 | Yes\* |                                  |
 | King's Sword       | 2500 | 500  | It_Pie_King             | 45-100 | Piercing +15 | No    |                                  |
 | Magnificient Sword | 1900 | 380  | It_Pie_Pomp             | 35-80  | Piercing +20 | No    |                                  |
 | Officer's Sword    | 450  | 100  | It_Pie_Officer          | 20-40  | Piercing +10 | No    | Cooper                           |
 | Old Sword          | 150  | 30   | It_Pie_Old              | 15-30  | Piercing +5  | Yes   |                                  |
-| Rapier             | 1750 | 370  | It_Pie_Rapier           | 40-90  | Piercing +10 | No    |                                  |
+| Rapier             | 1750 | 370  | It_Pie_Rapier           | 40-90  | Piercing +10 | No    | Possodino, Mercutio              |
 | Soul Caller        | 2500 | 500  | It_Pie_SoulCaller       | 45-100 | Piercing +15 | No    |                                  |
 | Stormthorn         | 250  | 75   | It_Pie_Storm            | 20-30  | Piercing +15 | No    | Cooper                           |
 | Sword              | 1100 | 250  | It_Pie_LongSword        | 30-65  | Piercing +10 | No    | Cooper                           |
@@ -262,10 +262,10 @@ Note: The DLC item "Master Scholar's Ring" cannot be sold and thus does not have
 | Item Name          | Buy  | Sell | Item Code               | Damage | Bonus        | Free? | Merchants                        |
 |:------------------:|:----:|:----:|:-----------------------:|:------:|:------------:|:-----:|:--------------------------------:|
 | Buccaneer's Knife  | 250  | 50   | It_Sla_Buccaneer        | 25-30  | Slashing +5  | Yes   |                                  |
-| Captain's Sabre    | 1500 | 350  | It_Sla_Captain          | 40-60  | Slashing +10 | No    |                                  |
+| Captain's Sabre    | 1500 | 350  | It_Sla_Captain          | 40-60  | Slashing +10 | No    | Possodino                        |
 | Cutlass            | 250  | 50   | It_Sla_Cutlass          | 25-30  | Slashing +5  | Yes   | Stone                            |
 | Decapitator        | ???? | 400  | It_Sla_Beheader         | 50-80  | Slashing +10 | No    |                                  |
-| Exotic Sabre       | 1875 | 420  | It_Sla_ExoticSabre      | 50-80  | Slashing +20 | No    |                                  |
+| Exotic Sabre       | 1875 | 420  | It_Sla_ExoticSabre      | 50-80  | Slashing +20 | No    | Mercutio                         |
 | Machete            | 450  | 100  | It_Sla_Machete          | 25-30  | Slashing +10 | Yes   | Stone                            |
 | Pirate's Sabre     | 1000 | 250  | It_Sla_PirateSabre      | 35-50  | Slashing +10 | Yes   | Stone, Cooper                    |
 | Plank Breaker      | 2100 | 375  | It_Sla_Plankbreaker     | 45-70  | Slashing +5  | No    |                                  |
@@ -296,11 +296,11 @@ I am separating them based on which Skill they use (or what sounds logical in th
 |:------------------------:|:----:|:----:|:---------------:|:------:|:-----:|:------:|:-----------:|:---------:|:---------:|:--------------------------------:|
 | Boarding Pistol          | 400  | 80   | It_Pis_Ship     | 50     | 8     | 20s    | Pistols +10 | Bullet    | No        | Thompkins                        |
 | Double-barrelled Pistol  | ???? | 350  | It_Pis_Double   | 70     | 8     | 15s    | Pistols +10 | Bullet    | No        |                                  |
-| Dueling Pistol           | ???? | 300  | It_Pis_Duel     | 70     | 8     | 20s    | Pistols +20 | Bullet    | No        |                                  |
+| Dueling Pistol           | ???? | 300  | It_Pis_Duel     | 70     | 8     | 20s    | Pistols +20 | Bullet    | No        | Fernando                         |
 | Fat Olga                 | ???? | 350  | It_ShG_FatOlga  | 100    | 8     | 30s    | Pistols +0  | Lead Shot | No        |                                  |
 | Officer's Pistol         | 1350 | 270  | It_Pis_Officer  | 65     | 8     | 20s    | Pistols +15 | Bullet    | Yes\*\*   |                                  |
-| Pistol                   | 750  | 150  | It_Pis_Single   | 60     | 8     | 20s    | Pistols +20 | Bullet    | Yes       | Barney                           |
-| Sawn-Off Shotgun         | ???? | 500  | It_ShP_SawnOff  | 90     | 8     | 30s    | Pistols +5  | Lead Shot | No        |                                  |
+| Pistol                   | 750  | 150  | It_Pis_Single   | 60     | 8     | 20s    | Pistols +20 | Bullet    | Yes       | Barney, Fernando                 |
+| Sawn-Off Shotgun         | ???? | 500  | It_ShP_SawnOff  | 90     | 8     | 30s    | Pistols +5  | Lead Shot | No        | Fernando                         |
 | Scatter Pistol           | 500  | 100  | It_ShP_Buckshot | 60     | 8     | 30s    | Pistols +5  | Lead Shot | No        | Barney, Webster                  |
 | Silver Iron              | ???? | 380  | It_Pis_Silver   | 80     | 8     | 20s    | Pistols +10 | Bullet    | No        |                                  |
 | The Grinder              | 1000 | 250  | It_ShP_Mortar   | 70     | 8     | 30s    | Pistols +5  | Lead Shot | No        | Webster                          |
@@ -366,7 +366,7 @@ There are multiple guns with "Rifle" in the name under the "Shotgun" category as
 | Item Name             | Buy  | Sell | Item Code             | Damage | Effects                                    | Free? | Merchants          |
 |:---------------------:|:----:|:----:|:---------------------:|:------:|:------------------------------------------:|:-----:|:------------------:|
 | Curse Doll            | ???  | 20   | It_VoodooDoll_Curse   | ---    | Curse and weaken enemies                   | Yes   |                    |
-| Voodoo Doll           | 50   | 10   | It_VoodooDoll         | ---    | ---                                        | No    | Kapua, Emma, Quinn |
+| Voodoo Doll           | 50   | 10   | It_VoodooDoll         | ---    | ---                                        | No    | Kapua, Emma, Quinn, Mercutio |
 | Sceptre of Fear       | ???? | 200  | It_Scepter_Fear       | 10-20  | Cause Fera and Terror in Enemies           | No    |                    |
 | Sceptre of Power      | ???? | 200  | It_ScepterTelekinesis | 10-20  | Incite People/Animals to attack each other | No    |                    |
 | Skull Sceptre         | ???? | 200  | It_Scepter_Skull      | 10-20  | Conjure up the Captain's Ghost             | No    |                    |
@@ -378,7 +378,7 @@ There are multiple guns with "Rifle" in the name under the "Shotgun" category as
 
 | Item Name           | Buy  | Sell | Item Code  | Effect             | Damage | Range | Reload | Free? | Merchants                        |
 |:-------------------:|:----:|:----:|:----------:|:------------------:|:------:|:-----:|:------:|:-----:|:--------------------------------:|
-| Fire Oil            | 100  | 20   | It_RockOil | Firebreathing      |        | Melee | 20s    | No    | Flannigan, Quinn                 |
+| Fire Oil            | 100  | 20   | It_RockOil | Firebreathing      |        | Melee | 20s    | No    | Flannigan, Quinn, Mercutio       |
 | Rock Hard Coconut   | ???? | 5    | It_Coconut | Chance of Enemy KO | 10     | 8     |        | No    |                                  |
 | Salt                | 100  | 20   | It_Salt    | Blinds an Enemy    |        | Melee | 10s    | No    | Flannigan, Sophia, Quinn         |
 | Sand                | N/A  | N/A  | It_Sand    | Blinds an Enemy    |        | Melee | 10s    | Yes   | Ghiles                           |
@@ -394,7 +394,7 @@ There are multiple guns with "Rifle" in the name under the "Shotgun" category as
 | Black Dog's Dagger | ???? | ---  | It_Dagger_MAB_BlackDog | 50     | 10    | 10s    | No    |                             |
 | Curved Dagger      | 15   | 3    | It_Dagger_Medium       | 30     | 8     | ---    | Yes   | Cooper                      |
 | Dagger             | 10   | 2    | It_Dagger_Small        | 20     | 8     | ---    | No    | Thompkins, Stone            |
-| Pirates Dagger     | ???? | 4    | It_Dagger_Large        | 40     | 8     | ---    | No    |                             |
+| Pirates Dagger     | ???? | 4    | It_Dagger_Large        | 40     | 8     | ---    | No    | Possodino, Mercutio         |
 | Sacrificial Knife  | ???? | ---  | It_Dagger_Sacrifice    | 60     | 10    | 10s    | No    |                             |
 | Spear              | ???? | 25   | It_Thr_Spear           | 40     | ----  | ---    | Yes   | ??                          |
 | Spear              | ???? | 25   | It_Thr_Spear_Warrior   | 40     | ----  | ---    | Np    | ---                         |
@@ -405,34 +405,34 @@ There are multiple guns with "Rifle" in the name under the "Shotgun" category as
 
 | Item Name                  | Buy  | Sell | Item Code        | Stats and Effects                        | Free? | Merchants                                  |
 |:--------------------------:|:----:|:----:|:----------------:|:----------------------------------------:|:-----:|:------------------------------------------:|
-| Bomb                       | 250  | 50   | It_Exp_Bomb      | Timed Explosive                          | Yes\* | Thompkins                                  |
-| Bone Saw                   | 100  | 20   | It_Bonesaw       | Harvest Claw & Sickle from some animals  | No    | Ghiles, Flannigan, Sophia, Ranapiri, Quinn |
-| Bullet                     | 1    | ---  | It_Ammo_Bullet   | ---                                      | Yes   | Thompkins, Barney, Webster                 |
+| Bomb                       | 250  | 50   | It_Exp_Bomb      | Timed Explosive                          | Yes\* | Thompkins, Fernando                        |
+| Bone Saw                   | 100  | 20   | It_Bonesaw       | Harvest Claw & Sickle from some animals  | No  | Ghiles, Flannigan, Sophia, Ranapiri, Quinn, Mercutio |
+| Bullet                     | 1    | ---  | It_Ammo_Bullet   | ---                                      | Yes   | Thompkins, Barney, Webster, Fernando, Mercutio |
+| Funnel-Shaped Gun Barrel   | ???  | 15   | It_ShP_Barrel    | Gun Part                                 | No    |                                            |
 | Hammer                     | ???? | 10   | It_Hammer        | Allows smithing                          | Yes   |                                            |
 | Jaw Chisel                 | ???? | 20   | It_JawChisel     | Harveset teeth & tusks from some animals | No    | Ranapiri, Quinn                            |
-| Lead Shot                  | 1    | ---  | It_Ammo_Buckshot | ---                                      | Yes   | Thompkins, Barney, Webster                 |
+| Lead Shot                  | 1    | ---  | It_Ammo_Buckshot | ---                                      | Yes   | Thompkins, Barney, Webster, Fernando, Mercutio |
 | Lockpick                   | ???? | 20   | It_Lockpick      | Pick locks (REQ: Lockpick skill to use)  | No    |                                            |
+| Match Lock                 | ??   | 15   | It_MatchLock     | Gun part                                 | No    |                                            |
+| Match Lock                 | ??   | 15   | It_MatchLock     | Gun part                                 | No    |                                            |
 | Monkey                     | ???? | 200  | It_Monkey        | Used to steal things, pull levers, etc   | No    | Flannigan, Quinn                           |
 | Parrot                     | ???? | 200  | It_Parrot        | Used to distract enemies                 | No    | Flannigan                                  |
-| Pickaxe                    | 150  | 30   | It_Pickaxe       | Allows mining for ore                    | No    | Flannigan, Sophia, Quinn                   |
-| Powder Keg                 | ???  | 25   | It_Exp_PowderKeg | Shootable Explosive                      | Yes\* | ---                                        |
-| Ritual Knife               | ???? | 50   | It_RitualKnife   | ???                                      | No    | Kapua (Faction)                            |
-| Shovel                     | 150  | 30   | It_Shovel        | Allows digging up buried treasure        | Yes   | Flannigan, Sophia, Quinn                   |
-| Skinning Knife             | 150  | 30   | It_SkinningKnife | Harvest skins from some animals          | Yes   | Ranapiri                                   |
-| Torch                      | 15   | 3    | It_Torch         | Allows lighting up dark areas            | Yes   | Ghiles, Flannigan, Ranapiri, Quinn         |
-| Match Lock                 | ??   | 15   | It_MatchLock     | Gun part                                 | No    |                                            |
-| Match Lock                 | ??   | 15   | It_MatchLock     | Gun part                                 | No    |                                            |
+| Pickaxe                    | 150  | 30   | It_Pickaxe       | Allows mining for ore                    | No    | Flannigan, Sophia, Quinn, Mercutio         |
+| Pistol Barrel              | ???  | 15   | It_Pis_Barrel    | Gun Part                                 | No    |                                            |
+| Powder Keg                 | ???  | 25   | It_Exp_PowderKeg | Shootable Explosive                      | Yes\* | Fernando                                   |
 | Provisions                 | ???  | 5    | It_Food          | Regeneratiopn 20                         | Yes   | Any bartender: Osorio, Booze, Sophia, etc  |
 | Raw Chicken Meat           | ???  | 5    | It_Chicken_Raw   | Fry for Provisions                       | Yes   |                                            |
 | Raw Fish                   | ???  | 5    | It_Fish_Raw      | Fry for Provisions                       | Yes   |                                            |
 | Raw Meat                   | ???  | 5    | It_Meat_Raw      | Fry for Provisions                       | Yes   |                                            |
-| Wheel Lock                 | ???  | 15   | It_WheelLock     | Gun Part                                 | Yes   |                                            |
-| Pistol Barrel              | ???  | 15   | It_Pis_Barrel    | Gun Part                                 | No    |                                            |
-| Funnel-Shaped Gun Barrel   | ???  | 15   | It_ShP_Barrel    | Gun Part                                 | No    |                                            |
-| Shotgun Barrel             | ???  | 15   | It_ShG_Barrel    | Gun Part                                 | No    |                                            |
+| Ritual Knife               | ???? | 50   | It_RitualKnife   | ???                                      | No    | Kapua (Faction)                            |
 | Shotgun Barrel             | ???  | 15   | It_Rif_Barrel    | Gun Part                                 | No    |                                            |
+| Shotgun Barrel             | ???  | 15   | It_ShG_Barrel    | Gun Part                                 | No    |                                            |
+| Shovel                     | 150  | 30   | It_Shovel        | Allows digging up buried treasure        | Yes   | Flannigan, Sophia, Quinn                   |
+| Skinning Knife             | 150  | 30   | It_SkinningKnife | Harvest skins from some animals          | Yes   | Ranapiri                                   |
 | Sugar                      | ???  | 10   | It_Sugar         | Brewing Component                        | No    |                                            |
 | Sword Blank                | ???  | 15   | It_SwordRaw      | Sword Part                               | Yes   |                                            |
+| Torch                      | 15   | 3    | It_Torch         | Allows lighting up dark areas            | Yes   | Ghiles, Flannigan, Ranapiri, Quinn, Possodino, Mercutio |
+| Wheel Lock                 | ???  | 15   | It_WheelLock     | Gun Part                                 | Yes   |                                            |
 
 
 \* Requires Pickpocket, Lockpick, and/or Monkey Trainer Skills be unlocked and of a certain level. If there are multiple copies freely available this only applies when *all* of the freely available copies of that item require thieving skills.
@@ -552,6 +552,7 @@ Most of the miscellaneous items can be found for free around the world.
 | Spyglass               | ??? | 60   | It_Spyglass                     | ---                                     | --- |
 | Tankard                | ??? | 2    | It_Mug                          | ---                                     | --- |
 | White Diamond (Akando) | ??? | 300  | It_Diamond_Akando               | ---                                     | --- |
+| Red Wine (Sophia)      | 25  | ???  |                                 | ---                                     | Mercutio |
 
 
 ### Legendary Items
@@ -565,7 +566,7 @@ See Legendary-Items.md and/or Freebies.md for more information on locating the i
 |:----------------------:|:----:|:---------------------:|:--------------------:|:--------------------:|:------------------------:|
 | Bottle of Memories     | 2000 | The Sword Coast       | It_Blue_CUL_Bottle   | Death Cult +10       | Kapua         |
 | Broken Rattle          | ???  | ???                   | It_Blue_MAG_Rattle   | Black Magic +10      |  |
-| Cannonball             | ???  | ???                   | It_Blue_GUN_Ball     | Shotguns +10         |  |
+| Cannonball             | ???  | ???                   | It_Blue_GUN_Ball     | Shotguns +10         | Mercutio |
 | Comb With One Tooth    | ???  | ???                   | It_Blue_BLA_Comb     | Blades +1            |  |
 | Flask                  | ???  | ???                   | It_Blue_DIR_Flask    | Dirty Tricks +10     |  |
 | Hand Mirror            | 2000 | Tacarigua             | It_Blue_SIL_Mirror   | Silver Tongue +10    | Booze          |
@@ -582,8 +583,26 @@ See Legendary-Items.md and/or Freebies.md for more information on locating the i
 | Shrunken Head          | ---  | The Sword Coast       | It_Blue_INT_Head     | Intimidate +10       | ---                      |
 | Silver Mask            | ???  | ???                   | It_Blue_BLA_Mask     | Bladeproof +10       |  |
 | Skull of Death         | ???  | ???                   | It_Blue_VOO_Skull    | Voodoo +1            |  |
-| Snuffbox               | ???  | ???                   | It_Blue_THI_Tabak    | Thievery +10         |  |
-| Voodoo Needle          | ???  | ???                   | It_Blue_PIE_Dagger   | Piercing Weapons +10 | Emma            |
+| Snuffbox               | ???  | ???                   | It_Blue_THI_Tabak    | Thievery +10         | Possodino           |
+| Voodoo Needle          | ???  | ???                   | It_Blue_PIE_Dagger   | Piercing Weapons +10 | Emma                |
+
+
+
+### Maps
+
+
+| Item Name                  | Buy  | Item Code   | Free? | Location / Merchants                                                    |
+|:--------------------------:|:----:|:-----------:|:---:|:-------------------------------------------------------------------------:|
+| Map of Caldera             | 200  | ???         | No  | Buy from Possodino                                                        |
+| Map of Tacarigua           | ???? | ???         | Yes | Pay Di Fuego or remind him that you need a map to deliver the letter      |
+| Map of Sword Coast         | ---  | ???         | Yes | Loot from Sebastiano's Manor or Cave en route to native                   |
+| Map of Antigua             | ???  | ???         | ??? | ???                                                                       |
+| Map of Treasure Island     | ???? | ???         | ??? | ???                                                                       |
+| Map of Maracai Bay         | ???? | ???         | ??? | ???                                                                       |
+| Map of Isle of the Dead    | ???? | ???         | ??? | ???                                                                       |
+| Map of Island of Thieves   | ???? | ???         | ??? | ???                                                                       |
+| Map of Storm Island        | ???? | ???         | ??? | ???                                                                       |
+
 
 
 
@@ -792,33 +811,6 @@ Some of these items, once added (via console or sometimes even via normal gamepl
 | Zaalu's Hair                                | It_Hair_Zaalu                             |                                  | ???              | Yes             |
 
 
-
-
-
-
-
-
-
-## Merchant Locations
-
-| Merchant Name                 | Type                                    | Island                | Location                         |
-|:-----------------------------:|:---------------------------------------:|:---------------------:|:--------------------------------:|
-| Osorio                        | Food/Drink                              | Tacarigua             | Puerto Sacarico                  |
-| Di Fuego                      | Clothing                                | Tacarigua             | Puerto Sacarico                  |
-| Booze                         | Alcohol                                 | Tacarigua             | Pirates Den                      |
-| Stone                         | Slashing Weapons                        | Tacarigua             | Pirates Den                      |
-| Flannigan                     | General, Clothing, Dirty Tricks         | Tacarigua             | Pirates Den                      |
-| Barney                        | Pistols                                 | Tacarigua             | Pirates Den                      |
-| Ghiles                        | General, Ring                           | Tacarigua             | Sugar Plantation                 |
-| Thompkins                     | Pistols, Musket                         | Tacarigua             | Sugar Plantation                 |
-| Sophia                        | Clothing, General                       | The Sword Coast       | Puerto Isabella                  |
-| Cooper                        | Blacksmith                              | The Sword Coast       | Puerto Isabella                  |
-| Webster                       | Pistols                                 | The Sword Coast       | Puerto Isabella                  |
-| Badriya                       | Potions, Ingredients                    | The Sword Coast       | Natives Village                  |
-| Ranapiri                      | General, Ingredients                    | The Sword Coast       | Natives Village                  |
-| Kapua                         | Voodoo, Ingredients                     | The Sword Coast       | Natives Village                  |
-| Emma                          | Voodoo, Potions                         | Angitua               | Harbor Town                      |
-| Quinn                         | General, Clothing, Dirty Tricks         | Angitua               | E of Harbor Town on shore        |
 
 
 ## Sources

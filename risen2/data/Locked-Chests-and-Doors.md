@@ -100,26 +100,89 @@ You might still notice these chests for later (or not, as I'll mention them agai
 ---
 
 
-## Angitua
+## Antigua
 
 
 | Level | Type  | Area                   | Notes                                                           | Notable Items                     |
 |:-----:|:-----:|:----------------------:|:---------------------------------------------------------------:|:---------------------------------:|
 | 20    | Chest | Harbour Town           | The Cauldron (bar near your ship) in Scarlett's room (upstairs) | Old Sword, Jade                   |
 | 20    | Chest | Harbour Town           | Along the side of Emma's Voodoo shop                            | ---                               |
+| 20    | Chest | E of Harbour Town      | On the beach near Quinn                                         | Curse Doll                        |
 
 
 
 
 ---
 
+## Maracai Bay
+
+For unlocking navigation to Maracai Bay, seeUnlocking-Maracai-Bay.md. This was moved to a separate file to avoid any potential spoilers relating either to story or to solving the puzzle of unlocking the island.
+
+
+
+| Level | Type  | Area                       | Notes                                                              | Notable Items                     |
+|:-----:|:-----:|:--------------------------:|:------------------------------------------------------------------:|:---------------------------------:|
+| 20    | Chest | Inquisition Temple / Ruins | In same room with Mercutio. On a corner                            | Officer's Ring, Sword Blank       |
+| 20    | Chest | Right Path from Ship       | Path to right of ship, near a tower and a firebird                 | Pistol                            |
+| 20    | Chest | Left  Path from Ship       | Path to left of ship, L of 1st set of corpses after Habib on rocks | Bloodthorn Earring                |
+| 20    | Chest | Left Path from Ship        | Find Harlok and kill the pirates. Locked chest near campfire       | 2x Jade                           |
+
 
 ## Treasure island (DLC)
 
+* Reminder: Don' forget to bring a shovel! *
 
-| Level | Type  | Area                   | Notes                                                  | Notable Items                     |
-|:-----:|:-----:|:----------------------:|:------------------------------------------------------:|:---------------------------------:|
-| --    | Chest | Placeholder |  |  |
+For unlocking navigation to Treasure Island, see Unlocking-Treasure-Island.md. This was moved to a separate file to avoid any potential spoilers relating either to story or to solving the puzzle of unlocking the island.
+
+
+
+| Level | Type  | Area                   | Notes                                                                | Notable Items                     |
+|:-----:|:-----:|:----------------------:|:--------------------------------------------------------------------:|:---------------------------------:|
+| 60    | Chest | Beach NE of rowboat    | On the beach right (NE) of where you come ashore                     | 2xSpear, Bloody Mary              |
+| 90    | Chest | Beach W of rowboat     | On the beach left (W) of where you come ashore. by campfire + bed    | Pistol, Pirate's Pendant          |
+| 60    | Chest | Cave                   | From cave entrance, go R, then L. find locked chest                  | Bloodthorn Amulet, 2x Jade        |
+| 90    | Chest | Cave                   | From cave entrance, go R, then R again. near a bed and desk          | Fencing Foil, Pain Killer         |
+| 20    | Chest | Swamps                 | From the grave, go L til you reach some ruins. keep left; near a bed | Curse Doll                        |
+| 60    | Chest | Swamps                 | From the grave, go R then keep L. kill 2 gators. on nearby beach     | Sabre                             |
+
+----
+
+## Caldera II
+
+**Note: You won't be able to get the Lockpicking skill before leaving the island (without cheating at least)**
+
+You might still notice these chests for later (or not, as I'll mention them again in the "Caldera II" section)
+
+| Level | Type  | Area              | Notes                                                                            | Notable Items                                 |
+|:-----:|:-----:|:-----------------:|:--------------------------------------------------------------------------------:|:---------------------------------------------:|
+| 35    | Chest | Barracks building | Second floor, by where Angus was in first chapter                                | ---                                           |
+| 60    | Chest | Barracks building | First floor, by guards' beds - inner room                                        | Treasure Map (Crystal Fortress)               |
+| 30    | Chest | Barracks building | First floor, by guards' beds - outer room                                        | ---                                           |
+| 35    | Door  | Beach/Docks Area  | Room on Storehouse 2nd Floor                                                     | L20 chest, L40 chest                          |
+| 20    | Chest | Beach/Docks Area  | Room on Storehouse 2nd Floor, chest #1                                           | Sparkling Gold Ring                           |
+| 40    | Chest | Beach/Docks Area  | Room on Storehouse 2nd Floor, chest #2                                           | ---                                           |
+| 40    | Chest | Fernando's House  | Last house on the left after the bridge, chest #1                                | ---                                           |
+| 50    | Chest | Fernando's House  | Last house on the left after the bridge, chest #2                                | Sword Hilt: Wave Dancer                       |
+| 30    | Chest | Mauregato's House | first floor, room on the left (kitchen)                                          | ---                                           |
+| 65    | Chest | Mauregato's House | first floor, room on the right                                                   | Inquisition's Ring                            |
+| 90    | Chest | Mauregato's House | second floor, room on the left                                                   | ???                                           |
+| 30    | Chest | Azuro's House     | first floor, room on the right                                                   | ---                                           |
+| 60    | Chest | Azuro's House     | second floor, bedroom on the right                                               | ---                                           |
+| 80    | Chest | Azuro's House     | second floor, room on the left                                                   | Poison Ring                                   |
+| 75    | Door  | Council Building  | Straight bcak from the entrance, in the cathedral                                | --- (just a balcony \*)                       |
+| 30    | Chest | Council Building  | In basement, straight ahead at bottom of stairs                                  | Marksman's Potion                             |
+| 50    | Chest | Council Building  | In basement, right of stairs (in Godin's room)                                   | ---                                           |
+| 30    | Chest | Council Building  | In basement, left of stairs (in the archives)                                    | ---                                           |
+| 60    | Chest | Council Building  | In basement, left of stairs (in the archives)                                    | Soul Necklack                                 |
+| 90    | Chest | Council Building  | In basement, left of stairs (in the archives)                                    | ---                                           |
+| 75    | Door  | Council Building  | In basement, left of stairs (in the archives)                                    | Thief's Potion, Book Hint: Master of Shotguns |
+| 50    | Door  | Council Building  | 2nd floor in Mauregato's office. REQ: Voodoo or 500g to bribe Cassandra for key  | Potion of Blades                              |
+| 60    | Chest | Hotel             | Garcia's Room\*\*:                                                               | Spirit Amulet, Ritual Knife, Potion of Blades |
+| 90    | Chest | Hotel             | Garcia's Room\*\*: 
+
+\* You can however use this to jump down into the archives (it's a little tricky to get over the ledge the first time). Be aware that you will probably take some fall damage though. But it depends on how lucky you get: the first time, I just jumped over and took 61 fall damage (39/100 health). On the next attempt, I carefully hopped up onto the ledge and tried to jump down more carefully (that is siding up against wall/objects to try to interrupt the "falling" status) and I only took 3 fall damage (97/100 health). Save before and you retry if you're worried about it. Or go around and just fight the guard; if you're used to the combat he's not that tough.
+
+\*\* To get into Garcia's room, you'll have to spend 500g. First, talk to the innkeeper. She won't let you rent Garcia's room because she "already has a room available". Rent that other room for 250g. When you talk to her again, she'll say "you already have a room". Go back onto the street and find the Merchant Possodino nearby. Give him your room key. Then go back and talk to the innkeeper again and ask to rent Garcia's room for 250g.
 
 
 ---

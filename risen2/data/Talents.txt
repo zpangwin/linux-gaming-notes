@@ -1,0 +1,105 @@
+
+## Attributes
+
+| Attribute Name            | Console Command    | 
+|:-------------------------:|:------------------:|
+| Blades                | teach Blades <int> |
+| Firearms              | teach Blades <int> |
+| Toughness             | teach Blades <int> |
+| Cunning               | teach Blades <int> |
+| Voodoo                | teach Blades <int> |
+
+
+Replace <int> with an integer value of 1-10. This will set the base level of the attribute (before bonuses from skills, items, potions, etc are applied).
+
+Note that this can be used to both increase as well as decrease attributes.
+
+---
+
+## Skills / Perks
+
+TO change these values using the console you can do
+
+
+
+| Attribute | Skill Name           | Console Command                      | Prerequisites | Teachers |
+|:---------:|:--------------------:|:------------------------------------:|:--------------:|:-----------:|
+| Blades    | Parry                | teach PerkBladesCounterParade        |  |  |
+| Blades    | Powerful Attack      | teach PerkBladesPowerfulAttack       |  |  |
+| Blades    | Piercing Weapons I   | teach PerkBladesPiercingPlus5        |  |  |
+| Blades    | Piercing Weapons II  | teach PerkBladesPiercingPlus10       |  |  |
+| Blades    | Piercing Weapons III | teach PerkBladesPiercingPlus15       |  |  |
+| Blades    | Slashing Weapons I   | teach PerkBladesSlashingPlus5        |  |  |
+| Blades    | Slashing Weapons II  | teach PerkBladesSlashingPlus10       |  |  |
+| Blades    | Slashing Weapons III | teach PerkBladesSlashingPlus15       |  |  |
+| Blades    | Throwing Weapons I   | teach PerkBladesDaggerPlus5          |  |  |
+| Blades    | Throwing Weapons II  | teach PerkBladesDaggerPlus10         |  |  |
+| Blades    | Throwing Weapons III | teach PerkBladesDaggerPlus15         |  |  |
+| Blades    | Riposte              | teach PerkBladesCounterAttack        |  |  |
+| Blades    | Powerful Riposte     | teach PerkBladesPowerfulCounter      |  |  |
+| Blades    | Forging              | teach PerkBladesBlacksmith           |  |  |
+| Blades    | Swordmaster          | teach PerkBladesSwordmaster          |  |  |
+| Cunning   | Sneaking             | teach PerkCunningSneak               |  | Largo |
+| Cunning   | Pickpocketing        | teach PerkCunningPickpocket          |  | Largo |
+| Cunning   | Lockpicking          | teach PerkCunningPickLock            |  | Largo |
+| Cunning   | Monkey Trainer       | teach PerkCunningMonkeyTrainer       |  | Flannigan, Quinn |
+| Cunning   | Parrot Trainer       | teach PerkCunningParrotTrainer       |  | Flannigan, Quinn |
+| Cunning   | Old Trickster        | teach PerkCunningTrickster           |  | Flannigan |
+| Cunning   | Dirty Tricks I       | teach PerkCunningDirtyTricksPlus5    |  |  |
+| Cunning   | Dirty Tricks II      | teach PerkCunningDirtyTricksPlus10   |  |  |
+| Cunning   | Dirty Tricks III     | teach PerkCunningDirtyTricksPlus15   |  |  |
+| Cunning   | Thievery I           | teach PerkCunningThieveryPlus5       |  | Largo |
+| Cunning   | Thievery II          | teach PerkCunningThieveryPlus10      |  | Largo |
+| Cunning   | Thievery III         | teach PerkCunningThieveryPlus15      |  |  |
+| Cunning   | Silver Tongue I      | teach PerkCunningSilverTonguePlus5   |  |  |
+| Cunning   | Silver Tongue II     | teach PerkCunningSilverTonguePlus10  |  |  |
+| Cunning   | Silver Tongue III    | teach PerkCunningSilverTonguePlus15  |  |  |
+| Firearms  | Critical Hits        | teach PerkFirearmsCriticalHit        |  |  |
+| Firearms  | Nuff Said!           | teach PerkFirearmsNuffSaid           |  | Barney |
+| Firearms  | Left-Handed          | teach PerkFirearmsLeftie             |  |  |
+| Firearms  | Gunsmith             | teach PerkFirearmsGunsmith           |  |  |
+| Firearms  | Marksman             | teach PerkFirearmsSharpshooter       |  |  |
+| Firearms  | Blazing Barrels      | teach PerkFirearmsThunderGun         |  |  |
+| Firearms  | Pistols I            | teach PerkFirearmsPistolsPlus5       |  | Barney |
+| Firearms  | Pistols II           | teach PerkFirearmsPistolsPlus10      |  |  |
+| Firearms  | Pistols III          | teach PerkFirearmsPistolsPlus15      |  |  |
+| Firearms  | Shotguns I           | teach PerkFirearmsShotgunsPlus5      |  |  |
+| Firearms  | Shotguns II          | teach PerkFirearmsShotgunsPlus10     |  |  |
+| Firearms  | Shotguns III         | teach PerkFirearmsShotgunsPlus15     |  |  |
+| Firearms  | Muskets I            | teach PerkFirearmsMusketsPlus5       |  |  |
+| Firearms  | Muskets II           | teach PerkFirearmsMusketsPlus10      |  |  |
+| Firearms  | Muskets III          | teach PerkFirearmsMusketsPlus15      |  |  |
+| Toughness | Kick                 | teach PerkToughnessKick              |  |  |
+| Toughness | Liquid Courage       | teach PerkToughnessLiquidCourage     |  |  |
+| Toughness | Quack                | teach PerkToughnessQuack             |  |  |
+| Toughness | Distiller            | teach PerkToughnessBrandyman         |  |  |
+| Toughness | Doctor               | teach PerkToughnessMedicus           |  |  |
+| Toughness | Indestructible       | teach PerkToughnessIndestructible    |  |  |
+| Toughness | Bladeproof I         | teach PerkToughnessBladeProofPlus5   |  |  |
+| Toughness | Bladeproof II        | teach PerkToughnessBladeProofPlus10  |  |  |
+| Toughness | Bladeproof III       | teach PerkToughnessBladeProofPlus15  |  |  |
+| Toughness | Bulletproof I        | teach PerkToughnessBulletProofPlus5  |  |  |
+| Toughness | Bulletproof II       | teach PerkToughnessBulletProofPlus10 |  |  |
+| Toughness | Bulletproof III      | teach PerkToughnessBulletProofPlus15 |  |  |
+| Toughness | Intimidate I         | teach PerkToughnessIntimidatePlus5   |  |  |
+| Toughness | Intimidate II        | teach PerkToughnessIntimidatePlus10  |  |  |
+| Toughness | Intimidate III       | teach PerkToughnessIntimidatePlus15  |  |  |
+| Voodoo    | Create Doll          | teach PerkVoodooCreateVoodooDoll     |  | Chani |
+| Voodoo    | Create Sceptre       | teach PerkVoodooCreateScepter        |  | Kapua |
+| Voodoo    | Brew Potion          | teach PerkVoodooCreateVoodooPotion   |  |  |
+| Voodoo    | Create Talisman      | teach PerkVoodooCreateTalisman       |  | Hikoko |
+| Voodoo    | Powerful Curse       | teach PerkVoodooPowerfulCurse        |  |  |
+| Voodoo    | Voodoo Master        | teach PerkVoodooVoodooMaster         |  |  |
+| Voodoo    | Black Magic I        | teach PerkVoodooBlackMagicPlus5      |  |  |
+| Voodoo    | Black Magic II       | teach PerkVoodooBlackMagicPlus10     |  |  |
+| Voodoo    | Black Magic III      | teach PerkVoodooBlackMagicPlus15     |  |  |
+| Voodoo    | Death Cult I         | teach PerkVoodooDeathCultPlus5       |  |  |
+| Voodoo    | Death Cult II        | teach PerkVoodooDeathCultPlus10      |  |  |
+| Voodoo    | Death Cult III       | teach PerkVoodooDeathCultPlus15      |  |  |
+| Voodoo    | Ritual I             | teach PerkVoodooRitualPlus5          |  |  |
+| Voodoo    | Ritual II            | teach PerkVoodooRitualPlus10         |  | Hikoko |
+| Voodoo    | Ritual III           | teach PerkVoodooRitualPlus15         |  | Hikoko |
+
+
+
+

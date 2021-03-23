@@ -7,20 +7,25 @@
 
 I may be missing some later game locations for these and I don't really care as this was intended to let me note the earliest locations where you can pick these up. Also note that bonesaw/skinning knife/jaw-chisel tools on Tacarigua and Sword Coast can all be obtained before you pick a side/commit to one faction or the other.
 
-| Tool           | $$$ | Island      | Area            | Character      | Notes                            |
-|:--------------:|:---:|:-----------:|:---------------:|:--------------:|:--------------------------------:|
-| Bonesaw        | 100 | Tacarigua   | Plantation      | Ghiles         | Guard near the shack             |
-| Bonesaw        | 100 | Tacarigua   | Pirates Den     | Flannigan      | From Barney's, take the bridge   |
-| Bonesaw        | 100 | Sword Coast | Puerto Isabella | Sophia         | Bartender in bottom section      |
-| Bonesaw        | 100 | Sword Coast | NativeVillage   | Ranapiri       | REQ: Complete gator quest        |
-| Skinning Knife | 0   | Sword Coast | Puerto Isabella | Isabella*      | REQ: Silver Tongue 45            |
-| Skinning Knife | 0   | Sword Coast | Puerto Isabella | Isabella*      | REQ: Pickpocket + Thievery 50    |
-| Skinning Knife | 150 | Sword Coast | Native Village  | Ranapiri       | REQ: Complete gator quest        |
-| Jaw-Chisel     | 100 | Sword Coast | Native Village  | Ranapiri       | REQ: Complete gator quest        |
-| Ritual Knife   | 250 | Sword Coast | Native Village  | Kupua          | REQ: Choosing sides with Natives |
-| Ritual Knife   | 250 | Caldera     | Inner Caldera   | Captain Garcia | ??? REQ: High Lockpick skill ?   |
+| Tool           | $$$ | Island      | Area             | Character      | Notes                                |
+|:--------------:|:---:|:-----------:|:----------------:|:--------------:|:------------------------------------:|
+| Bonesaw        | 100 | Tacarigua   | Plantation       | Ghiles         | Guard near the shack                 |
+| Bonesaw        | 100 | Tacarigua   | Pirates Den      | Flannigan      | From Barney's, take the bridge       |
+| Bonesaw        | 100 | Sword Coast | Puerto Isabella  | Sophia         | Bartender in bottom section          |
+| Bonesaw        | 100 | Sword Coast | Native Village   | Ranapiri       | REQ: Complete gator quest            |
+| Bonesaw        | 100 | Antigua     | Harbour Town     | Quinn          | East of town on the beach            |
+| Mercutio       | 100 | Maracai Bay | Inquisition Base | Mercutio       | temple/ruins straight ahead of docks |
+| Skinning Knife | 0   | Sword Coast | Puerto Isabella  | Isabella*      | REQ: Silver Tongue 45                |
+| Skinning Knife | 0   | Sword Coast | Puerto Isabella  | Isabella*      | REQ: Pickpocket + Thievery 50        |
+| Skinning Knife | 150 | Sword Coast | Native Village   | Ranapiri       | REQ: Complete gator quest            |
+| Jaw-Chisel     | 100 | Sword Coast | Native Village   | Ranapiri       | REQ: Complete gator quest            |
+| Ritual Knife   | 250 | Sword Coast | Native Village   | Kupua          | REQ: Choosing sides with Natives     |
+| Ritual Knife   | 500 | Caldera II  | Hotel            | ??? \*\*       | REQ: 500g  + Lockpick 60             |
+
 
 \* Note: If you meet all the requirements, it is possible to get TWO free skinning knives from Isabella. This allows you to keep one and sell the other for a small profit of 30g.
+
+\*\* This is in a L60 chest in Garcia's room. To get into Garcia's room, you'll have to spend 500g. First, talk to the innkeeper. She won't let you rent Garcia's room because she "already has a room available". Rent that other room for 250g. When you talk to her again, she'll say "you already have a room". Go back onto the street and find the Merchant Possodino nearby. Give him your room key. Then go back and talk to the innkeeper again and ask to rent Garcia's room for 250g.
 
 
 -----------------------------------------------------
@@ -120,7 +125,7 @@ For a full list of *all* ingredients/components (e.g. including plants and weapo
 | Bone              | 15   | 3    | Graveroot Extract\*, Spirit Essence, Bloodthorn Earring (Ritual +5), Bone Necklace (Death Cult +10/Black Magic +5), Bone Ring (Black Magic +5/Ritual +5), Jade Earring (Black Magic +5), Skull Amulet (Death Cult +15/Black Magic +5), Soul Ring (Death Cult +5/Ritual +5), Ti' Ha Ko (Death Cult +5/Black Magic +15), Tribal Symbol (Ritual) |
 | Claws             | ???  | 15   | Curse Doll, Hunter's Necklace (Ritual +10)                                                                          |
 | Ear               | 25   | 5    | Ritual Potion (Ritual)                                                                                              |
-| Eye               | 50   | 10   | Curse Stone (Death Cult +5/Black Magic +10), Sceptre of Fear                                                        |
+| Eye               | 50   | 10   | Keep 6 for quests\*\*, Curse Stone (Death Cult +5/Black Magic +10), Sceptre of Fear                                 |
 | Feather           | 50   | 10   | 1 for Isabella's quest, Feather Earring (Voodoo +1), Jade Pendant (Voodoo +1), Tribal Symbol (Ritual +5)            |
 | Gorilla Skin      | ???  | 50   | ---                                                                                                                 |
 | Jaguar Heart      | 180  | 45   | Ancestral Stone (Voodoo +2) , Soul Necklace (Voodoo +1/Ritual +5), Ti' Ha Ko (Death Cult +5/Black Magic +15)        |
@@ -133,11 +138,11 @@ For a full list of *all* ingredients/components (e.g. including plants and weapo
 | Sand Devil Sensor | ???  | 15   | Potion of Persuasion (Silver Tongue), Sceptre of Power                                                              |
 | Silverback Skin   | ???  | 60   | ---                                                                                                                 |
 | Skull             | ???  | 12   | Sceptre of Fear                                                                                                     |
-| Teeth             | 50   | 10   | 1 for Isabella's quest, Bloodthorn Earring (Ritual +5), Tribal Symbol (Ritual +5)                                   |
+| Teeth             | 50   | 10   | Keep 7 for quests\*\*, Bloodthorn Earring (Ritual +5), Tribal Symbol (Ritual +5)                                    |
 | Tusk              | ???  | 20   | 1 for Isabella's quest, Firearms, Voodoo, Intimidate | Potion of Awe (Intimidate), Hunter's Ring (Muskets +5/Shotguns +5), Feather Earring (Voodoo +1), Hunter's Necklace (Ritual +10), Warrior's Jewelery (Ritual +15) |
 | Warthog Skin      | ???  | ???  | ---                                                                                                                 |
 
-
-
 \* Permanent stat-boosting potions
+
+\*\* Most Voodoo Doll quests require Eyes and Teeth to make a doll. If you didn't choose to side with the Natives (Voodoo), then you'll just want to keep 1 tooth for Isabella's quest. There are 6 Voodoo Dolls you can create as quests (6 Eyes + 6 Teeth) + Isabella's Quest (1 Tooth) == 6 Eyes, 7 Teeth
 
