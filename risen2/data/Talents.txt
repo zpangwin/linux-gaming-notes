@@ -22,84 +22,112 @@ TO change these values using the console you can do
 
 
 
-| Attribute | Skill Name           | Console Command                      | Prerequisites | Teachers |
-|:---------:|:--------------------:|:------------------------------------:|:--------------:|:-----------:|
-| Blades    | Parry                | teach PerkBladesCounterParade        |  |  |
-| Blades    | Powerful Attack      | teach PerkBladesPowerfulAttack       |  |  |
-| Blades    | Piercing Weapons I   | teach PerkBladesPiercingPlus5        |  |  |
-| Blades    | Piercing Weapons II  | teach PerkBladesPiercingPlus10       |  |  |
-| Blades    | Piercing Weapons III | teach PerkBladesPiercingPlus15       |  |  |
-| Blades    | Slashing Weapons I   | teach PerkBladesSlashingPlus5        |  |  |
-| Blades    | Slashing Weapons II  | teach PerkBladesSlashingPlus10       |  |  |
-| Blades    | Slashing Weapons III | teach PerkBladesSlashingPlus15       |  |  |
-| Blades    | Throwing Weapons I   | teach PerkBladesDaggerPlus5          |  |  |
-| Blades    | Throwing Weapons II  | teach PerkBladesDaggerPlus10         |  |  |
-| Blades    | Throwing Weapons III | teach PerkBladesDaggerPlus15         |  |  |
-| Blades    | Riposte              | teach PerkBladesCounterAttack        |  |  |
-| Blades    | Powerful Riposte     | teach PerkBladesPowerfulCounter      |  |  |
-| Blades    | Forging              | teach PerkBladesBlacksmith           |  |  |
-| Blades    | Swordmaster          | teach PerkBladesSwordmaster          |  |  |
-| Cunning   | Sneaking             | teach PerkCunningSneak               |  | Largo |
-| Cunning   | Pickpocketing        | teach PerkCunningPickpocket          |  | Largo |
-| Cunning   | Lockpicking          | teach PerkCunningPickLock            |  | Largo |
-| Cunning   | Monkey Trainer       | teach PerkCunningMonkeyTrainer       |  | Flannigan, Quinn |
-| Cunning   | Parrot Trainer       | teach PerkCunningParrotTrainer       |  | Flannigan, Quinn |
-| Cunning   | Old Trickster        | teach PerkCunningTrickster           |  | Flannigan |
-| Cunning   | Dirty Tricks I       | teach PerkCunningDirtyTricksPlus5    |  |  |
-| Cunning   | Dirty Tricks II      | teach PerkCunningDirtyTricksPlus10   |  |  |
-| Cunning   | Dirty Tricks III     | teach PerkCunningDirtyTricksPlus15   |  |  |
-| Cunning   | Thievery I           | teach PerkCunningThieveryPlus5       |  | Largo |
-| Cunning   | Thievery II          | teach PerkCunningThieveryPlus10      |  | Largo |
-| Cunning   | Thievery III         | teach PerkCunningThieveryPlus15      |  |  |
-| Cunning   | Silver Tongue I      | teach PerkCunningSilverTonguePlus5   |  |  |
-| Cunning   | Silver Tongue II     | teach PerkCunningSilverTonguePlus10  |  |  |
-| Cunning   | Silver Tongue III    | teach PerkCunningSilverTonguePlus15  |  |  |
-| Firearms  | Critical Hits        | teach PerkFirearmsCriticalHit        |  |  |
-| Firearms  | Nuff Said!           | teach PerkFirearmsNuffSaid           |  | Barney |
-| Firearms  | Left-Handed          | teach PerkFirearmsLeftie             |  |  |
-| Firearms  | Gunsmith             | teach PerkFirearmsGunsmith           |  |  |
-| Firearms  | Marksman             | teach PerkFirearmsSharpshooter       |  |  |
-| Firearms  | Blazing Barrels      | teach PerkFirearmsThunderGun         |  |  |
-| Firearms  | Pistols I            | teach PerkFirearmsPistolsPlus5       |  | Barney |
-| Firearms  | Pistols II           | teach PerkFirearmsPistolsPlus10      |  |  |
-| Firearms  | Pistols III          | teach PerkFirearmsPistolsPlus15      |  |  |
-| Firearms  | Shotguns I           | teach PerkFirearmsShotgunsPlus5      |  |  |
-| Firearms  | Shotguns II          | teach PerkFirearmsShotgunsPlus10     |  |  |
-| Firearms  | Shotguns III         | teach PerkFirearmsShotgunsPlus15     |  |  |
-| Firearms  | Muskets I            | teach PerkFirearmsMusketsPlus5       |  |  |
-| Firearms  | Muskets II           | teach PerkFirearmsMusketsPlus10      |  |  |
-| Firearms  | Muskets III          | teach PerkFirearmsMusketsPlus15      |  |  |
-| Toughness | Kick                 | teach PerkToughnessKick              |  |  |
-| Toughness | Liquid Courage       | teach PerkToughnessLiquidCourage     |  |  |
-| Toughness | Quack                | teach PerkToughnessQuack             |  |  |
-| Toughness | Distiller            | teach PerkToughnessBrandyman         |  |  |
-| Toughness | Doctor               | teach PerkToughnessMedicus           |  |  |
-| Toughness | Indestructible       | teach PerkToughnessIndestructible    |  |  |
-| Toughness | Bladeproof I         | teach PerkToughnessBladeProofPlus5   |  |  |
-| Toughness | Bladeproof II        | teach PerkToughnessBladeProofPlus10  |  |  |
-| Toughness | Bladeproof III       | teach PerkToughnessBladeProofPlus15  |  |  |
-| Toughness | Bulletproof I        | teach PerkToughnessBulletProofPlus5  |  |  |
-| Toughness | Bulletproof II       | teach PerkToughnessBulletProofPlus10 |  |  |
-| Toughness | Bulletproof III      | teach PerkToughnessBulletProofPlus15 |  |  |
-| Toughness | Intimidate I         | teach PerkToughnessIntimidatePlus5   |  |  |
-| Toughness | Intimidate II        | teach PerkToughnessIntimidatePlus10  |  |  |
-| Toughness | Intimidate III       | teach PerkToughnessIntimidatePlus15  |  |  |
-| Voodoo    | Create Doll          | teach PerkVoodooCreateVoodooDoll     |  | Chani |
-| Voodoo    | Create Sceptre       | teach PerkVoodooCreateScepter        |  | Kapua |
-| Voodoo    | Brew Potion          | teach PerkVoodooCreateVoodooPotion   |  |  |
-| Voodoo    | Create Talisman      | teach PerkVoodooCreateTalisman       |  | Hikoko |
-| Voodoo    | Powerful Curse       | teach PerkVoodooPowerfulCurse        |  |  |
-| Voodoo    | Voodoo Master        | teach PerkVoodooVoodooMaster         |  |  |
-| Voodoo    | Black Magic I        | teach PerkVoodooBlackMagicPlus5      |  |  |
-| Voodoo    | Black Magic II       | teach PerkVoodooBlackMagicPlus10     |  |  |
-| Voodoo    | Black Magic III      | teach PerkVoodooBlackMagicPlus15     |  |  |
-| Voodoo    | Death Cult I         | teach PerkVoodooDeathCultPlus5       |  |  |
-| Voodoo    | Death Cult II        | teach PerkVoodooDeathCultPlus10      |  |  |
-| Voodoo    | Death Cult III       | teach PerkVoodooDeathCultPlus15      |  |  |
-| Voodoo    | Ritual I             | teach PerkVoodooRitualPlus5          |  |  |
-| Voodoo    | Ritual II            | teach PerkVoodooRitualPlus10         |  | Hikoko |
-| Voodoo    | Ritual III           | teach PerkVoodooRitualPlus15         |  | Hikoko |
+| Min Attr Level | Skill Name           | Console Command                      | Cost | Skill Requirements  | Trainers                   |
+|:--------------:|:--------------------:|:------------------------------------:|:---:-|:-------------------:|:--------------------------:|
+| Blades 1       | Parry                | teach PerkBladesCounterParade        | 1000 | ---                 | Severin, Roquefort, Curtis |
+| Blades 1       | Slashing Weapons I   | teach PerkBladesSlashingPlus5        | 500  | ---                 | Curtis |
+| Blades 2       | Piercing Weapons I   | teach PerkBladesPiercingPlus5        | 500  | ---                 | Severin, Roquefort |
+| Blades 2       | Powerful Attack      | teach PerkBladesPowerfulAttack       | 1000 | ---                 | Severin, Roquefort, Curtis |
+| Blades 3       | Throwing Weapons I   | teach PerkBladesDaggerPlus5          | 500  | ---                 | |
+| Blades 4       | Riposte              | teach PerkBladesCounterAttack        | 1000 | Parry               | Severin, Roquefort, Curtis |
+| Blades 4       | Slashing Weapons II  | teach PerkBladesSlashingPlus10       | 1000 | Slashing Weapons I  | Curtis |
+| Blades 5       | Piercing Weapons II  | teach PerkBladesPiercingPlus10       | 1000 | Piercing Weapons I  | Severin, Roquefort |
+| Blades 6       | Forging              | teach PerkBladesBlacksmith           | 1000 | ---                 | Stone |
+| Blades 6       | Throwing Weapons II  | teach PerkBladesDaggerPlus10         | 1000 | Throwing Weapons I  | |
+| Blades 7       | Slashing Weapons III | teach PerkBladesSlashingPlus15       | 1500 | Slashing Weapons II | |
+| Blades 8       | Piercing Weapons III | teach PerkBladesPiercingPlus15       | 1500 | Piercing Weapons II | |
+| Blades 8       | Powerful Riposte     | teach PerkBladesPowerfulCounter      | 1000 | Riposte             | Severin, Roquefort, Curtis |
+| Blades 9       | Throwing Weapons III | teach PerkBladesDaggerPlus15         | 1500 | Throwing Weapons II | |
+| Blades 10      | Swordmaster          | teach PerkBladesSwordmaster          | 2000 | ---                 | |
+| -------------- | -------------------- | ------------------------------------ | ---- |-------------------- |-------------------- |
+| Cunning 1      | Silver Tongue I      | teach PerkCunningSilverTonguePlus5   | 500  | Thievery II         | Holly |
+| Cunning 1      | Sneaking             | teach PerkCunningSneak               | 500  | ---                 | Largo |
+| Cunning 2      | Pickpocketing        | teach PerkCunningPickpocket          | 1000 | ---                 | Largo |
+| Cunning 2      | Thievery I           | teach PerkCunningThieveryPlus5       | 500  | ---                 | Largo |
+| Cunning 3      | Dirty Tricks I       | teach PerkCunningDirtyTricksPlus5    | 500  | ---                 | Flannigan |
+| Cunning 4      | Lockpicking          | teach PerkCunningPickLock            | 1000 | ---                 | Largo |
+| Cunning 4      | Silver Tongue II     | teach PerkCunningSilverTonguePlus10  | 1000 | Silver Tongue I     | Holly |
+| Cunning 5      | Thievery II          | teach PerkCunningThieveryPlus10      | 1000 | ---                 | Largo |
+| Cunning 6      | Dirty Tricks II      | teach PerkCunningDirtyTricksPlus10   | 1000 | Dirty Tricks I      | Flannigan |
+| Cunning 6      | Monkey Trainer       | teach PerkCunningMonkeyTrainer       | 1000 | ---                 | Flannigan, Quinn |
+| Cunning 7      | Silver Tongue III    | teach PerkCunningSilverTonguePlus15  | 1500 | Silver Tongue II    | Holly |
+| Cunning 8      | Parrot Trainer       | teach PerkCunningParrotTrainer       | 1000 | ---                 | Flannigan, Quinn |
+| Cunning 8      | Thievery III         | teach PerkCunningThieveryPlus15      | 1500 | Thievery I          | Largo, Jim |
+| Cunning 9      | Dirty Tricks III     | teach PerkCunningDirtyTricksPlus15   | 1500 | Dirty Tricks II     | Flannigan |
+| Cunning 10     | Old Trickster        | teach PerkCunningTrickster           | 1000 | ---                 | Flannigan |
+| -------------- | -------------------- | ------------------------------------ | ---- |-------------------- |-------------------- |
+| Firearms 1     | Critical Hits        | teach PerkFirearmsCriticalHit        | 1000 | ---                 | Barney |
+| Firearms 1     | Pistols I            | teach PerkFirearmsPistolsPlus5       | 500  | ---                 | Barney |
+| Firearms 2     | Nuff Said!           | teach PerkFirearmsNuffSaid           | 500  | ---                 | Barney |
+| Firearms 2     | Shotguns I           | teach PerkFirearmsShotgunsPlus5      | 500  | ---                 | |
+| Firearms 3     | Muskets I            | teach PerkFirearmsMusketsPlus5       | 500  | ---                 | |
+| Firearms 4     | Left-Handed          | teach PerkFirearmsLeftie             | 1000 | ---                 | Barney |
+| Firearms 4     | Pistols II           | teach PerkFirearmsPistolsPlus10      | 1000 | Pistols I           | Barney |
+| Firearms 5     | Shotguns II          | teach PerkFirearmsShotgunsPlus10     | 1000 | Shotguns I          |  |
+| Firearms 6     | Gunsmith             | teach PerkFirearmsGunsmith           | 1000 | ---                 | Barney |
+| Firearms 6     | Muskets II           | teach PerkFirearmsMusketsPlus10      | 1000 | Muskets I           |  |
+| Firearms 7     | Pistols III          | teach PerkFirearmsPistolsPlus15      | 1500 | Pistols II          |  |
+| Firearms 8     | Marksman             | teach PerkFirearmsSharpshooter       | 1000 | ---                 | |
+| Firearms 8     | Shotguns III         | teach PerkFirearmsShotgunsPlus15     | 1500 | Shotguns II         |  |
+| Firearms 9     | Muskets III          | teach PerkFirearmsMusketsPlus15      | 1500 | Muskets II          |  |
+| Firearms 10    | Blazing Barrels      | teach PerkFirearmsThunderGun         | 1000 | ---                 | |
+| -------------- | -------------------- | ------------------------------------ | ---- |-------------------- |-------------------- |
+| Toughness 1    | Intimidate I         | teach PerkToughnessIntimidatePlus5   | 500  | ---                 | Booze, Sophia               |
+| Toughness 1    | Kick                 | teach PerkToughnessKick              | 500  | ---                 | Blake               |
+| Toughness 2    | Bladeproof I         | teach PerkToughnessBladeProofPlus5   | 500  | ---                 | Blake               |
+| Toughness 2    | Liquid Courage       | teach PerkToughnessLiquidCourage     | 1000 | ---                 | Booze, Sophia               |
+| Toughness 3    | Bulletproof I        | teach PerkToughnessBulletProofPlus5  | 500  | ---                 | Booze, Sophia |
+| Toughness 4    | Intimidate II        | teach PerkToughnessIntimidatePlus10  | 1000 | Intimidate I        | Booze, Sophia |
+| Toughness 4    | Quack                | teach PerkToughnessQuack             | 1000 | ---                 | |
+| Toughness 5    | Bladeproof II        | teach PerkToughnessBladeProofPlus10  | 1000 | Bladeproof I        | Blake               |
+| Toughness 6    | Bulletproof II       | teach PerkToughnessBulletProofPlus10 | 1000 | Bulletproof I       | Booze, Sophia |
+| Toughness 6    | Distiller            | teach PerkToughnessBrandyman         | 1000 | ---                 | Alister |
+| Toughness 7    | Intimidate III       | teach PerkToughnessIntimidatePlus15  | 1500 | Intimidate II       | Booze, Sophia |
+| Toughness 8    | Doctor               | teach PerkToughnessMedicus           | 1000 | ---                 | |
+| Toughness 10   | Indestructible       | teach PerkToughnessIndestructible    | 2000 | ---                 | |
+| -------------- | -------------------- | ------------------------------------ | ---- |-------------------- |-------------------- |
+| Voodoo 1       | Create Doll          | teach PerkVoodooCreateVoodooDoll     | 1000 | ---                 | Chani (Faction) |
+| Voodoo 1       | Ritual I             | teach PerkVoodooRitualPlus5          | 500  | ---                 | | Hikoko (Faction) |
+| Voodoo 2       | Create Sceptre       | teach PerkVoodooCreateScepter        | 1000 | ---                 | Kapua (Faction) |
+| Voodoo 2       | Death Cult I         | teach PerkVoodooDeathCultPlus5       | 500  | ---                 | |
+| Voodoo 3       | Black Magic I        | teach PerkVoodooBlackMagicPlus5      | 500  | ---                 | |
+| Voodoo 4       | Brew Potion          | teach PerkVoodooCreateVoodooPotion   | 1000 | ---                 | |
+| Voodoo 4       | Ritual II            | teach PerkVoodooRitualPlus10         | 1000 | Ritual I            | Hikoko (Faction) |
+| Voodoo 5       | Death Cult II        | teach PerkVoodooDeathCultPlus10      | 1000 | Death Cult I        |  |
+| Voodoo 6       | Black Magic II       | teach PerkVoodooBlackMagicPlus10     | 1000 | Black Magic I       |  |
+| Voodoo 6       | Create Talisman      | teach PerkVoodooCreateTalisman       | 1000 | ---                 | Hikoko (Faction) |
+| Voodoo 7       | Ritual III           | teach PerkVoodooRitualPlus15         | 1500 | Ritual II           | |
+| Voodoo 8       | Death Cult III       | teach PerkVoodooDeathCultPlus15      | 1500 | Death Cult II       |  |
+| Voodoo 8       | Powerful Curse       | teach PerkVoodooPowerfulCurse        | 1000 | ---                 | |
+| Voodoo 9       | Black Magic III      | teach PerkVoodooBlackMagicPlus15     | 1500 | Black Magic II      |  |
+| Voodoo 10      | Voodoo Master        | teach PerkVoodooVoodooMaster         | 2000 | ---                 | |
+| -------------- | -------------------- | ------------------------------------ | ---- |-------------------- |-------------------- |
 
 
+## Trainer Locations
+
+
+| Type/Focus            | Trainer Name      | Status | Island                      | Area                                                     | Faction Reqs |
+|:---------------------:|:------------------|-------:|:---------------------------:|:--------------------------------------------------------:|:------------:|
+| Blades/Piercing       | Severin           | Perm   | Caldera                     | Inquisition base (aka Crystal Fortress)                  | ---          |
+| Blades/Piercing       | Roquefort         | Perm   | Tacarigua                   | Puerto Sacarico                                          | ---          |
+| Cunning/Sneak         | Largo (Chapter 1) | Temp   | Caldera (Chapter 1)         | Jail Cell (Caldera during Chapter 1 only)                | ---          |
+| Cunning/Thievery      | Largo             | Perm   | Tacarigua                   | Puerto Sacarico (jailed), Bar at Pirate's Den (freed)    | ---          |
+| Toughness/Kick        | Blake             | Temp   | Tacarigua                   | Beach near Pirate's Den (before sailing with Steelbeard) | ---          |
+| Blades/Slashing       | Curtis            | Temp   | Tacarigua                   | Pirate's Den: near Booze's bar                           | ---          |
+| Toughness/Intimidate  | Booze             | Perm   | Tacarigua                   | Pirate's Den: In Booze's bar                             | ---          |
+| Cunning/Silver Tongue | Holly             | Perm   | Tacarigua                   | Pirate's Den: Prostitute first floor in Booze's bar      | ---          |
+| Toughness/Distiller   | Alister           | Perm   | Tacarigua                   | Pirate's Den: Brewer top floor above Booze's bar         | ---          |
+| Firearms/Pistols      | Barney            | Perm   | Tacarigua                   | Pirate's Den: first house after the gate                 | ---          |
+| Cunning/Dirty Tricks  | Flannigan         | Perm   | Tacarigua                   | Pirate's Den: house after the bridge from Barney's       | ---          |
+| Blades/Forging        | Stone             | Perm   | Tacarigua                   | Pirate's Den: house closest to the shore                 | ---          |
+| Cunning/Thievery      | Sophia            | Perm   | Sword Coast                 | Puerto Isabella (bartender near harbor garrison)         | ---          |
+| Blades/Forging        | Cooper            | Perm   | Sword Coast                 | Puerto Isabella (blacksmith)                             | ---          |
+
+
+| Cunning/Thievery      | Jim               | ???    | Sword Coast                 | Native Village                                           | ---          |
+| Voodoo/Dolls          | Chani             | Quest  | Sword Coast                 | Native Village (before joining party/crew)               | Natives      |
+| Voodoo/Magic          | Kapua             | Perm   | Sword Coast                 | Native Village                                           | Natives      |
+| Voodoo/Potion         | Hikoko            | Perm   | Sword Coast                 | Native Village                                           | Natives      |
 
 
