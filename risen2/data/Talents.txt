@@ -24,30 +24,30 @@ TO change these values using the console you can do
 
 | Min Attr Level | Skill Name           | Console Command                      | Cost | Skill Requirements  | Trainers                   |
 |:--------------:|:--------------------:|:------------------------------------:|:---:-|:-------------------:|:--------------------------:|
-| Blades 1       | Parry                | teach PerkBladesCounterParade        | 1000 | ---                 | Severin, Roquefort, Curtis |
+| Blades 1       | Parry                | teach PerkBladesCounterParade        | 1000 | ---                 | Severin, Roquefort, Curtis, Alcazar |
 | Blades 1       | Slashing Weapons I   | teach PerkBladesSlashingPlus5        | 500  | ---                 | Curtis |
-| Blades 2       | Piercing Weapons I   | teach PerkBladesPiercingPlus5        | 500  | ---                 | Severin, Roquefort |
-| Blades 2       | Powerful Attack      | teach PerkBladesPowerfulAttack       | 1000 | ---                 | Severin, Roquefort, Curtis |
-| Blades 3       | Throwing Weapons I   | teach PerkBladesDaggerPlus5          | 500  | ---                 | |
-| Blades 4       | Riposte              | teach PerkBladesCounterAttack        | 1000 | Parry               | Severin, Roquefort, Curtis |
+| Blades 2       | Piercing Weapons I   | teach PerkBladesPiercingPlus5        | 500  | ---                 | Severin, Roquefort, Alcazar |
+| Blades 2       | Powerful Attack      | teach PerkBladesPowerfulAttack       | 1000 | ---                 | Severin, Roquefort, Curtis, Alcazar |
+| Blades 3       | Throwing Weapons I   | teach PerkBladesDaggerPlus5          | 500  | ---                 | Ranapiri |
+| Blades 4       | Riposte              | teach PerkBladesCounterAttack        | 1000 | Parry               | Severin, Roquefort, Curtis, Alcazar |
 | Blades 4       | Slashing Weapons II  | teach PerkBladesSlashingPlus10       | 1000 | Slashing Weapons I  | Curtis |
-| Blades 5       | Piercing Weapons II  | teach PerkBladesPiercingPlus10       | 1000 | Piercing Weapons I  | Severin, Roquefort |
+| Blades 5       | Piercing Weapons II  | teach PerkBladesPiercingPlus10       | 1000 | Piercing Weapons I  | Severin, Roquefort, Alcazar |
 | Blades 6       | Forging              | teach PerkBladesBlacksmith           | 1000 | ---                 | Stone |
-| Blades 6       | Throwing Weapons II  | teach PerkBladesDaggerPlus10         | 1000 | Throwing Weapons I  | |
+| Blades 6       | Throwing Weapons II  | teach PerkBladesDaggerPlus10         | 1000 | Throwing Weapons I  | Ranapiri |
 | Blades 7       | Slashing Weapons III | teach PerkBladesSlashingPlus15       | 1500 | Slashing Weapons II | |
 | Blades 8       | Piercing Weapons III | teach PerkBladesPiercingPlus15       | 1500 | Piercing Weapons II | |
-| Blades 8       | Powerful Riposte     | teach PerkBladesPowerfulCounter      | 1000 | Riposte             | Severin, Roquefort, Curtis |
-| Blades 9       | Throwing Weapons III | teach PerkBladesDaggerPlus15         | 1500 | Throwing Weapons II | |
+| Blades 8       | Powerful Riposte     | teach PerkBladesPowerfulCounter      | 1000 | Riposte             | Severin, Roquefort, Curtis, Alcazar |
+| Blades 9       | Throwing Weapons III | teach PerkBladesDaggerPlus15         | 1500 | Throwing Weapons II | Ranapiri |
 | Blades 10      | Swordmaster          | teach PerkBladesSwordmaster          | 2000 | ---                 | |
 | -------------- | -------------------- | ------------------------------------ | ---- |-------------------- |-------------------- |
 | Cunning 1      | Silver Tongue I      | teach PerkCunningSilverTonguePlus5   | 500  | Thievery II         | Holly |
-| Cunning 1      | Sneaking             | teach PerkCunningSneak               | 500  | ---                 | Largo |
-| Cunning 2      | Pickpocketing        | teach PerkCunningPickpocket          | 1000 | ---                 | Largo |
-| Cunning 2      | Thievery I           | teach PerkCunningThieveryPlus5       | 500  | ---                 | Largo |
+| Cunning 1      | Sneaking             | teach PerkCunningSneak               | 500  | ---                 | Largo, Jim |
+| Cunning 2      | Pickpocketing        | teach PerkCunningPickpocket          | 1000 | ---                 | Largo, Jim |
+| Cunning 2      | Thievery I           | teach PerkCunningThieveryPlus5       | 500  | ---                 | Largo, Jim |
 | Cunning 3      | Dirty Tricks I       | teach PerkCunningDirtyTricksPlus5    | 500  | ---                 | Flannigan |
-| Cunning 4      | Lockpicking          | teach PerkCunningPickLock            | 1000 | ---                 | Largo |
+| Cunning 4      | Lockpicking          | teach PerkCunningPickLock            | 1000 | ---                 | Largo, Jim |
 | Cunning 4      | Silver Tongue II     | teach PerkCunningSilverTonguePlus10  | 1000 | Silver Tongue I     | Holly |
-| Cunning 5      | Thievery II          | teach PerkCunningThieveryPlus10      | 1000 | ---                 | Largo |
+| Cunning 5      | Thievery II          | teach PerkCunningThieveryPlus10      | 1000 | ---                 | Largo, Jim |
 | Cunning 6      | Dirty Tricks II      | teach PerkCunningDirtyTricksPlus10   | 1000 | Dirty Tricks I      | Flannigan |
 | Cunning 6      | Monkey Trainer       | teach PerkCunningMonkeyTrainer       | 1000 | ---                 | Flannigan, Quinn |
 | Cunning 7      | Silver Tongue III    | teach PerkCunningSilverTonguePlus15  | 1500 | Silver Tongue II    | Holly |
@@ -56,16 +56,16 @@ TO change these values using the console you can do
 | Cunning 9      | Dirty Tricks III     | teach PerkCunningDirtyTricksPlus15   | 1500 | Dirty Tricks II     | Flannigan |
 | Cunning 10     | Old Trickster        | teach PerkCunningTrickster           | 1000 | ---                 | Flannigan |
 | -------------- | -------------------- | ------------------------------------ | ---- |-------------------- |-------------------- |
-| Firearms 1     | Critical Hits        | teach PerkFirearmsCriticalHit        | 1000 | ---                 | Barney |
-| Firearms 1     | Pistols I            | teach PerkFirearmsPistolsPlus5       | 500  | ---                 | Barney |
-| Firearms 2     | Nuff Said!           | teach PerkFirearmsNuffSaid           | 500  | ---                 | Barney |
-| Firearms 2     | Shotguns I           | teach PerkFirearmsShotgunsPlus5      | 500  | ---                 | |
-| Firearms 3     | Muskets I            | teach PerkFirearmsMusketsPlus5       | 500  | ---                 | |
-| Firearms 4     | Left-Handed          | teach PerkFirearmsLeftie             | 1000 | ---                 | Barney |
-| Firearms 4     | Pistols II           | teach PerkFirearmsPistolsPlus10      | 1000 | Pistols I           | Barney |
-| Firearms 5     | Shotguns II          | teach PerkFirearmsShotgunsPlus10     | 1000 | Shotguns I          |  |
-| Firearms 6     | Gunsmith             | teach PerkFirearmsGunsmith           | 1000 | ---                 | Barney |
-| Firearms 6     | Muskets II           | teach PerkFirearmsMusketsPlus10      | 1000 | Muskets I           |  |
+| Firearms 1     | Critical Hits        | teach PerkFirearmsCriticalHit        | 1000 | ---                 | Barney, Webster, Bartolo |
+| Firearms 1     | Pistols I            | teach PerkFirearmsPistolsPlus5       | 500  | ---                 | Barney, Webster |
+| Firearms 2     | Nuff Said!           | teach PerkFirearmsNuffSaid           | 500  | ---                 | Barney, Webster |
+| Firearms 2     | Shotguns I           | teach PerkFirearmsShotgunsPlus5      | 500  | ---                 | Bartolo |
+| Firearms 3     | Muskets I            | teach PerkFirearmsMusketsPlus5       | 500  | ---                 | Bartolo |
+| Firearms 4     | Left-Handed          | teach PerkFirearmsLeftie             | 1000 | ---                 | Barney, Webster |
+| Firearms 4     | Pistols II           | teach PerkFirearmsPistolsPlus10      | 1000 | Pistols I           | Barney, Webster |
+| Firearms 5     | Shotguns II          | teach PerkFirearmsShotgunsPlus10     | 1000 | Shotguns I          | Bartolo |
+| Firearms 6     | Gunsmith             | teach PerkFirearmsGunsmith           | 1000 | ---                 | Barney, Webster, Bartolo |
+| Firearms 6     | Muskets II           | teach PerkFirearmsMusketsPlus10      | 1000 | Muskets I           | Bartolo |
 | Firearms 7     | Pistols III          | teach PerkFirearmsPistolsPlus15      | 1500 | Pistols II          |  |
 | Firearms 8     | Marksman             | teach PerkFirearmsSharpshooter       | 1000 | ---                 | |
 | Firearms 8     | Shotguns III         | teach PerkFirearmsShotgunsPlus15     | 1500 | Shotguns II         |  |
@@ -73,13 +73,13 @@ TO change these values using the console you can do
 | Firearms 10    | Blazing Barrels      | teach PerkFirearmsThunderGun         | 1000 | ---                 | |
 | -------------- | -------------------- | ------------------------------------ | ---- |-------------------- |-------------------- |
 | Toughness 1    | Intimidate I         | teach PerkToughnessIntimidatePlus5   | 500  | ---                 | Booze, Sophia               |
-| Toughness 1    | Kick                 | teach PerkToughnessKick              | 500  | ---                 | Blake               |
-| Toughness 2    | Bladeproof I         | teach PerkToughnessBladeProofPlus5   | 500  | ---                 | Blake               |
+| Toughness 1    | Kick                 | teach PerkToughnessKick              | 500  | ---                 | Blake, Nakutu               |
+| Toughness 2    | Bladeproof I         | teach PerkToughnessBladeProofPlus5   | 500  | ---                 | Blake, Nakutu               |
 | Toughness 2    | Liquid Courage       | teach PerkToughnessLiquidCourage     | 1000 | ---                 | Booze, Sophia               |
 | Toughness 3    | Bulletproof I        | teach PerkToughnessBulletProofPlus5  | 500  | ---                 | Booze, Sophia |
 | Toughness 4    | Intimidate II        | teach PerkToughnessIntimidatePlus10  | 1000 | Intimidate I        | Booze, Sophia |
 | Toughness 4    | Quack                | teach PerkToughnessQuack             | 1000 | ---                 | |
-| Toughness 5    | Bladeproof II        | teach PerkToughnessBladeProofPlus10  | 1000 | Bladeproof I        | Blake               |
+| Toughness 5    | Bladeproof II        | teach PerkToughnessBladeProofPlus10  | 1000 | Bladeproof I        | Blake, Nakutu               |
 | Toughness 6    | Bulletproof II       | teach PerkToughnessBulletProofPlus10 | 1000 | Bulletproof I       | Booze, Sophia |
 | Toughness 6    | Distiller            | teach PerkToughnessBrandyman         | 1000 | ---                 | Alister |
 | Toughness 7    | Intimidate III       | teach PerkToughnessIntimidatePlus15  | 1500 | Intimidate II       | Booze, Sophia |
@@ -123,9 +123,12 @@ TO change these values using the console you can do
 | Blades/Forging        | Stone             | Perm   | Tacarigua                   | Pirate's Den: house closest to the shore                 | ---          |
 | Cunning/Thievery      | Sophia            | Perm   | Sword Coast                 | Puerto Isabella (bartender near harbor garrison)         | ---          |
 | Blades/Forging        | Cooper            | Perm   | Sword Coast                 | Puerto Isabella (blacksmith)                             | ---          |
-
-
+| Firearms/Pistols      | Bartolo           | Perm   | Sword Coast                 | Puerto Isabella (inside Sebastiano's manor - barracks)   | Inquisition  |
+| Firearms/Pistols      | Webster           | Perm   | Sword Coast                 | Puerto Isabella (gunsmith)                               | Inquisition  |
+| Blades/Piercing       | Alcazar           | Perm   | Sword Coast                 | Puerto Isabella (outside Sebastiano's manor              | Inquisition  |
+| Blades/Slashing       | Nakutu            | Perm   | Sword Coast                 | Native Village                                           | ---          |
 | Cunning/Thievery      | Jim               | ???    | Sword Coast                 | Native Village                                           | ---          |
+| Blades/Throwing       | Ranapiri          | Perm   | Sword Coast                 | Native Village                                           | ---          |
 | Voodoo/Dolls          | Chani             | Quest  | Sword Coast                 | Native Village (before joining party/crew)               | Natives      |
 | Voodoo/Magic          | Kapua             | Perm   | Sword Coast                 | Native Village                                           | Natives      |
 | Voodoo/Potion         | Hikoko            | Perm   | Sword Coast                 | Native Village                                           | Natives      |
