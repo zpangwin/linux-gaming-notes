@@ -130,71 +130,23 @@ The 'risen2.desktop' is for a regular wine launch (you'll need to manually disab
 The 'gamemode.risen2.desktop' is for running with gamemoderun (which you'll need to install yourself but will automatically handle screensaver)
 
 
-## Unofficial Patch
 
-You can get it here:
+## Risen 2 Unofficial Patch by Baltram
 
-* [Original Release thread on worldofplayers.de](https://forum.worldofplayers.de/forum/threads/1154440-release-Risen-2-Unofficial-Patch?p=19094558&viewfull=1#post19094558) - where Baltram originally released. Requires login to download but good notes and comments
+There are 3 ways you can install the Risen 2 Unofficial Patch (R2UP) mod:
+
+1. **Using the repacked tar.xz archive**: this contains the unpacked files the Unofficial Patch and is simply repacked into a common archive format and hosted in my repo (with permission from the mod's author, Baltram).
+2. **Using the "Risen 2 - Mod Starter v2.0" mod manager**: a Risen 2 mod manager that includes a preset list of available mods.
+3. **Running the R2UP exe installer via wine**: In my testing on Linux, this usually worked fine but it did fail to extract in a couple of tests and was the most time-consuming of the 3 methods. But if you wish to limit trust to only the original mod author, you can get it from the original [Release thread on worldofplayers.de](https://forum.worldofplayers.de/forum/threads/1154440-release-Risen-2-Unofficial-Patch?p=19094558&viewfull=1#post19094558)
+
+More info on the mod can be found here:
+
+* [Original Release thread on worldofplayers.de](https://forum.worldofplayers.de/forum/threads/1154440-release-Risen-2-Unofficial-Patch?p=19094558&viewfull=1#post19094558) - where Baltram originally released. no login required. 2nd post contains changelog, thread contains other comments that might be useful.
 * [Moddb.com mirror](https://www.moddb.com/games/risen-ii-dark-waters/downloads/risen-2-unofficial-patch-v05) - same version, no login required. some notes but no comments.
-
-
-To allow myself to be able to turn the patch on/off at will, I have set up my game install folder as a git repo. If you are interested in doing so (such as for being able to use the parrot exploit which the patch blocks), then you could set it up like this:
-
-
-    # if you want the unofficial risen 2 patch, you can get it here:
-    # https://www.moddb.com/games/risen-ii-dark-waters/downloads/risen-2-unofficial-patch-v05
-    $ sha256sum risen2_unofficial_patch-setup-0.5.exe
-    fc5bd45906905de337e8ba69a9d8e8a7e447695132a88a931c0f237220a2fd98  risen2_unofficial_patch-setup-0.5.exe
-
-    # if you want to put the folder under version control so you can revert the patch later
-    # (such as if you want to use the parrot exploit later)
-    cd drive_c/GOG/Risen2
-    git init
-    printf '# ignore redist\nredist\nredist/*\nredist/**\nredist/*.*\n\n' >> .gitignore
-    printf '# ignore files > 500M (patch doesnt modify them anyway)\n' >> .gitignore
-    printf 'dialogue_english.pak\ndialogue_german.pak\n' >> .gitignore
-    printf 'dialogue_russian.pak\ndialogue_polish.pak\n' >> .gitignore
-    printf 'images.pak\nsounds.pak\n' >> .gitignore
-    git add .gitignore && git commit -m 'initial commit';
-    git add * && git commit -m 'vanilla game + dlc';
-    git tag vanilla;
-
-    # download the included reg file:
-    # trick-unofficial-patch-installer-to-work-with-gog.reg
-    # save it under C:\ or C:\temp
-
-    # open wine regedit
-    env WINEPREFIX="$PFXD" wine regedit
-
-    # In wine regedit's menus: Registry > Import > import the reg file
-    #   trick-unofficial-patch-installer-to-work-with-gog.reg
-    # then browse the registry paths and confirm it was added correctly
-    # when done, close out of wine regedit
-
-    # then you can run the patch installer with:
-    env WINEDEBUG="fixme-all" WINEPREFIX="$PFXD" wine start /D"C:/temp/risen2" "risen2_unofficial_patch-setup-0.5.exe"
-    # If you skip the regedit stuff, you'll get an error:
-    #	title='Risen 2 Unofficial Patch v0.5 Setup'
-    #	message='Error! Can't initialize plug-ins directory'
-
-    # commit patch files
-    git add * && git commit -m 'unofficial risen 2 patch';
-    git tag unofficial-patch;
-
-
-
-The patch does not overwrite any files. It adds the following files (sha256 sums incl):
-./data/common/templates.p00 75c474c036d23b59ccb3c432c14dfaffc7ec4d721ee65e97c1e79e65b747bc65
-./data/compiled/library.p00 9746453b13dbd88e95cdf906402e69deadf60b58d2cb2dfd02564147f1da3385
-./data/compiled/strings.p00 f8a052b89e8ddaa1d2f28a7cf94b283040e8c91aa2c29e3aa6291eb9edb445ad
-./r2_unofficial_patch-uninst.exe b57e912f5e9a0e8e39eb1e19a32fdd69f00a6a5c0c1eb677bebce94eec310465
-
-To remove the patch, you can either move/delete the files manually or run the uninstaller with wine.
 
 UPDATE 2021, Apr 5th:
 
 I have confirmed that Baltram on the [worldofplayers.de forums](https://forum.worldofplayers.de/forum/threads/1154440-release-Risen-2-Unofficial-Patch) is indeed the original author. He was kind enough to respond to my pm on that forum and give permission. His response included below:
-
 
 **Baltram**:
 
@@ -205,10 +157,6 @@ You can find the (questionably organized) source code for my modding tools [on G
 >
 >Good luck!
 
----
-
-As far as I can tell, the mod itself does not contain any games assets (ignoring the 'uninstaller', I am showing the files themselves coming in at \~ 876 kB).
-
 According to a post [here](https://forum.worldofplayers.de/forum/threads/1154440-release-Risen-2-Unofficial-Patch/page3), Baltram replied in 2015 Mar - in response to someone asking if there will be any additional updates to the mod:
 
 > I am sorry but no, I don't plan to release a new version. I made this patch about 3 years ago. Now I am totally out of touch with Risen 2 modding and it would take me a lot of time to get into it again. (Besides, most of the bugs that still exist can't be fixed by editing the resource files.)
@@ -217,59 +165,104 @@ I *might* decide to take a stab at updating the mod a bit myself but understand 
 
 
 
-That being the case and considering that this is a mod which does not contain any copyrighted game assets and that if one can't get the installer to run, it becomes practically impossible to extract on non-windows systems... I decided to provide extracted copies of the \*.p00 files I listed above in my repo and put them in an archive named `manual-patch-install.tar.xz` which should be easy enough for most linux users to extract.
+### Risen 2 Unofficial Patch: Pre-install prep
+
+To allow myself to be able to turn the patch on/off at will, I have set up my game install folder as a git repo. Reasons why you might want to do this include:
+
+* testing whether the patch is working or not (I find testing via Severin's dialog options in Caldera is a nice quick test that can be done early on - see the mod's patch notes for more details)
+* being able to use the parrot gold exploit which the patch blocks
+* if you only want the patch installed for part of your playthrough
+* if you have issues and wish to test whether they still occur without the patch
+* you just really like using git
+
+If you are interested in doing so then you could set it up like this:
+
+    # if you want to put the folder under version control so you can revert the patch later
+    # (such as if you want to use the parrot exploit later)
+    cd drive_c/GOG/Risen2
+    git init
+
+    # download .gitignore
+    wget -O .gitignore https://github.com/zpangwin/linux-gaming-notes/raw/master/risen2/risen2-install-folder.gitignore
+
+    # OR manually create .gitignore
+    printf '# ignore redist\nredist\nredist/*\nredist/**\nredist/*.*\n\n' >> .gitignore
+    printf '# ignore files > 500M (patch doesnt modify them anyway)\n' >> .gitignore
+    printf 'dialogue_english.pak\ndialogue_german.pak\n' >> .gitignore
+    printf 'dialogue_russian.pak\ndialogue_polish.pak\n' >> .gitignore
+    printf 'images.pak\nsounds.pak\n' >> .gitignore
+
+    # Add initial commit
+    git add .gitignore && git commit -m 'initial commit';
+    git add * && git commit -m 'vanilla game + dlc';
+    git tag vanilla;
+
+
+### Option 1: Installing R2UP via repacked tar.xz
+
+The patch mod does not contain any games assets. Ignoring the uninstaller, I am showing the files themselves coming in at \~ 876 kB.
+
+It also does not overwrite any files provided by either the base game or the dlc. It adds the following files (sha256 sums incl):
+./data/common/templates.p00 75c474c036d23b59ccb3c432c14dfaffc7ec4d721ee65e97c1e79e65b747bc65
+./data/compiled/library.p00 9746453b13dbd88e95cdf906402e69deadf60b58d2cb2dfd02564147f1da3385
+./data/compiled/strings.p00 f8a052b89e8ddaa1d2f28a7cf94b283040e8c91aa2c29e3aa6291eb9edb445ad
+./r2_unofficial_patch-uninst.exe b57e912f5e9a0e8e39eb1e19a32fdd69f00a6a5c0c1eb677bebce94eec310465
+
+Considering the mod does not contain any copyrighted game assets, is small, can sometimes be difficul to extract under Linux, and the mod author - Baltram - gave his permission (see above), I have repacked the \*.p00 files from the mod into into [manual-patch-install.tar.xz](https://github.com/zpangwin/linux-gaming-notes/raw/master/risen2/manual-patch-install.tar.xz) to make it easy for most linux users to extract.
 
 For those that get [a feeling of impending doom whenever they need to use the "tar" command](https://xkcd.com/1168/), you can just run this to extract:
 
+    cd /media/f/winegames/gog-risen-2/drive_c/GOG/Risen2
+
+    # download
+    wget https://github.com/zpangwin/linux-gaming-notes/raw/master/risen2/manual-patch-install.tar.xz
+
+    # then extract
     tar --extract --file="manual-patch-install.tar.xz"
 
+    # then install patch files
+    cp -a -t /media/f/winegames/gog-risen-2/drive_c/GOG/Risen2/data ./manual-patch-install/com*
 
 
-Alternately, there is also an app called [Risen 2 - Mod Starter v2.0](https://forum.worldofplayers.de/forum/threads/1147645-RELEASE-Risen-2-ModStarter-v-2-0-%28Online-DB-version%29) which seems to be a mod manager for some risen 2 mods. I have not tested this myself but I noticed that the unofficial patch mod appears to be available as a zip file under this thread and that the zip file appears to contain the same files that get extracted from the regular mod exe. In the event that I have to take down the tar.xz and rebuild my repo without that in the history, then this might be a good alternate location that is extractable on Linux. Wish I had seen this before I messaged the mod author / made my own repack... probably would have been simpler to just use that from the start, had i known about it. I didn't test anything with this so this is all guess relevant guesswork.
 
-## Risen 2 - Mod Starter v2.0
+### Option 2: Installing R2UP via Mod Starter v2.0
 
-Download / info from [here](https://www.worldofrisen.de/english/download_85.htm) - download might require registration/login
-Download mirror [here](https://www.moddb.com/games/risen-ii-dark-waters/downloads/risen-2-modstarter-v20-online-db-version) - no login required
-More info from [here](https://forum.worldofplayers.de/forum/threads/1147645-RELEASE-Risen-2-ModStarter-v-2-0-%28Online-DB-version%29)
+Some time after I had repacked the original R2UP files, I discovered there was also a mod manager that could install the mod without requiring the mod exe installer to be unpacked.
 
+This mod manager app is called [Risen 2 - Mod Starter v2.0 by LordOfWAR](https://forum.worldofplayers.de/forum/threads/1147645-RELEASE-Risen-2-ModStarter-v-2-0-%28Online-DB-version%29) and allows you to select from a pre-defined list of risen 2 mods and install them.
 
-TBD - currently untested
+Basically you will run the installer for this under wine and have it download and install the R2UP mod (and any other mods you might like). Note that the Mod Starter dialog/form controls are a little wonky under wine... possibly installing mfc or similar could help. But since I only needed to run it once and I could still get by, I didn't test this. I have included workarounds for the controls in the notes below.
 
 
-* Any other winetricks dependencies needed to run this?: didn't seem to be any
+1\. Download R2MDS_OnlineDB_2_0_0_0.exe from one of the links above and save it to a folder under your `<wine_prefix>/drive_c`
 
-* Issues: Some of the controls are a little wonky under wine. Possibly installing mfc or similar could help? but i'd rather not risk it. For the exe selection, I could only pick lnk file and couldn't edit path to exe (you can later edit via ini file to fix this). For the mods page, the scrollbar didn't work for me but you could click in the text and use keyboard up/down/left/right arrows ok. Also on Mods page, I could not click to check the boxes but i could click on the mod name and then press spacebar to check/uncheck; it was also sometimes picky where i clicked on the mod name and i had to click more left/right.
-
+2\. Run the installer under wine
 
     # install the mod manager
-    cp -t "/media/f/lutris/games/gog-risen-2/drive_c/temp" "$HOME/Downloads/R2MDS_OnlineDB_2_0_0_0.exe"
-    env WINEDEBUG="fixme-all" WINEPREFIX="/media/f/lutris/games/gog-risen-2" wine start /D"C:/temp" "R2MDS_OnlineDB_2_0_0_0.exe"
+    cp -t "/media/f/winegames/gog-risen-2/drive_c/temp" "$HOME/Downloads/R2MDS_OnlineDB_2_0_0_0.exe"
+    env WINEDEBUG="fixme-all" WINEPREFIX="/media/f/winegames/gog-risen-2" wine start /D"C:/temp" "R2MDS_OnlineDB_2_0_0_0.exe"
+
+3\. After the install completes, run the mod manager:
 
     # run the mod manager for first time - then see notes below
-    env WINEDEBUG="fixme-all" WINEPREFIX="/media/f/lutris/games/gog-risen-2" wine start /D"C:/Program Files/Risen2MDS" "r2mds.exe"
+    env WINEDEBUG="fixme-all" WINEPREFIX="/media/f/winegames/gog-risen-2" wine start /D"C:/Program Files/Risen2MDS" "r2mds.exe"
 
-    # when it came up it complained that it couldn't find the risen exe and wanted me to type the path
-    # when i tried typing nothing appeared in the text box and i wasn't able to type/paste there but
-    # clicking the Browse button worked and I was able to navigate.
-    # oddly it wouldn't let me select:
-    #   C:\GOG\Risen2\system\Risen.exe
-    # but I was able to select:
-    #   C:\GOG\Risen2\Launch Risen 2 - Dark Waters.lnk
-    # then relaunch and close the program.
-    # finally I edited /media/f/lutris/games/gog-risen-2/drive_c/Program Files/Risen2MDS/mds.ini
-    # and manually changed the path to the exe and relaunched.
+4\. It will prompt you for the game exe. For me, I wasn't able to select `C:\GOG\Risen2\system\Risen.exe` but I could select `C:\GOG\Risen2\Launch Risen 2 - Dark Waters.lnk` to get past this dialog.
 
-    # re-run the mod manager with correct path in ini file
-    env WINEDEBUG="fixme-all" WINEPREFIX="/media/f/lutris/games/gog-risen-2" wine start /D"C:/Program Files/Risen2MDS" "r2mds.exe"
+5\. Now close out of the app and open its ini file `<wine_prefix>/drive_c/Program Files/Risen2MDS/mds.ini` in a text editor or go back to a terminal and edit it in sed. Change the value of Patch to be the Windows path to the game exe.
 
-    # when it comes up, choose "Internet Mods DB" from the menu at top and check the ones you want then click Download.
-    # it will take a bit to download then prompt you to add them to your modlist and restart (pick yes)
-    # click the 'Check all' button then 'Integrate mods' button to copy them to your risen 2 install folder
-    # then 'Close' and launch your game via wine as you normally do
+    cd "/media/f/winegames/gog-risen-2/drive_c/Program Files/Risen2MDS"
+    sed -E 's/^(Patch)=.*$/\1=C:\\GOG\\Risen2\\system\\Risen.exe/g' mds.ini
+    grep Patch= mds.ini
+      Patch=C:\GOG\Risen2\system\Risen.exe
 
+6\. Repeat step \#3 to relaunch the app
 
-For my testing, I selected the following mods:
+7\. From the menu at top, choose "Internet Mods DB" to open the mod selection page
+
+8\. Click on the mod name and then press spacebar to check/uncheck the selection. It was also sometimes picky where i clicked on the mod name and i had to click more to the left or right before it would become selected. Once the mod is selected, you should see some text in the bottom left for the mod's description. The scrollbar for the mod descriptions didn't work for me, clicking in the description text and I was able to move the cursor using up/down/left/right arrows.
+
+9\. Check the mods you want then click Download. For my testing, I selected the following mods and don't recall running into any issues:
 
 * R2.E.T_Pack_V1.0
 * Unofficial Patch v0.5
@@ -279,7 +272,54 @@ For my testing, I selected the following mods:
 * No Parallax Occlusion Mapping Mod
 * Lookup Specular
 
-Seemed to wokr fine for me
+10\. It will take a bit to download then prompt you to add them to your modlist and restart (pick yes)
+11\. Click the 'Check all' button then 'Integrate mods' button to copy them to your risen 2 install folder
+12\. Click 'Close' and then launch your game via wine as you normally do
+
+
+
+### Option 3: Installing R2UP via exe installer and wine
+
+1\. First you will need to download the exe file. Save it under a `<your_wine_prefix>/drive_c/temp`. You can get the exe installer from one of these sources:
+
+* [Original Release thread on worldofplayers.de](https://forum.worldofplayers.de/forum/threads/1154440-release-Risen-2-Unofficial-Patch?p=19094558&viewfull=1#post19094558) - where Baltram originally released. no login required. 2nd post contains changelog, thread contains other comments that might be useful.
+* [Moddb.com mirror](https://www.moddb.com/games/risen-ii-dark-waters/downloads/risen-2-unofficial-patch-v05) - same version, no login required. some notes but no comments.
+
+2\. Optional: confirm checksum
+
+    # if you want the unofficial risen 2 patch, you can get it here:
+    # https://www.moddb.com/games/risen-ii-dark-waters/downloads/risen-2-unofficial-patch-v05
+    $ sha256sum risen2_unofficial_patch-setup-0.5.exe
+    fc5bd45906905de337e8ba69a9d8e8a7e447695132a88a931c0f237220a2fd98  risen2_unofficial_patch-setup-0.5.exe
+
+3\. Download the windows [reg file](https://github.com/zpangwin/linux-gaming-notes/raw/master/risen2/trick-unofficial-patch-installer-to-work-with-gog.reg) from my repo and save it to `<your_wine_prefix>/drive_c`. I am not sure all of the keys in here are required but I had problems running the installer under wine and getting it to unpack its files. I eventually ended up installing via gog and steam on a windows pc and grabbing the reigstry entries I had and trying to trim it down to just game paths. This registry file is the end result.
+
+4\. If your relative install path in wine will be using a windows path other than `C:\GOG\Risen2` then you will need to open the reg file in a text editor and change the path to whatever path you plan to use.
+
+5\. To apply the reg file. Open wine's version of regedit using the command below. Then once it's open, from regedit's menus choose: Registry > Import > browse to `C:\` > select the file > import the reg file. Click OK then when done, close of of wine regedit.
+
+    # open wine regedit
+    env WINEPREFIX="$PFXD" wine regedit
+
+6\. Run the patch installer with wine
+
+    # Note: If you skipped the regedit stuff, you'll likely get an error:
+    #   title='Risen 2 Unofficial Patch v0.5 Setup'
+    #   message='Error! Can't initialize plug-ins directory'
+    env WINEDEBUG="fixme-all" WINEPREFIX="$PFXD" wine start /D"C:/temp/risen2" "risen2_unofficial_patch-setup-0.5.exe"
+
+7\. Optional: If you followed the pre-install prep and created a git repo, then you should ahead and commit the changes
+
+    # commit patch files
+    git add * && git commit -m 'unofficial risen 2 patch';
+    git tag unofficial-patch;
+
+
+To remove the patch, you can either move/delete the files manually or run the uninstaller with wine.
+
+
+---
+
 
 
 ## Sources
