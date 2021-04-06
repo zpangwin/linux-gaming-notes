@@ -83,6 +83,7 @@ I retested these steps after cleaning them up and they still worked for me
     env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="$PFXD" "/usr/bin/gamemoderun" wine start /D"C:/GOG/Risen2/system" "Risen.exe"
 
 -> worked fine
+-> after reinstalling my os (to resolve an unrelated issue from a different experiment), I reinstalled under fedora 33/kernel 5.11.11-200/Cinnamon 4.8.6/wine-6.5 (Staging)
 
 To enable controller:
 
