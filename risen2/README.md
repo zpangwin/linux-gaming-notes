@@ -58,7 +58,7 @@ terminal info:
 I retested these steps after cleaning them up and they still worked for me
 
 
-    cd /media/f/lutris/games
+    cd /media/f/winegames
     PFXD="$PWD/gog-risen-2"
 
     env WINEPREFIX="$PFXD" WINEARCH=win32 wine wineboot
@@ -99,7 +99,7 @@ If you get weird vertical sensitivity issues, take a look [here](https://steamco
 If you don't want to listen to the logo/splash screen videos (Deep Silver logo, Ubi logo, and PB logo) - which in my setup only play audio anyway, you can go into the videos folder and rename or delete them.
 
     # from game install dir
-    cd /media/f/lutris/games/gog-risen-2/drive_c/GOG/Risen2
+    cd /media/f/winegames/gog-risen-2/drive_c/GOG/Risen2
 
     # go to videos subfolder
     cd data/extern/videos
@@ -118,7 +118,7 @@ Ubuntu/Mint/etc users probably need to find a PPA or else just install manually 
 
 once you have it installed you can launch with something like:
 
-    /usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/media/f/lutris/games/gog-risen-2" "/usr/bin/gamemoderun" "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe"
+    /usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/media/f/winegames/gog-risen-2" "/usr/bin/gamemoderun" "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe"
 
 
 ## Desktop shortcut
