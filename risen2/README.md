@@ -66,6 +66,12 @@ I retested these steps after cleaning them up and they still worked for me
 
     env WINEPREFIX="$PFXD" winetricks vcrun2005 d3dx9 physx win7 d3dcompiler_43 corefonts gdiplus vcrun6 d3dx9_43
 
+    # fix for wine bug #50867 which affects wine staging 6.5
+    # https://bugs.winehq.org/show_bug.cgi?id=50867
+    # this creates a hard-linked copy of 'start.exe' if it
+    # doesn't exist on the windows PATH as seen by wine 6.5
+    test ! -f "$PFXD/drive_c/windows/start.exe" && ln "$PFXD/drive_c/windows/command/start.exe" "$PFXD/drive_c/windows/start.exe"
+
     # copy all game installers to C:\temp\risen2
 
     # install base game - I installed to 'C:\GOG\Risen2'
@@ -83,13 +89,27 @@ I retested these steps after cleaning them up and they still worked for me
     env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="$PFXD" "/usr/bin/gamemoderun" wine start /D"C:/GOG/Risen2/system" "Risen.exe"
 
 -> worked fine
--> after reinstalling my os (to resolve an unrelated issue from a different experiment), I reinstalled under fedora 33/kernel 5.11.11-200/Cinnamon 4.8.6/wine-6.5 (Staging)
 
-To enable controller:
+-> later, I ended up doing a complete system reimage due to an issue with from a completely unrelated project and wanting to have a fresh setup. After the fresh install, I had fedora 33/kernel 5.11.11-200/Cinnamon 4.8.6/wine-6.5 (Staging) and had changed both the location of the wineprefix folder and my username. I ended up replacing the user name in all of the \*.reg files (sed -Ei 's/oldusername/newusername/g' *.reg) / symlinks (`find . -type l|grep '<oldusername>'` then `rm symlink-name; ln -s ~/path symlink-name`). But still couldn't run the game and was seeing several errors in the terminal:
 
-* connect controller (wired)/turn it on (wireless)
-* start game anf get to main menu
-* using keyboard: Option > Gameplay > 2nd-to-last option > Yes > E to Apply.
+    wine: could not open working directory L"unix\\media\\f\\wine\\games\\gog-risen-2\\", starting in the Windows directory.
+    Application could not be started, or no application associated with the specified file.
+    ShellExecuteEx failed: File not found.
+
+I would get these errors when running the game binary or even just `... wine cmd` and was getting them when trying to run from my previous prefix folder and when I tried creating a new one and setting up from scratch. I tried putting selinux into permissive mode temporarily to rule it out as a cause but this had no effect (plus I hadn't done anything with selinux originally when it was working on fedora). After confirming the same issue under Linux Mint 20 (also with wine staging 6.5) and looking around online, I realized it was due to [this bug](https://bugs.winehq.org/show_bug.cgi?id=50867). I have updated my instructions so that hopefully anyone installing from this guide should be able to avoid this running into this issue (the fix was to copy/link start.exe to C:/Windows folder). After applying the fix, the game launched fine once again.
+
+
+## To enable controller
+
+In Risen 2, even if your controller is working fine normally, you will need to enable it from inside the game menus.
+
+1. connect controller (wired)/turn it on (wireless)
+2. If using Fedora, xbox controllers are supported automatically via the kernel xpad module and should "just work" with zero setup needed. If using Debian-based distros, you may need to install the `xboxdrv` package first.
+3. Optional: Test that your controller is working at the system-level. I find that using the controller in steam's big picture mode is a pretty quick and easy way to check this. Alternately, you can use the "Test" tab on wine's controller dialog: `WINEPREFIX="/media/f/wine/games/gog-risen-2" wine control joy.cpl`
+4. Start the game and get to main menu
+5. Using keyboard: Option > Gameplay > 2nd-to-last option > Yes > E to Apply.
+
+Thankfully, it should remember the setting so you won't have to do it again unless you reinstall / delete or change certain Risen 2 config files / manually switch back to keyboard / etc.
 
 If you get weird vertical sensitivity issues, take a look [here](https://steamcommunity.com/sharedfiles/filedetails/?id=734013029) or just look in your ConfigDefault.xml for 'SensitivityX' and 'SensitivityY' values and adjust accordingly. The higher the value, the faster your mouse movement; the guide author used set X to 0.4 and Y to 2.0, but it will depend on your system.
 
