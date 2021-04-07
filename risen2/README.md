@@ -58,7 +58,7 @@ terminal info:
 I retested these steps after cleaning them up and they still worked for me
 
 
-    cd /media/f/winegames
+    cd /media/f/wine/games
     PFXD="$PWD/gog-risen-2"
      
     env WINEPREFIX="$PFXD" WINEARCH=win32 wine wineboot
@@ -120,7 +120,7 @@ If you get weird vertical sensitivity issues, take a look [here](https://steamco
 If you don't want to listen to the logo/splash screen videos (Deep Silver logo, Ubi logo, and PB logo) - which in my setup only play audio anyway, you can go into the videos folder and rename or delete them.
 
     # from game install dir
-    cd /media/f/winegames/gog-risen-2/drive_c/GOG/Risen2
+    cd /media/f/wine/games/gog-risen-2/drive_c/GOG/Risen2
      
     # go to videos subfolder
     cd data/extern/videos
@@ -139,7 +139,7 @@ Ubuntu/Mint/etc users probably need to find a PPA or else just install manually 
 
 once you have it installed you can launch with something like:
 
-    /usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/media/f/winegames/gog-risen-2" "/usr/bin/gamemoderun" "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe"
+    /usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/media/f/wine/games/gog-risen-2" "/usr/bin/gamemoderun" "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe"
 
 
 ## Desktop shortcut
@@ -233,7 +233,7 @@ Considering the mod does not contain any copyrighted game assets, is small, can 
 
 For those that get [a feeling of impending doom whenever they need to use the "tar" command](https://xkcd.com/1168/), you can just run this to extract:
 
-    cd /media/f/winegames/gog-risen-2/drive_c/GOG/Risen2
+    cd /media/f/wine/games/gog-risen-2/drive_c/GOG/Risen2
      
     # download
     wget https://github.com/zpangwin/linux-gaming-notes/raw/master/risen2/manual-patch-install.tar.xz
@@ -242,7 +242,7 @@ For those that get [a feeling of impending doom whenever they need to use the "t
     tar --extract --file="manual-patch-install.tar.xz"
      
     # then install patch files
-    cp -a -t /media/f/winegames/gog-risen-2/drive_c/GOG/Risen2/data ./manual-patch-install/com*
+    cp -a -t /media/f/wine/games/gog-risen-2/drive_c/GOG/Risen2/data ./manual-patch-install/com*
 
 
 
@@ -260,19 +260,19 @@ Basically you will run the installer for this under wine and have it download an
 2\. Run the installer under wine
 
     # install the mod manager
-    cp -t "/media/f/winegames/gog-risen-2/drive_c/temp" "$HOME/Downloads/R2MDS_OnlineDB_2_0_0_0.exe"
-    env WINEDEBUG="fixme-all" WINEPREFIX="/media/f/winegames/gog-risen-2" wine start /D"C:/temp" "R2MDS_OnlineDB_2_0_0_0.exe"
+    cp -t "/media/f/wine/games/gog-risen-2/drive_c/temp" "$HOME/Downloads/R2MDS_OnlineDB_2_0_0_0.exe"
+    env WINEDEBUG="fixme-all" WINEPREFIX="/media/f/wine/games/gog-risen-2" wine start /D"C:/temp" "R2MDS_OnlineDB_2_0_0_0.exe"
 
 3\. After the install completes, run the mod manager:
 
     # run the mod manager for first time - then see notes below
-    env WINEDEBUG="fixme-all" WINEPREFIX="/media/f/winegames/gog-risen-2" wine start /D"C:/Program Files/Risen2MDS" "r2mds.exe"
+    env WINEDEBUG="fixme-all" WINEPREFIX="/media/f/wine/games/gog-risen-2" wine start /D"C:/Program Files/Risen2MDS" "r2mds.exe"
 
 4\. It will prompt you for the game exe. For me, I wasn't able to select `C:\GOG\Risen2\system\Risen.exe` but I could select `C:\GOG\Risen2\Launch Risen 2 - Dark Waters.lnk` to get past this dialog.
 
 5\. Now close out of the app and open its ini file `<wine_prefix>/drive_c/Program Files/Risen2MDS/mds.ini` in a text editor or go back to a terminal and edit it in sed. Change the value of Patch to be the Windows path to the game exe.
 
-    cd "/media/f/winegames/gog-risen-2/drive_c/Program Files/Risen2MDS"
+    cd "/media/f/wine/games/gog-risen-2/drive_c/Program Files/Risen2MDS"
     sed -E 's/^(Patch)=.*$/\1=C:\\GOG\\Risen2\\system\\Risen.exe/g' mds.ini
     grep Patch= mds.ini
       Patch=C:\GOG\Risen2\system\Risen.exe
