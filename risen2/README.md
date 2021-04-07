@@ -294,7 +294,9 @@ Basically you will run the installer for this under wine and have it download an
 * Lookup Specular
 
 10\. It will take a bit to download then prompt you to add them to your modlist and restart (pick yes)
+
 11\. Click the 'Check all' button then 'Integrate mods' button to copy them to your risen 2 install folder
+
 12\. Click 'Close' and then launch your game via wine as you normally do
 
 
