@@ -1,7 +1,7 @@
 
 ## Attributes
 
-| Attribute Name            | Console Command    | 
+| Attribute Name            | Console Command    |
 |:-------------------------:|:------------------:|
 | Blades                | teach Blades <int> |
 | Firearms              | teach Blades <int> |
@@ -56,21 +56,21 @@ TO change these values using the console you can do
 | Cunning 9      | Dirty Tricks III     | teach PerkCunningDirtyTricksPlus15   | 1500 | Dirty Tricks II     | Flannigan |
 | Cunning 10     | Old Trickster        | teach PerkCunningTrickster           | 1000 | ---                 | Flannigan |
 | -------------- | -------------------- | ------------------------------------ | ---- |-------------------- |-------------------- |
-| Firearms 1     | Critical Hits        | teach PerkFirearmsCriticalHit        | 1000 | ---                 | Barney, Webster, Bartolo |
+| Firearms 1     | Critical Hits        | teach PerkFirearmsCriticalHit        | 1000 | ---                 | Barney, Webster, Bartolo, Fernando |
 | Firearms 1     | Pistols I            | teach PerkFirearmsPistolsPlus5       | 500  | ---                 | Barney, Webster |
 | Firearms 2     | Nuff Said!           | teach PerkFirearmsNuffSaid           | 500  | ---                 | Barney, Webster |
-| Firearms 2     | Shotguns I           | teach PerkFirearmsShotgunsPlus5      | 500  | ---                 | Bartolo |
-| Firearms 3     | Muskets I            | teach PerkFirearmsMusketsPlus5       | 500  | ---                 | Bartolo |
+| Firearms 2     | Shotguns I           | teach PerkFirearmsShotgunsPlus5      | 500  | ---                 | Bartolo, Fernando (Faction) |
+| Firearms 3     | Muskets I            | teach PerkFirearmsMusketsPlus5       | 500  | ---                 | Bartolo, Fernando (Faction/1000g) |
 | Firearms 4     | Left-Handed          | teach PerkFirearmsLeftie             | 1000 | ---                 | Barney, Webster |
 | Firearms 4     | Pistols II           | teach PerkFirearmsPistolsPlus10      | 1000 | Pistols I           | Barney, Webster |
-| Firearms 5     | Shotguns II          | teach PerkFirearmsShotgunsPlus10     | 1000 | Shotguns I          | Bartolo |
-| Firearms 6     | Gunsmith             | teach PerkFirearmsGunsmith           | 1000 | ---                 | Barney, Webster, Bartolo |
-| Firearms 6     | Muskets II           | teach PerkFirearmsMusketsPlus10      | 1000 | Muskets I           | Bartolo |
-| Firearms 7     | Pistols III          | teach PerkFirearmsPistolsPlus15      | 1500 | Pistols II          |  |
-| Firearms 8     | Marksman             | teach PerkFirearmsSharpshooter       | 1000 | ---                 | |
-| Firearms 8     | Shotguns III         | teach PerkFirearmsShotgunsPlus15     | 1500 | Shotguns II         |  |
-| Firearms 9     | Muskets III          | teach PerkFirearmsMusketsPlus15      | 1500 | Muskets II          |  |
-| Firearms 10    | Blazing Barrels      | teach PerkFirearmsThunderGun         | 1000 | ---                 | |
+| Firearms 5     | Shotguns II          | teach PerkFirearmsShotgunsPlus10     | 1000 | Shotguns I          | Bartolo, Fernando |
+| Firearms 6     | Gunsmith             | teach PerkFirearmsGunsmith           | 1000 | ---                 | Barney, Webster, Bartolo, Fernando, Godin |
+| Firearms 6     | Muskets II           | teach PerkFirearmsMusketsPlus10      | 1000 | Muskets I           | Bartolo, Fernando |
+| Firearms 7     | Pistols III          | teach PerkFirearmsPistolsPlus15      | 1500 | Pistols II          | Godin (any faction)  |
+| Firearms 8     | Marksman             | teach PerkFirearmsSharpshooter       | 1000 | ---                 | Godin (Faction) |
+| Firearms 8     | Shotguns III         | teach PerkFirearmsShotgunsPlus15     | 1500 | Shotguns II         | Godin (Faction) |
+| Firearms 9     | Muskets III          | teach PerkFirearmsMusketsPlus15      | 1500 | Muskets II          | Godin (Faction) |
+| Firearms 10    | Blazing Barrels      | teach PerkFirearmsThunderGun         | 1000 | ---                 | Godin (Faction) |
 | -------------- | -------------------- | ------------------------------------ | ---- |-------------------- |-------------------- |
 | Toughness 1    | Intimidate I         | teach PerkToughnessIntimidatePlus5   | 500  | ---                 | Booze, Sophia               |
 | Toughness 1    | Kick                 | teach PerkToughnessKick              | 500  | ---                 | Blake, Nakutu               |
@@ -87,12 +87,12 @@ TO change these values using the console you can do
 | Toughness 10   | Indestructible       | teach PerkToughnessIndestructible    | 2000 | ---                 | |
 | -------------- | -------------------- | ------------------------------------ | ---- |-------------------- |-------------------- |
 | Voodoo 1       | Create Doll          | teach PerkVoodooCreateVoodooDoll     | 1000 | ---                 | Chani (Faction) |
-| Voodoo 1       | Ritual I             | teach PerkVoodooRitualPlus5          | 500  | ---                 | | Hikoko (Faction) |
+| Voodoo 1       | Ritual I             | teach PerkVoodooRitualPlus5          | 500  | ---                 | Hikoko (Faction), Di Silva |
 | Voodoo 2       | Create Sceptre       | teach PerkVoodooCreateScepter        | 1000 | ---                 | Kapua (Faction) |
 | Voodoo 2       | Death Cult I         | teach PerkVoodooDeathCultPlus5       | 500  | ---                 | |
 | Voodoo 3       | Black Magic I        | teach PerkVoodooBlackMagicPlus5      | 500  | ---                 | |
-| Voodoo 4       | Brew Potion          | teach PerkVoodooCreateVoodooPotion   | 1000 | ---                 | |
-| Voodoo 4       | Ritual II            | teach PerkVoodooRitualPlus10         | 1000 | Ritual I            | Hikoko (Faction) |
+| Voodoo 4       | Brew Potion          | teach PerkVoodooCreateVoodooPotion   | 1000 | ---                 | Di Silva |
+| Voodoo 4       | Ritual II            | teach PerkVoodooRitualPlus10         | 1000 | Ritual I            | Hikoko (Faction), Di Silva |
 | Voodoo 5       | Death Cult II        | teach PerkVoodooDeathCultPlus10      | 1000 | Death Cult I        |  |
 | Voodoo 6       | Black Magic II       | teach PerkVoodooBlackMagicPlus10     | 1000 | Black Magic I       |  |
 | Voodoo 6       | Create Talisman      | teach PerkVoodooCreateTalisman       | 1000 | ---                 | Hikoko (Faction) |
@@ -132,5 +132,7 @@ TO change these values using the console you can do
 | Voodoo/Dolls          | Chani             | Quest  | Sword Coast                 | Native Village (before joining party/crew)               | Natives      |
 | Voodoo/Magic          | Kapua             | Perm   | Sword Coast                 | Native Village                                           | Natives      |
 | Voodoo/Potion         | Hikoko            | Perm   | Sword Coast                 | Native Village                                           | Natives      |
-
-
+| Firearms/Pistols      | Fernando          | Perm   | Caldera II                  | In town, far left from bridge                            | Inquisition  |
+| Voodoo/Potion         | Di Silva          | Perm   | Caldera II                  | In hotel near Council Building, 2nd floor                | ???          |
+| Firearms/Pistol       | Godin             | Perm   | Caldera II                  | In Council Building basement, right from the stairstown  | ---          |
+| Firearms/Muskets      | Godin             | Perm   | Caldera II                  | In Council Building basement, right from the stairstown  | Inquisition  |

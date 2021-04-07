@@ -20,12 +20,12 @@ I may be missing some later game locations for these and I don't really care as 
 | Skinning Knife | 150 | Sword Coast | Native Village   | Ranapiri       | REQ: Complete gator quest            |
 | Jaw-Chisel     | 100 | Sword Coast | Native Village   | Ranapiri       | REQ: Complete gator quest            |
 | Ritual Knife   | 250 | Sword Coast | Native Village   | Kupua          | REQ: Choosing sides with Natives     |
-| Ritual Knife   | 500 | Caldera II  | Hotel            | ??? \*\*       | REQ: 500g  + Lockpick 60             |
+| Ritual Knife   | 500 | Caldera II  | Hotel            | Lucia \*\*     | REQ: 500g  + Lockpick 60             |
 
 
 \* Note: If you meet all the requirements, it is possible to get TWO free skinning knives from Isabella. This allows you to keep one and sell the other for a small profit of 30g.
 
-\*\* This is in a L60 chest in Garcia's room. To get into Garcia's room, you'll have to spend 500g. First, talk to the innkeeper. She won't let you rent Garcia's room because she "already has a room available". Rent that other room for 250g. When you talk to her again, she'll say "you already have a room". Go back onto the street and find the Merchant Possodino nearby. Give him your room key. Then go back and talk to the innkeeper again and ask to rent Garcia's room for 250g.
+\*\* This is in a L60 chest in Garcia's room. To get into Garcia's room, you'll have to spend 500g. First, talk to the innkeeper (Lucia). She won't let you rent Garcia's room because she "already has a room available". Rent that other room for 250g. When you talk to her again, she'll say "you already have a room". Go back onto the street and find the Merchant Possodino nearby. Give him your room key. Then go back and talk to the innkeeper again and ask to rent Garcia's room for 250g.
 
 
 -----------------------------------------------------
@@ -37,10 +37,10 @@ If you plan on using the console, you can use the spawn codes below to spawn the
 
     # spawn a jaguar
     spawn Jaguar
-     
+
     # spawn an alligator
     spawn Alligator
-     
+
     # doesn't recognize other parameters; you'll still just get ONE alligator...
     spawn Alligator 8
 
@@ -88,7 +88,7 @@ Note: (Human) Skulls and Bones may not be drops; you may need to find/buy those.
 | Item Name            | Buy  | Sell | Item Code            | Required Tool  | Animal(s)                                         | Merchants                        |
 |:--------------------:|:----:|:----:|:--------------------:|:--------------:|:-------------------------------------------------:|:--------------------------------:|
 | Acid Gland           | ???? | 13   | It_At_Acid           | Ritual Knife   | Termite Warriors                                  |                                  |
-| Bone                 | 15   | 5    | It_At_Bone           | ???            | ???                                               | Badriya, Ranapiri                |
+| Bone                 | 15   | 5    | It_At_Bone           | ---            | ---                                               | Badriya, Ranapiri                |
 | Claw                 | ???? | 15   | It_At_Claw           | Bonesaw        | Blueclaw Monkeys, Cave Bats, Claw Monkeys, Ghouls |                                  |
 | Ear                  | 25   | 5    | It_At_Ear            | Ritual Knife   | Cave Bats                                         | Badriya, Ranapiri                |
 | Eye                  | 50   | 10   | It_At_Eye            | Ritual Knife   | Giant Crabs, Spiders, Grave Spiders               | Badriya, Ranapiri, Kapua, Emma   |
@@ -100,7 +100,7 @@ Note: (Human) Skulls and Bones may not be drops; you may need to find/buy those.
 | Panther Skin         | ???  | 50   | It_At_Fur_Panther    | Skinning Knife | Panthers                                          |                                  |
 | Moneky Skull         | 125  | 25   | It_At_MonkeySkull    | Ritual Knife   | Monkeys (passive ones only)                       | Badriya, Ranapiri, Emma          |
 | Sand Devil Sensor    | 75   | 15   | It_At_Sensor         | ---            | Sand Devils                                       | Ranapiri                         |
-| Skull                | ???  | 12   | It_Skull             | ???            | ???                                               |                                  |
+| Skull                | ???  | 12   | It_Skull             | ---            | ---                                               |                                  |
 | Sickle               | ???? | 7    | It_At_AntSickle      | Bonesaw        | Termite Workers, Termite Warriors                 |                                  |
 | Silverback Skin      | ???? | 60   | It_At_Fur_Silverback | Skinning Knife | Silverback                                        |                                  |
 | Teeth                | 50   | 10   | It_At_Teeth          | Jaw Chisel     | Blueclaw Monekys, Claw Monkeys, Gators, Gorillas  | Ranapiri, Kapua, Emma            |

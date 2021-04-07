@@ -296,11 +296,11 @@ I am separating them based on which Skill they use (or what sounds logical in th
 |:------------------------:|:----:|:----:|:---------------:|:------:|:-----:|:------:|:-----------:|:---------:|:---------:|:--------------------------------:|
 | Boarding Pistol          | 400  | 80   | It_Pis_Ship     | 50     | 8     | 20s    | Pistols +10 | Bullet    | No        | Thompkins                        |
 | Double-barrelled Pistol  | ???? | 350  | It_Pis_Double   | 70     | 8     | 15s    | Pistols +10 | Bullet    | No        |                                  |
-| Dueling Pistol           | ???? | 300  | It_Pis_Duel     | 70     | 8     | 20s    | Pistols +20 | Bullet    | No        | Fernando                         |
+| Dueling Pistol           | 1500 | 300  | It_Pis_Duel     | 70     | 8     | 20s    | Pistols +20 | Bullet    | No        | Fernando                         |
 | Fat Olga                 | ???? | 350  | It_ShG_FatOlga  | 100    | 8     | 30s    | Pistols +0  | Lead Shot | No        |                                  |
 | Officer's Pistol         | 1350 | 270  | It_Pis_Officer  | 65     | 8     | 20s    | Pistols +15 | Bullet    | Yes\*\*   |                                  |
 | Pistol                   | 750  | 150  | It_Pis_Single   | 60     | 8     | 20s    | Pistols +20 | Bullet    | Yes       | Barney, Fernando                 |
-| Sawn-Off Shotgun         | ???? | 500  | It_ShP_SawnOff  | 90     | 8     | 30s    | Pistols +5  | Lead Shot | No        | Fernando                         |
+| Sawn-Off Shotgun         | 3000 | 500  | It_ShP_SawnOff  | 90     | 8     | 30s    | Pistols +5  | Lead Shot | No        | Fernando                         |
 | Scatter Pistol           | 500  | 100  | It_ShP_Buckshot | 60     | 8     | 30s    | Pistols +5  | Lead Shot | No        | Barney, Webster                  |
 | Silver Iron              | ???? | 380  | It_Pis_Silver   | 80     | 8     | 20s    | Pistols +10 | Bullet    | No        |                                  |
 | The Grinder              | 1000 | 250  | It_ShP_Mortar   | 70     | 8     | 30s    | Pistols +5  | Lead Shot | No        | Webster                          |
