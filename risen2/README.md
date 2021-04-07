@@ -39,13 +39,13 @@ terminal info:
       Display: x11 server: Fedora Project X.org 1.20.10 driver: nvidia
       resolution: 1920x1080~60Hz
       OpenGL: renderer: GeForce GTX 970/PCIe/SSE2 v: 4.6.0 NVIDIA 460.32.03
-
+     
     $ wine --version
     wine-6.3 (Staging)
-
+     
     $ winetricks --version
     20210206-next - sha256sum: 872a62040e7518ab9d577dc78d3a13a55341e310e3926e6ce9d5a77e3ef6fcc9
-
+     
     $ lutris --version
     2021-03-04 15:27:25,763: Your version of python-magic is too old.
 
@@ -60,37 +60,37 @@ I retested these steps after cleaning them up and they still worked for me
 
     cd /media/f/winegames
     PFXD="$PWD/gog-risen-2"
-
+     
     env WINEPREFIX="$PFXD" WINEARCH=win32 wine wineboot
     # -> if you get prompted about installing mono, agree and wait it out (takes awhile)
-
+     
     env WINEPREFIX="$PFXD" winetricks vcrun2005 d3dx9 physx win7 d3dcompiler_43 corefonts gdiplus vcrun6 d3dx9_43
-
+     
     # fix for wine bug #50867 which affects wine staging 6.5
     # https://bugs.winehq.org/show_bug.cgi?id=50867
     # this creates a hard-linked copy of 'start.exe' if it
     # doesn't exist on the windows PATH as seen by wine 6.5
     test ! -f "$PFXD/drive_c/windows/start.exe" && ln "$PFXD/drive_c/windows/command/start.exe" "$PFXD/drive_c/windows/start.exe"
-
+     
     # copy all game installers to C:\temp\risen2
-
+     
     # install base game - I installed to 'C:\GOG\Risen2'
     # choose Exit when done (dont click launch button)
     env WINEPREFIX="$PFXD" wine start /D"C:/temp/risen2" "setup_risen_2_-_dark_waters_1.0_(18732).exe"
-
+     
     # install dlc
     # choose Exit when done (dont click launch button)
     env WINEPREFIX="$PFXD" wine start /D"C:/temp/risen2" "setup_risen_2_gold_edition_1.0_(18732).exe"
-
+     
     # run game and confirm everything works
     env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="$PFXD" wine start /D"C:/GOG/Risen2/system" "Risen.exe"
-
+     
     # if you have feral interactive's gamemoderun installed, then use this to avoid screensaver:
     env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="$PFXD" "/usr/bin/gamemoderun" wine start /D"C:/GOG/Risen2/system" "Risen.exe"
 
 -> worked fine
 
--> later, I ended up doing a complete system reimage due to an issue with from a completely unrelated project and wanting to have a fresh setup. After the fresh install, I had fedora 33/kernel 5.11.11-200/Cinnamon 4.8.6/wine-6.5 (Staging) and had changed both the location of the wineprefix folder and my username. I ended up replacing the user name in all of the \*.reg files (sed -Ei 's/oldusername/newusername/g' *.reg) / symlinks (`find . -type l|grep '<oldusername>'` then `rm symlink-name; ln -s ~/path symlink-name`). But still couldn't run the game and was seeing several errors in the terminal:
+-> later, I ended up doing a complete system reimage due to an issue with from a completely unrelated project and wanting to have a fresh setup. After the fresh install, I had fedora 33/kernel 5.11.11-200/Cinnamon 4.8.6/wine-6.5 (Staging) and had changed both the location of the wineprefix folder and my username. I ended up replacing the user name in all of the \*.reg files (`sed -Ei 's/oldusername/newusername/g' *.reg`) / symlinks (`find . -type l|grep '<oldusername>'` then `rm symlink-name; ln -s ~/path symlink-name`). But still couldn't run the game and was seeing several errors in the terminal:
 
     wine: could not open working directory L"unix\\media\\f\\wine\\games\\gog-risen-2\\", starting in the Windows directory.
     Application could not be started, or no application associated with the specified file.
@@ -121,10 +121,10 @@ If you don't want to listen to the logo/splash screen videos (Deep Silver logo, 
 
     # from game install dir
     cd /media/f/winegames/gog-risen-2/drive_c/GOG/Risen2
-
+     
     # go to videos subfolder
     cd data/extern/videos
-
+     
     # rename the logo files
     for f in logo_*.vid; do mv "$f" "${f}.bak"; done
     # OR
@@ -202,17 +202,17 @@ If you are interested in doing so then you could set it up like this:
     # (such as if you want to use the parrot exploit later)
     cd drive_c/GOG/Risen2
     git init
-
+     
     # download .gitignore
     wget -O .gitignore https://github.com/zpangwin/linux-gaming-notes/raw/master/risen2/risen2-install-folder.gitignore
-
+     
     # OR manually create .gitignore
     printf '# ignore redist\nredist\nredist/*\nredist/**\nredist/*.*\n\n' >> .gitignore
     printf '# ignore files > 500M (patch doesnt modify them anyway)\n' >> .gitignore
     printf 'dialogue_english.pak\ndialogue_german.pak\n' >> .gitignore
     printf 'dialogue_russian.pak\ndialogue_polish.pak\n' >> .gitignore
     printf 'images.pak\nsounds.pak\n' >> .gitignore
-
+     
     # Add initial commit
     git add .gitignore && git commit -m 'initial commit';
     git add * && git commit -m 'vanilla game + dlc';
@@ -234,13 +234,13 @@ Considering the mod does not contain any copyrighted game assets, is small, can 
 For those that get [a feeling of impending doom whenever they need to use the "tar" command](https://xkcd.com/1168/), you can just run this to extract:
 
     cd /media/f/winegames/gog-risen-2/drive_c/GOG/Risen2
-
+     
     # download
     wget https://github.com/zpangwin/linux-gaming-notes/raw/master/risen2/manual-patch-install.tar.xz
-
+     
     # then extract
     tar --extract --file="manual-patch-install.tar.xz"
-
+     
     # then install patch files
     cp -a -t /media/f/winegames/gog-risen-2/drive_c/GOG/Risen2/data ./manual-patch-install/com*
 
