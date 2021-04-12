@@ -233,7 +233,7 @@ I *might* decide to take a stab at updating the mod a bit myself but understand 
 
 
 
-### Risen 2 Unofficial Patch: Pre-install prep
+### OPTIONAL: R2UP Pre-install prep
 
 To allow myself to be able to turn the patch on/off at will, I have set up my game install folder as a git repo. Reasons why you might want to do this include:
 
