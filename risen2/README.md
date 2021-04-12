@@ -189,6 +189,12 @@ See included file in this folder. For best portability and to avoid copyright is
 | [gamemode.risen2.desktop](https://github.com/zpangwin/linux-gaming-notes/raw/master/risen2/gamemode.risen2.desktop) | Wine launcher that runs through feral interactive's [gamemoderun](https://github.com/FeralInteractive/gamemode). Must also have gamemoderun installed. Screensaver should be handled automatically by gamemoderun. |
 | [firejail+gamemode.risen2.desktop](https://github.com/zpangwin/linux-gaming-notes/raw/master/risen2/firejail%2Bgamemode.risen2.desktop) | Wine launcher that runs through both firejail and feral interactive's [gamemoderun](https://github.com/FeralInteractive/gamemode). Must also have both firejail and gamemoderun installed. Screensaver should be handled automatically by gamemoderun. |
 
+**NOTE:** If download one of my files from the web, you will need to do 2 things before you can use it.
+
+1. Open it in vi or your favorite text editor. Review the file path and if you used a different path during the install, then update the WINEPREFIX path accordingly.
+
+2. Change the desktop file to give it execute permissions. You can either do this by right-clicking it from your file mananger and choosing properties. Or from the terminal using: `chmod a+x ~/Desktop/*.desktop`
+
 
 ## Risen 2 Unofficial Patch by Baltram
 
