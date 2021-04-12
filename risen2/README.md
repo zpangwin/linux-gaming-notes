@@ -311,7 +311,7 @@ Basically you will run the installer for this under wine and have it download an
 2\. Optional: confirm checksum
 
     # if you want the unofficial risen 2 patch, you can get it here:
-    # https://www.moddb.com/games/risen-ii-dark-waters/downloads/risen-2-unofficial-patch-v05
+    # https://forum.worldofplayers.de/forum/threads/1154440-release-Risen-2-Unofficial-Patch?p=19094558&viewfull=1#post19094558
     $ sha256sum risen2_unofficial_patch-setup-0.5.exe
     fc5bd45906905de337e8ba69a9d8e8a7e447695132a88a931c0f237220a2fd98  risen2_unofficial_patch-setup-0.5.exe
 
@@ -354,5 +354,6 @@ My approach above is based on aggregated data from multiple sources and tested u
 3. [GOG Foums: Risen series for Linux by adamhm](https://www.gog.com/forum/risen_series/risen_series_for_linux) - especially looking at the source of the script in his [risen2_wine.tar.xz](https://www.dropbox.com/s/yf7fijcrm26ld2k/risen2_wine.tar.xz?dl=0). *(note: you may need to be logged into gog forums to see all the posts; i know i had that issue at least once)*
 4. [Protondb: Risen 2](https://www.protondb.com/app/40390) - ultimately this did not work for me but i might have grabbed some winetricks dependencies from here
 5. [Lutris: Risen 2 (view script)](https://lutris.net/games/risen-2-dark-waters/) - ultimately this did not work for me but i might have grabbed some winetricks dependencies from here
-6. Risen 2 Unofficial patch ([on moddb](https://www.moddb.com/games/risen-ii-dark-waters/downloads/risen-2-unofficial-patch-v05) | [on orum.worldofplayers.de](https://forum.worldofplayers.de/forum/threads/1154440-release-Risen-2-Unofficial-Patch)) - didn't really help with install but i still prefer to have less bugs
-7. Risen 2 - Mod Starter v2.0 ([1](https://www.worldofrisen.de/english/download_85.htm), [2](https://forum.worldofplayers.de/forum/threads/1147645-RELEASE-Risen-2-ModStarter-v-2-0-%28Online-DB-version%29)) - wish i had noticed this sooner. i didn't come across it until my guide was finished and i was a good chunk of the way through the game
+6. [Risen 2 Unofficial release page](https://forum.worldofplayers.de/forum/threads/1154440-release-Risen-2-Unofficial-Patch?p=19094558&viewfull=1#post19094558)
+7. Risen 2 Unofficial patch [Moddb mirror](https://www.moddb.com/games/risen-ii-dark-waters/downloads/risen-2-unofficial-patch-v05)
+8. Risen 2 - Mod Starter v2.0 ([1](https://www.worldofrisen.de/english/download_85.htm), [2](https://forum.worldofplayers.de/forum/threads/1147645-RELEASE-Risen-2-ModStarter-v-2-0-%28Online-DB-version%29)) - wish i had noticed this sooner. i didn't come across it until my guide was finished and i was a good chunk of the way through the game
