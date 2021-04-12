@@ -64,6 +64,13 @@ I retested these steps after cleaning them up and they still worked for me
     env WINEPREFIX="$PFXD" WINEARCH=win32 wine wineboot
     # -> if you get prompted about installing mono, agree and wait it out (takes awhile)
      
+    # if you would like to sandbox your wine dir so that the following are NOT used:
+    #   a) Z:\ mapping which allows windows apps to more easily view your linux / filesystem.
+    #   b) C:/users/${USER}/ symlinks to your linux home subfolders
+    # then use:
+    env WINEPREFIX="$PFXD" winetricks sandbox
+     
+    # install dependencies needed by the game
     env WINEPREFIX="$PFXD" winetricks vcrun2005 d3dx9 physx win7 d3dcompiler_43 corefonts gdiplus vcrun6 d3dx9_43
      
     # fix for wine bug #50867 which affects wine staging 6.5
@@ -73,6 +80,9 @@ I retested these steps after cleaning them up and they still worked for me
     test ! -f "$PFXD/drive_c/windows/start.exe" && ln "$PFXD/drive_c/windows/command/start.exe" "$PFXD/drive_c/windows/start.exe"
      
     # copy all game installers to C:\temp\risen2
+    # this assumes you downloaded the offline installers from gog to ~/Downloads
+    mkdir -p "${PFXD}/drive_c/temp/risen"
+    cp -a -t "${PFXD}/drive_c/temp/risen" ~/Downloads/setup_risen_2*.*
      
     # install base game - I installed to 'C:\GOG\Risen2'
     # choose Exit when done (dont click launch button)
@@ -142,14 +152,42 @@ once you have it installed you can launch with something like:
     /usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/media/f/wine/games/gog-risen-2" "/usr/bin/gamemoderun" "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe"
 
 
-## Desktop shortcut
+## Running in a security sandbox
+
+First, make sure you have firejail installed:
+
+    # fedora
+    sudo dnf install -y firejail;
+    
+    # linux mint / ubuntu
+    sudo add-apt-repository ppa:deki/firejail -y;
+    sudo apt update -y;
+    sudo apt-get install -y firejail;
+
+Initially, I just tried to take my gamemoderun setup and pass it through to firejail like so:
+
+    /usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/media/f/wine/games/gog-risen-2" "/usr/bin/gamemoderun" "/usr/bin/firejail" "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe"
+
+On Fedora 33, the above almost worked. It came up with the game. Sound worked. Keyboard worked. But I didn't have any response from my controller (xbox 360).
+
+But thanks to a [hint](https://wiki.archlinux.org/index.php/Gamepad#Using_hid-nintendo_with_Steam_Games) on the Arch Linux forums, I was able to get the controller working without too much trouble by adding `--noprofile --blacklist=/sys/class/hidraw/` after firejail.
+
+The full command (with gamemoderun) is:
+
+    /usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/media/f/wine/games/gog-risen-2" "/usr/bin/gamemoderun" "/usr/bin/firejail" --noprofile --blacklist=/sys/class/hidraw/ "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe
+
+I was able to load my previous save, with sound and controller no problem. I did have to go back in the menus and re-enable my controller but that might have been because I launched it without controller support on the first attempt.
+
+## Desktop shortcuts
 
 See included file in this folder. For best portability and to avoid copyright issues, it references the bmp file included with the gog install but you can probably find or make a better icon.
 
-The 'risen2.desktop' is for a regular wine launch (you'll need to manually disable your screensaver)
-
-The 'gamemode.risen2.desktop' is for running with gamemoderun (which you'll need to install yourself but will automatically handle screensaver)
-
+| File name | Description |
+|:---------:|:------------|
+| [risen2.desktop](https://github.com/zpangwin/linux-gaming-notes/raw/master/risen2/risen2.desktop) | Regular wine launcher without any extra dependencies. Note: you may need to manually disable your screensaver. |
+| [firejail.risen2.desktop](https://github.com/zpangwin/linux-gaming-notes/raw/master/risen2/firejail.risen2.desktop) | Wine launcher that runs through firejail. Must also have firejail installed. Note: you may need to manually disable your screensaver. |
+| [gamemode.risen2.desktop](https://github.com/zpangwin/linux-gaming-notes/raw/master/risen2/gamemode.risen2.desktop) | Wine launcher that runs through feral interactive's [gamemoderun](https://github.com/FeralInteractive/gamemode). Must also have gamemoderun installed. Screensaver should be handled automatically by gamemoderun. |
+| [firejail+gamemode.risen2.desktop](https://github.com/zpangwin/linux-gaming-notes/raw/master/risen2/firejail%2Bgamemode.risen2.desktop) | Wine launcher that runs through both firejail and feral interactive's [gamemoderun](https://github.com/FeralInteractive/gamemode). Must also have both firejail and gamemoderun installed. Screensaver should be handled automatically by gamemoderun. |
 
 
 ## Risen 2 Unofficial Patch by Baltram
