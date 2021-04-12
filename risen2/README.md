@@ -170,7 +170,7 @@ Initially, I just tried to take my gamemoderun setup and pass it through to fire
 
 On Fedora 33, the above almost worked. It came up with the game. Sound worked. Keyboard worked. But I didn't have any response from my controller (xbox 360).
 
-But thanks to a [hint](https://wiki.archlinux.org/index.php/Gamepad#Using_hid-nintendo_with_Steam_Games) on the Arch Linux forums, I was able to get the controller working without too much trouble by adding `--noprofile --blacklist=/sys/class/hidraw/` after firejail.
+But thanks to a [hint](https://wiki.archlinux.org/index.php/Gamepad#Using_hid-nintendo_with_Steam_Games) on the Arch Linux wiki, I was able to get the controller working without too much trouble by adding `--noprofile --blacklist=/sys/class/hidraw/` after firejail.
 
 The full command (with gamemoderun) is:
 
@@ -194,6 +194,9 @@ See included file in this folder. For best portability and to avoid copyright is
 1. Open it in vi or your favorite text editor. Review the file path and if you used a different path during the install, then update the WINEPREFIX path accordingly.
 
 2. Change the desktop file to give it execute permissions. You can either do this by right-clicking it from your file mananger and choosing properties. Or from the terminal using: `chmod a+x ~/Desktop/*.desktop`
+
+
+
 
 
 ## Risen 2 Unofficial Patch by Baltram
