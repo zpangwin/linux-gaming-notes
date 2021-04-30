@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # change to wherever you prefer to download code
-cd ~/Downloads
+BASE_DIR="$HOME/Downloads/Gaming/Code"
+mkdir -p "${BASE_DIR}"
+cd "${BASE_DIR}"
 
 # if you want to just use a precompiled version that's fine too:
 #   tar.gz: https://github.com/flightlessmango/MangoHud/releases
