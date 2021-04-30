@@ -109,4 +109,6 @@ tested on both Linux Mint 19.3 and LMDE 4. Nov 2020
 
 *Note 2: Proton 5.13-2 didn't work for me. Use Proton-5.11-GE-3-MF or read their rel notes to find one mentioning this game as working. At the time of writing, the newest Proton-GE release was [Proton-5.21-GE-1](https://github.com/GloriousEggroll/proton-ge-custom/releases/tag/5.21-GE-1), which specifically notes that "Darksiders Warmastered Edition intro+cutscenes broken currently".*
 
+*Note 3 / Update to Note 2: I was reading through releases notes for another issue and noticed that this is still an issue with the latest proton as of 2021-Apr-30: [Proton-6.5-GE-2](https://github.com/GloriousEggroll/proton-ge-custom/releases/tag/6.5-GE-2) which does have some media foundation fixes, still has this note: "Darksiders Warmastered Edition still doesn't work". At this time, I would still recommend Proton-5.11-GE-3-MF but since MF fixes appear to be getting actively worked on, I would also recommend reading the release notes for any newer versions of Proton GE that come out after Apr 30 to see if they note fixes for DS:WE.
+
 tested on both Linux Mint 19.3 and LMDE 4. Nov 2020
