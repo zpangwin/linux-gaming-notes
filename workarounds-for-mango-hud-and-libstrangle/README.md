@@ -2,7 +2,7 @@
 
 ## Current status
 
-I was able to get libstrangle working with `Proton-5.21-GE-1` and the launch option `ENABLE_VK_LAYER_TORKEL104_libstrangle=1 STRANGLE_FPS=6 %command%` (FPS is very low here beause I was trying to slow down a very cheap, very fast-paced mini game... and also because it happens to be easier to confirm when it is working).
+I was able to get libstrangle working with `Proton-5.21-GE-1` and the launch option `ENABLE_VK_LAYER_TORKEL104_libstrangle=1 STRANGLE_FPS=6 %command%`. FPS is very low here - only 6 frames per second. This is for 2 reasons: first, when you don't have an overlay displaying the actual FPS on top of the game, an extremely low FPS will be easier to confirm a change with. Second, in my particular scenario I was intentionally trying to slow the game's speed down to somewhat counter a very fast, very cheap AI in a mini game.
 
 I have not able to get MangoHud working (yet) beyond seeing it appear when I do the vkcube demo. Every time I launched it from steam, nothing would happen (game would start but no MangoHud displayed). Trying from wine, I was seeing some errors about the so files. It could have been some incompatibility with Proton GE or something else on my end; I didn't test it out under either the latest Proton 5.13-4 or under older pre-5.23 versions of Proton or Proton GE; I may investigate some more later as the demo suggests the issue is not with my hardware nor with my os/system but more likely my proton/wine setup.
 
