@@ -25,7 +25,7 @@ if [[ ! -f /usr/include/gnu/stubs-32.h ]]; then
 	#
 	if [[ -f /usr/bin/dnf ]]; then
 		echo 'Installing 32-bit build dependencies (for libstrangle) ...';
-		sudo dnf install -y glibc-devel.x86_64;
+		sudo dnf install -y glibc-devel.i686 glibc-devel.x86_64;
 
 	elif [[ -f /usr/bin/apt-get ]]; then
 		echo 'Installing 32-bit build dependencies (for libstrangle) ...';
