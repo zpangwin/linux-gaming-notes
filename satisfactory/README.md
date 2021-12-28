@@ -58,7 +58,7 @@ I know, you're probably thinking that it's a pain in the ass to move everything 
 13. Rename the current Satisfactory folder: `mv Satisfactory Satisfactory-bak`
 14. Create a new folder and apply the casefold attribuute: `mkdir Satisfactory; chattr +F Satisfactory;`
 15. Move all the contents back under the folder: `mv -t Satisfactory Satisfactory-bak/*`
-16. Confirm it works: `cd Satisfactory; echo 'TEST' > TEST; sed -i 's/TEST/PASS/g' test; cat Teste || echo FAIL; rm TEST`
+16. Confirm it works: `cd Satisfactory; echo 'TEST' > TEST; sed -i 's/TEST/PASS/g' test; cat Test || echo FAIL; rm TEST`
 17. All done with casefold setup, you can safely close the terminal.
 
 
