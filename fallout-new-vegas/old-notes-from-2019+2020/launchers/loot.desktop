@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Type=Application
+Name=LOOT
+Icon=/gaming/RawMods/LOOT/icons/icon.png
+Exec=/gaming/RawMods/LOOT/loot_extracted/loot_0.14.5-61-g3a356cb_master/LOOT
+Categories=Game

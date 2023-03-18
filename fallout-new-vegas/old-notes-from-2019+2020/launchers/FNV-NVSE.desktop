@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Type=Application
+Name=FNV-NVSE
+Icon=steam_icon_22380
+Exec=/usr/bin/env WINEPREFIX="/gaming/lutris/winesteam/prefix64" "/usr/bin/wine" start /d"C:/Program Files (x86)/Steam/steamapps/common/Fallout New Vegas/" "nvse_loader.exe"
+Categories=Game

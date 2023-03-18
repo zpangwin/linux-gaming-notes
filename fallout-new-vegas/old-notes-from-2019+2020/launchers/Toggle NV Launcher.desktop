@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Toggle NV Launcher
+Exec=/home/user/Scripts/gaming/bethesda/toggle-NV-launcher.sh
+Comment=
+Terminal=true
+Icon=media-playlist-repeat-rtl-symbolic
+Type=Application

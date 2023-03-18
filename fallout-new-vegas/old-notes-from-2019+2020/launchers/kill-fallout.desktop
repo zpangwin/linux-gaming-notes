@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Type=Application
+Name=Kill Fallout
+Icon=/home/user/Pictures/photo-hacks/fallout/kill-fallout.png
+Exec=/home/user/Scripts/gaming/bethesda/kill-fallout.sh
+Categories=Game

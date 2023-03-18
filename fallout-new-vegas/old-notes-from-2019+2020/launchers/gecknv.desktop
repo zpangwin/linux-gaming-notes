@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Type=Application
+Name=NV-GECK
+Icon=/gaming/lutris/custom-icons/utils/Icon_geck.png
+Exec=/usr/bin/env WINEPREFIX="/gaming/lutris/xedit" "/usr/bin/wine" start /d"C:/SteamGames/steamapps/common/Fallout New Vegas" "Geck.exe"
+Categories=Game
+

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Report NV Launcher
+Exec=/home/user/Scripts/gaming/bethesda/report-NV-launcher.sh
+Comment=
+Terminal=true
+Icon=dialog-information-symbolic
+Type=Application

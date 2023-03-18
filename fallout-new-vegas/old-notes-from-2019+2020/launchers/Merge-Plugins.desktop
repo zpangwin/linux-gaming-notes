@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Type=Application
+Name=Merge-Plugins
+Icon=/gaming/lutris/bethesda/drive_c/icons/utils/merge-plugins.png
+Exec=/usr/bin/env WINEPREFIX="/gaming/lutris/xedit" "/home/user/.local/share/lutris/runners/wine/3.0-i386/bin/wine" "C:/merge-plugins/MergePlugins.exe"
+Categories=Game
+

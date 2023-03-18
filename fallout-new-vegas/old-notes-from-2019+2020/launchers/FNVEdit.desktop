@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Type=Application
+Name=FNVEdit
+Icon=/gaming/lutris/bethesda/drive_c/icons/utils/f03edit-black.png
+Exec=/usr/bin/env WINEPREFIX="/gaming/lutris/xedit" "/home/user/.local/share/lutris/runners/wine/3.0-i386/bin/wine" "C:/SteamGames/steamapps/common/Fallout New Vegas/FNVEdit.exe"
+Categories=Game
