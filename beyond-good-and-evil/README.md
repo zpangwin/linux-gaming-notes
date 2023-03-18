@@ -84,16 +84,16 @@ I was using Lutris as a launcher but since I prefer to install the game using th
 
 1\. Obviously, have wine, winetricks, and lutris installed.
 
-2\. Decide where you want the wine container (WINEPREFIX) to live. For me, this was: `/media/f/lutris/games/beyond-good-and-evil` - *note: do NOT actually create this folder, wine is picky and will want to do that when we set it up. You just want to pick the parent folder and decide on a name.*
+2\. Decide where you want the wine container (WINEPREFIX) to live. For me, this was: `/gaming/lutris/games/beyond-good-and-evil` - *note: do NOT actually create this folder, wine is picky and will want to do that when we set it up. You just want to pick the parent folder and decide on a name.*
 
 3\. Run the following command to create the WINEPREFIX (replacing my folder/name if you want):
 
     # setup 64-bit wine prefix. could probably use 32-bit but it shouldn't matter
-    env WINEPREFIX="/media/f/lutris/games/beyond-good-and-evil" WINEARCH=win64 wine wineboot;
+    env WINEPREFIX="/gaming/lutris/games/beyond-good-and-evil" WINEARCH=win64 wine wineboot;
     
     # use winetricks to setup basic depends. these might not all be needed (based of lutris scripts)
     # ignore any warnings, including the ones about 32-bit stuff on 64-bit prefixes.
-    env WINEPREFIX="/media/f/lutris/games/beyond-good-and-evil" WINEARCH=win64 winetricks d3dx9 arial d3dcompiler_47;
+    env WINEPREFIX="/gaming/lutris/games/beyond-good-and-evil" WINEARCH=win64 winetricks d3dx9 arial d3dcompiler_47;
      
     # leave terminal open; you'll probably use it to run a few more commands later
 
@@ -102,7 +102,7 @@ I was using Lutris as a launcher but since I prefer to install the game using th
 
 You can set the path in Lutris and launch there, then update it to the installed exe path afterwards. But I find its just as easy to run it from the terminal initially and if you run into problems, you might have some output to give you a clue.
 
-    cd "/media/f/lutris/games/beyond-good-and-evil";
+    cd "/gaming/lutris/games/beyond-good-and-evil";
      
     # copy installer (assumes you downloaded offline one from gog)
     mkdir ./drive_c/temp;
@@ -135,7 +135,7 @@ The settings for "HW Vertex Processing" and "Autogen mipmap" are consistently me
 
 It's up to you which of these you want to mess with but I would recommend to at least disable the two main culprits unless you wish to spend a lot of time testing.
 
-    cd "/media/f/lutris/games/beyond-good-and-evil";
+    cd "/gaming/lutris/games/beyond-good-and-evil";
      
     # run setup app
     WINEPREFIX="$(pwd)" wine "C:/GOG Games/Beyond Good and Evil/SettingsApplication.exe";
@@ -196,7 +196,7 @@ I generally skip ENB mods on Linux but if you are using one then you'll need to 
 
 Finally, run BGEResolutionSettings.exe and choose your resolution and refresh rate.
 
-    cd "/media/f/lutris/games/beyond-good-and-evil";
+    cd "/gaming/lutris/games/beyond-good-and-evil";
      
     # run setup app
     WINEPREFIX="$(pwd)" wine "C:/GOG Games/Beyond Good and Evil/BGEResolutionSettings.exe";
@@ -235,7 +235,7 @@ create a text file named `Beyond Good and Evil.desktop` and add the following:
     Comment=Play this in wine
     # note you should use absolute paths with Exec for best results
     # especially if you will be placing this under /usr/share/applications
-    Exec=/usr/bin/env WINEPREFIX="/media/f/lutris/games/beyond-good-and-evil" /usr/bin/wine start /D"C:/GOG Games/Beyond Good and Evil" BGE.exe
+    Exec=/usr/bin/env WINEPREFIX="/gaming/lutris/games/beyond-good-and-evil" /usr/bin/wine start /D"C:/GOG Games/Beyond Good and Evil" BGE.exe
     # Icon will also take an image path or you can put it one in
     # ~/.local/share/pixmaps or /usr/share/pixmaps and refer to it by name
     Icon=steam_icon_15130

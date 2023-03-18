@@ -58,7 +58,7 @@ terminal info:
 I retested these steps after cleaning them up and they still worked for me
 
 
-    cd /media/f/wine/games
+    cd /gaming/wine/games
     PFXD="$PWD/gog-risen-2"
      
     env WINEPREFIX="$PFXD" WINEARCH=win32 wine wineboot
@@ -115,7 +115,7 @@ In Risen 2, even if your controller is working fine normally, you will need to e
 
 1. connect controller (wired)/turn it on (wireless)
 2. If using Fedora, xbox controllers are supported automatically via the kernel xpad module and should "just work" with zero setup needed. If using Debian-based distros, you may need to install the `xboxdrv` package first.
-3. Optional: Test that your controller is working at the system-level. I find that using the controller in steam's big picture mode is a pretty quick and easy way to check this. Alternately, you can use the "Test" tab on wine's controller dialog: `WINEPREFIX="/media/f/wine/games/gog-risen-2" wine control joy.cpl`
+3. Optional: Test that your controller is working at the system-level. I find that using the controller in steam's big picture mode is a pretty quick and easy way to check this. Alternately, you can use the "Test" tab on wine's controller dialog: `WINEPREFIX="/gaming/wine/games/gog-risen-2" wine control joy.cpl`
 4. Start the game and get to main menu
 5. Using keyboard: Option > Gameplay > 2nd-to-last option > Yes > E to Apply.
 
@@ -130,7 +130,7 @@ If you get weird vertical sensitivity issues, take a look [here](https://steamco
 If you don't want to listen to the logo/splash screen videos (Deep Silver logo, Ubi logo, and PB logo) - which in my setup only play audio anyway, you can go into the videos folder and rename or delete them.
 
     # from game install dir
-    cd /media/f/wine/games/gog-risen-2/drive_c/GOG/Risen2
+    cd /gaming/wine/games/gog-risen-2/drive_c/GOG/Risen2
      
     # go to videos subfolder
     cd data/extern/videos
@@ -149,7 +149,7 @@ Ubuntu/Mint/etc users probably need to find a PPA or else just install manually 
 
 once you have it installed you can launch with something like:
 
-    /usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/media/f/wine/games/gog-risen-2" "/usr/bin/gamemoderun" "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe"
+    /usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/gaming/wine/games/gog-risen-2" "/usr/bin/gamemoderun" "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe"
 
 
 ## Running in a security sandbox
@@ -166,7 +166,7 @@ First, make sure you have firejail installed:
 
 Initially, I just tried to take my gamemoderun setup and pass it through to firejail like so:
 
-    /usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/media/f/wine/games/gog-risen-2" "/usr/bin/gamemoderun" "/usr/bin/firejail" "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe"
+    /usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/gaming/wine/games/gog-risen-2" "/usr/bin/gamemoderun" "/usr/bin/firejail" "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe"
 
 On Fedora 33, the above almost worked. It came up with the game. Sound worked. Keyboard worked. But I didn't have any response from my controller (xbox 360).
 
@@ -174,7 +174,7 @@ But thanks to a [hint](https://wiki.archlinux.org/index.php/Gamepad#Using_hid-ni
 
 The full command (with gamemoderun) is:
 
-    /usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/media/f/wine/games/gog-risen-2" "/usr/bin/gamemoderun" "/usr/bin/firejail" --noprofile --blacklist=/sys/class/hidraw/ "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe
+    /usr/bin/env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/gaming/wine/games/gog-risen-2" "/usr/bin/gamemoderun" "/usr/bin/firejail" --noprofile --blacklist=/sys/class/hidraw/ "/usr/bin/wine" start /D"C:/GOG/Risen2/system" "Risen.exe
 
 I was able to load my previous save, with sound and controller no problem. I did have to go back in the menus and re-enable my controller but that might have been because I launched it without controller support on the first attempt.
 
@@ -280,7 +280,7 @@ Considering the mod does not contain any copyrighted game assets, is small, can 
 
 For those that get [a feeling of impending doom whenever they need to use the "tar" command](https://xkcd.com/1168/), you can just run this to extract:
 
-    cd /media/f/wine/games/gog-risen-2/drive_c/GOG/Risen2
+    cd /gaming/wine/games/gog-risen-2/drive_c/GOG/Risen2
      
     # download
     wget https://github.com/zpangwin/linux-gaming-notes/raw/master/risen2/manual-patch-install.tar.xz
@@ -289,7 +289,7 @@ For those that get [a feeling of impending doom whenever they need to use the "t
     tar --extract --file="manual-patch-install.tar.xz"
      
     # then install patch files
-    cp -a -t /media/f/wine/games/gog-risen-2/drive_c/GOG/Risen2/data ./manual-patch-install/com*
+    cp -a -t /gaming/wine/games/gog-risen-2/drive_c/GOG/Risen2/data ./manual-patch-install/com*
 
 
 
@@ -307,19 +307,19 @@ Basically you will run the installer for this under wine and have it download an
 2\. Run the installer under wine
 
     # install the mod manager
-    cp -t "/media/f/wine/games/gog-risen-2/drive_c/temp" "$HOME/Downloads/R2MDS_OnlineDB_2_0_0_0.exe"
-    env WINEDEBUG="fixme-all" WINEPREFIX="/media/f/wine/games/gog-risen-2" wine start /D"C:/temp" "R2MDS_OnlineDB_2_0_0_0.exe"
+    cp -t "/gaming/wine/games/gog-risen-2/drive_c/temp" "$HOME/Downloads/R2MDS_OnlineDB_2_0_0_0.exe"
+    env WINEDEBUG="fixme-all" WINEPREFIX="/gaming/wine/games/gog-risen-2" wine start /D"C:/temp" "R2MDS_OnlineDB_2_0_0_0.exe"
 
 3\. After the install completes, run the mod manager:
 
     # run the mod manager for first time - then see notes below
-    env WINEDEBUG="fixme-all" WINEPREFIX="/media/f/wine/games/gog-risen-2" wine start /D"C:/Program Files/Risen2MDS" "r2mds.exe"
+    env WINEDEBUG="fixme-all" WINEPREFIX="/gaming/wine/games/gog-risen-2" wine start /D"C:/Program Files/Risen2MDS" "r2mds.exe"
 
 4\. It will prompt you for the game exe. For me, I wasn't able to select `C:\GOG\Risen2\system\Risen.exe` but I could select `C:\GOG\Risen2\Launch Risen 2 - Dark Waters.lnk` to get past this dialog.
 
 5\. Now close out of the app and open its ini file `<wine_prefix>/drive_c/Program Files/Risen2MDS/mds.ini` in a text editor or go back to a terminal and edit it in sed. Change the value of Patch to be the Windows path to the game exe.
 
-    cd "/media/f/wine/games/gog-risen-2/drive_c/Program Files/Risen2MDS"
+    cd "/gaming/wine/games/gog-risen-2/drive_c/Program Files/Risen2MDS"
     sed -E 's/^(Patch)=.*$/\1=C:\\GOG\\Risen2\\system\\Risen.exe/g' mds.ini
     grep Patch= mds.ini
       Patch=C:\GOG\Risen2\system\Risen.exe
