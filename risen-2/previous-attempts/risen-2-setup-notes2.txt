@@ -1,0 +1,267 @@
+=================================================================================
+steam version
+
+2021-Mar-04 @ 2125:
+rm /gaming/steam/steamapps/compatdata/40390
+relaunch game to recreate fresh compatdata/40390
+
+# find you proton folder and set a variable for the wine64 under it
+PW64='/gaming/steam/steamapps/common/Proton 5.13/dist/bin/wine64'
+
+# set pfx dir
+PFXD='/gaming/steam/steamapps/compatdata/40390/pfx'
+
+$ "$PW64" --version
+wine-5.13-789-gc14054e6923
+
+cd "$PFXD"
+env WINEARCH=win64 WINEPREFIX="$PFXD" winetricks d3dx9 win7 d3dcompiler_43 corefonts gdiplus vcrun6 d3dx9_43
+
+-> no dice. use gog version
+
+=================================================================================
+2021-Mar-04 @ 2100:
+
+cd /gaming/lutris/games
+mkwine32 gog-risen-2-retest
+# if you get prompted about installing mono, agree and wait it out (takes awhile)
+
+cd gog-risen-2-retest
+WINE_PREFIX_DIR="$PWD"
+
+wt vcrun2005 d3dx9 physx win7 d3dcompiler_43 corefonts gdiplus vcrun6 d3dx9_43
+
+# copy all game installers to C:\temp\risen2
+
+# install base game - I installed to 'C:\GOG\Risen2'
+# choose Exit when done (dont click launch button)
+env WINEPREFIX="$WINE_PREFIX_DIR" wine start /D"C:/temp/risen2" "setup_risen_2_-_dark_waters_1.0_(18732).exe"
+
+# install dlc
+# choose Exit when done (dont click launch button)
+env WINEPREFIX="$WINE_PREFIX_DIR" wine start /D"C:/temp/risen2" "setup_risen_2_gold_edition_1.0_(18732).exe"
+
+# run game
+env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="$WINE_PREFIX_DIR" wine start /D"C:/GOG/Risen2/system" "Risen.exe"
+
+-> worked fine
+
+To enable controller:
+From main menu of game > Option > Gameplay > 2nd-to-last option > Yes > E to Apply.
+
+=================================================================================
+2021-Mar-04 @ 1940:
+
+wt d3dcompiler_43
+
+wt corefonts gdiplus vcrun6 d3dx9_43
+
+env WINEDEBUG="fixme-all" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="$WINE_PREFIX_DIR" wine start /D"C:/GOG/Risen2/system" "Risen.exe"
+
+-> NO MORE ERROR ! Game launched without crashing!
+-> However, I am seeing that the intro video doesn't play picture (black screen
+but you hear audio). I do see picture when the main menu appears.
+-> this ONLY appears to the splash/logo video, NOT to the game's story intro video which works fine.
+
+=================================================================================
+2021-Mar-04 @ 1820:
+
+https://forum.winehq.org/viewtopic.php?t=9397
+
+    fixme:gameux:GameExplorerImpl_VerifyAccess stub 
+
+Try setting gameux.dll to disabled in winecfg.
+
+env WINEDLLOVERRIDES="gameux=" WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="$WINE_PREFIX_DIR" wine start /D"C:/GOG/Risen2/system" "Risen.exe"
+
+00fc:err:ole:apartment_add_dll couldn't load in-process dll L"C:\\windows\\system32\\gameux.dll"
+00fc:err:ole:com_get_class_object no class object {9a5ea990-3034-4d6f-9128-01f3c61022bc} could be created for context 0x1
+
+-> from stuff online it look like I need to ignore the gameux message because that
+one is only prefixed with 'fixme:'
+
+sure enough, looking closer at output AFTER this line, I see:
+
+00fc:err:winediag:MIDIMAP_drvOpen No software synthesizer midi port found, Midi sound output probably won't work.
+
+
+https://www.playonlinux.com/en/topic-16151-Sound_echoing.html
+-> from 2018, mentions dsound. not sure if that is current or if should be using faudio...
+
+
+
+=================================================================================
+2021-Mar-04 @ 1715:
+
+cd /gaming/lutris/games/gog-risen-2/drive_c
+ff 'PhysXLoader.dll'
+./Program Files/NVIDIA Corporation/Installer2/Display.PhysX.{34A17E40-97F8-4365-AF15-E8E97DC331DB}/files/Common/PhysXLoader.dll
+./Program Files/NVIDIA Corporation/PhysX/Common/PhysXLoader.dll
+
+cp -a -t windows/system32/ './Program Files/NVIDIA Corporation/PhysX/Common/PhysXLoader.dll'
+cp -a -t GOG/Risen2/system/ './Program Files/NVIDIA Corporation/PhysX/Common/PhysXLoader.dll'
+
+WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/gaming/lutris/games/gog-risen-2" wine "c:/GOG/Risen2/system/Risen.exe"
+
+-> no change
+
+env WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="/gaming/lutris/games/gog-risen-2" wine start /D"C:/GOG/Risen2/system" "Risen.exe"
+
+-> no change
+
+=================================================================================
+2021-Mar-04 @ 1700:
+
+cd /gaming/lutris/games/gog-risen-2/drive_c/GOG/Risen2/data/ini
+cp -a ConfigDefault.xml ConfigDefault.xml.orig
+
+edited ConfigDefault.xml
+
+    <Window
+			AdapterNumber="0"
+			RefreshRate="0"
+		>
+	to
+    <Window
+			AdapterNumber="1"
+			RefreshRate="60"
+		>
+
+		and
+		<Physics
+			Disabled="false"
+		>
+		to
+		<Physics
+			Disabled="true"
+		>
+
+
+WINE_PREFIX_DIR="/gaming/lutris/games/gog-risen-2"
+WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="$WINE_PREFIX_DIR" wine "c:/GOG/Risen2/system/Risen.exe"
+
+-> no change
+
+
+=================================================================================
+2021-Mar-04 @ 1545:
+
+from old notes:
+d3dx9 physx win7
+physx d3dcompiler_47 vcrun2005 win7
+vcrun2005 d3dx9 physx win7
+
+refresher:
+$ agrep mkwine
+alias mkwine32='createNewWine32Prefix'
+alias mkwine32pfx='createNewWine32Prefix'
+alias mkwine64='createNewWine64Prefix'
+
+$ agrep wine|grep trick
+alias wt='winetricksHere'
+
+confirmed:
+lutris system settings still had: WINE_LARGE_ADDRESS_AWARE=1
+
+this attempt:
+
+cd /gaming/lutris/games
+mkwine32 gog-risen-2
+-> got prompted about installing mono. agreed
+
+cd gog-risen-2
+wt vcrun2005 d3dx9 physx win7
+
+from lutris, ran
+Exec=/gaming/lutris/games/gog-risen-2/drive_c/temp/risen2/setup_risen_2_-_dark_waters_1.0_(18732).exe
+WorkingDir=/gaming/lutris/games/gog-risen-2/drive_c/temp/risen2
+WinePrefix=/gaming/lutris/games/gog-risen-2
+PrefixArch=Auto
+
+Runner Options > Wine Version=System (6.3 Staging)
+-> everything else defaults
+
+cd /gaming/lutris/games/gog-risen-2/drive_c/users
+mv $USER wineuser
+ln -s wineuser $USER
+
+# setup symlinks and copy over windows settings and saves for game
+cd wineuser
+
+mkdir Games
+cp -r -t Games /home/user/Download/game-backups/dropbox/Risen2
+mv 'Saved Games' 'Saved Games.bak'
+ln -s Games 'Saved Games'
+
+mkdir Documents
+rm 'My Documents'
+ln -s Documents 'My Documents'
+
+cd Documents
+ln -s ../Games 'My Games'
+ln -s ../Games 'SavedGames'
+
+# mounted old windows 'C:' from dual-boot to /windowos
+# now copy app settings from there to wine app settings dir
+cd "../Local Settings/Application Data"
+cp -r -t ./ "/media/windowsos/Users/windohsuser/AppData/Local/Risen2"
+up2
+
+from lutris, changed and ran
+Exec=/gaming/lutris/games/gog-risen-2/drive_c/temp/risen2/dlc-installers/setup_risen_2_gold_edition_1.0_(18732).exe
+WorkingDir=/gaming/lutris/games/gog-risen-2/drive_c/temp/risen2/dlc-installers
+
+from lutris, changed and ran
+Exec=/gaming/lutris/games/gog-risen-2/drive_c/GOG/Risen2/system/Risen.exe
+WorkingDir=/gaming/lutris/games/gog-risen-2/drive_c/GOG/Risen2/system
+
+-> game launched, fullscreen became black but then got a crash
+
+dump files created at:
+./users/wineuser/Local Settings/Application Data/Risen2/Dumps/Risen2-0-FEDORATEST-20210304-165850.dmp
+./users/wineuser/Local Settings/Application Data/Risen2/Dumps/Risen2-0-FEDORATEST-20210304-165850.log
+
+$ cat Risen2-0-FEDORATEST-20210304-165850.log 
+========================================================================================================================
+===                                              GENOME CRASH LOG
+========================================================================================================================
+
+Exception Code ... EXCEPTION_ACCESS_VIOLATION
+Description ...... The thread attempts to read from or write to a virtual address for which it does not have access.
+
+Executable ....... C:\GOG\Risen2\system\Risen.exe
+Version .......... 1.0 (Build 0) [Change 0]
+
+WINE_PREFIX_DIR="/gaming/lutris/games/gog-risen-2"
+WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="$WINE_PREFIX_DIR" wine "c:/GOG/Risen2/system/Risen.exe"
+
+same thing as from lutris
+also see the following error on terminal:
+
+0024:fixme:gameux:GameExplorerImpl_VerifyAccess (129FCC88, L"c:\\GOG\\Risen2\\system\\Risen.exe", 01BBF7EC)
+-------------------------------------------------------------------------
+system:
+
+$ inxi -SG
+System:
+  Host: fedoratest.local Kernel: 5.10.19-200.fc33.x86_64 x86_64 bits: 64 
+  Desktop: Cinnamon 4.8.6 Distro: Fedora release 33 (Thirty Three) 
+Graphics:
+  Device-1: NVIDIA GM204 [GeForce GTX 970] driver: nvidia v: 460.32.03 
+  Display: x11 server: Fedora Project X.org 1.20.10 driver: nvidia 
+  resolution: 1920x1080~60Hz 
+  OpenGL: renderer: GeForce GTX 970/PCIe/SSE2 v: 4.6.0 NVIDIA 460.32.03 
+
+$ wine --version
+wine-6.3 (Staging)
+
+$ winetricks --version
+20210206-next - sha256sum: 872a62040e7518ab9d577dc78d3a13a55341e310e3926e6ce9d5a77e3ef6fcc9
+
+$ lutris --version
+2021-03-04 15:27:25,763: Your version of python-magic is too old.
+-------------------------------------------------------------------------
+
+=================================================================================
+=================================================================================
+=================================================================================

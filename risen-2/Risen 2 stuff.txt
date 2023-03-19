@@ -1,0 +1,836 @@
+Risen 2 stuff
+
+================================================================================
+Risen 2: Dark Waters | Speedrun | Any% 1:01:33 [WR]
+https://www.youtube.com/watch?v=MIpjnU0zIM0
+
+Risen 2: Dark Waters | Speedrun | Any% 1:07:35
+https://www.youtube.com/watch?v=19hrje2prKQ
+
+Fastest Speedrun of Risen 2
+https://www.youtube.com/watch?v=Oxj0Fds9WI0
+================================================================================
+Anyone else prefers the "the twins" to the "dueling pistol"?
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62730819
+
+I'm still using the Twins that I nabbed off Sebastiano before leaving Caldera for the first time. 
+
+> How do you get the twins off Sebastino on the starting Island?
+
+
+>> To get The Twins before leaving Caldera, you have to 1) convince the ship guard to let you on board, and 2) have learned how to sneak from Largo. Then you can sneak into the captain's room of the ship and steal The Twins off Sebastiano's desk while he's sleeping. There's only one dialogue option that will let you onto the ship, and I don't remember exactly what it is, so you'd do well to save before talking to the guard for the first time to figure it out.
+
+::me::
+-> tried to figure this out. Went there at night and never got prompted for coming onboard and Sebastino never went to sleep. Possibly there are some other conditions to trigger it, it was removed during a patch/dlc update (perhaps bc dlc gives you the captain's pistol instead?), or doesn't work when using the unofficial patch. this on the latest gog version with dlc installed.
+
+maybe try when you are supposed to be rescueing patty on the beach? i tried after and found that after the cutscene where you wake up the next morning, Sebastino is in a meeting with Carlos. I think I had previously tried investigating the ship during this time and found nothing. It also does not let you sleep in the beds to progress time until after you've spoken with Carlos/Sebastino. After talking to them, Sebastino walks out the ship. At this point, I was not able to get him to go to bed: tried progressing time to evening and then to night, neither worked. I also tried night then waiting a bit (didn't time it, was maybe 2-3 minutes though?). No dice. Or rather no pistols.
+
+-----------
+
+When you first start the game, get your gear and talk to Carlos. Buy Sneak skill from Largos. Make sure sword is equipped (not drawn, just equipped) and talk to Juan so he'll open the gate. Then BEFORE RESCUING PATTY, go down the stairs to the LEFT and head to the SHIP. The bosun will challenge you and you need to get the answers right to be let onboard.
+The correct sequence is:
+	1. To the ship, of course
+	2. I want to see the captain
+	3. I have an urgent message from the Commandant
+	4. Carlos
+Go up to the left and on the deck with an open door start sneaking. You'll find the gun on a barrel to the left of the writing desk.
+
+================================================================================
+https://risen.fandom.com/wiki/Risen_2_Potions
+
+Permanent Potions:
+
+Swordthorn Essence: Piercing, Slashing, & Throwing +2
+
+	1x Swordthorn
+	1x Choking Vine
+	1x Panther Paw
+
+Fool's Juice: Silver Tongue, Dirty Tricks, Thievery +2
+
+	1x Jester's Cap
+	1x Black Oleander
+	1x Monkey Skull
+
+Sharpeye Paste: Muskets, Pistols, & Shotguns +2
+
+	1x Sharpeye
+	1x Powdered Poppy Seed
+	1x Acid Gland
+
+Leather Oil: Bladeproof, Bulletproof, Intimidate +2
+
+	No info
+
+Graveroot Extract: Black Magic, Death Cult, Ritual +2
+
+	1x Graveroot
+	1x Spirit Lily
+	1x Bone
+
+
+
+================================================================================
+Gold farming tips (possible spoilers)
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62679682
+
+1. <invalid>
+
+2. Barney lets you practice shooting at 1st, but then opens "shooting the fleet" competition after a few rounds, where you can win 500g for a 50g entry fee. after you win, play another practice round (10g cost) and purposely loose it, and you'll get the option to do the competition again. rinse and repeat. (this is probably considered a glitch and may be fixed in future patch if there's any coming.)
+
+I know im not too far in the game so my spoiler warning isn't really valid, but i hope others post tips here as well on spots and events where you can rack a lot of gold.
+--------
+Um hate to point this out...
+neither of those games is infinite
+
+after a while both of the ones that give them will say they will no longer play for money.
+-----------
+for op's second money making thing
+Seriously? He says right in the OP how to glitch the game to let you play it over and over.
+
+-> Tested (2021). These appear to have been patched. I temporarily removed the unofficial patch to rule that out but got the same result. The worse part is that this has been patched in a very dumb / user-unfriendly way: The user can still exploit the game menus by paying 10g to play the shoot the targets game and losing. They will still get the option to pay an additioanl 50g to play "shoot the fleet". But if you win, now you only get paid the 10g prize from the first game (e.g. you get -10g -50g +10g => a net loss of 50g).
+
+
+================================================================================
+Tweaking with ConfigDefault.xml ?
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62660549
+
+But what bothers me most is the vegetation increasing and decreasing size as you get closer. That's very disturbing. Any one found a good way to get rid of this?
+
+---------
+
+some stuff I think I've found out:
+
+changing viewdistance does not do anything as the number references the quality setting (off, low, medium, high, ultra)
+in general there seem to be many default "ultra" settings, but ingame you can only chose "high" for most.
+
+the config user file can be found under: C:\Users\NAME\AppData\Local\Risen2\Config
+however I can't seem to get any change no matter if I delete it or what I change. I set the "view range from 10000 to 16000 and even 50000 and I can't make out a difference. what's bugging me most is actually not the vegetation but rather the "small object" popping. I'm standing 5 meter in front of a table and I barely see some stuff, while it is FULLY LOADED with lots of stuff when I stand right in front of it. objectcunning from 0.008 to 0.00008 didn't changed anything either so I'm at quite a lost here =/
+
+--------
+zUkUu:
+you have to tweak quite some stuff to make it somewhat acceptable. one thing you can't seem to address is the range when the LOD changes.
+
+anyway, here is my tweaked config:
+
+https://rapidshare.com/files/1127751312/ConfigDefault.xml
+goes to => \Steam\steamapps\common\risen 2\data\ini\ConfigDefault.xml
+
+
+https://rapidshare.com/files/843546085/ConfigUser.xml
+goes to => C:\Users\name\AppData\Local\Risen2\Config\ConfigUser.xml
+
+=> tried links, they are long dead
+
+-------------
+
+Something weird.
+
+By changing C:\Users\NAME\AppData\Local\Risen2\Config
+
+ViewRangeQuality="High" to "...=Ultra"
+
+The pop in is better, but there is a lot of scintilating trees in the background... And some of the bushes at close range pop in closer than in "High".
+================================================================================
+cheap way to get glory
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62693647
+
+if you attack someone in a town and kill them you don't actually kill them. you just knock em down and you get glory. you can go through an entire town doing this, no reprocussions. this isn't an exploit since you only get glory the first time you do this so i'm sure the programmers knew about this.
+
+They will be offended for a bit but and not talk to you but that wears off quickly. if they don't get back up immediately, click on them.
+
+================================================================================
+https://gamefaqs.gamespot.com/boards/622500-risen-2-dark-waters/63704759
+
+Temple Guardians... lulz.... one curse doll turns them into a punching bag XD
+
+----------------
+Guardians and leviathans are the only creatures in the game which pose any real threat to a Voodoo user. (I'll explain that below.) For such encounters, you have a few choices. Use a curse doll and the fight is basically over. Or use a shotgun from Tacarigua (750 gold purchase) or Maracai Bay (a couple drop from kills) as these all have two-second delays. Or you can distract them with the parrot, get a hit in, and repeat. Obviously if you have the option of using a follower as a distraction, things are much less difficult.
+
+Most of the remaining tough encounters - ghouls, cave bats, sunken ones, non-native humans, firebirds, termite warriors, gorillas, and even Mara - can be easily dispatched in the following manner: Kick, powerful attack, repeat. Sometimes you'll want to have a tiny delay between the powerful attack and its followup kick, because kicking too fast can result in the creature not staggering from it. This strategy by itself keeps the game from being a frustrating headache.
+
+Native humans are easily dealt with in this manner: Stay just out of melee range, wait for him to throw a spear, dodge (preferably to the right), run in and powerful attack while he's reloading a new spear, run away, repeat.
+
+Having the right tactics was a more satisfying choice, to me, than relying on guns which ultimately weren't all that powerful (one attack every 2.5 seconds assuming you don't have to kite mobs around) and cost money to use.
+
+I'll mention in closing that I found only one use for the summoned spirit, and that's on the Isle of the Dead. You don't get said spirit until you reach the end of the island, so the most efficient approach is to skip past most encounters until you can summon the spirit, and then clear the island with its help. I mention this because there are a few guardians and yes, it can take a while to deal with them without the help of a follower.
+
+-----------
+
+Nah, not true.
+
+Guardians have one VERY powerful weakness.
+
+Poor path finding.....
+
+You can have them chase you to key areas like elevations or stairs and such and then pelt them with pistol rounds. XD
+================================================================================
+Risen 2: Dark Waters
+https://megagames.com/cheats/risen-2-dark-waters?noradio=1
+
+spawn Jaguar (spawn a jaguar)
+spawn GiantCrab (spawn a giant crab)
+spawn TombSpider (spawn a tomb spider)
+
+
+Console commands...
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62702484
+
+Anywhere in game type in "pommes" quickly and it enables test mode, access console by pressing `
+
+All commands are case sensitive
+
+list - shows commands
+God
+Invisible
+give It_Gold x - give x amount of gold
+edit PC_Hero - Edit your character
+give It 1 - Give all items
+
+Using the editor, you are able to add skills that you would otherwise be unable to use (muskets / shotguns or voodoo.) Just make sure to save before you start playing around.
+
+Also, if you opt to give yourself everything, you can use the editor and check your inventory so you can select the items you want without having 1 of everything. Most everything is categorized (It_Map, It_Rif, It_ShG etc..) so they should be easy to find. New items will be on the list in alphabetical order, existing items will be in order obtained. Another option is to sell and buyback the item you are trying to locate, that will move it to the bottom of the item list.
+
+I did have a few times where updating a skill didn't take. I started hitting enter after changing the 0 to a 1 and when finished I entered "edit PC_Hero" again before closing the console.
+
+-------------
+just wanted to add -- i messed around with the console and found that
+
+teach Cunning 4 sets your cunning to 4
+teach Cunning 1 sets it back to 1
+
+I assume that teach Blades etc would do the same thing.
+
+you could use that to cheat -- or if you're like me and want to get rid of a skill and move the points from Cunning to Voodoo -- then that could be done....
+
+Note the capital C in Cunning...
+-----------------
+List of console commands
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62714857
+
+Anywhere in game type in "pommes" quickly and it enables test mode, access console by pressing `
+
+All commands are case sensitive
+
+list - shows commands
+God
+Invisible
+give It_Gold x - give x amount of gold
+edit PC_Hero - Edit your character
+give It 1 - Give all items
+
+Using the editor, you are able to add skills that you would otherwise be unable to use (muskets / shotguns or voodoo.) Just make sure to save before you start playing around.
+
+When editing skills, make sure to press enter after each skill you update. So after changing something from 0 to 1, press enter or it will reset.
+
+Decided to add some additional things... type "give" followed by the following
+
+All legendary items:
+
+It_Blue_BLA_Comb
+It_Blue_BLA_Mask
+It_Blue_BUL_Coin
+It_Blue_CUL_Bottle
+It_Blue_CUN_Boot
+It_Blue_DIR_Flask
+It_Blue_FIR_Pipe
+It_Blue_GUN_Ball
+It_Blue_INT_Head
+It_Blue_MAG_Rattle
+It_Blue_MUS_Gallow
+It_Blue_PIE_Dagger
+It_Blue_PIS_Powder
+It_Blue_RIT_Talisman
+It_Blue_SIL_Mirror
+It_Blue_SLA_Hook
+It_Blue_THI_Tabak
+It_Blue_THR_Wing
+It_Blue_TOU_Peg
+It_Blue_VOO_Skull
+It_Blue_XP_Book
+
+Plants with permanent stat increases:
+
+It_Pl_Perm_Blades
+It_Pl_Perm_Firearms
+It_Pl_Perm_Cunning
+It_Pl_Perm_Toughness
+It_Pl_Perm_Voodoo
+
+Best swords, pistol and musket
+
+It_Sla_Wavedancer
+It_Pie_King
+It_Pis_Silver
+It_Rif_Assault
+
+You can use the editor to look through your inventory and find the item name for anything. This works well for finding items you don't currently have. Just type give It 1, find the item name in the editor, write it down and reload, then give yourself just the item you want.
+----------
+Actualy its interesting you post this.
+
+Using console commands you can see the error the fool potion does.
+A few people posted how if you try to create it you get nothing.
+Interestingly enough the console command to give yourself the Potion does the same thing.
+
+*Spoilers follow*
+
+
+
+
+
+
+
+The potions for all 5 stats should be
+It_Po_Perm_Blades
+It_Po_Perm_Firearms
+It_Po_Perm_Cunning
+It_Po_Perm_Toughness
+It_Po_Perm_Voodoo
+
+The Plants give +1 while potions give +2
+
+And of course if you give yours self the one for cunning...the game says it gives it to you...but it wont show in your inventory.
+
+The Plant versions works though since they are components
+
+Also you dont want to give your self the best weapon items nor every item....as that will mess up the quests....as in you get only some of the Glory not all of it and you also may lock your self out of certain parts of the game.
+
+And you can also get stuck with items in your inventory that you cant get rid of....
+so be careful adding everything....or specifc items....as the game tells you...save often.
+
+I think some of the healing drinks are:
+It_Bo_Rum
+It_Bo_Grog
+It_Bo_BloodyMary
+It_Bo_PainKiller
+
+Though not sure as i am not looking at the game and am at work as I post this...
+Just wanted to help though with some stuff.
+---------------
+I just uploaded a semi-complete list to the FAQ's section, it contains most items as well as some quest items. I didn't bother with the legendary items, or most of the quest items to avoid people using those codes and not being able to remove the items they added.
+
+
+Also for those of you who don't know, using the command "take" followed by the same command for "give" will remove items from your inventory, this is useful when you have quest items that won't go away.
+
+
+Example:
+
+take It_Am_Earth will remove the Earth Amulet from your inventory.
+
+
+This command doesn't work on all items though, items like the Titan Harpoon can't be removed for some reason.
+-------------
+bartoni33 posted...
+I can't get "give it_Gold x" to work. Well it "works" but I get no gold. Says "0 items given (x times)" or somesuch but nothing is given to me. I can get God mode to work but not give gold.
+
+Many of the codes are case-sensitive, such with the gold command. Make sure you're capitalizing the "i" so it reads like this: "give It_Gold x" and it should work.
+
+================================================================================
+Revised item list 1
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62850789
+
+It_Bo_Grog
+It_Map_World
+It_Gold
+It_RockOil
+It_Dagger_Sacrifice
+It_Monkey
+It_Parrot
+It_Scepter_Skull
+It_TreasureMap_TAK_OBrian
+It_Torch
+It_Torch_Burning
+It_Bo_Rum
+It_Ammo_Bullet
+It_Rif_Double
+It_Lockpick
+It_Pie_Epee
+It_Hat_NPC_Stahlbart
+It_Bandana_NPC_Largo
+It_Rum
+It_Stew
+It_Meat_Fried
+It_Plant_Eat
+It_Mask_MAB_Ghost_04
+It_Mask_MAB_Ghost_03
+It_Mask_MAB_Ghost_02
+It_Mask_MAB_Ghost_01
+It_Idol_Shaganumbi
+It_Beer
+It_FakeLetter
+It_LowBoot_Largo
+It_Shirt_Largo
+It_Ear_Largo
+It_Bandana_Largo
+It_Hat_NPC_Morris
+It_Meat_Raw
+It_Ri_Inquisitor
+It_Ri_Greed
+It_Ri_Blade
+It_Am_Pirate
+It_Am_Luck
+It_TreasureMap_IOT_Valley
+It_Recipe_Po_Perm_Voodoo
+It_Recipe_Po_Blade
+It_Recipe_Ri_Jade
+It_Recipe_Ear_Feather
+It_Recipe_Am_Warrior
+It_Recipe_Am_Ancestor
+It_Am_Tiwa
+It_Am_Soul
+It_Am_Bone
+It_TreasureMap_MAB_Valley
+It_Ear_Warrior
+It_Sla_CaptainsLaw
+It_Wine_Sophia
+It_Pants_Studded
+It_GreatCoat_Leather
+It_Coat_Inq
+It_ShG_Thunder
+It_Recipe_Pie_Duel
+It_Blue_GUN_Ball
+It_Sla_Beheader
+It_Sla_LordlyScimitar
+It_Pie_Admiral
+It_Recipe_Sla_Captain
+It_Sla_Buccaneer
+It_Pie_Fencing
+It_Painkiller
+It_Ri_Deception
+It_Ri_Rogue
+It_Ear_Rogue
+It_Am_Thief
+It_Bandana_Red
+It_HighBoot_Normal
+It_Vest_Leather
+It_GreatCoat_Torn
+It_Coat_Leather
+It_Recipe_Pis_SawnOff
+It_ShG_Fire
+It_Pis_Double
+It_Recipe_Po_Perm_Blades
+It_Ri_Soul
+It_Recipe_Po_Intimdate
+It_Recipe_Ri_Soul
+It_Recipe_Ear_Bloodthorn
+It_Recipe_Am_Jade
+It_Recipe_Am_Hunter
+It_Ri_Thief
+It_Ri_Poison
+It_Ear_Jade
+It_Am_Ghost
+It_Blue_PIE_Dagger
+It_Ri_Ruby
+It_Pants_Leather
+It_Tricorn_Torn
+It_Bicorn_Torn
+It_Bandana_Black
+It_LowBoot_Polished
+It_HighBoot_Torn
+It_Vest_Torn
+It_Shirt_Leather
+It_Coat_Torn
+It_TreasureMap_SWC_Beach
+It_At_Tusk
+It_At_Teeth
+It_JawChisel
+It_SkinningKnife
+It_RitualKnife
+It_VoodooDoll
+It_Recipe_VoodooDoll_Curse
+It_Recipe_Ear_Jade
+It_Recipe_Ri_Bone
+It_Recipe_Am_Tribe
+It_Ear_Bloodthorn
+It_Am_Tribe
+It_Ri_Jade
+It_Ri_Iron
+It_Ri_Bone
+It_Am_Kiki
+It_Blue_CUL_Bottle
+It_Recipe_Po_Thief
+It_Recipe_Po_Silvertongue
+It_Recipe_Po_Perm_Cunning
+It_Recipe_Po_BlackMagic
+It_Am_Jade
+It_At_MonkeySkull
+It_Jade
+It_At_Heart
+It_At_Feather
+It_At_Eye
+It_At_Ear
+It_At_Bone
+It_Pl_Toughness
+It_Pl_Voodoo
+It_Pl_Cunning
+It_Pl_Blades
+It_Recipe_Shot_Fire
+It_ShG_Pirate
+It_Rif_Ship
+It_ShP_Mortar
+It_Pis_Twins
+It_Pis_Singlep
+It_Pie_Deathblow
+It_Pie_Pomp.
+It_Recipe_Pie_Epee
+It_Dagger_Medium
+It_Sla_Scimitar
+It_Pie_LongSword
+It_Pie_Officer
+It_Pie_Storm
+It_Sla_ExoticSabre
+It_Sla_Plankbreaker
+It_Sla_Mower
+It_Recipe_Sla_Scimitar
+It_Sla_PirateSabre
+It_Sla_Sabre
+It_Sla_Machete
+It_Sla_Cutlass
+It_Recipe_Bo_PainKiller
+It_Bo_PainKiller
+It_Bo_BloodyMary
+It_Recipe_Bo_Rum
+It_Recipe_Bo_Grog
+It_Blue_SIL_Mirror
+It_Salt
+It_Shovel
+It_Pickaxe
+It_Ri_Gold
+It_Ear_Skull
+It_Bandana_Striped
+It_Shoes_Torn
+It_LowBoot_Torn
+It_Shirt_Striped
+It_Shirt_Cloth
+It_ShP_Shredder
+It_ShP_Buckshot
+It_Dagger_Small
+It_Rif_Single
+It_Pis_Ship
+It_Sand
+It_Bonesaw
+It_Ri_Officer
+It_Pants_Striped
+It_Bandana_Torn
+It_Shirt_Torn
+It_Food
+
+---------------
+
+Revised item list 2
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62850776
+
+It_Ruby
+It_Pearl
+It_Shoes_Polished
+It_Ear_Pearl
+It_Ear_Duel
+It_Map_CRY
+It_Ri_Hunter
+It_Ear_Sailor
+It_Sla_Captain
+It_Dagger_Large
+It_Pie_Rapier
+It_Pie_Pirate
+It_Pie_Duel
+It_Blue_THI_Tabak
+It_Recipe_Sce_Power
+It_Recipe_Sce_Fear
+It_Po_Thief
+It_Po_Silvertongue
+It_Po_Ritual
+It_Po_Intimdate
+It_Po_Firearms
+It_Po_Blade
+It_Po_BlackMagic
+It_Po_FalseDead_Tao
+It_Po_FalseBlood_Tao
+It_Po_AncestorsBlood
+It_Po_Speed
+It_Potion_Health
+It_Po_Health_02
+It_Recipe_Ri_Hunter
+It_Recipe_AmSkull
+It_Recipe_Am_Curse
+It_Recipe_Po_Ritual
+It_Recipe_Po_Perm_Firearms
+It_Recipe_Po_Firearms
+It_Ri_Skull
+It_Am_Warrior
+It_Am_Skull
+It_Am_Curse
+It_GreatCoat_Striped
+It_Pants_White
+It_Pants_Black
+It_Tricorn_White
+It_Tricorn_Gold
+It_Bicorn_Silver
+It_Bicorn_Black
+It_Shoes_Rich
+It_HighBoot_Polished
+It_Vest_Black
+It_Vest_Silk
+It_Shirt_White
+It_GreatCoat_Black
+It_Coat_Cloth
+It_Recipe_Shot_Double
+It_Recipe_Rif_Ship
+It_Recipe_Rif_Assault
+It_ShG_Ship
+It_ShG_Hunting
+It_Rif_Caldera
+It_Rif_Expedition
+It_Ammo_Buckshot
+It_Recipe_Pis_Twins
+It_Exp_PowderKeg
+It_Exp_Bomb
+It_ShP_SawnOff
+It_Pis_Duel
+It_Pis_Single
+It_Hat_DLC1
+It_Shoes_DLC1
+It_Armor_DLC1
+It_Ri_XP
+It_Pis_Officer
+It_Thr_Titan
+It_Key_Mauregato_Office
+It_Key_Mauregato
+It_Key_Hawkins
+It_Pis_Wilson
+It_ScepterTelekinesis
+It_Idol_Kapua
+It_Thr_Titan_Crow
+It_Pants_Null
+It_Feet_Null
+It_Body_Inq
+It_LowBoot_NPC_Largo
+It_Shirt_NPC_Largo
+It_Wri_Letter_Di_Fuego
+It_Sealed_Letter_Di_Fuego
+It_1H_Sword
+It_TreasureMap_TAK_Pete
+It_TreasureMap_MAB_Jungle
+It_TreasureMap_MAB_Cave
+It_TreasureMap_MAB_Beach
+It_TreasureMap_IOT_Cave
+It_TreasureMap_IOT_Beach
+It_TreasureMap_CRY_Beach
+It_TreasureMap_STI_Hill
+It_TreasureMap_IOD_Grave
+It_TreasureMap_TRI_Wallace
+It_TreasureMap_TRI_Stubbings
+It_TreasureMap_TRI_Ramsay
+It_TreasureMap_TRI_Sokbart
+It_TreasureMap_SWC_Graveyard
+It_TreasureMap_SWC_Fall
+It_TreasureMap_SWC_Jaguar
+It_TreasureMap_SWC_Stahlbart
+It_TreasureMap_ANT_Garcia
+It_TreasureMap_ANT_Gibson
+It_TreasureMap_ANT_Grotto
+It_TreasureMap_ANT_Cave
+It_TreasureMap_ANT_Beach
+It_TreasureMap_ANT_Nesir
+It_Map_TRI
+It_Map_TAK
+It_Map_SWC
+It_Map_STI
+It_Map_MAB
+It_Map_IOT
+It_Map_IOD
+It_Map_ANT
+It_Wri_Letter_Crouse
+It_Sla_GargoyleSlayer
+It_Car_Ant_Wood
+It_Car_Ant_Log
+It_Car_Barrel
+It_Car_Crate
+It_Thr_Spear
+It_At_Acid
+It_At_AntSickle
+It_At_Paw
+It_At_Fur_Panther
+It_At_Claw
+It_Chicken_Raw
+It_Sla_GargoyleSlayer
+It_Shell
+It_Fish_Raw
+It_At_Fur_Gorilla
+It_At_Fur_Jaguar
+It_At_Sensor
+It_At_Fur_Silverback
+It_Sla_Undead
+It_Bone
+It_At_Fur_Warthog
+It_GoldOre
+It_Nails_Patty
+It_Bust_BD_Vulcan_Left
+It_Thr_EarthTitanRock
+It_Blue_VOO_Skull
+It_Blue_TOU_Peg
+It_Blue_RIT_Talisman
+It_Blue_MAG_Rattle
+It_Blue_INT_Head
+It_Blue_FIR_Pipe
+It_Blue_DIR_Flask
+It_Blue_BUL_Coin
+It_Blue_BLA_Mask
+It_Blue_BLA_Comb
+It_Blue_XP_Book
+It_Blue_THR_Wing
+It_Blue_SLA_Hook
+It_Blue_PIS_Powder
+It_Blue_CUN_Boot
+It_Coconut
+It_Meat_Raw_Habib
+It_Dagger_MAB_BlackDog
+It_Key_Stahlbart_TRI
+It_Paw_Datu
+It_Hair_Sebastiano
+It_Wri_Letter_Evidence_Mauregato
+It_Scepter_Fear
+It_Pot
+It_Fork
+It_Shirt_Collar
+It_Rif_Musket
+It_Rif_Assault
+It_Sla_GargoyleSlayer_Monster
+It_Sla_SunkenOne
+It_Sla_Guardian
+It_Pr_Mara
+It_Pr_Gnome
+It_Pr_ClawMonkey
+It_Pr_AntWorker
+It_Pr_AntWarrior
+It_Scepter_Skull_SunkenOne
+It_Pie_Old
+
+================================================================================
+How many stats can I juggle?
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62812393
+
+If you do pretty much everything, you can get one stat to 10, one stat to 9, and the other two at 8. You might be able to do 10,10,8,8 if you spend a lot of time killing things, or 10,9,9,8 more easily. This is including the items that give you +1 to each major stat. You should have enough points to bump up your remaining skill a bit if you want some firearms skills after taking voodoo, but not by much. Probably to 5 or so. I finished with about 7-8k glory left over with 10,9,8,8.
+
+Whether or not you sink points into toughness early on I think depends on if you took voodoo or firearms. A double barrel musket makes the game remarkably easier, and it's not like grog and provisions are hard to come by, so you can take offense before defense. Voodoo might be another matter since you aren't as effective at range and you might need the toughness boosts faster.
+================================================================================
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62793611?page=2
+
+I will probably get tied to a pole and burned alive for saying this, but till date no game has been able to give the RPG experience that I got in Gothic 3. Risen 2 comes closer than any other, though.
+
+I love RPGs- all kinds of them. I rarely play other kinds of games, if I do at all. I love Witcher 1 & 2, I love Dragon Age (Origins only), I love Mass Effect, I love Spellforce 2, I love Drakensang, I love NWN2 and I really love The Last Remnant. But none of these games has been able to deliver the extent of immersion I only find in PB games.
+
+And don't even get me started on Bethesda....
+
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/63092459
+
+-> gothic 2 might be worth checking out
+
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62905953
+
+-> good lists
+
+https://duckduckgo.com/?t=ffab&q=gothic+1+hd+mod&atb=v246-1&ia=web
+
+If I ever do get around to attempting Gothic 1/2/3, I probably should look for
+some mods to update their graphics to something less terrible... especially for
+the first gothic game.
+================================================================================
+List of Chest for skill rank 90
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62699114
+
+* Caldera : Archive room in High counsil
+
+* Island of Theives: in one of the gnome's house. Forget which one.
+
+* Moracai: Datu's Hut
+
+* Maracai: Hidden valley, in the temple, the door that requires 2 idols to open (you need to use the Thief's bone hand to open the door in the first room by activating a hidden switch).
+
+* Maracai: Panther Cave
+
+* Sword Coast : Shaganumbi village, Kapua's hut
+
+* Sword Coast: Behind a locked door in the Commandant's room. There is also another high lvl chest (I think it was 90) north of the tribal village on Sword Coast as well, on a small cliff protected by some ghouls.
+
+* Tacarigua : Booze's room
+
+* Storm Island: When you enter the Air temple, first door on the right, the one that had a hole for a monkey.
+
+* Tacarigua : Marecage at the south east, turn left imediatly when entering, gives a part of the King's sword.
+
+* Tacarigua: in the swamps in the southeast, near 4 ghouls (edit: not sure if same as one above?)
+
+* Treasure island (DLC): Chest 1 : Go west as soon as you get to shore from your boat, it's near a firecamp.
+
+* Treasure island (DLC): Chest 2 : In the cave after the monkey trap. Go east inside the cave.
+
+
+
+
+
+
+================================================================================
+Looking for a list of locations where I can use my monkey
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62691244
+
+* Angitua: There's a crack on the roof in the storeroom at Angitua, accessible only by a monkey. ( top floor of the storehouse and the side window of the gunsmiths house)
+
+* Antigua: If you haven't gotten Wilson's pistol from Henri on Antigua yet, you can send the monkey through a side window to steal the pistol from Henri's locked room, saving you the steep cost of buying it off him. There are a few other inconsequential items in there too.
+
+* Maracai: there are a couple of the ancestor temples that you can use the monkey in, but I don't recall which.
+
+* Storm Island: storm temple opens up further if you send your monkey through a door on the right and pull a lever. You'll want to do this after you have the hand from Garcia though.
+
+* Sword Coast: the first temple, just beside where you first come ashore.
+
+* Sword Coast: the natives ancestor temple, behind their village.
+
+* Sword Coast: You can get behind the locked door of the second floor warehouse room on the Sword Coast by having the monkey jump onto a ledge outside and go through the window. He won't be able to pick the lock, but he can grab a few silver goblets, money bags, and gold coins while he's in there.
+
+* Tacarigua: The temple in the cave with a grave spider on Tacarigua. You have to kill the spider to get a mask to open the door.
+
+* Tacarigua: the big tomb at the bottom of the canyon (get there via the jungle where the three "slaves" are)
+
+================================================================================
+A solution for those with disproportionate mouse sensitivity..
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62682812
+
+I was experiencing extremely high mouse sensitivity on the X axis (looking left and right) and terribly low sensitivity on the Y axis (looking up and down). I changed the Camera Speed under Gameplay in the Options menu to 0.4 and that solved my X axis sensitivity but it also proportionately worsened my Y axis sensitivity. I was able to solve the problem by editing the ConfigUser.xml file.
+
+Now, there are two ConfigUser.xml files. One of them is in your game installation folder tree, it is simply a template for the other one and editing it will not have any effect on gameplay. The other one is the one that needs to be edited to make changes to gameplay. That one can be found here - "C:\Users\(your name)\AppData\Local\Risen2\Config"
+
+Open that ConfigUser.xml file with Notepad and look for the following entries -
+
+SensitivityY="1.000000"
+SensitivityX="1.000000"
+
+Sensitivity is what we are after. I have excellent results by making the following changes -
+
+SensitivityY="2.000000"
+SensitivityX="0.400000"
+
+As you can see, I set the X sensitivity to the same level that I found to be comfortable by playing around with the Camera Speed under Gameplay in the Options menu. I set the Y sensitivity to five times the X sensitivity, and now my mouse movements feel natural. You may have to experiment to find the perfect alignment for your tastes. Good luck!
+================================================================================
+How to play Barney's "Shooting the fleet" mini-game as many times as you want...
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62660788
+
+After you've won the mini-game and gotten your 500 gold it'll disappear from the list of the options when you talk to him. Instead select the option to shoot some targets for 10 gold. When the game starts just fire off all your rounds without hitting anything and purposefully lose. Afterwards he'll make some joke about how bad of a shot you are. Then when it comes back to the dialogue menu you'll see the option for playing "Shooting the fleet" once again at the top. You can then play it again for another 500 gold.
+
+I've played through the mini-game at least 10 times now and it works every time for me. I don't know if this is just a glitch with my game, or with the game itself. I just figured I'd throw this out there in case someone wants to make some easy gold in the beginning of the game (assuming you're decent at the shooting range, it can be pretty tough). And I apologize if this has already been mentioned, but I didn't see a topic about it.
+
+================================================================================
+
+Any fixes for those god awful pop-in issues?
+https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62677767
+->
+
+Shifter1178 8 years ago
+	http://www.gamespot.com/risen-2-dark-waters/forum/tweaking-with-configdefaultxml--62660549/
+
+	Check Zuuluu's posts.
+
+	His xml files will do the trick quite nicely.
+	
+-> link is dead but might be able to get it on wayback machine
+
+================================================================================

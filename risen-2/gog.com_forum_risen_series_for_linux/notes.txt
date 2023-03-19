@@ -1,0 +1,55 @@
+https://www.gog.com/forum/risen_series/risen_series_for_linux
+
+For some reason, this page's comments don't show up unless you are logged in.
+
+
+==================================================================================
+adamhm
+From United Kingdom
+Posted March 28, 2018
+
+I've put together Wine wrappers for the Risen games, allowing them to be played on Linux almost like native games & with no Wine knowledge required. (Please note that the Risen 2 & 3 wrappers require the gold/complete editions)
+
+Simply run the build script to create the wrapper. If the installer files are not alongside the wrapper build files then the path to them will need to be specified either by passing it as an argument to the build script with -respath="<path>" or by setting an environment variable named WINEWRAP_RESPATH containing it. You can change the path to build the wrapper in and the name of the wrapper directory with the -buildpath= and -dirname= arguments. The build path can also be set with the WINEWRAP_BUILDPATH environment variable.
+
+The output will be a directory containing the game set up within a preconfigured Wine prefix, along with its own copy of Wine, extracted game icons, documentation, and start script(s). From there simply run the start script to play. The start script also includes options for creating a shortcut, configuring the wrapper etc.
+
+(to uninstall simply delete the game directory and any shortcuts you created, and the game's user data directory in ~/.local/share if you don't want to keep your saves & settings)
+
+User data is stored under ~/.local/share/risen, ~/.local/share/risen2, ~/.local/share/risen3
+
+Full details are in the readme.txt and release notes. Here are the download links: 
+
+
+risen_wine.tar.xz
+(38.1 kB, SHA256: ffd961e68ca3c1cc564174f77c1cbcd0d120fa0deadbd6b38f585494161484af)
+
+https://www.dropbox.com/s/yilqi5hryxwn7s0/risen_wine.tar.xz?dl=0
+
+risen2_wine.tar.xz
+(37.7 kB, SHA256: 8ff7cbea60d731f217fdfb57425c26ef9fb3bbdaf236ddd0bbf3ca8734bbb032)
+
+https://www.dropbox.com/s/yf7fijcrm26ld2k/risen2_wine.tar.xz?dl=0
+
+risen3_wine.tar.xz
+(43.6 kB, SHA256: e5154f55bb4cda435f218a9d5346114fd8ebe5d31893fc6fb049f872d47cad7a)
+
+https://www.dropbox.com/s/6ut82myh5kv3113/risen3_wine.tar.xz?dl=0
+
+Last updated 2021/02/28
+
+The wrappers use Wine 6.0. Wine, Winetricks and a redistributable for PhysX will be downloaded automatically if not present; to avoid redownloading for other scripts the downloaded Wine package will be stored in ~/.cache/winewrap and the PhysX redistributable will be stored in ~/.cache/winetricks/physx
+
+I've only played the beginning of the games (except Risen 2, which I've fully played through) but they seem to run well so far. The only issues I've encountered are the logo videos at the start not playing properly and in Risen 2 shadows are somewhat buggy, most notably in indoor areas. Also in Risen 2 the player character's eye and the gnomes' faces are rendered completely black.
+
+Risen 3 likes to crash every so often (apparently at random) so save often & read the release notes first!
+
+Unfortunately none of these games run well on Intel integrated graphics, if at all
+
+If anyone encounters any other problems then post in this thread, Adamhm's Linux Wine Wrappers - News, FAQ &amp; Discussion and/or The "Judas&trade; does this run in Wine" thread v1.173.
+
+For more of my Linux Wine wrappers check out post 3 in this thread: Adamhm's Linux Wine Wrappers - News, FAQ &amp; Discussion
+https://www.gog.com/forum/general/adamhms_linux_wine_wrappers_news_faq_discussion
+
+Post edited 4 days ago by adamhm
+==================================================================================

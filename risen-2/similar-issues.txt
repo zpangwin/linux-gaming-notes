@@ -1,0 +1,11 @@
+
+-----------------------------------------------------------------------------
+00fc:err:winediag:MIDIMAP_drvOpen No software synthesizer midi port found, Midi sound output probably won't work.
+-----------------------------------------------------------------------------
+
+https://askubuntu.com/questions/1079568/problem-when-trying-to-play-using-wine
+https://forum.winehq.org/viewtopic.php?f=8&t=34544&p=130173#p130173
+https://forum.winehq.org/viewtopic.php?t=34469&p=129918
+https://www.gog.com/forum/diablo/game_crashes_after_showing_blizzard_logo
+https://forum.winehq.org/viewtopic.php?t=33161
+

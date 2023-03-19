@@ -1,0 +1,10 @@
+redist
+redist/*
+redist/**
+redist/*.*
+
+# ignore files > 500M
+images.pak
+dialogue_*.pak
+sounds.pak
+

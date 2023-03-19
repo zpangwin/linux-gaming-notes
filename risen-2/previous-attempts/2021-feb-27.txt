@@ -1,0 +1,133 @@
+
+$ inxi -SG
+System:
+  Host: <hostname> Kernel: 5.10.16-200.fc33.x86_64 x86_64 bits: 64 
+  Desktop: Cinnamon 4.8.6 Distro: Fedora release 33 (Thirty Three) 
+Graphics:
+  Device-1: NVIDIA GM204 [GeForce GTX 970] driver: nvidia v: 460.32.03 
+  Display: x11 server: Fedora Project X.org 1.20.10 driver: nvidia 
+  resolution: 1920x1080~60Hz 
+  OpenGL: renderer: GeForce GTX 970/PCIe/SSE2 v: 4.6.0 NVIDIA 460.32.03 
+
+	$ wine --version
+	wine-6.3 (Staging)
+
+	$ winetricks --version|cut -d- -f1
+	20210206
+
+	$ protontricks --version
+	protontricks (1.4.4)
+
+
+    # Path notes:
+    #   My steam dir is /gaming/steam
+    #   Default one is ~/.steam/steam or ~/.local/share/Steam
+    <steamapps>=under your steam install (/gaming/steam/steamapps)
+    <gamedir>=game install (<steamapps>/common/Risen 2)
+    <pfxdir>=proton 'pfx' folder (<steamapps>/compatdata/40390/pfx)
+    <winegamedir>=Fake quasi-windows path used by wine and game process (Z:/gaming/steam/steamapps/common/Risen 2). either type of slash works but you have to escape backslash in double-quotes so unix forward slash is easier.
+
+1. Deleted <pfxdir> then verified install from steam
+2. Relaunched game. didnt start but it recreated <pfxdir>
+3. Checked reg values with $ grep -Pi 'Piranha|Risen|Silver' *.reg
+	system.reg:[Software\\Wow6432Node\\deep silver\\risen2] 1614477338
+	system.reg:"exe_path"="\\system\\risen2.exe"
+
+	$ grep 'deep silver' -A 5
+		[Software\\Wow6432Node\\deep silver\\risen2] <random int>
+		#time=<random hexstring>
+	 	"exe_path"="\\system\\risen2.exe"
+		"install_path"=""
+		"language"=dword:00000001
+		"version"="0.95"
+
+	-> no changes made at this time; just noting values and paths
+	-> may try changing the 'exe_path' path later but doubt thats it
+
+4. Added debug params to launch options:
+	`PROTON_LOG=1 PROTON_LOG_DIR=~/Desktop PROTON_DUMP_DEBUG_COMMANDS=1 %command%`
+	then relaunched game and then `xed ~/Desktop/steam-40390.log`
+
+	there are a bunch of lines with "loaddll:build_module Loaded" then
+	17558.901:00cc:00d0:trace:loaddll:build_module Loaded L"C:\\windows\\system32\\OLEAUT32.dll" at 6A300000: builtin
+		-> last successful dll that was loaded
+	
+	17558.901:00cc:00d0:err:module:LdrInitializeThunk Importing dlls for L"Z:\\gaming\\steam\\steamapps\\common\\Risen 2\\system\\Risen2.exe" failed, status c0000135
+		-> some unknown dll failed to load and things crapped out
+		-> cant tell which one it is but shouldnt be any of the ones listed above
+
+5. When I launch, it always seems to take awhile before it craps out.
+	Makes me wonder if its trying to install some shit like reinstalling game
+	dependencies. reminds me of another workaround i saw for something else.
+	going to try an [ME3 workaround](https://github.com/ValveSoftware/Proton/issues/3999#issuecomment-748336039) on this game.
+5.1. Close out of steam
+5.2. run terminal:
+		# run the physx redistrib included with game:
+		PROTONWINE="<steamapps>/common/Proton 5.13/dist/bin/wine64"
+		WINEPREFIX="<pfxdir>" "$PROTONWINE" start /D"<winegamedir>/redist/PhysX" PhysX_SystemSoftware.exe
+		
+		# one-liner of above command
+		# e.g. WINEPREFIX="/gaming/steam/steamapps/compatdata/40390/pfx" "/gaming/steam/steamapps/common/Proton 5.13/dist/bin/wine64" start /D"Z:/gaming/steam/steamapps/common/Risen 2/redist/PhysX" PhysX_SystemSoftware.exe
+		
+		# confirm install was successful
+		# should see a non-zero # of dll files that were
+		# installed under drive_c/Program Files (x86)/
+		find "drive_c/Program Files (x86)"/ -type f -iname '*physx*.dll'|wc -l
+		
+		# and be able to see them added to Wine's Windows PATH variable
+		grep 'Session Manager\\\\Environment' system.reg -A 20|grep '"PATH"='|grep -i phys
+
+		# now prevent steam from fucking stuff up:
+		# chattr -i: file cannot be modified, deleted or renamed except by root
+		cd "<pfxdir>"
+		sudo chattr +i *.reg
+		# note: if you read the ME3 bug he blocks stuff under syswow64. on my
+		# install there were no dll files there or under system32. they were
+		# instead located under the program files x86 dir with PATH variable
+		# set as shown above during verification steps. SO i am going to skip
+		# all the "syswow64" stuff he did bc it be worthless in my install
+		# 
+		# but i will make "drive_c/Program Files (x86)/NVIDIA Corporation"
+		# folder more tamper-proof than he did.
+		#
+		cd "drive_c/Program Files (x86)"
+		chmod -R a-w "NVIDIA Corporation"
+		sudo chattr -R +i "NVIDIA Corporation"
+
+	-> Restart Steam and relaunch
+	-> launch dialog said installing directx, ms visual c++ runtime, then physx
+	-> then game process was launched (confirmed via pgrep) but no visual and
+		then process exited on its own
+
+		-> need directx / visual c++?
+		-> some other issue?
+6. Deleted <pfxdir> then relaunched game to recreate it
+7. 
+WINEPREFIX="/gaming/steam/steamapps/compatdata/40390/pfx" "/gaming/steam/steamapps/common/Proton 5.13/dist/bin/wine64" start /D"Z:/gaming/steam/steamapps/common/Risen 2/redist/PhysX" PhysX_SystemSoftware.exe
+
+WINEPREFIX="/gaming/steam/steamapps/compatdata/40390/pfx" "/gaming/steam/steamapps/common/Proton 5.13/dist/bin/wine64" start /D"Z:/gaming/steam/steamapps/common/Risen 2/redist/VCRedist" "vcredist_x86.exe"
+
+WINEPREFIX="/gaming/steam/steamapps/compatdata/40390/pfx" "/gaming/steam/steamapps/common/Proton 5.13/dist/bin/wine64" start /D"Z:/gaming/steam/steamapps/common/Risen 2/redist/DirectX" "DXSETUP.exe"
+
+
+protontricks 40390 physx d3dcompiler_47 vcrun2005 win7
+		
+8. 
+cp -a "drive_c/Program Files (x86)/NVIDIA Corporation/PhysX/Common/PhysXLoader.dll" "drive_c/windows/syswow64/PhysXLoader.dll"
+
+cp -a "drive_c/Program Files (x86)/NVIDIA Corporation/PhysX/Common/PhysXLoader.dll" "drive_c/windows/system32/PhysXLoader.dll"
+
+9. 
+PROTON_LOG=1 PROTON_LOG_DIR=~/Desktop  PROTON_OLD_GL_STRING=1 PROTON_NO_ESYNC=1 PROTON_NO_FSYNC=1 %command%
+
+disabled steam overlay and desktop theater
+
+
+PROTON_LOG=1 PROTON_LOG_DIR=~/Desktop PROTON_OLD_GL_STRING=1 PROTON_NO_ESYNC=1 PROTON_NO_FSYNC=1 taskset --cpu-list 0-3 %command%
+	
+10. nothing so far... looking at thel og from last failed launch, I see;:
+
+26535.805:00c4:00c8:trace:loaddll:free_modref Unloaded module L"C:\\windows\\system32\\d3dxof.dll" : builtin
+26535.805:00c4:00c8:trace:loaddll:free_modref Unloaded module L"C:\\windows\\system32\\d3dcompiler_47.dll" : native
+26535.805:00c4:00c8:trace:loaddll:free_modref Unloaded module L"C:\\windows\\system32\\d3dx9_43.dll" : builtin
+

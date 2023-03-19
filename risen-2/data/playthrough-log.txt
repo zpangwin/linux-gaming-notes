@@ -1,0 +1,487 @@
+================================================================================
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Detailed Comparison:
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Playthrough 1:
+
+* Didn't beat up anyone on Caldera for extra Glory
+* Never knew about the possibility of getting a free The Twins Pistol on Caldera
+* Tacarigua: beat up roqueford during training and riley for bandana. then left patty near tower then stole from chest in de fugio's mansion to agro guards and kited them back to her where i eventually beat them up for extra glory.
+* Had gotten all of Largo's clothes before I freed him so didn't want to turn in Blackpearl
+* I got the bonesaw very early on (killed a few warthogs first but that was it). Killed all wildlife before leaving Tacarigua, even passive stuff, grave spider, and ancestor. Only exception was I had missed the cave near the plantation.
+* Tacarigua: Looted everything that wasn't tied down / had low enough lockpicking requirements
+* Sword Coast: Had gone around with Patty clearing things out before visiting Puerto Isabella and again after getting the skinning knife. Cleared out probably 3/4 or better of the island before I ever visited the Natives Village for the first time.
+* Sword Coast: Beat up pretty much every named character in and around Puero Isabella (including Isabella). The only exceptions being Alveraz? bc he had 4 guards nearby and the people on the ship bc I was also drastically outnumbered there. Also beat up pretty much every named character in the native village (pirates and villagers). All for the extra, zero-penalty glory.
+* Sided with Natives
+
+* Sword Coast:
+
+--------------------------------------------------------
+After leaving Tacarigua/Arrival on Sword Coast:
+--------------------------------------------------------
+
+	Character
+		100/100 Blood
+		1530 Gold
+		4542 Glory
+
+	Base Attributes (not inlcuding bonuses):
+		Blades 2
+		Firearms 1
+		Toughness 2
+		Cunning 5
+		Voodoo 1
+
+	Permanent Attribute Bonuses:
+		Meerchaum's Pipe (+1 Firearms)
+		Peg Leg (+1 Toughness)
+
+	Skills:
+		Blades: Powerful Attack, Slashing Weapons 1
+		Firearms: None
+		Toughness: Kick, Bladeproof 1
+		Cunning: Sneaking, Pickpocket, Lockpicking, Dirty Tricks 1, Thievery 1, Thievery 2
+			-> also bought Monkey Trainey from Flannigan but while I could use monkey
+				the skill didnt show up as active in my menus (bug?)
+				known issue: https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62684183
+		Voodoo: None
+
+	Inventory - Gear:
+		Right: 1 Machete, 1 Fencing Foil
+		Left: 1 Salt, 2 Sand, 10 Coconut, 1 Officer's Pistol
+		Head: 1 Pirate Hat (DLC), 1 (Largo's) Pirate Bandana
+		Body: 1 Pirate Outfit (DLC), 1 (Largo's) Leather Vest, 1 Silk Shirt
+		Pants: None (Call me Donald Duck)
+		Feet: 1 Pirate Boots (DLC), 1 (Largo's) Worn-out Boots
+		Earring: 1 Duelist's Earring, 1 (Largo's) Blackpearl
+		Amulet: 1 Curse Stone, 1 Lucky Charm, 1 Tribal Symbol
+		Ring: 1 Ring of Deception, 1 Iron Ring, 1 Master Scholar's Ring (DLC)
+		
+	Inventory - Ingredients:
+		1 Heros Crown
+		1 Grave Root
+		19 Black Oleander
+		16 Bloodroot
+		11 Choking Vine
+		27 Golden Clover
+		13 Powdered Poppy Seeds
+		29 Skullflower
+		10 Spirit Lily
+
+	Inventory - Other:
+		7 Torch
+		1 Monkey
+		12 Rum
+		10 Grog
+		2 Blood Mary
+		2 Painkiller
+		92 Provision
+		1 Potion of Blades
+		1 Potion of Ritual
+		1 Potion of Persausion
+		69 Bullets
+		50 Lead Shot
+		1 Lock Pick
+		1 Pickax
+		1 Shovel
+		1 Bonesaw
+		1 Hammer
+		9 Raw Chicken
+		3 Raw Fish
+		11 Raw Meat
+		9 Sand Devil Sensors (I had sold some of these for cash)
+		11 Oyster Shells
+		1 Emerald
+		10 Gold Nugget
+		1 Golden Goblet
+		1 Bowl
+		1 Bloody Mary Recipe
+
+--------------------------------------------------------------
+After leaving Sword Coast/Returning to Tacarigua:
+--------------------------------------------------------------
+
+
+
+
+---------------------------------------------------------------
+After Reconquering Tacarigua + Sword Coast/Arrival on Antigua:
+----------------------------------------------------------------
+
+
+
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Playthrough 2:
+
+* Caldera: Got free The Twins Pistol from Sebastiano on Caldera (must be done before rescuing Patty)
+
+* Caldera: Beat up Severin/Storeroom Master/Carlos/Juan/Angus/Sebastiano/Bosun/2 Sailors for penalty-free glory. This took me many many reloads and was a right pain in the ass.
+
+* Tacarigua Puerto Sacarico: For more penalty-free glory, I beat up the 3 defenseless ship-slaves. Then the guard at the town entrance. Then Roquefort and Pedro. Then "The Helmsman". Then the first plantation slave on the right. Then Osorio. And Vasco/Ghilles/Thompson. The Guard outside the slavehouse after midnight (should be the guard furtherest from the shack at the plantation) and all the slaves. De Fuego and his 3 guards. Barracks guard. Riley. The other unnamed Plantation guard. And finally, Carter, the jail guard.
+
+* Tacarigua Pirates Den: For more penalty-free glory, I beat up Colby/Barney/Flannigan/Lola/Alister/Elia/Curtis/Morris/Hank/Holly/Booze/O'Brian/Foster/Doggs and the 2 unnamed pirates in the bar. Then also Stone and the 2 nearby unnamed Pirates. And Fence and the unnamed pirate guarding the gate. And Jack at the Lighthouse.
+
+* Tacarigua Creatures: I still made a beeline to the bonesaw and got that pretty much before i killed any wildlife. But this time around, animals with skins (warthogs, jaguars, panthers) I tried to avoid them as much as possible this time around so as to be able to reap in some cash later. Animals with only one or two minor things that I would have missed (like not getting teeth for claw monkeys; not getting eyes for giant crabs/grave spiders), I didn't worry about and killed all of those that I could get to without triggering fights for skinnable animals.
+
+	Grave Spider: could get 1 eye if you wait
+	Warthogs: could get up to 1 tusk and 1 skin per hog if you want
+	jaguars: could get 1 skin and 1 heart per kitty if you wait
+	claw monkeys: can get 1 claw now. could get 1 teeth per monkey if you wait
+	giant crabs: can get 1 oyster now. could get 1 eye per crab if you wait
+	sand devil: can get everything now, no need to wait
+	ghouls: can get 1 claw now. could get ??? if you wait
+
+| Drop Name    | Used in Recipe(s) for                                                |
+|:------------:|:--------------------------------------------------------------------:|
+| Acid Gland   | Sharpeye Paste (Perm +2 Firearms), Marksman's Potion, Jewelry        |
+| Eye          | Curse Stone, Sceptre of Fear                                         |
+| Jaguar Heart | Ancestral Stone , Soul Necklace, Ti' Ha Ko                           |
+| Monkey Skull | Curse Doll, Fools Juice (Perm +2 Cunning), Thiefs Potion, Skull Amlt |
+| Teeth        | Bloodthorn Earring, Tribal Symbol                                    |
+| Tusk         | Potion of Awe, Hunter's Ring, Warrior's Jewelery, 2 other Jewelry    |
+
+->	You miss out on the rum quest if you don't take care of the termites (might be required for joining steelbeard's crew?). Anyways, you wont be losing too much if you only do that one cave
+
+-> Eyes you can get from Crabs & Spiders. Doesn't hurt to leave some but there should be plenty later.
+
+-> Jaguar Heart can only come from Jaguars which are pretty rare. Can also be skinned later. Avoid these as much as possible. If you have to kill one, there will be more but more pelts later == more cash later.
+
+-> Monkey Skull: these onyl come from the passive monkeys. easy to leave alone for now and not much xp gain so good to leave unless you're really desperate for every ounce of xp.
+
+-> Teeth: you can get these from claw monkeys. you can leave from to get extra teeth later if you want but if you wanna kill a few, there are plenty of claw monkeys on other islands and you can get a Tribal Symbol for free on Tacarigua (in river stream west and north of lighthouse, near the falls). this decision should be a mostly: delay xp for bigger monetary gain vs quick xp (you'll have plenty of funds later too).
+
+-> Tusk: come from warthogs. warthogs also can be skinned later. again xp vs gold but you probably stand to gain a bit more gold here than with the monkeys. that said, there are plenty of these on other islands also.
+
+* Did a small cheat: gave large back his stuff, then re-added his boots, bandana, and blackpearl back to my inventory. i'd be a liar if i said i wasn't interested in the gold and xp but just having the quest cleared out was also a big factor for me. Not intending to do any big cheating but don't like either or quests...
+
+
+Remaining:
+.
+---
+* Tacarigua Pirate Den: 
+Blake
+steelbeard?
+
+
+
+--------------------------------------------------------
+After leaving Caldera/Arrival on Tacarigua:
+--------------------------------------------------------
+	Character
+		100/100 Blood
+		460 Gold
+		1610 Glory
+
+	Base Attributes (not inlcuding bonuses):
+		Blades 1
+		Firearms 1
+		Toughness 1
+		Cunning 1
+		Voodoo 1
+
+	Permanent Attribute Bonuses:
+		None
+
+	Skills:
+		Blades: None
+		Firearms: None
+		Toughness: None
+		Cunning: Sneaking
+		Voodoo: None
+
+	Inventory - Gear:
+		Right: 1 Officers Sword
+		Left: 1 Officer's Pistol, 1 The Twins Pistol
+		Head: 1 Pirate Hat (DLC)
+		Body: 1 Pirate Outfit (DLC)
+		Pants: None (Call me Donald Duck)
+		Feet: 1 Pirate Boots (DLC)
+		Earring: None
+		Amulet: None
+		Ring: 1 Master Scholar's Ring (DLC)
+		
+	Inventory - Ingredients:
+		1 Heros Crown
+
+	Inventory - Other:
+		1 Torch
+		1 Grog
+		10 Provision
+		1 Potion of Blades
+		34 Bullets
+		1 Raw Chicken
+		7 Sand Devil Sensors
+		1 Pearl
+		3 Silver Goblet
+
+--------------------------------------------------------
+After leaving Tacarigua/Arrival on Sword Coast:
+--------------------------------------------------------
+
+
+	Character
+		100/100 Blood
+		248 Gold
+		1569 Glory
+
+	Base Attributes (not inlcuding bonuses):
+		Blades 3
+		Firearms 2
+		Toughness 3
+		Cunning 5
+		Voodoo 1
+
+	Permanent Attribute Bonuses:
+		Meerchaum's Pipe (+1 Firearms)
+		Peg Leg (+1 Toughness)
+
+	Skills:
+		Blades: Powerful Attack, Slashing Weapons 1, Piercing Weapons 1
+		Firearms: Critical Hits, Nuff Said, Pistols 1
+		Toughness: Kick, Bladeproof 1
+		Cunning: Sneaking, Pickpocket, Lockpicking, Thievery 1, Thievery 2
+			-> also bought Monkey Trainey from Flannigan but while I could use monkey
+				the skill didnt show up as active in my menus (bug?)
+				known issue: https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62684183
+		Voodoo: None
+
+	Inventory - Gear:
+		Right: 1 Scimitar, 1 Fencing Foil, 1 Shotgun
+		Left: 1 Salt, 2 Sand, 10 Coconut, 1 Officer's Pistol, 1 "The Twins" Pistol
+		Head: 1 Pirate Hat (DLC), 1 (Largo's) Pirate Bandana
+		Body: 1 Pirate Outfit (DLC), 1 Silk Shirt
+		Pants: 1 White Trousers, 1 Black Trousers
+		Feet: 1 Pirate Boots (DLC), 1 Elegant Shoes
+		Earring:	1 Duelist's Earring, 1 (Largo's) Blackpearl, 1 Pearl Earring,
+		 			1 Jade Earring, 1 Rogue Earring, 1 Skull Earring
+		Amulet: 1 Curse Stone, 1 Lucky Charm, 1 Tribal Symbol
+		Ring:		1 Ring of Deception, 1 Iron Ring, 1 Master Scholar's Ring (DLC)
+					1 Inquistors Ring, 1 Thieves Ring
+		
+	Inventory - Ingredients:
+		1 Heros Crown
+		1 Grave Root
+		1 Jesters Cap
+		14 Black Oleander
+		9 Bloodroot
+		10 Choking Vine
+		28 Golden Clover
+		13 Powdered Poppy Seeds
+		30 Skullflower
+		13 Spirit Lily
+
+	Inventory - Other:
+		10 Torch
+		1 Monkey
+		14 Rum
+		19 Grog
+		2 Blood Mary
+		143 Provision
+		1 Markman's Potion
+		1 Potion of Blades
+		1 Potion of Ritual
+		1 Spirit Essence
+		1 Potion of Awe
+		1 Potion of Persausion
+		109 Bullets
+		40 Lead Shot
+		1 Lock Pick
+		1 Pickax
+		1 Shovel
+		1 Bonesaw
+		1 Club
+		1 Hammer
+		33 Claws
+		45 Sand Devil Sensors
+		13 Sickles
+		1 Emerald
+		4 Jade
+		1 Bloody Mary Recipe
+
+
+--------------------------------------------------------------
+After leaving Sword Coast/Returning to Tacarigua:
+--------------------------------------------------------------
+
+
+
+
+---------------------------------------------------------------
+After Reconquering Tacarigua + Sword Coast/Arrival on Antigua:
+----------------------------------------------------------------
+
+	Character
+		100/100 Blood
+		3280 Gold
+		16779 Glory
+
+	Base Attributes (not inlcuding bonuses):
+		Blades 3
+		Firearms 3
+		Toughness 5
+		Cunning 7
+		Voodoo 4
+
+	Permanent Attribute Bonuses:
+		Meerchaum's Pipe (+1 Firearms)
+		Peg Leg (+1 Toughness)
+
+	Permanent Talent Bonuses:
+		Powder Bag (Pistols +10)
+		Shrunken Head (Intimidate +10)
+		Permanent Bonus from 2x Fool's Juice (Dirty Tricks/Thievery/Silver Tongue +4)
+		Bottle of Memories (Death Cult +10)
+
+	Skills:
+		Blades: Powerful Attack, Slashing Weapons 1, Piercing Weapons 1, Parry
+		Firearms: Crtical Hits, Nuff Said, Left Hand, Pistols 1+2
+		Toughness: Kick, Bladeproof 1+2, Bulletproof 1+2, Intimidate 1
+		Cunning: Sneaking, Pickpocket, Lockpicking, Thievery 1+2+3
+			-> also bought Monkey Trainey from Flannigan but while I could use monkey
+				the skill didnt show up as active in my menus (bug?)
+				known issue: https://gamefaqs.gamespot.com/boards/622499-risen-2-dark-waters/62684183
+		Voodoo: Create Doll, Create Sceptre, Brew Potion, Black Magic 1, Ritual 1+2
+
+	Inventory - Gear:
+		Right:
+			1 Sceptre of Fear, 3 Curse Dolls,  1 Prizetaker, 1 Dueling Epee, 1 Titan Harpoon,
+			27 Spear, 1 Shotgun (Musket), 1 Bomb, 2 Powder Keg
+		Left:
+			1 Salt, 4 Sand, 24 Coconut, 1 Curved Dagger, 1 Officer's Pistol, 1 "The Twins" Pistol, 1 Pistol
+		Head:
+			1 Pirate Hat (DLC), 1 (Largo's) Pirate Bandana, 1 Steelbeard's Hat
+		Body:
+			1 Pirate Outfit (DLC), 1 Silk Shirt
+		Pants:
+			1 White Trousers, 1 Black Trousers
+		Feet:
+			1 Pirate Boots (DLC), 1 Elegant Shoes
+		Earring:
+			1 (Largo's) Blackpearl, 1 Warrior's Earring, 1 Sailor's Earring, 1 Duelist's Earring, 
+			1 Jade Earring, 1 Pearl Earring, 1 Rogue Earring, 1 Skull Earring
+		Amulet:
+			1 Ta'Ha'Ko, 1 Warrior's Jewellry, 1 Witch's Amulet, 1 Lucky Charm
+		Ring:
+			1 Inquistors Ring, 1 Ring of Deception, 1 Thieves Ring, 1 Iron Ring, 1 Skull Ring,
+			1 Officer's Ring, 1 Master Scholar's Ring (DLC)
+
+	Inventory - Ingredients:
+		1 Swordthorne
+		1 Sharpeye
+		2 Heros Crown
+		2 Grave Root
+		30 Black Oleander
+		17 Bloodroot
+		29 Choking Vine
+		72 Golden Clover
+		25 Powdered Poppy Seeds
+		63 Skullflower
+		35 Spirit Lily
+
+	Inventory - Other:
+		25 Torch
+		1 Monkey
+		20 Rum
+		35 Grog
+		2 Blood Mary
+		369 Provision
+		1 Thief's Potion
+		1 Markman's Potion
+		2 Potion of Blades
+		5 Potion of Ritual
+		1 Potion of Spirit
+		2 Potion of Awe
+		1 Potion of Persausion
+		178 Bullets
+		73 Lead Shot
+		1 Lock Pick
+		1 Pickax
+		1 Shovel
+		1 Ritual Knife
+		1 Skinning Knife
+		1 Bonesaw
+		1 Jaw chisel
+		1 Foul Smelling Letter
+		Diary Page 2
+		Diary Page 3
+		Diary Page 4
+		1 Sword Hilt: Soul Caller
+		1 Sowrd Blank
+		1 Wheelock
+		3 Voodoo Doll
+		1 Rattle
+		1 Hammer
+		3 Raw Chicken
+		9 Jaguar Heart
+		2 Monkey Skull
+		3 Tusk
+		21 Acid Gland
+		156 Claw
+		50 Sand Devil Sensors
+		1 Skull
+		47 Sickle
+		5 Bone
+		3 Feather
+		3 Sapphire
+		21 Jade
+		3 Gold Nugget
+		1 Gold Plate
+		1 Gold Statue
+		1 Golden Mask
+		1 Shaganumbi Idol
+		1 Sebastiano's Key
+		1 Steelbeard's Key
+		1 Tower Key
+		1 Schematic for Hunter's Necklace
+		1 Bloody Mary Recipe
+		1 Recipe for Fool's Juice
+		1 Recipe for Thief's Potion
+		1 Recipe for Ritual Potion
+		1 Recipe for Spirit Essence
+		1 Recipe for Potion of Persausion
+		1 Schematic for Sceptre of Fear
+		1 Schematic for Curse Doll
+
+
+### Lockpicking + Thievery 2 (+15):
+
+Reminder: The table columns are using *base* Cunning Level (e.g. without bonuses)
+
+| Item(s)                   | C-6 | C-7 | C-8 | C-9 | C-10 |
+|:-------------------------:|:---:|:---:|:---:|:---:|:----:|
+| No Items - Before Skills  | 30  | 35  | 40  | 45  | 50   |
+| ------------------------- | --- | --- | --- | --- | --- | ---- |
+| No Items - After Skills   | 45  | 50  | 55  | 60  | 65   |
+| ------------------------- | --- | --- | --- | --- | ---- |
+| BP: (Blackpearl Earring)  | 50  | 55  | 60  | 65  | 70   |
+| TR: (Thief's Ring)        | 55  | 60  | 65  | 70  | 75   |
+| SB: (Snuffbox)            | 55  | 60  | 65  | 70  | 75   |
+| TP: (Thief Potion - temp) | 52  | 57  | 62  | 67  | 72   |
+| ------------------------- | --- | --- | --- | --- | ---- |
+| BP + TR (+15)             | 60  | 65  | 70  | 75  | 80   |
+| BP + SB (+15)             | 60  | 65  | 70  | 75  | 80   |
+| TR + SB (+20)             | 65  | 70  | 75  | 80  | 85   |
+| ------------------------- | --- | --- | --- | --- | ---- |
+| BP + TP (+12)             | 57  | 62  | 67  | 72  | 77   |
+| TR + TP (+17)             | 62  | 67  | 72  | 77  | 82   |
+| SB + TP (+17)             | 62  | 67  | 72  | 77  | 82   |
+| ------------------------- | --- | --- | --- | --- | ---- |
+| BP + TR + SB (+25)        | 70  | 75  | 80  | 85  | 90   |
+| ------------------------- | --- | --- | --- | --- | ---- |
+| BP + TR + TP (+22)        | 67  | 72  | 77  | 82  | 87   |
+| BP + SB + TP (+22)        | 67  | 72  | 77  | 82  | 87   |
+| TR + SB + TP (+27)        | 72  | 77  | 82  | 87  | 92   |
+| ------------------------- | --- | --- | --- | --- | ---- |
+| BP + TR + SB + TP (+32)   | 77  | 82  | 87  | 92  | 97   |
+| ------------------------- | --- | --- | --- | --- | ---- |
+
+
+
+
+--------------------------------------------------------
+After 100%'ing Tacarigua:
+--------------------------------------------------------
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

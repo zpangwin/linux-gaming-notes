@@ -1,0 +1,69 @@
+
+
+## Known bugs:
+
+* Regardless of R2UP / vanilla, playing Barney's 10g game and losing lets you play the 50g game. However, if you win you are still only awarded 10g and end up with a 50g loss when you win (-10g + -50g + 10g ==> -50g). This should either be patched properly (remove dialog option when it is supposed to be removed), or the payout should be left intact. having it broken in this way is bad for legitimate but unknowing players and as well as for people who want to exploit the "infinite game" bug.
+
+* Fools juice recipe not available to inquistion [reported here](https://translate.google.com/translate?sl=auto&tl=en&u=https://forum.worldofplayers.de/forum/threads/1285962-Rezept-f%C3%BCr-Narrensaft-nur-f%C3%BCr-Voodoo-Angeh%C3%B6rige)
+
+* Torches glitchy af in caves... //not sure can be fixed via mod
+
+* Muskets I says it costs 500g per Character screen but Fernando charges 1000g. Either his price is wrong or the Character screen is wrong. Confirmed that Bartolo sells the same skill for 500g so Fernando seems to be bugged.
+
+
+## things that piss me off
+
+* Torches glitchy af in caves... //not sure can be fixed via mod
+
+* the length of the stand-up animation after being defeated / not being able to access menus for that long of a time
+
+
+## How to mod
+
+* https://translate.google.com/translate?sl=auto&tl=en&u=https://forum.worldofplayers.de/forum/threads/1302517-3D-Modelling-f%C3%BCr-Risen
+
+
+## Needs confirmation:
+
+* Buying the Monkey trainer skill from Flannigan doesn't give you the skill / it is not marked as acquired in Character page. IIRC this happens still even with the R2UP mod. Need to confirm tho.
+
+* per [comment by Primevals](https://forum.worldofplayers.de/forum/threads/1154440-release-Risen-2-Unofficial-Patch/page3): "What about Fat Olga, can`t find it in the game, also Bartholo`s Rifle is bugged, i would love to insert it"
+
+* per [comment by Crude](https://translate.google.com/translate?sl=auto&tl=en&u=https://forum.worldofplayers.de/forum/threads/1154440-release-Risen-2-Unofficial-Patch/page3): [https://imgur.com/kPsphfj](https://imgur.com/kPsphfj) I'm not 100% sure how it will come about, because I only noticed that when I thought "Why do I have 100 in cutting weapons with only 5 in blades?" But I have a clue how it could have happened. //not sure i understand the root cause
+
+* per [comment by Motoki](https://forum.worldofplayers.de/forum/threads/1154440-release-Risen-2-Unofficial-Patch): There is no recipe for Leather Oil (raises Toughness stats +2) although it exists in a chest as a loot item. It should be a potion made of the Hero's Crown herb just like Fool's Juice, Sharpeye Paste, Swordthorn Essence and Graveroot Extract. //not sure if can be patched via mod
+
+* per [comment by Motoki](https://forum.worldofplayers.de/forum/threads/1154440-release-Risen-2-Unofficial-Patch): There is no quick travel map marker for the port at Maracai Bay. More of an annoyance than a bug, but all the other ports have a quick travel marker at or close to the port entry area. //not sure if can be patched via mod
+
+* [General Bug Thread](https://translate.google.com/translate?sl=auto&tl=en&u=https://forum.worldofplayers.de/forum/threads/1143361-Allgemeiner-Bug-Thread)
+
+* [bug steelebeard ghost](https://translate.google.com/translate?sl=auto&tl=en&u=https://forum.worldofplayers.de/forum/threads/1539156-Kann-die-Quest-Sprich-mit-Stahlbarts-Geist-nicht-Abschliessen-%28BUG-%29)
+
+## Other:
+
+looks like someone else has detailed notes on the game too that I missed in my google searches. Verify my notes against this later:
+
+* [Collected help - FAQs, guides, maps, lists, tips](https://qbh6alemkje6ejafyreoi5f6ey--forum-worldofplayers-de.translate.goog/forum/threads/1374641-Gesammelte-Hilfen-FAQs-Guides-Karten-Listen-Tipps?p=23225885#post23225885) - probably good to hold off for now though so as to avoid spoilers
+
+* [Risen 2 resource maps - spoilers - large images](https://qbh6alemkje6ejafyreoi5f6ey--forum-worldofplayers-de.translate.goog/forum/threads/1190521-Risen-2-resource-maps-spoilers-large-images) - probably good to hold off for now though so as to avoid spoilers
+
+* [Risen 2 cheat guide](https://translate.google.com/translate?sl=auto&tl=en&u=https://forum.worldofplayers.de/forum/threads/1142359-Risen-2-Cheatguide-Work-in-Progress)
+
+* [Risen 2 database](https://translate.google.com/translate?sl=auto&tl=en&u=https://forum.worldofplayers.de/forum/threads/1154333-Risen-2-Datenbank) - probably good to hold off for now though so as to avoid spoilers
+
+
+* for the di fuego chests. i should add my trick for getting past the guards to the freebies and chests files.. go into a room to get them suspicous, lure them upstairs, then jump onto the chest and fall. sometimes this works if you are quick. the other method is to kite them out of the building (e.g. steal something and run) til you get outside of town and can take one guard down without backup. repeat until all guards defeated.
+
+alternately:
+https://translate.google.com/translate?sl=auto&tl=en&u=https://forum.worldofplayers.de/forum/threads/1141312-Wachen-in-Di-Fuegos-Haus-umgehen
+Go to the room you want to loot, as far as you can go to the back. Then wait until guards are as far in the room as possible.
+Then quickly run out of the house all the way and run right back in again.
+Shortly before the threshold to the room, switch to sneak.
+Since the guards walk back to their position after you leave the house, you can sneak into the room unnoticed if you are fast enough because the guards go back to their old position with their backs to you.
+
+
+Steal, run out of sight, save, load. NPC then forgot that they were mad.
+
+go straight into the room and quick save / quick charge, as the guards' attention dissolves when charging
+
+You start a practice fight with Roquefort and walk into the building with this fight, so that the 3 guards, and sometimes Di Fuego himself, become onlookers. Then you wander out of the building and out of the village with the fight, the onlookers follow you. When you are far enough away, you end the fight, dash back into the village and can now loot the chests in peace without anyone catching you.

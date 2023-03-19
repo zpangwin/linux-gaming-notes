@@ -1,0 +1,262 @@
+
+===========================================
+Attempt #4:
+===========================================
+
+Decided to reverse-engineer the steps from this script
+but still using wineprefix from earlier attempts...
+
+https://www.gog.com/forum/risen_series/risen_series_for_linux
+
+into a pared-down simple set of steps
+
+starting off, i have
+
+ls -acl /gaming/lutris/games/risen-2/drive_c/temp
+total 6.5G
+-rwxrw----. 1 user user 4.0G Dec 29 21:56 'setup_risen_2_-_dark_waters_1.0_(18732)-1.bin'
+-rwxrw----. 1 user user 2.5G Dec 29 21:56 'setup_risen_2_-_dark_waters_1.0_(18732)-2.bin'
+-rwxrw----. 1 user user 722K Dec 29 21:56 'setup_risen_2_-_dark_waters_1.0_(18732).exe'
+-rwxrw----. 1 user user 5.4M Dec 29 21:56 'setup_risen_2_gold_edition_1.0_(18732).exe'
+
+# install required packages (in addition to wine)
+sudo dnf install -y innoextract icoutils p7zip cabextract
+
+# setup vars
+WINE_PREFIX_DIR="/gaming/lutris/games/risen-2"
+INSTALL_DIR="${WINE_PREFIX_DIR}/drive_c/Risen2_manual_install"
+
+cd /gaming/lutris/games/risen-2/drive_c/temp
+
+# Extract base game and then dlc to temp folder (drive_c/temp/gog_risen_2)
+innoextract "./setup_risen_2_-_dark_waters_1.0_(18732).exe" -g -d "${INSTALL_DIR}"
+innoextract "./setup_risen_2_gold_edition_1.0_(18732).exe" -g -d "${INSTALL_DIR}"
+
+cd "${INSTALL_DIR}"
+mkdir -p ./eulas ./support ./redist/DirectX
+mv -t ./eulas ./tmp/*.txt
+mv -t ./app/data/ini ./app/__support/app/data/ini/*.ini
+rm -rf ./app/__support
+find ./app/data/extern/videos -type f -iname 'logo*.vid' -exec mv "{}" "{}.bak" \;;
+
+icotool -x -i6 ./app/goggame-1207663193.ico -o ./gog-risen2-icon.png
+wrestool -x -t14 ./app/system/Risen.exe -o ./risen2.ico
+icotool -x -i6 ./risen2.ico -o ./risen2-icon.png
+
+cabextract ./tmp/directx_Jun2010_redist.exe -F Jun2010_D3DCompiler_43_x86.cab -d .
+cabextract ./tmp/directx_Jun2010_redist.exe -F Jun2010_d3dx9_43_x86.cab -d .
+cabextract ./Jun2010_D3DCompiler_43_x86.cab -L -F d3dcompiler_43.dll -d "${WINE_PREFIX_DIR}/drive_c/windows/system32"
+cabextract ./Jun2010_d3dx9_43_x86.cab -L -F d3dx9_43.dll -d "${WINE_PREFIX_DIR}/drive_c/windows/system32"
+
+mv -t ./ ./app/*
+mv -t ./redist ./tmp/*.ttf
+mv -t ./redist ./tmp/*.dll
+mv -t ./redist ./tmp/PhysX*
+mv -t ./redist/DirectX ./tmp/directx_Jun2010_redist.exe
+mv ./tmp/MSVC2005 ./redist/VCRedist
+
+rm ./tmp/*.jpg ./tmp/*.png ./tmp/*.ini ./tmp/*.ico ./goggame-* 2>/dev/null
+
+find . -type d -empty -delete;
+
+# didn't work for me
+#WINEPREFIX="$WINE_PREFIX_DIR" wine "$WINDOWS_INSTALL_DIR/redist/PhysX/PhysX-9.17.0524-SystemSoftware.exe" /s
+
+# this works
+7za x -i'!PhysX/files/Common/*' -o"." ./redist/PhysX/PhysX-9.17.0524-SystemSoftware.exe
+mv -t ./ ./PhysX/files/Common/*.dll
+
+WINDOWS_INSTALL_DIR=$(echo "${INSTALL_DIR}"|sed -E 's|^.*/drive_([a-z])(/.*)$|\1:\2|g'|tr '/' '\\')
+REGEDIT_INSTALL_DIR=$(echo "${WINDOWS_INSTALL_DIR^}"|sed -E 's|\\|\\\\\\\\|g')
+
+CRLN='\r\n'
+REGEDIT_PATH_QUOTE='\\\"'
+PATH_SEP='\\\\'
+regdata="REGEDIT4${CRLN}${CRLN}"
+regdata="${regdata}[HKEY_CURRENT_USER\\Software\\Wine\\Direct3D]${CRLN}"
+regdata="${regdata}\"csmt\"=dword:1${CRLN}${CRLN}"
+
+regdata="${regdata}[HKEY_CURRENT_USER\\Software\\Wine\\DllOverrides]${CRLN}"
+regdata="${regdata}\"d3dx9_43\"=\"native,builtin\"${CRLN}"
+regdata="${regdata}\"d3dcompiler_43\"=\"native,builtin\"${CRLN}"
+regdata="${regdata}\"winemenubuilder.exe\"=\"\"${CRLN}${CRLN}"
+
+regdata="${regdata}[HKEY_LOCAL_MACHINE\Software\Deep Silver\Risen 2 - Dark Waters]${CRLN}"
+regdata="${regdata}\"InstallPath\"=\"${REGEDIT_INSTALL_DIR}\"${CRLN}"
+regdata="${regdata}\"Language\"=\"0x0009\"${CRLN}"
+regdata="${regdata}\"RUN_CMD\"=\"${REGEDIT_PATH_QUOTE}${REGEDIT_INSTALL_DIR}${PATH_SEP}system${PATH_SEP}Risen.exe${REGEDIT_PATH_QUOTE}\"${CRLN}"
+regdata="${regdata}\"Type\"=\"GOG\"${CRLN}"
+regdata="${regdata}\"UNINSTALL_CMD\"=\"\"${CRLN}"
+regdata="${regdata}\"Version\"=\"1.00\"${CRLN}${CRLN}"
+
+printf "${regdata}" > ./risen2.reg
+
+WINEPREFIX="$WINE_PREFIX_DIR" wine regedit /C /S "$WINDOWS_INSTALL_DIR\\risen2.reg"
+
+then run
+WINEPREFIX="$WINE_PREFIX_DIR" wine regedit
+
+and manually confirm keys were added. if not File > Import > locate risen2.reg and manually import.
+
+then test if game launches ok
+
+WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="$WINE_PREFIX_DIR" wine "$WINDOWS_INSTALL_DIR/system/Risen.exe"
+-> game tries to run but immediately closes with following error in terminal:
+0024:fixme:gameux:GameExplorerImpl_VerifyAccess (1295E630, L"c:\\Risen2_manual_install\\system\\Risen.exe", 01BBF7EC)
+
+# trying the original install with the physx fix
+
+cp -a -t "/gaming/lutris/games/risen-2/drive_c/GOG Games/risen 2 - dark waters/system" "${INSTALL_DIR}"/*.dll
+
+WINE_LARGE_ADDRESS_AWARE=1 WINEPREFIX="$WINE_PREFIX_DIR" wine "c:/GOG Games/risen 2 - dark waters/system/Risen.exe"
+
+-> same thing:
+0024:fixme:gameux:GameExplorerImpl_VerifyAccess (1295E9F0, L"c:\\GOG Games\\risen 2 - dark waters\\system\\Risen.exe", 01BBF7EC)
+
+
+https://forum.winehq.org/viewtopic.php?t=9397
+-> suggests disabling gameux.dll via winecfg
+
+https://forums.gentoo.org/viewtopic-t-1080678-start-0.html
+-> mentions gothic 2, which is by same dev group and considered a predecessor (engine-wise)
+
+
+https://www.phoronix.com/forums/forum/linux-graphics-x-org-drivers/open-source-amd-linux/27408-proper-setup-to-be-able-to-run-old-or-any-games-with-wine
+-> suggests issue could be with using 64-bit wineprefix when it is not needed
+
+https://www.reddit.com/r/linux_gaming/comments/99e0kc/steam_playguide_create_custom_32bit_prefix_to/
+-> this suggests we could do the 32-bit wineprefix hack with the steam version.
+-> however, i would probably do this under a custom proton instance under compatibility tools such
+	as one of the gloriouseggroll builds. bc in theory that should be less prone to breakage during
+	updates and more isolated to prevent the hack being applied to anything implicitly
+
+===========================================
+Attempt #3:
+===========================================
+thinknig that the offline installer might be a bust bc it seems to be relying on the microsoft installer for success/fail condition. maybe we can bypass it by extracting from the gog installer (e.g. open the installer exe with file roller since gog installers are really just archives...)
+
+file roller seems to show some non-accessible intermediary format.
+
+https://www.gog.com/forum/catacombs_pack/extract_files_from_installer_without_installing
+-> Yes. You can use innoextract to unpack the windows installers. 
+-> https://constexpr.org/innoextract/
+-> Note that InnoSetup frequently changes its format in their releases, so sometimes innoextract is not ready yet for the latest version of InnoSetup, or there's no release yet and you have to build it from latest sources on git.
+-> https://github.com/dscharrer/innoextract
+
+https://www.gog.com/forum/general_archive/any_way_to_extract_the_contents_of_the_gog_installers
+-> http://innounp.sourceforge.net/
+-> Inno Extract already runs on Linux: http://constexpr.org/innoextract/ 
+
+https://www.gog.com/forum/general/linux_extracting_game_files_from_installer
+
+https://www.gog.com/forum/general/adamhms_linux_wine_wrappers_news_faq_discussion/page1
+
+https://www.gog.com/forum/general/adamhms_linux_wine_wrappers_news_faq_discussion/post3
+
+https://www.gog.com/forum/general/adamhms_linux_wine_wrappers_news_faq_discussion/post6
+https://www.gog.com/forum/risen_series/risen_series_for_linux
+
+https://pyra-handheld.com/boards/threads/gog-games-unpacker.65874/
+
+https://maximumhoyt.blogspot.com/2017/07/unpack-those-exe-game-files-from-gogcom.html
+
+
+dnf search inno
+innoextract.x86_64 : Tool to extract installers created by Inno Setup
+
+dnf install -y innoextract
+
+innoextract --extract --gog setup_risen_2_-_dark_waters_1.0_\(18732\).exe
+
+-> think i'm missing some stuff... try again
+
+===========================================
+Attempt #2:
+===========================================
+installing from offline (windows) installer. planning to do manual wine prefix setup then run installer.
+reusing wineprefix from attempt #1 but having winetricks install vc++ 2005 runtimes first.
+
+cd /gaming/lutris/games/risen-2
+
+# trying to manually install VC++ 2005
+wt vcrun2005 d3dx9 physx win7
+
+deleted "/gaming/lutris/games/risen-2/drive_c/GOG Games/risen 2 - dark waters"
+
+
+then swapped out the exe target back to:
+/gaming/lutris/games/risen-2/drive_c/temp/setup_risen_2_-_dark_waters_1.0_(18732).exe
+
+and reran installer (skipping integrity check since we already did that)
+
+still got the error from vc2005
+
+
+
+===========================================
+Attempt #1:
+===========================================
+installing from offline (windows) installer. planning to do manual wine prefix setup then run installer.
+
+alias mkwine32='mk_wine64 () { env WINEPREFIX="$(realpath "$1")" WINEARCH=win32 wine wineboot } ; mk_wine64'
+alias mkwine64='mk_wine64 () { env WINEPREFIX="$(realpath "$1")" WINEARCH=win64 wine wineboot } ; mk_wine64'
+alias wt='wt_here() { winePrefixDir="$(pwd)"; env WINEPREFIX="${winePrefixDir}" winetricks $1 $2 $3 $4 $5 $6 $7 $8 $9 } ; wt_here'
+
+cd /gaming/lutris/games
+
+# why 64? bc proton does it so figured i would too
+mkwine64 risen-2 && cd $_
+
+# how did i determine to use these winetricks ids?
+# i cheated and looked at the lutris install script then also set it to win7
+# which i think i had seen somewhere online possibly on winehq db
+# also tried vista later based on a russian comment on lutris page... still no luck
+wt d3dx9 physx win7
+
+
+* install gui comes up
+* clicked to install using default paths and checked box to run integrity verification
+* no integrity issues, installation startd
+
+Eventually craps out with msgbox error:
+
+---------------------------
+Microsoft Visual C++ 2005 SP1 Redistributable Package (x86)
+---------------------------
+Extracting file failed.  It is most likely caused by low memory (low disk space for swapping file) or corrupted Cabinet file.
+---------------------------
+OK   
+---------------------------
+
+clicking OK, we get a 2nd msgbox error:
+
+---------------------------
+Microsoft Visual C++ 2005 SP1 Redistributable Package (x64)
+---------------------------
+Extracting file failed.  It is most likely caused by low memory (low disk space for swapping file) or corrupted Cabinet file.
+---------------------------
+OK   
+---------------------------
+
+It then comes up with the installer for PhysX. If you accept and hit next you'll get a third pop-up error (non-standard MS forms) that appears to be from the gog installer:
+
+
+---------------------------
+Fatal Error
+---------------------------
+Installation ended prematurely because of asn error.
+---------------------------
+OK   
+---------------------------
+
+
+Ironically, the gog installer will then say that the game was installed successfully. However, clicking the Launch button; nothing happens.
+
+
+Ignoring this and swapping out the exe target from:
+/gaming/lutris/games/risen-2/drive_c/temp/setup_risen_2_-_dark_waters_1.0_(18732).exe
+
+to:
+/gaming/lutris/games/risen-2/drive_c/GOG Games/risen 2 - dark waters/system/Risen.exe
+
+nothing happens

@@ -1,0 +1,410 @@
+
+see /gaming/lutris/games/risen-2-setup-notes.txt
+
+if i get it going, check other games that are borked due to physx:
+
+Homefront 1:
+https://www.protondb.com/app/55100
+-> still borked as of 2021-feb-27
+
+Mass Effect 3 N7 Digital Deluxe Edition
+https://www.protondb.com/app/1238020
+-> ~9months ago (~ May 2020) lot of stuff about it not working due to physx
+-> first person to get it working was using Proton-5.11-GE-1-MF but others claimed this didn't work
+-> 2ns to get it working: Used 32bit prefix with winesteam (lutris 5.7), worked without any problem that way.
+-> https://github.com/ValveSoftware/Proton/issues/3999#issuecomment-748336039
+	-> Every time you hit play on Steam, it runs the "First time setup" which deletes a lot of files and some registry keys.
+	-> let the game do its first time setup and complete then close out of everything (including steam)
+	-> run the physx redistrib included with game:
+		WINEPREFIX="/path/to/game/prefix" wine start /D"C:/relative/path/from/pfx" "PhysX_9.09.0814_SystemSoftware.exe"
+	-> then prevent steam from fucking stuff up:
+		in terminal:
+			cd "/path/to/game/prefix"
+			sudo chattr +i *.reg
+			cd drive_c/windows/syswow64
+			sudo chattr +i PhysX*
+			sudo chattr +i AGEIA/
+			sudo chattr +i AgC*
+			cd AGEIA/
+			chmod 555 *
+			cd ../../..
+			cd "ProgramFiles(x86)"
+			chmod -R 555 "NVIDIA Corporation"
+			chmod -R 555 "AGEIA Tecnologies
+	-> Restart Steam and hit play! Should work perfectly every time!
+
+Bionic Commando: Rearmed
+https://www.protondb.com/app/21680
+-> initial comments about physx. e.g. "Boots to splash screen then immediately closes" / "PhysX runtime error"
+-> "Wont start without physx. Works flawless after installing physx with winetricks"
+
+======================================================================================================================
+Could there be a bad registry path like what happened in the
+beyond good and evil steam install?
+
+https://steamcommunity.com/app/40300/discussions/0/340412122402598965/
+
+	go to steam\steamapps\common\Risen\data\ini
+	and open the configdefault with notepat or press edit(right click etc)
+	then change fullscreen "true" to fullscreen "false" save then open the game if works start new game and save then exit redo the full screen to true thens tart game from steam app :) hope it works
+
+https://steamcommunity.com/app/40390/discussions/0/2381701715725096834/
+
+	This is what worked for me:
+	Go to: .\Steam\steamapps\common\Risen 2\data\ini\
+	Open "ConfigDefault.xml" with texteditor of your choice (e.g. Notepad)
+	Search for (Shortcut: CTRL + F): "refreshrate"
+	In my ConfigDefault.xml this value was "0"
+	I changed it to "60" and saved it.
+
+	Started the game and finally saw the main menu :-)
+
+https://translate.google.com/translate?sl=auto&tl=en&u=https://steamcommunity.com/app/40390/discussions/0/154644928861750032/
+	(original was in french)
+
+	4-once the download is finished, the game will still not work, because the 'PhysXLoader.dll' file will be missing, and an error message will tell you ...
+	5-download this file on the internet (google search)
+	6-copy the file 'PhysXLoader.dll' in the directory of Windows / System32 AND in Windows / Sys WOW64
+	7-installer 'PhysX-9.13.0604-SystemSoftware-Legacy' (google search by copy / paste)
+	8-installer 'NVIDIA PhysX 9.16.0318 system software '(google search by copy / paste)
+	9-check (in programs and functionalities) that these two software are installed:
+		'visual microsoft C ++ 2005 redistributable (x64) '
+		'visual microsoft C ++ 2005 redistributable'
+
+https://steamcommunity.com/app/40390/discussions/0/368542844481541182/?ctp=2
+
+	Edited : Pick Windows 7 in Compatibility Mode and do the rest like i posted Lag is gone ;)
+
+https://steamcommunity.com/app/40390/discussions/0/215439774865498331/
+
+	What fixed it for me was changing the AdapterNumber in data\ini\ConfigDefault.xml from 0 to 1, as #0 is apparently my WMR set, that the game was trying to get displayed on. You might have to change it from 1 to 0, depending on what count the game assigns to your displays.
+
+	You might also have to do the same in %localappdata%\Risen2\Config\ConfigUser.xml
+
+https://steamcommunity.com/app/40300/discussions/0/46476691571092149/
+
+	I've managed to fix this opening the ConfigDefault.xml archive, which is located at C:\Program Files\Steam\SteamApps\common\Risen\data\ini
+
+	You have to search "physics" while using the notepad and write Disabled="true"
+
+https://steamcommunity.com/app/40300/discussions/0/46476691571092149/?ctp=2
+
+	I found a other way to fix the blackscreen (without any error-message) and Fatal-error (Physx).
+	Found some good propositions on the web.
+
+	I use Windows 8.1 and Nvidia GTX 960 and the fix worked without reinstalling the game. My problem was the blackcreen after the Risen-logo. I had to shut it manually down and there was no error-message.
+
+	Here's the Fix for the blackscreen:
+		1. Go to the following folder: D:\Program Files\Games\Steam\steamapps\common\Risen\data\ini
+		2. Open "ConfigDefault.xml"
+		3. Search for the the following line:	--- FullScreen="true"
+		4. Change "true" to "false"				--- FullScreen="false"
+		5. Save the changes and start the game.
+			--- Risen will start in a window. Go to the settings (ingame) and change your Video
+			--- Settings back to fullscreen!!! Dont forget to set your preffered resolution and it's done
+			--- The game will start normally now and always in Fullscreen. You woun't have to do this
+			--- steps again. Don't know why... But it was the first thinbg I tried and it's working.
+
+	Aftter fixing the Blackscreen I got the Fatal-Error-Message (Physx).
+		1. Just install Physx.
+			--- Visit the nvidia.com and download the newest version of Physx and install it.
+			http://www.nvidia.com/object/physx-9.13.1220-driver.html
+
+		It's done! The game will start without blackscreen and without the Physx Error!
+
+https://www.reddit.com/r/linux_gaming/comments/lgjwar/very_poor_performance_on_proton/
+
+	run a game that is giving problem's and check the kernel output after closing it for any error's or indication of a hidden background problem (use command "journalctl -b --output short-monotonic")
+
+https://www.gamingonlinux.com/articles/wine-57-is-out-with-more-wined3d-vulkan-work-a-start-on-a-usb-device-driver.16508
+
+	D9VK still runs, in my case begins work risen 2 and literally crush wined3d:
+
+https://appdb.winehq.org/objectManager.php?sClass=version&iId=27325
+	Risen 2 - Dark Waters - Normal Steam-Version
+
+	Linux kernel 4.19 breaks startup of BO2 due to change in PTRACE_POKEUSER hw breakpoint behavior
+	https://bugs.winehq.org/show_bug.cgi?id=46472
+
+https://bugs.winehq.org/show_bug.cgi?id=46472
+
+	andy 2020-03-28 13:31:58 CDT
+
+	Still present in last wine version (5.5), block Risen 2 for me (crash when load/start game) but patch posted by tjb fixed issue for me.
+
+	I think this bug should be confirmed and have some priority.
+
+https://appdb.winehq.org/objectManager.php?sClass=version&iId=35292
+
+	Requires physx and native d3dcompiler_43
+
+https://www.gog.com/forum/risen_series/risen_2_doesnt_start
+
+	- Check that - "visual microsoft C ++ 2005 redistributable (x64)" / "visual microsoft C ++ 2005 redistributable" - are installed.
+
+	- Also, check the installation of the "Nvidia-PhysX" program :
+	https://www.nvidia.com/fr-fr/drivers/physx/physx-9-19-0218-driver/
+
+https://www.pcgamingwiki.com/wiki/Risen_2:_Dark_Waters
+
+	-> has some good tech details about config files and such
+	-> might be good for verifying stuff wasn't messed up during install
+
+	-> also has "Risen 2 Fails to Launch / Hangs on launch"
+		-> PhysX
+		-> Verify install
+
+	-> "Game doesn't start / Frequency out of range errored
+		-> option 1: delete %LOCALAPPDATA%\Risen2\Config\ConfigUser.xml (new one gets created next time game is stared)
+		-> option 2: edit <path-to-game>\data\ini\ConfigDefault.xml
+			In the section <Window>, you should verify that the values are correct:
+				AdapterNumber="0"
+				Top="0"
+				Bottom="768"
+				Left="0"
+				Right="1024
+				RefreshRate="85"
+
+	-> "Game uses the wrong monitor"
+		-> Set monitor in %LOCALAPPDATA%\Risen2\Config\ConfigUser.xml
+		-> Set monitor in <Steam-folder>/steamapps/compatdata/40390/pfx/Users/steamuser/LocalAppData/Risen2/Config/ConfigUser.xml
+			Change the AdapterNumber line so it reads AdapterNumber="0"
+			Save your changes and test the result in-game.
+
+https://www.reddit.com/r/SteamPlay/comments/9anque/steamplayprotonlutris_cheat_sheet/
+
+	How do I enable the HUD?
+
+	In your Steam Library/steamapps/common/Proton 3.x rename user settings example to user_settings.py open it in a text editor and remove the # at the beginning of the DXVK_HUD line
+
+	Alternatively you can add it to the steam launch options
+
+		DXVK_HUD=fps %command%
+
+https://segmentnext.com/2012/04/27/risen-2-crashes-errors-blackscreen-fps-fixes-and-graphics-tweaks/
+
+	"Risen 2 Doesn’t Start"
+		-> "Set your sound card to 6 channels instead of 8"
+
+	"Risen 2 Black Screen – InGame All Black"
+		-> ATI: set "Texture Filtering Quality" = "High"
+
+======================================================================================================================
+Options to consider:
+https://github.com/ValveSoftware/Proton/#runtime-config-options
+
+	PROTON_LOG=1
+	# default PROTON_LOG_DIR=~
+	PROTON_LOG_DIR=~/Desktop
+	PROTON_DUMP_DEBUG_COMMANDS=1
+
+	# https://github.com/ValveSoftware/Proton/issues/891
+	# https://www.reddit.com/r/SteamPlay/comments/e9t6ej/how_to_use_dxvk_with_proton_is_it_already_enabled/
+	# https://solwhitehorn.github.io/dxvk-fps-proton/
+	# https://github.com/doitsujin/dxvk#hud
+	#
+	# DXVK_HUD=1 has the same effect as DXVK_HUD=devinfo,fps
+	#
+	DXVK_HUD=1
+	DXVK_HUD=devinfo,fps,frametimes
+	DXVK_HUD=devinfo,fps,memory,gpuload
+	DXVK_HUD=full
+
+
+	# PROTON_FORCE_LARGE_ADDRESS_AWARE: Enabled by default.
+	#PROTON_FORCE_LARGE_ADDRESS_AWARE=1
+	# https://www.reddit.com/r/SteamPlay/comments/hlxdcs/what_is_the_proper_format_for_proton_launch/
+	# By the way, PROTON_USE_D9VK=1 doesn't do anything anymore because D9VK got merged into DXVK
+	# and is enabled by default in Proton since 5.0.
+	PROTON_USE_D9VK=1
+	# esync shouldn't be disabled unless it actually causes crashes or slowdowns with a particular game
+	PROTON_NO_ESYNC=1
+
+	# PROTON_OLD_GL_STRING: Set some driver overrides to limit the length of the GL extension string,
+	#	for old games that crash on very long extension strings.
+	PROTON_OLD_GL_STRING=1
+
+	# PROTON_USE_WINED3D: Use OpenGL-based wined3d instead of Vulkan-based DXVK for d3d11, d3d10, and d3d9.
+	PROTON_USE_WINED3D=1
+	PROTON_NO_FSYNC=1
+	taskset --cpu-list 0-7 %command%
+		or taskset --cpu-list 0-7 gamemoderun %command%
+
+	# PROTON_SET_GAME_DRIVE: Create an S: drive which points to the Steam Library which contains the game.
+	PROTON_SET_GAME_DRIVE=1
+
+Commands from Prototype (another game that used to crash on launch) were now successfully using:
+https://www.protondb.com/app/10150
+	PROTON_FORCE_LARGE_ADDRESS_AWARE=1 PROTON_USE_D9VK=1 taskset --cpu-list 0-7 %command%
+	PROTON_FORCE_LARGE_ADDRESS_AWARE=1 PROTON_USE_D9VK=1 taskset -c 0-7 %command%
+	or
+	PROTON_FORCE_LARGE_ADDRESS_AWARE=1 WINEDLLOVERRIDES="xaudio2_3=b" PROTON_USE_D9VK=1 taskset 0x000000FF gamemoderun %command%
+		-> according to the man page 0x000000FF == --cpu-list 0-8 (bc 0x00FF == binary 1111 1111)
+		-> --cpu-list 0-7 would actually be 0x0000007F (binary 0111 1111)
+
+The Forest
+https://www.protondb.com/app/242760
+	PROTON_NO_FSYNC=1 PULSE_LATENCY_MSEC=90 taskset -c 0,1,2,3 %command%
+	PROTON_NO_FSYNC=1 taskset -c 0,1,2,3 %command%
+	PROTON_NO_FSYNC=1 DXVK_HUD=1 taskset -c 0,1,2,3 %command%
+
+
+Red Orchestra 2
+https://www.protondb.com/app/35450
+	PROTON_USE_WINED3D=1 gamemoderun %command%
+
+Red Dead Redemption 2
+https://www.protondb.com/app/1174180
+	PROTON_NO_GLSL=1 WINEDLLOVERRIDES="dxgi=n,b" PULSE_LATENCY_MSEC=60 taskset -c 0-7 %command% -vulkan -USEALLAVAILABLECORES -cpuLoadRebalancing -ignorepipelinecache
+
+	WINEDLLOVERRIDES=dxgi=n,b PULSE_LATENCY_MSEC=60 %command% -adapter 1 -vulkan -width 2560 -height 1440 -USEALLAVAILABLECORES -cpuLoadRebalancing -ignorepipelinecach
+
+		-> are these flags specific to RDR2?
+		-> going by google, steam, and reddits results... yeah, probably
+
+https://www.howtoforge.com/linux-taskset-command/
+
+taskset [options] mask command [argument...]
+taskset [options] -p [mask] pid
+
+taskset  is  used  to  set  or  retrieve  the CPU affinity of a running
+process given its pid, or to launch a new  command  with  a  given  CPU
+affinity.   CPU affinity is a scheduler property that "bonds" a process
+to a given set of CPUs on the system.  The Linux scheduler  will  honor
+the  given CPU affinity and the process will not run on any other CPUs.
+Note that the Linux scheduler also supports natural CPU  affinity:  the
+scheduler attempts to keep processes on the same CPU as long as practi?
+cal for performance reasons.  Therefore, forcing a specific CPU  affin?
+ity is useful only in certain applications.
+
+The CPU affinity is represented as a bitmask, with the lowest order bit
+corresponding to the first logical CPU and the highest order bit corre?
+sponding  to  the  last logical CPU.  Not all CPUs may exist on a given
+system but a mask may specify more CPUs than are present.  A  retrieved
+mask  will  reflect only the bits that correspond to CPUs physically on
+the system.  If an invalid mask is given (i.e., one that corresponds to
+no  valid  CPUs on the current system) an error is returned.  The masks
+may be specified in hexadecimal (with or without a leading "0x"), or as
+a CPU list with the --cpu-list option.  For example,
+
+   0x00000001  is processor #0,
+
+   0x00000003  is processors #0 and #1,
+
+   0xFFFFFFFF  is processors #0 through #31,
+
+   32          is processors #1, #4, and #5,
+
+   --cpu-list 0-2,6
+               is processors #0, #1, #2, and #6.
+
+When  taskset returns, it is guaranteed that the given program has been
+scheduled to a legal CPU.
+
+https://www.protondb.com/help/improving-performance
+
+Feral Gamemode
+
+Feral gamemode is a tool that applies automatic tweaks to your system when running games which can improve performance. Generally, this can result in games becoming a bit smoother with a small increase to performance.
+
+Arch-based installation
+
+    Install the gamemode and lib32-gamemode packages from AUR
+    https://aur.archlinux.org/packages/gamemode-git
+    https://aur.archlinux.org/packages/lib32-gamemode-git
+
+Ubuntu-based installation:
+
+    Use this PPA
+    https://launchpad.net/~samoilov-lex/+archive/ubuntu/gamemode
+
+To use gamemode
+
+    Launching from Lutris: Select the “Enable feral gamemode” option under “System Options”
+    Launching from Steam: enter gamemoderun %command% into the game's launch options.
+
+You can verify that gamemode is working by entering gamemoded -s into terminal while a game is running.
+
+https://gamecrate.com/linux-gaming-boost-your-performance-gamemode/25200
+https://github.com/FeralInteractive/GameMode
+
+
+
+======================================================================================================================
+i also wonder if this might work:
+
+	https://www.protondb.com/app/10150
+
+Reported by: wundrweapon 8 months ago
+Just take 5 minutes to set up some Proton junk and you're off to the races
+
+	Launcher:Steam
+	Launch Flags:Large Address Aware, Use D9VK
+
+	Game also needed taskset -c 0-7 because I have more than 8 threads on my CPU
+	Customizations:Protontricks
+
+	protontricks 10150 winxp to change the supposed OS, then protontricks 10150 winecfg to add a DLL override for xaudio2_3 (though perhaps this could also be done in launch options?)
+	Audio:Other
+
+	Without the XAudio DLL override, no audio will play
+	Significant Bugs:
+
+	Without the taskset fix, CPUs with more than 8 threads will crash the game during or before the opening cutscene
+
+	TINKER
+	Proton 4.11-13
+	Distro:Void Linux
+	Kernel:5.7.8_1
+	RAM:16 GB
+	GPU Driver:4.6 Mesa 20.1.2
+	GPU:Radeon RX Vega
+	CPU:AMD Ryzen 5 2600 Six-Core
+
+======================================================================================================================
+https://www.protondb.com/app/10150
+Reported by Stoney_Fish, 9 months ago: Sound works with 4.2 and 4.11.
+
+	Launcher:Steam
+	Launch Flags:Large Address Aware, Use D9VK
+
+	PROTON_FORCE_LARGE_ADDRESS_AWARE=1 WINEDLLOVERRIDES="xaudio2_3=b" PROTON_USE_D9VK=1 taskset 0x000000FF gamemoderun %command%
+	Audio:Other
+
+	Quiet audio - needed set the speaker volume up high to be a normal level.
+
+	PROTON_FORCE_LARGE_ADDRESS_AWARE=1 WINEDLLOVERRIDES="xaudio2_3=b" PROTON_USE_D9VK=1 taskset 0x000000FF gamemoderun %command%
+	TINKER
+	Proton 4.11-13
+	Distro:Ubuntu 20.04 LTS
+	Kernel:5.4.0-29-generic
+	RAM:16 GB
+	GPU Driver:NVIDIA 440.64
+	GPU:NVIDIA GeForce GTX 1080
+	CPU:Intel Core i5-7400 @ 3.00GHz
+======================================================================================================================
+https://www.protondb.com/app/10150
+
+Reported by Photonboy, 10 months ago: R9-3900x + GTX1080 + Ubuntu v12.04 and working great now!
+
+	Launcher:Steam
+	Launch Flags:Use D9VK
+
+	Used WINETRICKS as discussed to fix AUDIO and copied/pasted into the game Launch Options the following from this page: PROTON_FORCE_LARGE_ADDRESS_AWARE=1 PROTON_USE_D9VK=1 taskset --cpu-list 0-7 %command%
+
+	R9-3900x CPU (12-core) so I guess that was the final problem why it kept crashing "Slyxxx" here had that fix as anything above 8 cores crashes otherwise.
+
+	Will try the res fix but it looks great already at 1920x1080 (2560x1440 monitor), 4xAA. Also runs SMOOTH unlike on Windows 10 for me where it has an odd JUDDER (quick stutter) which is why I kept trying to make it work in Linux.
+
+	So there's the AUDIO fix via Winetricks, appyling Vulkan API, CPU fix for high core-count systems and if desired the DLL replacement if you have more than 1920x1080 res.
+	Customizations:Winetricks
+
+	TINKER
+	Proton 5.0-6
+	Distro:Ubuntu 20.04 LTS
+	Kernel:5.4.0-28-generic
+	RAM:32 GB
+	GPU Driver:NVIDIA 440.64
+	GPU:NVIDIA GeForce GTX 1080
+	CPU:AMD Ryzen 9 3900X 12-Core
+======================================================================================================================

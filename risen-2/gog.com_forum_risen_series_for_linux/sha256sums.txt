@@ -1,0 +1,10 @@
+risen_wine.tar.xz
+(38.1 kB, SHA256: ffd961e68ca3c1cc564174f77c1cbcd0d120fa0deadbd6b38f585494161484af)
+
+risen2_wine.tar.xz
+(37.7 kB, SHA256: 8ff7cbea60d731f217fdfb57425c26ef9fb3bbdaf236ddd0bbf3ca8734bbb032)
+
+risen3_wine.tar.xz
+(43.6 kB, SHA256: e5154f55bb4cda435f218a9d5346114fd8ebe5d31893fc6fb049f872d47cad7a) 
+
+Since I am unsure if the author intends his scripts to be freely distributable or not, I am NOT going to be including a copy in my repo.. (I also don't think they really helped me significantly in the end)
