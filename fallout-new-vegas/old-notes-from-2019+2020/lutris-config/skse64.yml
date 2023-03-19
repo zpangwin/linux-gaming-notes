@@ -1,0 +1,83 @@
+name: "FNVEdit"
+game_slug: fnvedit
+slug: fnvedit
+version: v4.0.2
+runner: wine
+
+script:
+    files:
+    - nvse_launcher: https://github.com/rockerbacon/lutris-skyrimse-installers/releases/download/1.8.2/nvse_launcher.sh
+    - selauncher_launcher: https://github.com/rockerbacon/lutris-skyrimse-installers/releases/download/1.8.2/selauncher_launcher.sh
+    - xedit_archive: https://github.com/TES5Edit/TES5Edit/releases/download/xedit-4.0.2/SSEEdit.4.0.2.zip
+
+    game:
+        exe: $GAMEDIR/proton_runner/selauncher_launcher.sh
+        args: skse64_loader.exe
+        working_dir: "$HOME/.steam/steam/steamapps/common/Skyrim Special Edition"
+
+    system:
+        env:
+            STEAM_COMPAT_DATA_PATH: "$HOME/.steam/steam/steamapps/compatdata/489830"
+
+    installer:
+    - extract:
+        file: xedit_archive
+        dst: "$GAMEDIR/fnv_edit"
+
+    # xEdit is just renamed to FNVEdit as recommended in their documentation.
+    # However, since FONV is a 32-bit game we don't need (and should not use) the 64-bit xEdit binaries
+    # BUT there is currently no remove/delete command in lutris; we are going to cheat and move them
+    # to the system temp dir so that they will automatically get cleaned up on reboot (at least on most ubuntu-based systems)
+    - move:
+        src: "$GAMEDIR/fnv_edit/SSEEdit64.exe"
+        dst: "/tmp/SSEEdit64.exe"
+    - move:
+        src: "$GAMEDIR/fnv_edit/SSEDump64.exe"
+        dst: "/tmp/SSEDump64.exe"
+    - move:
+        src: "$GAMEDIR/fnv_edit/SSEEdit.exe"
+        dst: "$GAMEDIR/fnv_edit/FNVEdit.exe"
+    - move:
+        src: "$GAMEDIR/fnv_edit/SSEDump.exe"
+        dst: "$GAMEDIR/fnv_edit/FNVDump.exe"
+
+
+    - merge:
+        src: $GAMEDIR/skse_binaries/Data
+        dst: "$HOME/.steam/steam/steamapps/common/Skyrim Special Edition/Data"
+    - copy:
+        src: $GAMEDIR/skse_binaries/skse64_1_5_73.dll
+        dst: "$HOME/.steam/steam/steamapps/common/Skyrim Special Edition"
+    - copy:
+        src: $GAMEDIR/skse_binaries/skse64_loader.exe
+        dst: "$HOME/.steam/steam/steamapps/common/Skyrim Special Edition"
+    - copy:
+        src: $GAMEDIR/skse_binaries/skse64_steam_loader.dll
+        dst: "$HOME/.steam/steam/steamapps/common/Skyrim Special Edition"
+
+    - copy:
+        src: nvse_launcher
+        dst: $GAMEDIR/proton_runner
+    - chmodx: $GAMEDIR/proton_runner/nvse_launcher.sh
+
+    - copy:
+        src: selauncher_launcher
+        dst: $GAMEDIR/proton_runner
+    - chmodx: $GAMEDIR/proton_runner/selauncher_launcher.sh
+
+    - input_menu:
+        description: "MANUAL STEPS REQUIRED:\n
+            1. Open Steam and find Fallout New Vegas;\n
+            2. Right click on it and select the option \"Properties\";\n
+            3. Click on \"Set Launch Options...\";\n
+            4. Copy and paste the following in the textbox:\n
+                bash \"${HOME}/Games/nvse/proton_runner/nvse_launcher.sh\" && echo %command% > /dev/null\n
+            5. Click on \"OK\";\n
+            6. Still on the properties menu check the option \"Force the use of a specific Steam Play compatibility tool\";\n
+            7. Select \"Proton 4.11-x\" from the dropdown menu;\n
+            8. Click on \"Close\""
+        options:
+            - waiting: "Click here after you've finished all steps"
+            - proceed: "I've followed the steps, procced with the installation"
+        preselect: waiting
+

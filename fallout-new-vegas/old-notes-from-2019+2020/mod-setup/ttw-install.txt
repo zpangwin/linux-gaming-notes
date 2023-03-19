@@ -1,0 +1,982 @@
+NOTE: TO SELF
+IF YOU GET THIS WORKING... POST BACK HERE:
+https://taleoftwowastelands.com/viewtopic.php?t=7709
+
+https://wiki.step-project.com/User:EssArrBee/FalloutNewVegas
+
+https://taleoftwowastelands.com/viewtopic.php?t=2392
+
+https://www.reddit.com/r/Fallout/comments/ah994i/how_to_install_mods_for_fallout_new_vegas_on_linux/
+
+https://www.reddit.com/r/modpiracy/comments/apopl9/newest_version_of_ttw/
+
+https://appdb.winehq.org/objectManager.php?sClass=version&iId=35711
+
+I'm not going to ask for or expect linux support but I HAVE used this under wine and the only "issues" I see are really just things that don't work for some Windows users (e.g. AMD cpus, MO2 users, etc). Would you be willing to consider any of the following, which could also benefit windows users?
+
+1) I have seen mention in a few places that the installer runs slowly on AMD cpus. Some (maybe most) of this is probably unavoidable, but if you are using ffmpeg under the covers then would you consider adding the -nostdin flag if you aren't already? The flag shouldn't impact anything for input/output files but it can have a decent performance boost in some cases (not just on linux but for sure it would help there).
+
+2) I have seen some users on the discord #general channel mention getting error messages when installing the update packages (TTW_v3.2.1_to_v3.2.2_Update especially) into a separate folder (e.g. not Fallout New Vegas\Data). This seems to be more frequent for Mod Organizer 2 users, probably because they're more likely to install to a separate folder. Not sure if this is the case, but if the original 3.2 does all the OGG re-encoding, then would it be possible to also offer the updates as simple 7z/rar archives that you could extract and copy into an existing TTW install?
+
+3) Would you be open to possibly sharing / open-sourcing the installer source code? On the windows side, that would potentially gain contributers / maintainers to help out (and of course you could still reject unsatifactory pull requests). On the linux side, it might give us insight into what needs to be fixed in wine or help us figure out workarounds when we run into problems.
+
+4) If #2 & #3 are not something you are interested in from a support perspective, do you know if it is possible to extract/dump the contents of a .mip file? If so, I might be interested in offering my time to create/test/help/support an unofficial linux install process if you were ok with that.
+
+====================================================================
+
+
+7) In addition to the Vortex LOOT module, Vortex also covers the "ArchiveInvalidation Invalidated" stuff that you see in a lot of Bethesda games.
+
+It is implemented as a plugin in Vortex; should be enabled by default but if you messed with them you might have to re-enable "Gambryo Archive Invalidation".
+
+The setting is per-game so first activate the game you want to use (e.g. FO:NV) > then go to Dashboard > under the pane labeled "Let's Get You Set Up" there should be a big orange button labeled "Archive Invalidate: No" just click it once to toggle it to "Yes".
+
+--------------------------------------------------------------------
+
+8) TTW (Tales of Two Wastelands) ... there is definitely some setup work here and it takes awhile but it is doable if you are persistant.
+
+---------------------------------
+Common Questions:
+---------------------------------
+Q: lol why linux? / windows 10 is better / just use a VM / etc.
+A: I do keep a Win7 partition around... for now. But I don't plan to forever; especially as security updates go bye-bye. As for Windows 10, I consider having that on my system to be a bit like wading chest deep through slippery septic pool at noon on swelting summer day. I can tolerate working with that if I'm getting PAID VERY HANDSOMELY for it, but it's not something that appeals to me very much. You're welcome to disagree or even like Windows. Doesn't matter to me what you use. Just don't try to force it on me and I'll try my best not to compare it to equine leavings. Now this isn't supposed to be a rant for "linux is better". Windows/Mac/Linux all do their own things; each has their pros and cons. BUT since Windows users are officially supported, this guide is my attempt to keep organized notes for myself while also responding to anybody saying "I only use linux and want to play FONV with TTW... please help!". While I don't own a Mac, I know you guys have access to bash and wine so I would imagine Mac users might benefit from this too.
+
+Q: Are you part of the TTW team / officially supporting Linux setup.
+A: Nope; not at all. I'm just a gamer like you who runs Linux and wanted to make some notes for mysel... uh, for other Linux users like me. Like so many other things, there is no official support for TTW on Linux. The authors seem decent enough on the discord channel as long as you're decent with them. RoyBatty and zilav were a huge help. That said, I wouldn't bother them with asking for official wine support; be upfront that you're running from wine but try and keep it to general case questions. If you have any Linux-specific questions that you'd like to field here first then go ahead and post. I'll help if I can and have no qualms about owning up to not knowning something. SO EVERYTHING I SAY ON THIS PAGE IS MY OWN OPINION/INSTRUCTIONS/NOTES AND NOT OFFICIALLY SANCTIONED/TESTED/APPROVED BY THE TTW TEAM UNLESS EXPLICITLY STATED OTHERWISE.
+
+Q: But who do I bug for support?
+A: It depends on the problem. You're welcome to post questions here first. But whether you ask here or on the official discord channels try not to be a jerk. I understand that running into problems can be really frustrating but just remember nobody here or on the TTW team is trying to make you life miserable and nobody's getting paid to help you either. The TTW team has invested massive amounts of time and energy to create this mod and share it FOR FREE.
+
+Q: Can you provide the checksums for the mpi files so I can verify before starting?
+A: Sure; this isn't official but here's what my copies showed with sha256sum:
+	df11b5a323d9c1bd441a14d7115da286c83d304604beee8f0bfc2934db3d9d40  TTW_v3.2_Full.mpi
+	19c9bcb9599638b1bfbd6a7ae4fdeb7eeceedd816091a3aa4bc47caa3c80af83  TTW_v3.2_to_v3.2.1_Update.mpi
+	65fb9e8c8ce189d9ca3f85b7e600f8daee95fda2ac72a56c71c4a10b72cf5e92  TTW_v3.2.1_to_v3.2.2_Update.mpi
+
+Q: What about checksums for the final files?
+A: I had originally captured these and was going to provide them but I noticed that checksums were different run-to-run, even using the same settings. I assume there's some internal timestamp or similar that changes. In any cases, if the files don't end up with a 100% identical binary state, then checksums are kinda pointless. The YUP / YUPTTW files have the same checksum regardless of what you do.
+
+Q: Why is it so freaking slow?
+A: You're probably forgot to run the exe with the -NoOggEnc2 flag. The normal install without that flag re-encodes some of the game's ogg files and the encoding library it uses doesn't work so well under wine. Lot of people report seeing a single thread with low cpu usage under wine whereas on Windows it utilizes threads correctly. I have also heard it doesn't play nice with AMD processors sometimes. Anyway, I recommend using -NoOggEnc2 to skip the encoding initially and doing this manually so that you can leverage native apps like ffmpeg which work better under Linux. Alternately, if you have access to a Windows install (dual-boot, other pc, VM, etc) then you might consider running it there and copying the files back; but I won't assume you do in this guide.
+
+Q: OK... I get that it's slow but just how long exactly should I expect to wait?
+A: Unfortunately, I can't give you a straight answer there because it likely varies by OS/hardware/wine version/etc. I can only say what it took for me running on Mint 19.2 x64 Cinnamon / 32 GB RAM / AMD 990 FX CPU / NVIDIA GeForce 970. Wine doesn't seem to utilize all the CPU's cores for this installer, like Windows does. The time also varies greatly by whether you (a) run the installer with no arguments or (b) run the installer with -NoOggEnc2. For just installing 3.2 without the updates, (a) it took around a whopping 35 hours compared with (b) the -NoOggEnc2 version which only took around 35 minutes on my setup. The updates each took less than a minute to install.
+
+Q: Since -NoOggEnc2 is significantly faster, is there any real difference if I go with that? Is there a difference if I skip the manual ffmpeg afterwards?
+A: I didn't test -NoOggEnc2 without the manual ffmpeg but based on the TTW FAQ's description of "Transcodes sound effects from .ogg to .wav so they work", I would assume that some of the sound effects just don't play in-game. As for regular install vs. -NoOggEnc2 with ffmpeg encoding, I will update once I have more info. Update 3.2.1 ends up with a different size when using -NoOggEnc vs not, so I'm guessing there might be some additional encoding stuff there (one reason I wait till v3.2.2 is merged before doing anything with ffmpeg). The YUP / YUPTTW files have the same checksum regardless of what you do.
+
+Q: When I run the TTW installer in wine, I don't see any labels or buttons like in GamerPoet's video / you mention in your guide.
+A: I ran into this initially too. I think it has something to do with certain app dependencies. If you check the part of the guide where I list out the winetricks stuff I installed to my winesteam prefix, that should sort it out. I'm not 100% sure exactly what fixed it. If I had to guess, it'd be either one of the vcrun* (visual c++ redistrib), dotnet, or com32 options in that order.
+
+Q: When installing the update from 3.2 to 3.2.1, I get an error about "Could not find Tale of Two Wasteland files at the specified path." ?
+A: I got this before too. Double check that you don't have any typos on the path and it actually exists. If that's good try exiting the installer and relaunching... yes, I know it seems lame but it does work. And that advice comes from one of the authors on discord; I'm just regurgitating it here.
+
+Q: When installing the update from 3.2 to 3.2.1, I get an error about: Archive "C:\some\path\Fallout - Meshes.bsa" doesn't exist for location: FNV Fallout - Meshes.bsa
+A: I got this during one of my earlier runs before I installed more wine options through winetricks. I think what happened was that when I ran the installer with -NoOggEnc2 but without all the winetricks options it needed, not everything got installed to the output folder. I did not encounter it later when I retried again after fixing my wine dependencies.
+
+Q: When installing the update I get an error about: "TTW files have incorrect version, the update can be install on version 3.2 only" / "TTW files have incorrect version, the update can be install on version 3.2.1 only"
+A: There are a few different things that can cause this. Obviously, if you mess with the files / install more mods that could happen. Leaving that off, it can also be caused by: (a) accidentally selecting the wrong MPI file when you start the installer / pointing to the source folder for TTW, (b) trying to install 3.2.1 onto a messed up/incomplete 3.2 install, (c) trying to install 3.2.2 onto a 3.2 install aka forgetting to merge 3.2.1 into the 3.2 folder, (d) LINUX/WINE only: if you installed 3.2.1 but didn't rename 'TaleofTwoWastelands.esm' to fix the case before adding that to the 3.2 install then you'll see this when you try to install 3.2.2. In the case of (d), you can fix this by deleting the one with 'Of' (from 3.2), then renaming the one with 'of' to 'Of' and rerunning the installer.
+
+Q: Do I really need all those system dependencies you list? / Can I use wine-stable instead of wine-staging?
+A: Not sure. You will absolutely need wine and ffmpeg but I don't know if wine-stable/wine-dev would be fine instead of wine-staging. You can probably skimp on the system dependencies a bit (for example, I listed mono because I wasn't sure if wine uses that for anything). If you have an older version of the nvidia drivers, it will probably work. You can probably skip getting winetricks from source, not bother with fslint utils, or use native steam client instead of lutris. I wasn't trying to tell you what to do so much as documenting what I had done. My advice is try what you have and if it doesn't work, then look at what's different relevant to what you're doing. If you can confirm that it works for you without something, feel free to post and let us know system details / how much you've tested in game / any other mods you're using.
+
+Q: Why can't you/the authors just release the files in a zip/7z/rar archive or FOMOD or etc?
+A: While I too would have liked that for sheer convenience of setting up on Linux, the authors had their reasons. According to what I've read on discord, they chose to use an xdelta3 format (basically the mpi's are binary patch files that get applied against a vanilla install). I can't speak for the authors as to why they chose to go that route instead of the here's some files and some instructions route but I respect their right to do what they want. I think a few of the reasons were likely: (a) they aren't legally allowed to redistribute files provided by the vanilla game but binary that modifies that is ok (b) a delta (difference) is much smaller and will cut down on bandwidth and hosting size. As to why I don't repack it: (a) I consider that disrespectful to the authors, (b) legal issues, (c) it's freaking huge @ ~16.5 with everything but even the TTW-specific files are over 2 GB, (d) I'm not interested in doing so.
+
+Q: Why isn't it available on nexus?
+A: Who knows; it's the author's perogative. While I personally find nexus to be convenient, I can certainly relate to choosing a platform based on personal preferences over popularity (I imagine most if not all Linux users can probably relate to this lol).
+
+Q: GAH... this is too much work! Could you repackage it and send it to me?
+A: Nope.
+
+Q: Repacks.. What if I send you a PM and promise not to tell ? / What if I pay you?
+A: Still nope. I won't repack it. But if you want to pay me a ridicously large amount of money to remote in and perform the steps in this guide on your computer... well, I'd probably be suspicious that I'm taking advantage of a rich but mentally-challenged person (I get enough bad karma in-game; don't need any IRL). If you really want to pay someone; make a donation to the TTW team for their awesome mod. If you become a noteworthy financial backer maybe they'll consider what you have to say (but there's no guarantee).
+
+Q: Do you use the NVSE / JIP LN / YUP / YUPTTW versions included with the mod?
+A: I go for the newest versions. I completed all the TTW installs in a staging folder, then copied everything to a vortex mod folder and finally deleted nvse and yup. i generally install the newest versions of nvse / nvse plugins (including jip ln) directly in my mod folder and manage them with git version control (personal preference). The YUP/YUPTTW files are REQUIRED but there are newer versions available so I have a separate Vortex mod folder for those.
+
+Q: Why Lutris? You should use the native steam client/proton/steamplay/PlayOnLinux/just plain old wine/x instead...
+A: Comes down to personal preference I guess. For Proton, I didn't like that I had to lookup game id's (and remember them) and felt like running wine against the pfx folders it set up was a pain. I had tried out POL a few years back and had very bad luck with it (maybe it was just me). Yes, there's protontricks but that didn't alliviate much except the game id lookup for me. Lutris was pretty easy to setup (both the app and game install process), I found it easy for managing which wine version I launch with, and I like the layout. You're welcome to use whatever you like.
+
+Q: Why Vortex? FOMM/WyreBash/MO2/MO1/whatever is better.
+A: Use whatever you want. I liked Vortex because it has built-in functionality for handling load order (so I don't have to deal with getting LOOT to work in Linux), archive invalidation, handles FOMODs, uses hard-linking, is actively maintained, does a decent job removing junk from your install folder, and IS EASY TO SETUP ON LINUX. It also doesn't require you to keep it open to launch the game/mod utilities. There's a few UI/UX things that I would have layed out differently and some things I really dislike (info panes that block the scrollbars!) but for all that it still does what it is supposed to quite well. @TanninOne, if you happen to be reading: thanks for bearing with my in-app feedback and please don't take my UI/UX critism personally... I'm just picky about that lol; anyway, hope I didn't bug you too much and keep up the great work!
+
+Q: Is Vortex officially supported on Linux?
+A: No. But is *ANY* mod manager officially supported on Linux? Hey, at least it's open-source :-)
+
+Q: Is Vortex officially supported by the TTW team?
+A: Again, no. But if you are installing to a separate folder then the process is similar to MO2 which I believe is supported.
+
+Q: Why do you say MO2 doesn't work on Linux? It does so!
+A: Yeah, but I have to use a third-party hack, it's a lot more involved, and the hack mentions that it can mess stuff up (although I admit the degree of risk was unclear). Look, I like MO2's interface. A lot actually. But I didn't feel it was in a good enough state on Linux right now. If the hack works for you, great; do what you want.
+
+Q: Why did you pick those ffmpeg settings over [insert other ffmpeg settings]?
+A: I had come up with some settings for a different conversion script (for FO3's VTAP mod); I just reused those settings with a few slight tweaks to make the output a 24k sampled wav (based on TTW FAQ mentioning that 24k was used by NV for voices). I'll admit that I am no ffmpeg expert and am not sure if these are perfectly optimized for the game or not.
+
+Q: Why did you do x in bash? (I hate bash / it could have been done a better way)
+A: Bash is easy and on almost every modern Linux. I also feel like it is easier for non-programmers to run bash commands in the terminal than it is to use python/ruby/nodejs/perl/etc. I don't consider myself a bash guru but I am proficient and don't think I'm a slouch there either. If you see something that could be done better, let me know and I might consider it if it makes the guide easier to follow / harder to mess something up (but not for the sake of looking better). The main thing I did thought looked inefficient was find -exec'ing a bash process instead of exec'ing ffmpeg directly. But since it cut out a rename step but it only took 2-3 mins so I didn't care too much.
+
+Q: Why don't you make a Linux install script / bash script to automate this?
+A: Aside from not wanting to develop/maintain such a script, a lot of the guide relies on running windows GUI apps. If automating (windows-based) wine GUIs is not impossible in bash (and I'm not certain of that) then UI automation itself is still very difficult, time-consuming, and prone to error. Not interested; not sorry.
+
+Q: Wow... you have a lot of... technical detail, don't you? Are you OCD or something?
+A: A bit. I also find that when I'm reading other people's guides that leave off that kind of information, it can be a bit frustrating when you run into problems (and have run into this on a several occasions). But if you refer to think of me as being OCD then that's cool. I've also worked as a professional programmer for some time and have noticed that if you do something worthwhile, eventually you'll be asked questions about how you did it, so I've gotten into the habit of trying to take notes BEFORE/DURING/AFTER doing anything technical that has even a remote chance of needing to be done again.
+
+
+---------------------------------
+Before you start, you MUST have:
+---------------------------------
+- Legal, fully updated copies of FO3 + FONV installed (Steam and GOG ok - not sure about others)
+- Have heard that TTW has issues with non-English language (untested)
+- You'll need to run the TTW installer from the same wine prefix where the games are actually installed. I had initially tried to run in from a separate wine prefix with symlinks and the installer would always get stuck at around 25% (not just slow but no UI updates either). See
+- both FO3 and FONV need to be in a VANILLA state. E.g.:
+	- UNMODDED (undeploy and use 'Purge' button in Vortex)
+	- NO FOSE/NVSE plugins (move to temp dirs)
+	- exe's need to be UNPATCHED (restore the original, non-4gb patched exes)
+
+	-> If you don't have backups, sucks to be you; you'll need to reinstall / recheck files in steam if you want to continue. I am a bit of a backup nazi (to the point of spending the time to put my GAME DIRs under version control in git and then using new branches for testing this out)
+- You need to run both games once so that registry entries and INI files are generated in the wine prefix where the install will happen.
+
+---------------------------------
+Relevant system dependencies:
+---------------------------------
+# DISCLAIMER: Not sure if this is the *BEST* way, just what I have done according to
+# notes I had laying around. I have not tested my instructions from a blank slate
+# so it is possible my instructions are incomplete/not completly correct.
+#
+# I provide this for reference only; you're welcome to use any or all of it but
+# make sure you have backups / etc just in case something gets messed up.
+# If you choose to use it, you do so without any warranty and with no guarantee
+# that it won't mess something up. I highly recommend using timeshift / other system
+# backup utility and doing at LEAST one snapshot in case you need a "system restore"
+#
+# I'm on Linux Mint 19.2 x64 Cinnamon (Ubuntu 18.04 "bionic" / Debian 10.0 "buster")
+#
+
+# add support for 32-bit packages
+sudo dpkg --add-architecture i386;
+
+# mono... probably not needed but just in case
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF;
+echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list;
+sudo apt update;
+sudo apt install -y --install-recommends mono-runtime mono-devel mono-complete referenceassemblies-pcl ca-certificates-mono mono-xsp4;
+
+#nvidia drivers... obviously only do this if you have an nvidia card !
+LC_ALL=C.UTF-8 add-apt-repository -y ppa:graphics-drivers/ppa;
+sudo apt update;
+NVIDIA_PACKAGE_NAME=$(apt-cache search nvidia | grep -i -v "\-dev" | grep -P -i "^nvidia\-driver\-\d+\s" | sort | tail -n 1 | perl -pe "s/^(nvidia\-driver\-\d+)\s.*$/\$1/g");
+NVIDIA_VERSION=$(echo "$NVIDIA_PACKAGE_NAME" | sed 's|^.*[^0-9]\([0-9][0-9.]*\)$|\1|g');
+NVIDIA_64BIT_LIBS="libnvidia-gl-${NVIDIA_VERSION} nvidia-dkms-${NVIDIA_VERSION}";
+NVIDIA_32BIT_LIBS="libc6:i386 libnvidia-gl-${NVIDIA_VERSION}:i386";
+sudo apt install -y --install-suggests $NVIDIA_PACKAGE_NAME $NVIDIA_64BIT_LIBS $NVIDIA_32BIT_LIBS nvidia-settings;
+sudo apt install libvulkan1 libvulkan1:i386;
+
+# PPA for latest version of Wine from WineHQ
+# https://forum.winehq.org/viewtopic.php?f=8&t=31621
+wget -nc https://dl.winehq.org/wine-builds/winehq.key;
+sudo apt-key add winehq.key;
+sudo apt-add-repository -y 'deb http://dl.winehq.org/wine-builds/ubuntu/ bionic main';
+
+# libfaudio0 ppa - this might not be need in the future; my understanding is that
+# this is in the process of being added to official repos but was not there yet for me
+#
+# libfaudio0 is a dependency for wine-staging that isn't included in wine ppa
+#
+WINE_REPO_URL="https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04";
+KEY_URL="${WINE_REPO_URL}/Release.key";
+wget -nc $KEY_URL;
+sudo apt-key add Release.key;
+echo "deb ${WINE_REPO_URL}/ ./" | sudo tee -a /etc/apt/sources.list.d/libfaudio.list;
+sudo chmod 644 /etc/apt/sources.list.d/libfaudio.list;
+
+# Lutris PPA
+sudo add-apt-repository -y ppa:lutris-team/lutris;
+
+sudo apt update;
+
+# you may not need to uninstall/reinstall this...
+# i had issues installing winestaging bc of libfaudio0 until i did this
+#   https://forum.winehq.org/viewtopic.php?f=8&t=32545
+#   https://forum.winehq.org/viewtopic.php?f=8&t=32192
+sudo dpkg --force-remove-reinstreq --force-remove-essential --purge wine-staging wine-staging-i386 wine-staging-i386:i386 libfaudio:i386 libfaudio0:i386 winehq-staging wne-staging-amd64;
+sudo apt install -y --install-recommends libfaudio0:i386;
+
+#common wine dependencies (to increase compatibility)
+#   https://github.com/lutris/lutris/wiki/Wine-Dependencies
+sudo apt install -y libgnutls30:i386 libldap-2.4-2:i386 libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 libsdl2-2.0-0:i386 libfreetype6:i386 libdbus-1-3:i386 libsqlite3-0:i386;
+
+sudo apt install --install-recommends winehq-staging q4wine fonts-wine;
+
+# purge any old winetricks from official repo and install latest from github
+# if you weren't aware, winetricks is actually just a shell script :-)
+sudo apt-get -y purge winetricks 2>/dev/null;
+wget -q https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks;
+sudo chown root:root winetricks;
+sudo mv -t /usr/bin winetricks;
+sudo chmod a+rx /usr/bin/winetricks;
+
+# correct known invalid hashes:
+#   https://askubuntu.com/a/1090064
+sudo sed -i -e 's/249473568eba7a1e4f95498acba594e0f42e6581add4dead70c1dfb908a09423/e17cb384eeac4caf08a4f5d4bceb9697fff83fa942d2a3d9ad0294a9b1774390/g' /usr/bin/winetricks;
+
+sudo apt install -y git zip unzip p7zip-full lutris wget ffmpeg curl rename lame libmp3lame0;
+
+# install fslint cli utilities; used for checking duplicate files
+git clone https://github.com/pixelb/fslint.git "/tmp/fslint";
+sudo chown -R root:root "/tmp/fslint/fslint";
+sudo chmod -R a+rx "/tmp/fslint/fslint";
+sudo mv /tmp/fslint/fslint/* /usr/bin/;
+
+-------------------------------
+Lutris setup:
+-------------------------------
+In Lutris > Manage runners, I installed wine (latest lutris and ge builds) and winesteam. Then moved my winesteam dirs (more on this in the next section).
+
+YOU NEED TO SET UP YOUR LUTRIS DIR / GAME INSTALL DIRS / MOD MANAGER DIRS
+ON THE SAME PARTITION / HARD DRIVE (IT SHOULD BE EXT4 FOR BEST RESULTS)
+
+I already had installed FO3 / NV via the native steam client so just moved those game dirs to the steamapps/common folder under my winesteam/prefix64. Whether you are re-using an existing install or installing fresh, launch winesteam from lutris and install FO3/FONV... you could probably do the GOG versions if thats what you have but I didnt test that.
+
+If you don't have an existing install, you can install them here (assuming you own them):
+https://lutris.net/games/fallout-3-game-of-the-year-edition/
+https://lutris.net/games/fallout-new-vegas/
+
+I used Vortex v1.0.0 as my mod manager. You can install to Lutris from here:
+https://lutris.net/games/vortex-mod-manager/
+
+Since I run Vortex from a different wine prefix than my games, I setup a symlink and then pointed Vortex to that folder. This should work fine as long as you installed on same partion. If you didn't, you'll find that it will fail to actually deploy mods.
+
+-------------------------------
+Finding the right wine prefix:
+-------------------------------
+I used Lutris and find that to be the easiest. If you want to switch to it, you should be able to install Lutris and copy/move an existing Native Steam/Proton install to Lutris's wine steam dir, launch wine steam, and tell it to "install" the game (it will then find the local files). If you do this, make sure you run each game once before starting so that they generate their INI files and registry entries IN LUTRIS's WINEPREFIX.
+
+By default, I think Lutris installs wine steam to 32- and 64-bit prefixes under:
+	$HOME/.local/share/lutris/runners/winesteam/
+I moved mine to a bigger hard drive (in file explorer) then repointed Lutris to them: in Left-hand pane in Lutris > hover over "wine steam" and click the gear icon > edit the paths to match the new location.
+
+If you really don't want to use Lutris and prefer to stay in native Steam/Proton, I did find this after I was almost done and you can maybe adapt my instructions to this Proton+Vortex guide: https://steamcommunity.com/sharedfiles/filedetails/?id=1735078385
+
+But if you want to run in proton, you'll have to figure out how to run the correct version of proton/whatever from the correct wineprefix for your game on your own.
+
+You also might notice that you can right-click on the game in Lutris and get some quick-options for wine:
+- Wine console
+- Winetricks
+- etc
+
+For winetricks, this generally worked fine for me. BUT for the 'wine console', it gave me some issues with the install that running 'wine cmd' from terminal did not. this might be because i was lazy and just let it default to my system wine and it would have worked if I changed my lutris wine version to match or it might be due to differences between 'wine console' and 'wine cmd'. Not sure; just noting what worked for me and what didn't.
+
+---------------------------------------
+My setup / paths:
+---------------------------------------
+OS: Mint 19.2 x64 Cinnamon
+CPU: AMD 990-FX
+RAM: 32 GB
+GPU: NVidia Geforce 970
+driver: nvidia-driver-430 nvidia-dkms-430 nvidia-settings
+
+System Wine (from winehq ppa): wine-4.15 (Staging)
+Lutris: v0.5.3
+Lutris Wine (FONV Runner): Lutris build 4.15
+FO3: Vanilla Steam GOTY version (aka latest with all DLCs) under Lutris Winesteam
+FONV: Vanilla Steam Ultimate version (aka latest with all DLCs) under Lutris Winesteam
+
+Winetricks (FONV Runner/Winesteam prefix64):
+Installed apps: 7zip
+Installed fonts:
+	andale arial comicsans corefonts courier georgia impact times trbuchet verdana webdings
+Installed Windows DLL/Components:
+	adobeair amstream avifile32 cabinet cmd cnc_ddraw comctl32 comctl32ocx comdlg32ocx crypt32 dinput8 dotnet40 gdiplus mfc40 mfc42 msasn1 msdelta msvcirt quartz riched30 richtx32 vbrun6 vcrun2003 vcrun2008
+
+	initial: adobeair crypt32 dinput8 dotnet40 msasn1
+
+Lutris wine steam path (I don't use the 32-bit one here):
+	/gaming/lutris/winesteam/prefix64
+
+Games:
+	/gaming/lutris/winesteam/prefix64/drive_c/Program Files (x86)/Steam/steamapps/common/Fallout 3 goty/
+
+	/gaming/lutris/winesteam/prefix64/drive_c/Program Files (x86)/Steam/steamapps/common/Fallout New Vegas/
+
+Vortex dirs:
+	/gaming/lutris/vortex/drive_c/Vortex/falloutnv/mods
+
+On my system /gaming/lutris is a symlink to a folder on a large 5 TB drive that I use almost exclusively for gaming and mods. It is formatted as ext4 and mounted in /etc/fstab with the options ' ext4  defaults,nofail,x-systemd.device-timeout=5s,nodev,user,exec 0 0'
+
+---------------------------------------
+TTW pre-install setup:
+---------------------------------------
+I made a temp folder at:
+	/gaming/lutris/winesteam/prefix64/drive_c/ttw
+
+then extracted contents of TTW_Install_v3.2_Full.7z and both update archives there.
+	cd /gaming/lutris/winesteam/prefix64/drive_c/ttw
+	ls
+	 bass.dll         'TTW Install.exe'
+	 bassenc.dll      'TTW Install Without OGG Reencoding.bat'
+	 bassenc_mp3.dll   TTW_v3.2.1_to_v3.2.2_Update.mpi
+	 bassenc_ogg.dll   TTW_v3.2_Full.mpi
+	 bassmix.dll       TTW_v3.2_to_v3.2.1_Update.mpi
+	 oggenc2.exe       xdelta3.dll
+
+finally I made some empty folders for use DURING the install to store the mod's extracted files. I'll come back to these AFTER the install so I can copy their contents over to my Vortex mod dir.
+	cd /gaming/lutris/winesteam/prefix64/drive_c/ttw
+	mkdir repack/ update1/ update2/
+
+---------------------------------------
+Dealing with the TTW installer in wine:
+---------------------------------------
+I REALLY REALLY wish this was just a simple archive I could extract or a batch/vbs/ps1/py/etc file I could translate to equivalent unix commands. Unfortunately, I never found a way to do this. The files themselves are a combination of copying over your FO3 files and stuff stored in the mod's .mip files which according to the discord #general channel stands for 'mod install program' and appears to be some custom format. Renaming to 7z/ar/gz/rar/tar/xz/zip didn't allow extracting and I couldn't find much info about the format online.
+
+I recommend watch what the install process looks like in Windows first. The Gamer Poets video for this is recommended from the official TTW site and is quite good:
+https://www.youtube.com/watch?v=BHXIEGtP2Hw
+https://www.youtube.com/watch?v=s7Y6wYEnNjM
+
+
+Even though Mod Organizer 2 currently doesn't work under Linux/wine, we'll be doing a similar approach in the sense that we'll install to a separate folder (e.g. NOT Fallout New Vegas\Data). However, this video does not cover the TTW update files which is where I ran into most of the trouble.
+
+There are several posts online about TTW working under Linux but all seemed to either:
+a) rely on an actual Windows install/VM (e.g. not strictly wine/nix) to get past the installer:
+	https://taleoftwowastelands.com/viewtopic.php?t=1703
+	https://taleoftwowastelands.com/viewtopic.php?t=1960
+
+b) did not cover the update modules:
+	https://portingteam.com/files/file/3047-a-tale-of-two-wastelands-fallout-3-goty/page__st__165
+
+c) were quite dated
+
+
+Main issues with the installer under wine:
+------------------------------------------
+1. You need to run an OGG re-encoding routine to prevent stutter (this is part of default install). It takes forever; especially if you have an AMD cpu like me. Technically, there is an option (see bat file) for skipping this but when I tried that it ended up that the installer would not let me install the update packages because it thought there were missing files.
+
+2. The installer's UI got messed up for me when running it in wine. Specifically, labels and buttons disappeared. I recommend checking out the Gamer Poet's video around times 2:00-2:10 to see what the UI looks like under Windows. By the way, the "Browse" dialog didn't work for me at all so I had to type things out by hand.
+
+Basically, there are 2 "button links" for "Install" and "Exit" which are not initially visible when running from wine. However, they will show up as ugly green boxes with no text if you hover your mouse over the area. There will be 2 of them: "Install" is the box on the left and "Exit" is the box on the right. If you hit "Exit" accidentally, just re-launch.
+
+There are also 3 labels with 3 textboxes that change depending on WHAT you are installing.
+The last label/textbox will always be for the install/output folder.
+
+If you are installing the main (v3.2) part of the mod, then the first 2 fields will be the same as in the video:
+- Fallout 3 game install folder
+- Fallout NV game install folder
+
+If you are installing one of the update files (3.2.1 or 3.2.2), then the first 2 fields will be:
+- Fallout NV game install folder
+- TTW folder
+
+3. From the discord channel, it sounded like even Windows users had some trouble installing the mod upgrades when they were installing to a separate folder (e.g. NOT Fallout New Vegas\Data) as shown for Mod Organizer in the Video. The recommendations there were to close and relaunch the app and to run as Admin.
+
+https://askubuntu.com/a/892182
+"As far as Windows programs are concerned, Wine runs with Windows administrator rights by default when it is started by an user with ordinary permissions (not root permissions)" - karel
+
+As far as relaunching the app, that did get rid of one of the errrors I was seeing.
+
+ERROR #1:
+"Could not find Tale of Two Wasteland files at the specified path."
+
+ERROR #2:
+Archive "C:\ttw\repack\Fallout - Meshes.bsa" doesn't exist for location: FNV Fallout - Meshes.bsa
+
+
+
+You will always have 3 but first 2 targets and will change depending
+
+
+------------------------------------------------
+Sep13-Sep14 -NoOggEnc2 run after wine updates :
+------------------------------------------------
+1) first pass:
+winecmd:
+"TTW Install.exe" -NoOggEnc2
+
+	-> TTW_v3.2_Full
+
+	-> FO3 path:    (should get auto-populated)
+	-> FONV path:   (should get auto-populated)
+	-> output path: C:\ttw\noogg_v320
+
+sanity check:
+	right-click on ./ttw/noogg_v320 > Properties
+	Contents: 314 items, totalling 16.2 GB
+
+2) second pass:
+winecmd:
+"TTW Install.exe" -NoOggEnc2
+
+	-> TTW_v3.2_to_v3.2.1_Update
+
+	-> FONV path:    (should get auto-populated)
+	-> TTW 3.2 path: C:\ttw\noogg_v320
+	-> output path:  C:\ttw\noogg_update321
+
+sanity check:
+	right-click on ./ttw/noogg_update321 > Properties
+	Contents: 11 items, totalling 951.2 MB
+
+3) prep work before 3.2.2 update:
+
+	# fix case-sensitivity issue with filename
+	# credit to monyarm on discord for finding this
+	# need to change "of" to "Of" so it matches case of the file in v32
+	mv ./noogg_update321/TaleofTwoWastelands.esm ./noogg_update321/TaleOfTwoWastelands.esm
+
+	# create a copy of 3.2
+	cp -a ./noogg_v320/ ./noogg_v321/
+
+	# merge v32 + 321 by copying 3.2.1 files overtop the v32 files
+	# note: ./dir/. is a cp syntax to copy folder contents
+	# if you use cp -a ./dir1 ./dir2, then you will end up with ./dir2/dir1
+	cp -a ./noogg_update321/. ./noogg_v321
+
+sanity check #1:
+	#confirm there are no files/folders that have the same name but different case
+	#if you installed the fslint cli tools (see dependences section) this is easy to do
+	#if you run the following and get no output, then you're good to go
+	findsn ./noogg_v322 -c
+
+sanity check #2:
+	right-click on ./ttw/noogg_v321 > Properties
+	Contents: 316 items, totalling 16.4 GB
+	-> if you have 317 check that you didn't miss the rename step!
+
+4) 3rd pass
+winecmd:
+"TTW Install.exe" -NoOggEnc2
+
+	-> TTW_v3.2.1_to_v3.2.2_Update
+
+	-> FONV path:    (should get auto-populated)
+	-> TTW 3..1 path: C:\ttw\noogg_v321
+	-> output path:  C:\ttw\noogg_update322
+
+sanity check:
+	right-click on ./ttw/noogg_update322 > Properties
+	Contents: 7 items, totalling 408.8 MB
+
+5) final merge:
+
+	mv ./noogg_update322/TaleofTwoWastelands.esm ./noogg_update322/TaleOfTwoWastelands.esm
+
+	# create a copy of 3.2.1
+	cp -a ./noogg_v321/ ./noogg_v322/
+
+	# merge v321 + 322 by copying 3.2.2 files overtop the v321 files
+	# note: ./dir/. is a cp syntax to copy folder contents
+	# if you use cp -a ./dir1 ./dir2, then you will end up with ./dir2/dir1
+	cp -a ./noogg_update322/. ./noogg_v322
+
+sanity check #1:
+	#confirm there are no files/folders that have the same name but different case
+	#if you installed the fslint cli tools (see dependences section) this is easy to do
+	#if you run the following and get no output, then you're good to go
+	findsn ./noogg_v322 -c
+
+sanity check #2:
+	right-click on ./ttw/noogg_v322 > Properties
+	Contents: 318 items, totalling 16.5 GB
+	-> if you have 319 make sure you renamed the esm and don't have 2 different copies
+
+6) Now you need something to extract BSA files with.
+
+	BAE seems to work well in wine with the newer BSA formats used in FONV.
+
+	Unfortunately some older tools like BSAOpt don't seem to like the modified BSA files used by the mod.
+
+	You can get BAE here:
+	https://www.nexusmods.com/fallout4/mods/78/?tab=files
+	-> "Manual download"
+	-> copy to ./drive_c
+	-> extract to folder then rename folder to "bae" (e.g. ./drive_c/bae)
+
+7) copy all of the *Sound*.bsa files from your
+	folder to your bae folder
+
+	cd ./ttw/noogg_v322
+	find . -maxdepth 1 -type f -iname '*sound*.bsa' ! -iname '*TTW*' ! -iname '*TwoWaste*' -exec cp -a -t "../../bae" {} \;
+	cd ../../bae
+	ls -1a *.bsa
+		'Anchorage - Sounds.bsa'
+		'BrokenSteel - Sounds.bsa'
+		'Fallout3 - Sound.bsa'
+		'DeadMoney - Sounds.bsa'
+		'Fallout - Sound.bsa'
+		'HonestHearts - Sounds.bsa'
+		'LonesomeRoad - Sounds.bsa'
+		'OldWorldBlues - Sounds.bsa'
+		'PointLookout - Sounds.bsa'
+		'ThePitt - Sounds.bsa'
+		'Zeta - Sounds.bsa'
+
+8) Run BAE.exe from winecmd, then select a BSA file > hit extract > pick C:\bae as output folder > Repeat until all BSA's extracted, then close out of BAE.
+
+e.g.
+winecmd:
+bae.exe
+-> File > Open > Browse to C:\bae\
+-> Hold down shift and select all the BSA files at once
+-> OK (you should then see them all listed)
+-> Extract
+-> select C:\bae\ as the output folder
+-> when it gets done, close BAE
+
+sanity check
+	right-click on ./bae/sound > Properties
+	Contents: 10,530 items, totalling 2.2 GB
+
+5) We only care about OGG files; the TTW install already took care of everything else.
+	Open a bash terminal to ./bae/sound and do some clean-up:
+		cd ./bae/sound
+		find . -type f ! -iname '*.ogg' -delete
+		find . -type d -empty -delete
+
+sanity check
+	right-click on ./bae/sound > Properties
+	Contents: 494 items, totalling 93.7 MB
+
+9) alright, let's re-encode:
+	cd ./bae/sound
+
+	# per: https://taleoftwowastelands.com/faq#TTWInstaller
+	# 	Transcodes sound effects from .ogg to .wav
+	#	-> I am using 24khz sample rate as that was mentioned for FONV voice files
+	# this will take a couple minutes but shouldn't be hours like when you do the
+	# encoding from the installer in wine... (took about 2-3 mins for me)
+	#
+	find . -type f -iname '*.ogg' -exec bash -c 'if="{}";of="${if%.*}.wav";ffmpeg -hide_banner -nostdin -loglevel quiet -y -i "${if}" -vn -dn -sn -copy_unknown -ar 24000 -ac 2 -b:a "192k" "${of}"' \;
+
+	#clean-up
+	find . -type f -iname '*.ogg' -delete
+
+sanity check
+	right-click on ./bae/sound > Properties
+	Contents: 494 items, totalling 1.3 GB
+	-> yes, that size is correct; wav is uncompressed
+
+10) merge files back in (alternately, you can have this as a separate "mod" after TTW)
+
+	Move the sound folder back under your ./ttw/noogg_v322 folder or new folder.
+
+	If you overlay it on top of noogg_v322, then you should have:
+	Contents: 808 items, totalling 17.8 GB
+
+11) Check NVSE:
+	http://nvse.silverlock.org/
+
+	If it says "stable version 5.1b4" then you're good.
+	Otherwise, if it is newer then download the new one and install that instead.
+
+12) Check JIP LN:
+	https://www.nexusmods.com/newvegas/mods/58277
+
+	This has been updated since v3.2.2 was released so you should get the newer one to take advantage of bugfixes etc.
+	This has been updated since v3.2.2 was released so you should get the newer one to take advantage of bugfixes etc.
+
+------------------------------------------------
+Sep14 Ogg run after wine updates :
+------------------------------------------------
+-> started at Sep-14_3:47am
+	numbers are unreadable but the bar does have a shade of blue
+
+-> checked at Sep-14_4:44am ... still going. assuming bar is accurate, it's somewhere near 8%. assuming constant process and no errors, we're looking at 11.5 more hours or around 4:15pm
+
+-> checked at Sep-14_11:45am ... still going. at this point, we can assume that either
+the progress bar is not accurate or that it does not progress at a constant rate. going by the bar, it should be near 22%. if its going to error out around the 13 hr mark like before the winetricks updates, then it would probably happen around (3:45+13) == 16:45
+
+-> checked at Sep-15_01:37pm ... still going. going by the bar, it should be near 65%. The numbers in the bar are now visible and say "132623/201896" which would be 65.68%.
+So 65-22=~43% in 26 hrs or about 1.65%/hr. Assuming constant rate of process, then estimated time of completion would be around:
+	(100-65)=35% remaining => 35%/1.65%/hr => 21.21 hrs
+	or Sep-16 sometime between 11am and 12pm or somewhere near 57 total hrs.
+
+-> checked at Sep-15_02:47pm ... it's done! total time ~35 hrs
+
+1) first pass:
+winecmd:
+"TTW Install.exe"
+
+	-> TTW_v3.2_Full
+
+	-> FO3 path:    (should get auto-populated)
+	-> FONV path:   (should get auto-populated)
+	-> output path: C:\ttw\ogg_v320
+
+sanity check
+	right-click on ./ogg_v320 > Properties
+	Contents: 314 items, totalling 16.1 GB
+
+2) second pass:
+winecmd:
+"TTW Install.exe"
+
+	-> TTW_v3.2_to_v3.2.1_Update
+
+	-> FONV path:    (should get auto-populated)
+	-> TTW 3.2 path: C:\ttw\ogg_v320
+	-> output path:  C:\ttw\ogg_update321
+
+sanity check
+	right-click on ./ogg_update321 > Properties
+	Contents: 11 items, totalling 947.6 GB
+
+3) prep work before 3.2.2 update:
+
+	# fix case-sensitivity issue with filename
+	# credit to monyarm on discord for finding this
+	# need to change "of" to "Of" so it matches case of the file in v32
+	mv ./ogg_update321/TaleofTwoWastelands.esm ./ogg_update321/TaleOfTwoWastelands.esm
+
+	# create a copy of 3.2
+	cp -a ./ogg_v320/ ./ogg_v321/
+
+	# merge v32 + 321 by copying 3.2.1 files overtop the v32 files
+	# note: ./dir/. is a cp syntax to copy folder contents
+	# if you use cp -a ./dir1 ./dir2, then you will end up with ./dir2/dir1
+	cp -a ./ogg_update321/. ./ogg_v321
+
+sanity check #1:
+	#confirm there are no files/folders that have the same name but different case
+	#if you installed the fslint cli tools (see dependences section) this is easy to do
+	#if you run the following and get no output, then you're good to go
+	findsn ./ogg_v321 -c
+
+sanity check #2:
+	right-click on ./ogg_v321 > Properties
+	Contents: 316 items, totalling 16.4 GB
+	-> if you have 317, check that you didn't miss the rename step!
+
+4) 3rd pass
+winecmd:
+"TTW Install.exe"
+
+	-> TTW_v3.2.1_to_v3.2.2_Update
+
+	-> FONV path:    (should get auto-populated)
+	-> TTW 3..1 path: C:\ttw\ogg_v321
+	-> output path:  C:\ttw\ogg_update322
+
+5) final merge:
+
+	mv ./ogg_update322/TaleofTwoWastelands.esm ./ogg_update322/TaleOfTwoWastelands.esm
+
+	# create a copy of 3.2.1
+	cp -a ./ogg_v321/ ./ogg_v322/
+
+	# merge v321 + 322 by copying 3.2.2 files overtop the v321 files
+	# note: ./dir/. is a cp syntax to copy folder contents
+	# if you use cp -a ./dir1 ./dir2, then you will end up with ./dir2/dir1
+	cp -a ./ogg_update322/. ./ogg_v322
+
+sanity check #1:
+	#confirm there are no files/folders that have the same name but different case
+	#if you installed the fslint cli tools (see dependences section) this is easy to do
+	#if you run the following and get no output, then you're good to go
+	findsn ./ogg_v322 -c
+
+sanity check #2:
+	right-click on ./ogg_v322 > Properties
+	Contents: 318 items, totalling 16.4 GB
+	-> if you have 319, check that you didn't miss the rename step!
+
+6) Check NVSE:
+	http://nvse.silverlock.org/
+
+	If it says "stable version 5.1b4" then you're good.
+	Otherwise, if it is newer then download the new one and install that instead.
+
+7) Check JIP LN:
+	https://www.nexusmods.com/newvegas/mods/58277
+
+	This has been updated since v3.2.2 was released so you should get the newer one to take advantage of bugfixes etc.
+
+---------------------------------------
+Timing:
+---------------------------------------
+Started installer on Sept 13th around 7:00am
+-> checkin Sept 13th @1710 [10 hrs in] - installer at 52316/201896 [25.91%]
+-> checkin Sept 13th @1845 [~12 hrs in] - installer at 56577/201896 [28.02%]
+-> checkin Sept 13th @1930 [12.5 hrs in] - installer at 58401/201896 [28.93%]
+
+Sep13@1845 calc:
+estimate by percent:
+1845-1710: 135 min
+28.02-25.91: 2.11%
+
+2.11% in 135 min
+135/2.11 = 63.981 min per percent
+or 1% every 64 minutes
+100-28.02=71.98% left [at 1845]
+=> Sep13@1845 + (71.98% * 63.981min/%)
+=> 1845 + (4605)
+=> 6450
+=> 6450-2400=4050 (Sep14@1845+4050)
+=> 4050-2400=1650 (Sep15@1845+1650=3495)
+=> 3495-2400=1095 (Sep16@1045)
+
+
+---------------------------------------
+Moving captured files to Vortex:
+---------------------------------------
+
+The last bit of preparation is that I want to create a mod folder in Vortex where I can copy the files to AFTER the install completes. Initially, I just did this with a dummy file and then t
+
+then made an empty folder to install TTW to (so I can repack it for Vortex later)
+mkdir /gaming/lutris/winesteam/prefix64/drive_c/ttw/repack
+
+
+
+
+-----------
+CHOICE #1:
+-----------
+A) RECOMMENDED:
+   You plan to install TTW in Vortex and let it link the TTW files into your GAME DIR.
+-> In this case, change the output folder to something outside your GAME DIR.
+
+	in my example above, this is "/gaming/lutris/winesteam/prefix64/drive_c/ttw/repack"
+	but it can be pretty much any empty folder you create under the drive_c/
+	you'll see this again in a bit but using windows notation (C:\ttw\repack)
+
+Pros:
+- Vortex should be able to manage conflicts
+- Shouldn't be any issue with you using other mods (assuming they are otherwise compatible)
+- Uninstall/reinstall should be simple.
+
+Cons:
+- Little more work up front
+- Little more work if updates come out and you want to install them
+
+B) You plan to install TTW directly into your GAME DIR and not manage it in Vortex.
+-> In this case, leave output folder as default
+
+Pros:
+- You can be lazy initial (pre-populated box and no extra steps)
+- You can be lazy when there are updates too.
+
+Cons:
+- Vortex probably won't be able to overwrite somethings since they already exist in the Data dir (unverified) so you might not be able to install other mods if they conflict.
+- Harder to uninstall
+
+-----------
+EITHER WAY:
+-----------
+next start up wine cmd and change to the directory with the installer:
+	env WINEPREFIX="/gaming/lutris/winesteam/prefix64" wine cmd
+	cd /d "C:\ttw\"
+
+-----------
+CHOICE #2:
+-----------
+Do you want to re-encode the OGG audio files to try to reduce stuttering? I would generally recommend doing so unless either you don't care at all, you don't want to wait, you plan on doing so with another utility like ffmpeg, or you've already tried and failed to re-encode the OGG files and are willing to settle for just getting the darn thing running.
+
+A) RECOMMENDED: re-encodes OGG files to reduce stutter; "run overnight while you sleep" speed. from wine cmd, run:
+		"TTW Install.exe"
+
+==OR==
+
+B) skip OGG re-encoding; "go out and have dinner" speed. from wine cmd, run:
+	"TTW Install.exe" -NoOggEnc2
+
+-----------
+EITHER WAY:
+-----------
+If you have the update files in the right folder, the TTW installer will first
+prompt you to choose between the updates or the main file. Choose "TTW_v3.2_Full"
+from the prompt the first time through; you'll have to rerun the app when you're
+all done for each of the updates in order (the updates can be installed to the same output folder as the main file).
+
+
+If you are running on the same wineprefix where the games live and have run the
+games at least once, then the TTW installer should auto-detect the install paths
+from the reigstry and pre-populate them for you.
+
+Next file in the output folder (see choice #1 above). Assuming you went with the
+recommendation then you would enter something like C:\ttw\repack.
+
+Now, you've probably noticed that there aren't any continue/ok/next/etc buttons.
+There actually are; but there is a graphical bug that is making them invisible.
+Move your mouse pointer around in the area below and to the right of the output
+textbox. You should see 2 green rectangular regions: these are both buttons.
+The button on the left is the Install button and the button on the right is the Cancel
+button. If you get it wrong, just re-launch the app and try again.
+
+When you're all done, you can either click the button on the right or just close the window via the taskbar/etc.
+
+Now close and re-open the app (if you see some output stil on win cmd, just hit hit
+and the prompt should come back up. then press up arrow and enter to rerun last command)
+
+When it re-launches, select "TTW_v3.2_to_v3.2.1_Update" this time. If the color for the
+labels is messed up for you too, then you might not immediately notice but the text boxes
+will have changed
+
+from:
+[Fallout 3 path]
+[Fallout NV path]
+[output dir]
+
+to:
+[Fallout NV path]
+[TTW 3.2 install path]
+[output dir]
+
+At this point, I was getting errors when I tried to install the update into the output dir. First:
+"Could not find Tale of Two Wasteland files at the specified path."
+
+Then after reading the author's notes on discord channel (see https://discord.gg/zg46A6H > #general > RoyBatty on 07/26/2019), I saw that this happens on Windows when folks are doing it for Mod Organizer too. The solution there was to restart the app a few times and try running it as admin.
+
+Reopening / re-enterinf path got rid of that error and then kept getting:
+Archive "C:\ttw\repack\Fallout - Meshes.bsa" doesn't exist for location: FNV Fallout - Meshes.bsa
+
+My plan to try and get by this was to take the base update and set it up in Vortex, then have Vortex deploy (hard-link) the TTW 3.2 into the game folder and try rerunning. If it worked, then I would send the update to C:\ttw\update1 then apply it on top of my Vortex mod folder.
+
+create a dummy archive for Vortex so we can install a "Mod" with the right name
+note: Vortex doesn't seem to install tar files right so I used zip instead
+	mkdir Data;
+	echo 'deleteme' > Data/dummy.txt;
+	zip -r "TTW-Tales-of-Two-Wastes-3.2.zip" Data
+
+Drag and drop "TTW-Tales-of-Two-Wastes-3.2.zip" into Vortex > Downloads > Drag section
+then "install" it, go back to the filesystem explorer (nemo/nautilus/dolphin/etc) and
+copy the contents of "/gaming/lutris/winesteam/prefix64/drive_c/ttw/repack" to the Vortex mod folder. Finally go back to Vortex, enable the TTW mod and deploy it.
+
+My New Vegas GAME DIR now has 'TaleOfTwoWastelands.esm' (among lots of other files) that
+are hard-linked from Vortex.
+
+Then I tried loading the utility again with "TTW_v3.2_to_v3.2.1_Update"
+
+[Fallout NV path]	== "C:\Program Files (x86)\Steam\steamapps\common\Fallout New Vegas"
+[TTW 3.2 install path] == "C:\Program Files (x86)\Steam\steamapps\common\Fallout New Vegas\Data"
+[output dir] == "C:\ttw\update1";
+
+--> Nope; still blocked by that freaking archive...
+
+
+
+
+
+
+
+
+Then repeat everything one last time for "TTW_v3.2.1_to_v3.2.2_Update".
+
+Finally, assuming that you chose the recommended option for CHOICE #1 (Vortex managed mod) then you should have something equivalent to my /gaming/lutris/winesteam/prefix64/drive_c/ttw/repack folder which contains the files for the main mod, with update 1 and the update 2 overlayed on top of those files.
+
+Now repack it and feed it to Vortex:
+mv "/gaming/lutris/winesteam/prefix64/drive_c/ttw/repack" "/gaming/lutris/winesteam/prefix64/drive_c/ttw/Data"
+tar -zcvf "TTW-Tales-of-Two-Wastes-3.2+Updates.tar" "/gaming/lutris/winesteam/prefix64/drive_c/ttw/Data"
+
+
+
+tar -zcvf "TTW-Tales-of-Two-Wastes-3.2+Updates.tar" "/gaming/lutris/winesteam/prefix64/drive_c/ttw/repack"
+
+
+
+sudo apt install -y p7zip-full;
+
+7z a -t7z -m0=lzma2 -mx=9 -md=32m -ms=on "${zipPath}" "${dirPath}"
+
+
+
+
+
+
+
+
+
+
+
+
+I did this with:
+Fallout 3 GOTY (Steam version installed under Steamwine in Lutris)
+Fallout NV GOTY (ditto)
+
+per https://taleoftwowastelands.com/dl
+
+First I partially followed this:
+https://www.youtube.com/watch?v=Cypqage_Pdk
+
+- First, I realize the video says you can skip most of this for TTW. You probably can. But I had already done most of it and am trying to document exactly what I di to the best of my memory. You're welcome to slim it down and re-verify that it still works under Linux/wine :-)
+
+- I ignored everything mentioning Mod Organizer or NMM (for the reasons mentioned in previous post).
+
+- he is using the same 4GB patcher I mentioned earlier; only difference is that I ran it from a separate 32-bit wine prefix (you could probably reuse a steamwine / proton wineprefix but i choose not to so as to avoid messing anything up)
+
+- I did the same stuff for NVSE, NVAC, Vorbis, JIP, and NVSR. I also installed the NVSE Plugins not mentioned in the video: UI Organizer (UIO), lStewieAl's Tweaks, and the optional DisableProcessWindowsGhosting file from NVAC download page; you don't need the extra stuff - just listing them for completeness.
+
+- Added config as noted in video: ./Fallout New Vegas/Data/NVSE/NVSE_Config.ini
+	[Memory]
+	DefaultHeapInitialAllocMB=400
+
+- Modified config as noted in video: ./Fallout New Vegas/Data/NVSE/Plugins/sr_New_Vegas_Stutter_Remover.ini -- not sure if these are really needed; you might be able to use the default values. I just used what was in the video because I didn't feel like testing.
+
+- I used the default configs except as noted in the video for NVSE
+
+- I skipped the ENB section entirely. Partially because I never used them on windows, partially bc I have no clue how to set them up under nix, and partially bc I am not sure I wanted to risk any instability from them right now.
+
+ - for the Fallout.ini section, I applied the bSelectivePurgeUnusedOnFastTravel=1 and bPreemptivelyUnloadCells=1 settings, skipped the CPU/Core/Thread settings bc I wasn't sure if this would work well in wine, and then applied both audio cache settings.
+
+ - In wine steam, I disabled steam overlay for FO3 and FONV
+
+ - I had previously tried the BSA decompressor under a 32-bit wine prefix and saw that it crashed whenever i tried to browse folders. maybe it would work under different wine settings but i just decided to skip it. //update: tried again. if you mess with the Browse button, you just need to kill and restart the app then manually type the path without clicking Browse and it should work. Anyway, I skipped it so I would consider it a bonus step.
+
+ - TESTED SETUP TO MAKE SURE I COULD LOAD GAME WITHOUT CRASHING
+ I was able to open the game and load up a save from just after chargen. then ~ to open console and typed "GetNVSEVersion" (without the quotes - also its not case-sensitive) as a test to confirm that NVSE loaded at least. I got: "NVSE Version: 5"
+
+
+ Then move on to video #2
+ https://www.youtube.com/watch?v=BHXIEGtP2Hw
+
+ - Again, ignore the stuff about Mod Organize because it doesn't (currently) work that great under wine/Linux.
+
+ - Before you get started, if you already patched either or both FO3 / FONV exes, then you will need to temporariliy revert to the original unpatched exe to get past the install (hope you kept backups! if not, sorry but winehq doesn't let me edit my posts to note that in the beginning - you may have to have steam check files)
+
+ - For best Vortex compatibility, create a dir for the install, do the install, then repack as a 7z and install the 7z in Vortex like you would any other mod.
+
+ mkdir -p "./Fallout New Vegas/Repack/TTW - A Tale of Two Wastelands"
+
+- Download the main installer AND update files from the TTW site. Extract the TTW_Install_v3.2_Full.7z and the update achives into a temp folder under a wineprefix.
+I just re-used my temporary 32-bit wineprefix where I did the 4gb patching / bsa stuff earlier and made a symlink:
+
+	./drive_c$ ln -s '/gaming/lutris/winesteam/prefix64/drive_c/Program Files (x86)/Steam'/ Steam
+
+- Around the 1:45 mark in the video, he mentions that the install can be done with or without OGG re-encoding. You only have to run the exe version if you want to do the OGG re-encode; otherwise you can use the batch file (which just calls "TTW Install.exe" -NoOggEnc2). It's also mentioned that it needs registry keys (you dont... if you were lazy and symlinked it like me, just manually type in the paths)
+
+We need to run this from wine. I used the -NoOggEnc2 flag; if I need it later I can probably rerun or possibly even re-encode with ffmpeg:
+
+	env WINEPREFIX="/path/to/new/32bit/wine/pfx" wine cmd
+	cd /d "C:\ttw\TTW_Install_v3.2_Full\"
+	"TTW Install.exe" -NoOggEnc2
+
+	# based on my earlier symlink setup, i entered the following
+	# as with the bsa stuff earlier, the Browse button does NOT work.
+	# copy/paste is also broke so you have to type it out...
+	# so be careful to review/check spelling and make sure output dir exists
+
+	C:\Steam\steamapps\common\Fallout 3 goty
+	C:\Steam\steamapps\common\Fallout New Vegas
+	C:\ttw\repack
+
+	Once it starts, it will take awhile. it might look like it has frozen.
+	hopefully thats not the case. for me the fonts in the progress bar blurred
+	the text together and made it unreadable.
+	 take a few minutes to extract (2:16 to)
+
+
+
+
+
+
+
+
+
+
+
+
+
+What do NXM links actually look like on the command line when passed from Firefox to Vortex?:
+
+C:\Program Files\Black Tree Gaming Ltd\Vortex\Vortex.exe -d nxm://FalloutNV/mods/<mod-id>/files/<download-id-visible-on-button-hover>?key=<str w alphanum and dashes>&expires=<int>&user_id=<int>
+
+e.g.:
+C:\Program Files\Black Tree Gaming Ltd\Vortex\Vortex.exe -d nxm://FalloutNV/mods/67254/files/1000054928?key=F-ka2r-gsN6QWdf4Cy2Dcw&expires=1569546967&user_id=58286921
+

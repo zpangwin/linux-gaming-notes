@@ -1,0 +1,30 @@
+fonv todo
+============================================
+disable karma sounds
+update vanilla ui plus
+============================================
+
+
+for xedit
+============================================
+I can understand why allowing automation for merging scripts etc might be troublesome. But would you consider something similar within the scope of quickautoclean only?
+
+I'm guessing that xEdit is just not built to "repeat" the QAC as a batch process (e.g. clean one plugin, unload, clean next plugin, unload, etc).
+
+But assuming any loop logic was left to a cygwin/batch/python script, would it be possible to make a single cleaning not require any clicks? I see that passing the mod name as a quoted string after the arguments generally works to preselect the mod in dialog (does have issues with files that contain apostrophes and spaces) but still requires clicking OK in the GUI.
+
+
+So could be wrong, but from what I can tell, this would basically involve 2 parts:
+1) a modification of the autoload dialog to auto-accept (e.g. presss OK) if a matching mod was preselected when passed as an argument
+2) a modification to auto-exit after completion (or possibly exit only on success but leaving GUI open if errors are encountered)
+
+e.g. something like:
+FNVEdit.exe -IKnowWhatImDoing -QuickAutoClean -CloseWhenDone "MSG_Alert.esp"
+or
+FNVEdit.exe -IKnowWhatImDoing -QuickAutoClean -CloseIfNoErrors "MSG_Alert.esp"
+
+
+Also, in the event you are not interested in creating such flags, would you potentially be willing to accept a pull request with them?
+
+
+============================================

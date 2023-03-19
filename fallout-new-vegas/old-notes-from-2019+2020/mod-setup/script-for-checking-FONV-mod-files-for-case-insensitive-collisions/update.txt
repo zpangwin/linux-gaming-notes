@@ -1,0 +1,127 @@
+
+If you have Linux Kernel v5.13 or newer
+which you can check by running the command:
+
+	uname -a
+
+or
+
+	inxi -S
+
+Then a MUCH MUCH better solution that this script is to use the ext4 case folding feature. Which you can read about here:
+
+	https://www.phoronix.com/news/EXT4-Casefolding-With-Encrypt
+
+PROS:
+
+	* case-insensitivity is automatic, you don't need to run a script all the time.
+	* There is some work for setup, but after it is set up, you don't have to do anything; it just works from that point on
+	* Negligible performance overhead (at least I have not noticed anything having issues)
+
+CONS:
+	
+	* Only works for EXT4 partitions
+
+	* It can NOT be simply "turned on" for an existing EXT4 partition. You can only set the option while formatting
+		- so if you don't have a new drive and there's other stuff on the drive you want it on... it can be a bit of
+		  a pain in the ass bc you have to move everything so it will be safe to format.
+
+	* Currently, none of the partitioning GUIs support this AFAIK (Gparted, Gnome Disks, KDE Partition Editor for sure
+		did not last I checked - mid-2022). You will need to partition from the terminal to use ex4 case folding.
+
+	* The option that you specify during formatting only enables *support* for the feature. You still have to turn
+		it on for whatever folder you wish to use it on (I like it this way personally, but I imagine some folks might
+		be annoyed that they have to run a 2nd command)
+
+
+To use ext4 case folding:
+
+1. Have a drive/partition that you are ready to format (this will erase ALL data on the drive/partition so backup anything
+		important to another location).
+
+2. Find the device path of the drive/partition that you want to format (e.g. /dev/sdc1). You can use the following command
+	to view all partitions without making any changes (the leftmost column - 'PATH' - is the one you are looking for):
+
+	lsblk --include 8,253 --path --ascii -o PATH,LABEL,UUID,PARTLABEL,FSTYPE,MOUNTPOINTS
+
+3. When you are ready to format, run the following command (note the -L "<label>" is completely optional. A label is
+		just a very short name that you can give to the drive/partition. Letters and numbers are ok. Underscores and 
+		hyphen/minus sign/dashes are ok as long as they aren't the first or last character. Not sure if spaces or other
+		special characters are allowed. Not sure how long a label can be - my longest one is 13 characters)
+
+	
+	sudo mkfs.ext4 -L "some-label" -O casefold /dev/sd<drive><partition>
+
+4. Setup an fstab entry if you want it to be auto-mount when you start the system:
+
+	(Note you can get the UUID for the new partition by re-running the 'lsblk' command from step 2)
+
+	# make the mountpoint location
+	sudo /gaming
+
+	# make a backup
+	sudo cp /etc/fstab /etc/fstab.$(date +'%F.%H%M%S').bak
+	
+	# edit fstab
+	sudo nano /etc/fstab
+
+	# add the following line, replacing "<UUID>" with the actual UUID and /gaming with whatever mountpoint you
+	# location that you want to have it mounted at (a mount point is like a windows drive letter but you can
+	# have it be located practically anywhere - but you should probably avoid reserved system folders like /root or /usr).
+
+	UUID=<UUID> /gaming    ext4    defaults,nofail,nodev,user,exec 0 0
+
+	# when finished press:
+	Ctrl + O to output the changes
+	Enter to confirm the filename/location
+	Ctrl + X to exit nano
+
+5. Mount the new partition. If you added an fstab entry in step 4, the *simplest* way is to just reboot.
+
+	Alternately, you can avoid rebooting and just use more terminal commands:
+
+		# if you added an fstab entry, just reload all your fstab mounts with:
+		sudo systemctl daemon-reload
+        sudo mount -a
+
+		# if you did NOT add a fstab entry, you use the following
+		# (again replace "<UUID>" and /gaming with your values)
+		sudo mount --type ext4 UUID=<UUID> /gaming
+		
+6. Make a folder and turn case-insensitivity on for it
+
+	mkdir /gaming/wine-installs
+
+	chattr +F /gaming/wine-installs
+
+7. Test it to make sure it works correctly
+
+	cd /gaming/wine-installs/
+	touch camelCaseFile.txt
+
+	echo "POOP" > CAMELCASEFILE.TXT
+
+	cat camelcasefile.txt
+		POOP
+
+	mkdir mYsPecIAlFoLdEr
+	cp CAMELCASEFILE.TXT mySPECIALfolder/camelCaseFile.txt
+	echo "stinks" >> myspecialfolder/CamelCaseFile.Txt
+
+	cat MySpecialFolder/camelcasefile.txt
+		POOP
+		stinks
+
+8. Move shit back / install shit / go crazy and enjoy.
+
+	Note: if you are moving shit back and the shit you're moving has multiple case variants, e.g.
+
+		~/backups/my-shit
+			|
+			|-   dumb-shit.txt
+			|-   Dumb-Shit.txt
+
+	Then something is going to get overwritten. Use a GUI file manager or the -n option with cp/mv
+	if you want to avoid this.
+
+

@@ -1,0 +1,168 @@
+
+TTW#troubleshooting
+
+RoyBatty07/16/2018
+zilav is programming the installer, not me
+and it's not in C#, it's in object pascal
+
+Cait11/06/2018
+mpi's are basically zip files /s
+Just throw it in the downloads folder of MO2
+
+RoyBatty11/06/2018
+except as xdelta3 patches
+which is what we do
+
+Razbros01/05/2019
+No problem. Thanks for trying anyway man! I appreciate it
+Is there no way for a manual install, bypassing the installer?
+
+RoyBatty01/05/2019
+it's not possible, the installer uses xdelta3 to patch the original files
+the download would be illegal and around 10GB
+
+MajinHaku01/05/2019
+Roy
+I tried to update to 3.2.1
+But then it tells me my game version is incorrect or something
+file version
+idk
+TTW files have incorrect version
+
+[couple back and forth posts then]
+Some info, I installed 3.2 via the installer and I don't think I chose a different path
+
+RoyBatty01/05/2019
+you'll have to delete everything manually then majin and reinstall
+
+RoyBatty01/05/2019
+the reason TTW can't install is because you messed up your data folder
+reinstall the mods through mo2
+there's nothing wrong with the alien blaster
+you're using a mod that's breaking it
+
+Cait11/06/2018
+Pay attention to the /s
+
+sedme07/17/2019
+So the installer finally finished on 3..2, but when I run the installer for 3.2.1 it shows up like this.
+
+sedme07/17/2019
+So I figured out that these mpi files are actually bsa files, so since I can't use the installer to patch the mod normally, I'll have to do it manually. I extracted the 3.2.1 mpi and I'm guessing the .xd3 files are xdelta patches and the other files are just ready to be dropped in. I don't want to break anything, so can anyone confirm this?
+
+Telavus08/14/2019
+Hi
+The TTW installer is unreasonably slow
+
+flecked08/14/2019
+:snig~1:
+
+Telavus08/14/2019
+Seems like the ogg encoder threads dont utilize my pc fully
+
+RoyBatty08/14/2019
+and transcoding 50000 audio files is supposed to be sped up how?
+
+Telavus08/14/2019
+Im well aware my dude
+
+RoyBatty08/14/2019
+your PC is probably throttling due to poor cooling
+
+Telavus08/14/2019
+But its like 20 threads utilizing 1% of my cpu power
+No its not
+
+
+RoyBatty08/14/2019
+what OS
+
+Telavus08/14/2019
+Cpu is at 50 degreea celsius
+Latest linux kernel and latest wine staging
+
+RoyBatty08/14/2019
+install uses 90% of my CPU
+problem is in wine
+
+Telavus08/14/2019
+I thought so.
+
+RoyBatty08/14/2019
+create a windows VM, run it in there
+
+...
+
+
+RoyBatty08/15/2019
+problem is with linux or wine
+probably wine
+perhaps audio driver
+it's working on windows and osx
+
+Telavus08/15/2019
+Audio driver?
+Encoding vorbis has nothing to do with that
+
+RoyBatty08/15/2019
+bad audio drivers crash on windows, it's because of bass.dll
+its in the FAQ
+
+...
+
+RoyBatty08/15/2019
+we're using ogg2enc , it uses bass dll's, check the faq you can try deleting some
+
+
+RoyBatty08/15/2019
+main installer is written in object pascal, its compiled to native code so shouldn't be an issue and oggenc is all C++ afaik
+well if whatever wine version you are using has poor multithread support
+the installer takes about an hour for me,  Windows 7, i4790k
+all threads used, CPU 90% usage
+
+Telavus08/15/2019
+What libs are the installer relying on
+Maybe i could rewrite to linux
+
+RoyBatty08/15/2019
+Jam's machine is a monster with a xeon in it, takes her 45 mins
+is SSE disabled in Wine ?
+
+Telavus08/15/2019
+Its not in PIO mode
+its an nvme ssd
+Bandwith should be plenty
+How many files should the TTW mod folder consist of?
+
+RoyBatty08/15/2019
+with updates?
+
+Telavus08/15/2019
+Just pure install of latest version
+
+RoyBatty08/15/2019
+15.2 GB in 30 folders consisting of 288 files with updates. I don't have a count without.
+2 less I guess
+nope, 4 less
+
+Telavus08/15/2019
+My folder is 15GiB
+so that sounds about right
+
+RoyBatty08/15/2019
+the updates dont take anywhere near as long
+
+
+
+
+
+
+
+
+
+having some issues running the installer in wine. yes, it's slow as hell but i can live with that. my issue is actually that the installer craps out with "BASS Encode start error" about 1/3 of the way into the 3.2 install (~13hrs in for me). If I try skipping the ogg conversion using the -NoOggEnc2 from the batch file, it seems to do much better and the main 3.2 install completes. But then for the upgrade to 3.2.1 no matter how many times I close/reopen, I can't get past an error aboout Archive "C:\ttw\repack\Fallout - Meshes.bsa" doesn't exist for location: FNV Fallout - Meshes.bsa
+
+I feel like I am so close to getting all the pieces together. I had FONV with 4gb-LLA-patch/NVSE/JIP LN working with Vortex befoe I reset to vanilla for the TTW install , I can extract BSAs on linux, and converting ogg to 24khz wav with ffmpeg should be pretty simple... so really I feel like my biggest roadblock is just running the installer itself.
+
+Saw a comment from RoyBatty last month that the main install is written in object pascal. Anybody know of a way to dump the file contents of the *.mpi files? If I could just get the mod-specific stuff as a 7z/rar (TaleOfTwoWastelands.esm, TaleOfTwoWastelands*.bsa's, etc) then I'm pretty confident I could get the rest sorted out on my own. the faq even lists the steps more or less: https://taleoftwowastelands.com/faq#TTWInstaller
+

@@ -1,0 +1,243 @@
+
+==================================================
+HarcoreIsEasy:
+==================================================
+HC.esp 							(from https://www.nexusmods.com/newvegas/mods/57713)
+Instant Aid Healing.esp 		(from https://www.nexusmods.com/newvegas/mods/62900)
+crippled limbs heal over time 	(from https://www.nexusmods.com/newvegas/mods/66592)
+sleep heals limbs 				(from https://www.nexusmods.com/newvegas/mods/67091)
+JokerineStimpakLimbsHC.esp 		(from https://www.nexusmods.com/newvegas/mods/61506)
+
+
+Fists do knockout fatique damage.esp
+Longer Knockouts.esp
+
+==================================================
+BetterBeginnings:
+==================================================
+psychoelfs char editor.esp
+Clean Character Creation.esp 	//SPECIAL allocation is on a single screen
+								//Hardcore mode is turned ON automatically and the Revise Character bit is disabled.
+CharacterRestructuringStation - Vanilla.esp
+CharacterRestructuringStation - Honest Hearts.esp
+CharacterRestructuringStation - Dead Money.esp
+Safe ShowRaceMenu_Console.esp
+DLC Weapon Integration.esp
+Courier's Stash Scattered.esp
+Character Creation Plus.esp 	//the one that adds the gown
+Simple DLC Delay.esp
+Tutorial Killer.esp 			//removes the V to enter vats and similar 'tutorial' messages
+
+==================================================
+BetterBeginningsTTW:
+==================================================
+psychoelfs char editor.esp
+CharacterRestructuringStation - Vanilla.esp
+CharacterRestructuringStation - Honest Hearts.esp
+CharacterRestructuringStation - Dead Money.esp
+Safe ShowRaceMenu_Console.esp
+DLC Weapon Integration.esp
+Courier's Stash Scattered.esp
+	Character Creation Plus - Loot Changes Only-65573-2-1-1564666679/Character Creation Plus.esp
+	+ Character Creation Streamlined (need to redownload)
+Simple DLC Delay.esp
+Tutorial Killer.esp 			//removes the V to enter vats and similar 'tutorial' messages
+
+==================================================
+BetterThievery:
+==================================================
+no karma loss for stealing.esp
+ThroatSlit.esp
+Pickpocket Overhaul.esp
+=> X => Loot Unconscious Victims.esp
+Fists do knockout fatique damage.esp
+Longer Knockouts.esp
+
+==================================================
+BetterThievery Redux:
+==================================================
+[ ] Better Pickup Prompt
+[ ] Casino UnBanner.esp
+[ ] CorpseCarry.esp
+[ ] Craftable Facemask.esp
+[ ] Disable Anti Cheat Minute.esp
+[ ] Disable Sitting
+[ ] Increasedcarryweight2.esp
+[ ] Lockable Locks NV.esp
+[ ] LockedDoorMarkers.esp
+[ ] Longer Knockouts.esp
+[ ] Loot Menu
+[ ] MGS_Alert.esp
+[ ] no karma loss for stealing.esp
+[ ] Ownerless Trash.esp
+[ ] Pickpocket Overhaul.esp
+[ ] Shoot Karma In The Head - Edible Edition.esp
+[ ] Show Pickpocket Success Rate.esp
+[ ] ThroatSlit.esp
+
+
+[E] Buy or Steal.esp
+[E] Loot Unconscious Victims.esp
+
+[R] WeightlessJunk.esp
+-> checking for errors freezes
+
+==================================================
+MerchantsImprovements:
+==================================================
+CardMaster DM.esp
+CardMaster NV.esp
+MerchantRestock.esp
+MoreMerchantCaps.esp
+
+
+==================================================
+MerchantsImprovements:
+==================================================
+Merchants Sell Displayed Items.esp
+MerchantRestock.esp
+MoreMerchantCaps.esp
+
+
+==================================================
+MiscImprovements:
+==================================================
+Tuneable Radios.esm
+psychoelfs anti anti cheat.esp
+Casino UnBanner.esp
+Pause Background Remover.esp
+Tuneable Radios.esm
+Harvestable Cave Fungus.esp
+dressup.esp
+Military Explansion Program.esm
+DragThings.esp
+Static Battery Replacer.esp
+Get Both Alien Blaster And YCS186.esp
+Project13 - Populated Wasteland.esp
+WhetStoneRepair.esp
+Project13 - Populated Wasteland.esp
+NukaVend.esp
+Portable Bedroll - Well Rested.esp
+Repair.esp
+LayThatPistolDown.esp
+Useful Loading Screens 1.2.esp
+SkylersCouriersStashMod.esp
+
+
+
+
+==================================================
+ESP only
+==================================================
+-> X-> Increasedcarryweight2.esp
+-> X-> WeightlessJunk.esp
+
+
+
+--chargen/start of game
+
+
+--harcore
+No Needs.esp
+Sleep Heals Limbs.esp
+
+--player
+Karma-Less Petty Crime NV.esp
+
+--npcs
+
+
+--misc
+psychoelfs anti anti cheat.esp
+Casino UnBanner.esp
+Pickpocket Overhaul.esp
+DLC Weapon Integration.esp
+Pause Background Remover.esp
+Tuneable Radios.esm
+Harvestable Cave Fungus.esp
+dressup.esp
+Military Explansion Program.esm
+DragThings.esp
+Static Battery Replacer.esp
+Loot Unconscious Victims.esp
+Get Both Alien Blaster And YCS186.esp
+Project13 - Populated Wasteland.esp
+Begone 'To Enter VATS'.esp
+WhetStoneRepair.esp
+Project13 - Populated Wasteland.esp
+NukaVend.esp
+Portable Bedroll - Well Rested.esp
+Repair.esp
+LayThatPistolDown.esp
+Useful Loading Screens 1.2.esp
+SkylersCouriersStashMod.esp
+ThroatSlit.esp
+
+
+==================================================
+More than just esp
+==================================================
+MSG Alerts
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+fnvedit:
+
+#1)
+qSkillPerks + qSkillPerksDLC0[1-5]
+=> reduce from 6 esps to 1
+
+#2)
+
+HumanTrafficing + HumanTrafficingSIP
+
+#3) Character Creation Plus,
+	Clean Character Creation,
+	Courier Stash Scattered
+
+#4)
+grinding wheel,
+FNV Crowbar,
+HC?,
+increased carry weight,
+lay that pistol down,
+locked door markers,
+magazine box,
+simple dlc delay,
+weightless junk,
+removable robot arms
+both alien blaster and ycs186
+watter putter outter
+static battery replacer
+slave jail
+metal gear solid alerts
+whet stone repair
+aLB?
+xfo - epic skills  - effects after level 100
+pipboy counters
+
+
+#5) Delay Level Up + Delay Level up - steath suit fix
+
+#6) FewPosesMore, SariDPosesNV, Slave In Pose NV
+
+#7) military expansion program,
+project 13 populated wastlandds
+
+
+
+Combine multiple esps into 1:
+-----------------------------
+bubba shot the jukebox
+
+
+combine misc stuffs (light functionality + only esp)
+------------------------------------------------------------
+Working Grinding Wheel v4
+Glen2k6's Increased Carry Weight - carry cap to 2400 or so
+Karma-Less Petty Crime
+
+combine misc stuffs (light functionality)
+------------------------------------------------------------
+Throw and Retrieve with DLC

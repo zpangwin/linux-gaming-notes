@@ -1,0 +1,158 @@
+Merge-plugins
+
+You can also re-use the same xedit wineprefix described above to get the Merge Plugins utility working.
+
+If you are not familiar with this, I recommend watching the Gamer Poets video for an overview of how this would work on Windows but if you don't want to watch the whole 48 minute video then I have the key points noted in the instructions below.
+https://www.youtube.com/watch?v=0S6cpCwTezE
+
+Alternately, for a less detailed video just outlining the basics without much detail:
+https://www.youtube.com/watch?v=rfTAP9AOTVc
+
+To get it working under wine:
+
+1. The utility requires files from the GECK. So get the Fallout NV Geck, extract it, and copy the files into your game installation folder. You can get this directly from Bethesda here (make sure you are getting the one for the correct game):
+	http://geck.bethsoft.com/index.php?title=Main_Page
+
+2. The utility also requires Champollion. Download the archive for Champollion (I used the 64-bit one), extract it, and copy the Champollion-V1.0.1-x64 folder under the game's Data folder.
+	https://www.nexusmods.com/skyrim/mods/35307/
+
+3. Create a new folder for Merge Plugins called under the wineprefix we used earlier: e.g. /gaming/lutris/xedit/drive_c/merge-plugins
+
+then download the archive for Merge Plugins, extract contents to the new folder
+https://www.nexusmods.com/skyrim/mods/69905
+
+4. Decide on a few sample plugins to merge (start with a small # of plugins for now; you can go crazy later after you confirm its all working). Make sure that their load or is set the way that you want them as the merge utility will take their load order into consideration.
+
+If you skipped the video, I would highly recommend at least watching from 14:30 to 18:16 as this discusses planning out what to merge. If you can't be bothered a quick summary is: avoid frequently updated mods (assuming you plan on using the updates and dont want to rebuild your merges every time), avoid masters, merge mods from similar categories (e.g. 3 armor mods), but avoid merging mods from many various categories. ALWAYS CONSIDER HOW LOAD ORDER WILL BE AFFECTED.
+https://youtu.be/0S6cpCwTezE?t=871
+
+5. Create a new desktop shortcut for launching the merge plugins util
+
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Type=Application
+Name=Merge-Plugins
+Icon=/gaming/lutris/xedit/drive_c/icons/merge-plugins.png
+Exec=/usr/bin/env WINEPREFIX="/gaming/lutris/xedit" "${HOME}/.local/share/lutris/runners/wine/3.0-i386/bin/wine" "C:/merge-plugins/MergePlugins.exe"
+Categories=Game
+
+or simply launch from a terminal for now:
+/usr/bin/env WINEPREFIX="/gaming/lutris/xedit" "${HOME}/.local/share/lutris/runners/wine/3.0-i386/bin/wine" "C:/merge-plugins/MergePlugins.exe"
+
+
+6. At some point, you'll probably see an error message or three about the English lang file missing. I tried downloading the new ones from github to the app's lang folder as suggested but that didn't fix it for me. Nor did copying the files into the same folder as the app. Not sure what causes the error but you can safely ignore it.
+
+If you don't see the error right away, don't worry: you either got lucky or you'll see it later. If you see it, just ignore it.
+
+However, You CAN prevent it from opening pages in your browser...
+That is assuming you have this in a separate wineprefix from the game / dont mind preventing ALL apps under that wineprefix prevent from opening pages in your browser. Just open wine regedit and make the changes mentioned here:
+https://superuser.com/a/1350875
+- aka open to HKEY_CLASSES_ROOT\http\shell\open\command and change the default value to an empty string
+
+
+7. When you get to the Plugin Selection screen, Right-click then Uncheck all, then click only the plugins you want to merge + their required masters and hit OK. If OK is disabled, scroll to the top and check any dependencies (red text) that you missed until you are able to proceed.
+
+e.g. :
+
+Fists do knockout fatique damage.esp 	https://www.nexusmods.com/newvegas/mods/64312
+Longer Knockouts.esp 					https://www.nexusmods.com/newvegas/mods/50224
+
+and I had  to select FalloutNV.esm before I could click OK. The indexes listed above are what I saw once everything was loaded.
+
+8. The GamerPoets video mentions doing mod manager integration. I didn't want this so I skipped it. If you want that, you'll have to experiment with that (and test it) on your own, but if you do please feel free to comment whether it works or not.
+
+9. Click the Gear on the toolbar to open Options. Ignore any error messages / red text about user name not being set. Also, if you Alt+Tab and lose the Options dialog, just minimize the other windows and move the main window around.
+
+Click on the Merging tab and confirm the destination directory is whatever you want it to be. Then click the Integrations tab
+
+10. Under Options > Integrations tab, look for the Papyrus section and set the Champolion Decompiler path
+e.g.
+C:\SteamGames\steamapps\common\Fallout New Vegas\Data\Champollion-V1.0.1-x64\Decompiler.dll
+
+11. If you want to set the Papyrus Compiler path, see:
+https://www.creationkit.com/fallout4/index.php?title=Papyrus_Compiler
+
+Note: The Gamer Poets video explicitly mentions that folks merging FO3 / FONV mods can skip setting up the Papyrus Compiler
+See 12:00 to 12:33
+https://youtu.be/0S6cpCwTezE?t=722
+
+If using Skyrim, you can install the Creation Kit by: open Steam/winesteam > Library tab > click the name to the right of the search filter (e.g. "Games") > at the bottom of the menu, pick Tools > then pick appropriate creation kits:
+e.g. "GECK - New Vegas Edition" / "Skyrim Creation Kit" / etc
+
+12. Click OK to save Options
+
+13. On the Merges tab and create a new merge.
+e.g. "PunchOut.esp"
+
+14. Click the Plugins tab. Use Shift/Left click or Ctrl+Left click to select multiple mods. SELECT ONLY THE MODS TO BE MERGED - DO NOT INCLUDE THE MASTER FILES FROM THE GAME OR DLC. Then right-click and choose "Add to merge" > name of your merge frpom previous step (e.g. "PunchOut.esp")
+
+15. Go back to the Merges tab > right-click the named merge (e.g. "PunchOut") > Plugins > Check plugins for errors.
+
+16. Go back to the Plugins tab. If everything is good all of the plugins (ignore the masters) should have green checkmarks now. If any mods contain errors, fix them if you know how (e.g. with xEdit / GECK). If you don't know how / aren't able to fix them, then right-click on the offending mod and choose to remove it from the merge. Alternately, you can also try Merges tab > right-click on named merge (e.g. "PunchOut") > Plugins > Resolve issues. However, this issues may or may not be resolvable from this utility so I won't be covering that.
+
+17. Now either build the merge. To do this you can either click the Hammer button from the toolbar or go back to the Merges tab > right-click the named merge (e.g. "PunchOut") > select whatever option says "Build Merge" (mine was labeled as mpMain_Build Merge despite the merge being named "PunchOut")
+
+18. Close the program and go to the output folder (whatever you picked in step #9. If you didn't change it, it should default to a merge folder under the folder where the exe is).
+
+e.g.
+gaming/lutris/xedit/drive_c/merge-plugins/merges/PunchOut/PunchOut.esp
+
+Either copy it into your Data folder or add it to a zip/rar/7z archive and install in your mod manager.
+If you have a file named as xxx.esp.save, most of the time this is because you have not closed out of the application yet.
+
+
+19. Test that it works as expected :-)
+
+The main gotchas here are when you start adding in other mods outside of what was merged, especially if those are in a merged plugin too. Consider the following:
+
+	a) LOOT may not work as well when trying to sort the merged plugins (since it is going completely off hueristic data, any user-contributions/corrections for the original mods in the LOOT master file will not be matched/applied)
+
+	b) Lets say you have a scenario where mod C overrides part of mod B and mod B overrides a different part of mod A. Then when you merge mods A and C into mod D, you can only put those together 2 ways:
+		B overrides D (the original C=>B override is lost but the original B=>A override is the same)
+		or
+		D overrides B (the original B=>A override is lost but the original C=>B override is the same)
+	In some cases, this will be desirable or will not matter. In others, it may be undesirable or create issues.
+
+
+
+=================================================
+everything above caused game to freeze on launch
+=================================================
+
+
+=================================================
+testing with creation kit:
+=================================================
+
+1. My winesteam always says it can't connect and I choose offline mod: in other words, you get an error about needing to be online when you try to install anything.
+
+SO from my native steam client > Library tab > click the name to the right of the search filter (e.g. "Games") > at the bottom of the menu, pick Tools > then "Skyrim Creation Kit"
+
+2. The default folder for steam on the filesystem is at ~/.steam/steamapps/common but I had setup my steam downloads to /gaming/steam/steamapps/common so the creation kit was installed under:
+
+/gaming/steam/steamapps/common/skyrim
+
+3. I copied files as follows:
+
+STEAM_DIR="/gaming/steam/steamapps/common";
+cd "/gaming/lutris/winesteam/prefix64/drive_c/Program Files (x86)/Steam/steamapps/common/Fallout New Vegas";
+
+cp -a -t ./ "${STEAM_DIR}/skyrim/Archive.exe";
+cp -a -t ./ "${STEAM_DIR}/skyrim/flowchartx32.dll";
+cp -a -t ./ "${STEAM_DIR}/skyrim/skyrim/lex";
+cp -a -t ./ "${STEAM_DIR}/skyrim/Papyrus Compiler";
+cp -a -t ./ "${STEAM_DIR}/skyrim/Data;
+
+cd Data;
+unrar x Scripts.rar;
+
+4. In Merge Plugins options:
+/gaming/lutris/winesteam/prefix64/drive_c/Program Files (x86)/Steam/steamapps/common/Fallout New Vegas/Data/Champollion-V1.0.1-x64/Decompiler.dll
+/gaming/lutris/winesteam/prefix64/drive_c/Program Files (x86)/Steam/steamapps/common/Fallout New Vegas/Papyrus Compiler/
+/gaming/lutris/winesteam/prefix64/drive_c/Program Files (x86)/Steam/steamapps/common/Fallout New Vegas/Data/Scripts/Source/TESV_Papyrus_Flags.flg
+
+
+=================================================
+
+

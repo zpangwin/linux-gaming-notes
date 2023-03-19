@@ -1,0 +1,53 @@
+
+Merging Mods:
+https://www.youtube.com/watch?v=dOT283m__UA
+
+
+
+
+
+
+
+
+
+https://www.nexusmods.com/oblivion/mods/11536/?tab=posts&topic_id=4672655
+
+https://www.afkmods.com/index.php?/topic/5509-xedit-and-linux-tutorial/
+
+
+https://appdb.winehq.org/objectManager.php?sClass=version&iId=33372&sAllBugs
+
+
+
+
+These steps didn't quite work for me with FONV running through Lutris but I'm still glad that you confirmed that you were able to get 4.0.2 to work; that kept me from giving up and I evenutally got it to work. Here's what I did different in case it helps somebody else.
+
+First, my setup just in case any of it turns out to be important:
+
+OS: Linux Mint v19.2 x64 Cinnamon (based on Ubuntu 18.04)
+
+System wine: wine-staging v4.16 from winehq ppa (I also had to add libfaudio from a ppa on wine forums and use dpkg to forcefully remove my libfaudio before it would install correctly)
+
+CPU: AMD FX-990
+
+GPU: NVidia 970 (yeah I know its getting a bit dated)
+
+Game installation: I have the Steam version of Fallout New Vegas. I originally installed it via Proton but didn't feel like making multiple symlinks for each game folder under MyDocs / Local App Data to use with Vortex, so I moved it over to Lutris's winesteam (e.g. windows version of steam running under wine) and "re-downloaded". Currently, I have everything installed in Lutris and just launch either Vortex or Lutris's Winesteam via *.desktop files similar to what you have above. I am currently using my system wine (wine-0staging v4.16) for everything but might opt for one of the lutris custom builds in the future as they've added a flag for doing LARGE_ADDRESS_AWARE directly via wine instead of needing to patch the game.
+
+
+What I did different:
+
+1. I grabbed the 4.0.2 release from xEdit's github page, extracted, and renamed the exes from SSE* to FNV* as indicated on github readme. (In theory, this should be the same as getting the archive from nexus page).
+
+2. I copied the exes to my game folder, e.g. "/gaming/lutris/winesteam/prefix64/drive_c/Program Files (x86)/Steam/steamapps/common/Fallout New Vegas"
+
+3. I had issues with running FNVEdit.exe, with or without the ini option shown above. It would come up and display but never found the ini, even when i setup symlinks that didn't use spaces. It also seemed like the UI would lock up and not register any interactions / not load any plugins.
+
+4. On my lutris runner (and my desktop shortcut), I changed it to run the 64 bit version instead (e.g. "/gaming/lutris/winesteam/prefix64/drive_c/Program Files (x86)/Steam/steamapps/common/Fallout New Vegas/FNVEdit64.exe"). If you downloaded from nexus, I think it is in an optionals archive instead the original one. otherwise, just get the github one. The first time I launched it, I got the pop-up from ElminsterAU followed by the plugin popup and then a tooltips popup that only had a checkbox for not displaying next time and a next link and seemed to have an infinite number of tips. Since I didn't have a close button for the tooltips I had to uncheck the box, then run
+
+pkill --signal 9 --full --ignore-case 'fnvedit';
+
+This continued to occur after the plugin pop-up on subsequent launches.
+
+5. There does not appear to be any command line args for xEdit to disable tooltips
+
