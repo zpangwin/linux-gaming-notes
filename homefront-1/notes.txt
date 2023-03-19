@@ -1,0 +1,10 @@
+2021-Feb-20:
+
+Nothing useful on protondb or winedb.
+
+Codeweavers had:
+https://www.codeweavers.com/compatibility/crossover/forum/homefront?msg=144567
+-> Forgot to try setting virutal desktop...that did the trick.
+
+https://www.codeweavers.com/compatibility/crossover/forum/homefront?msg=103616
+-> "Will NOT work! Requires Nvidia Physx Drivers to be installed "
